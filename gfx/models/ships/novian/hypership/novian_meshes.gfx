@@ -1,0 +1,15 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "novian_engine_mesh"
+		file = "gfx/models/ships/novian/hypership/novian_engine.mesh"
+		
+		animation = { id = "idle"						type = "novian_engine_idle_animation" }
+		animation = { id = "moving" 					type = "novian_engine_moving_animation"}
+	}
+	pdxmesh = {
+		name = "novian_hypership_locators_mesh"
+		file = "gfx/models/ships/megastructures/war_system/war_system_locators.mesh"
+		scale = 1
+	}
+}
