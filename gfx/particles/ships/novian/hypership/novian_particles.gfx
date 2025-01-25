@@ -1,0 +1,56 @@
+objectTypes = {
+	####################
+	###Novian Hypership###
+	####################
+	pdxparticle = {
+		name = "novian_engine_thrust_effect"
+		type = "novian_engine_thrust_effect"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "novian_small_thrust_effect"
+		type = "novian_small_thrust_effect"
+		scale = 4.8
+	}
+
+	pdxparticle = {
+		name = "novian_50_engine_exhaust"
+		type = "novian_engine_exhaust"
+	
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "novian_150_engine_exhaust"
+		type = "novian_engine_exhaust"
+	
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "novian_250_engine_exhaust"
+		type = "novian_engine_exhaust"
+	
+		scale = 2.5
+	}
+
+	pdxparticle = {
+		name = "novian_engine_black_hole_effect" #sadly no longer a blackhole
+		type = "novian_engine_black_hole_effect"
+		
+		scale = 4.0
+	}
+
+	pdxparticle = {
+		name = "novian_star_effect"
+		type = "m_class_star_file"
+		scale = 4.8
+	}
+
+	pdxparticle = {
+		name = "giga_novian_small2_particle"
+		type = "giga_novian_small2_particle"
+		scale = 10.0
+	}
+}

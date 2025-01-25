@@ -1,0 +1,15 @@
+cb_novian_attacker = { #See comment in war goal file
+	show_in_diplomacy = no
+	show_notification = yes
+	potential = {
+		always = no
+	}
+}
+
+cb_novian_defender = {
+	show_in_diplomacy = no
+	show_notification = yes
+	potential = {
+		always = no
+	}
+}

@@ -1,0 +1,607 @@
+building_giga_novian_capital = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	#planetary_ftl_inhibitor = yes
+	ai_weight = { weight = 0 }
+	category = government
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_max_buildings_add = 36
+		planet_stability_add = 25
+		job_giga_novian_commandant_add = 4
+	}
+
+	desc = {
+		text = job_giga_novian_commandant_effect_desc
+	}
+}
+
+building_giga_novian_capital_throne = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	#planetary_ftl_inhibitor = yes
+	ai_weight = { weight = 0 }
+	category = government
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 20
+		planet_max_buildings_add = 36
+		planet_stability_add = 25
+		job_giga_novian_commandant_add = 6
+	}
+
+	desc = {
+		text = job_giga_novian_commandant_effect_desc
+	}
+}
+
+building_giga_novian_city = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = government
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 50
+			alloys = 25
+			unity = 50
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 15
+		job_giga_novian_archivist_add = 5
+	}
+
+	desc = {
+		text = job_giga_novian_archivist_effect_desc
+	}
+}
+
+building_giga_novian_civilian_forge = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = manufacturing
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 50
+			alloys = 25
+		}
+		upkeep = {
+			minerals = 50
+		}
+	}
+
+	planet_modifier = {
+		job_giga_novian_manufacturer_add = 5
+	}
+
+	desc = {
+		text = job_giga_novian_manufacturer_effect_desc
+	}
+}
+
+building_giga_novian_fort = {
+	base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = army
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.5
+		planet_stability_add = 10
+		#job_giga_novian_soldier_add = 10
+	}
+
+	desc = {
+		text = job_giga_novian_soldier_effect_desc
+	}
+}
+
+building_giga_novian_encampment = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = army #unless this becomes an occupation capital
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.25
+		planet_stability_add = 5
+		#job_giga_novian_soldier_add = 5
+	}
+
+	desc = {
+		text = job_giga_novian_soldier_effect_desc
+	}
+}
+
+building_giga_novian_autofab = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = manufacturing
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 100
+			volatile_motes = 10
+			exotic_gases = 10
+			rare_crystals = 10
+		}
+		upkeep = {
+			energy = 50
+		}
+	}
+}
+
+building_giga_novian_temple = {
+	base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = unity
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 50
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.25
+		job_giga_novian_priest_add = 5
+		job_giga_novian_acolyte_add = 10
+	}
+
+	desc = {
+		text = job_giga_novian_priest_effect_desc
+	}
+}
+
+building_giga_novian_grand_temple = {
+	base_cap_amount = 1
+	empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = unity
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 100
+		}
+		upkeep = {
+			energy = 4
+			sr_zro = 1
+			rare_crystals = 1
+		}
+	}
+
+	planet_modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.50
+		job_giga_novian_priest_add = 10
+		job_giga_novian_archivist_add = 5
+		job_giga_novian_acolyte_add = 10
+	}
+
+	desc = {
+		text = job_giga_novian_priest_effect_desc
+	}
+}
+
+building_giga_novian_overseers = { #temporary slave employment mechanics
+	#base_cap_amount = 1
+	empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = government #I guess?
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 25
+		planet_amenities_add = 10
+		job_giga_novian_oppressor_add = 5
+		job_giga_novian_overseer_add = 2
+	}
+
+	desc = {
+		#text = job_giga_novian_oppressor_effect_desc
+		text = job_giga_novian_overseer_effect_desc
+	}
+}
+
+building_giga_novian_iodizium_imports = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = manufacturing
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		job_giga_iodizium_miner_add = 2
+		#job_giga_iodizium_miner_add = 1
+		#multiplier = value:giga_novian_iodizium_station_count
+	}
+
+	desc = {
+		text = job_giga_iodizium_miner_effect_desc
+	}
+}
+
+building_giga_novian_ripperdoc = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = pop_assembly
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	planet_modifier = {
+		job_giga_novian_ripperdoc_add = 2
+	}
+
+	desc = {
+		text = job_giga_novian_ripperdoc_effect_desc
+	}
+}
+
+building_giga_novian_orbital_uplink = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = manufacturing
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			alloys = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.10
+	}
+}
+
+building_giga_novian_hangars = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = army
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			alloys = 5
+		}
+	}
+
+	planet_modifier = {
+		army_health = 0.25
+		army_defense_damage_mult = 0.25
+	}
+}
+
+building_giga_novian_colosseum = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = amenity
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 8
+		}
+	}
+
+	planet_modifier = {
+		job_giga_novian_gladiator_add = 6
+		planet_amenities_add = 40
+
+	}
+
+	desc = {
+		text = job_giga_novian_gladiator_effect_desc
+	}
+}
+
+building_giga_novian_strange_matter_plant = {
+	#base_cap_amount = 1
+	#empire_limit = 1
+
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	ai_weight = { weight = 0 }
+	category = manufacturing
+
+	potential = {
+		always = no
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				is_country_type = novian_arikhanate
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 50
+		}
+	}
+}

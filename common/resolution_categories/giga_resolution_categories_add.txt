@@ -1,0 +1,10 @@
+resolution_category_novian_focus = {
+	group = galactic_focus
+	icon = "GFX_resolution_category_novian_focus" #needs making
+
+	resolution_types = {
+		"resolution_nov1"
+		#"resolution_nov2"
+		#"resolution_nov3"
+	}
+}

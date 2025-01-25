@@ -1,0 +1,262 @@
+novian_analysis_physics = {
+    damage_vs_country_type_novian_arikhanate_mult = 0.20
+    damage_vs_country_type_novian_raiders_mult = 0.20
+}
+novian_analysis_society = {
+    damage_vs_country_type_novian_arikhanate_mult = 0.20
+    damage_vs_country_type_novian_raiders_mult = 0.20
+}
+novian_analysis_engineering = {
+    damage_vs_country_type_novian_arikhanate_mult = 0.20
+    damage_vs_country_type_novian_raiders_mult = 0.20
+}
+
+# easy_katzen_tech_level_buffs = {
+#     ship_fire_rate_mult = @wildRideKatzenWeapons
+#     ship_weapon_damage = @wildRideKatzenWeapons
+#     ship_armor_mult = @wildRideKatzenOther
+#     ship_hull_mult = @wildRideKatzenOther
+#     ship_shield_mult = @wildRideKatzenOther
+#     army_damage_mult = @wildRideKatzenOther
+#     army_health = @wildRideKatzenOther
+#     megastructure_build_speed_mult = @wildRideKatzenOther
+# }
+
+novian_disarray = { #effects halved from Katzen disarray
+    army_damage_mult = -0.25
+    ship_speed_mult = -0.25
+    ship_fire_rate_mult = -0.25
+    ship_orbital_bombardment_mult = -0.25
+}
+
+novian_mechanics = {
+    ships_upkeep_mult = -100
+    pop_demotion_time_mult = -10
+    command_limit_add = 100000
+    country_naval_cap_add = 100000
+    country_leader_cap_add = 100
+    #army_starting_experience_add = 1000
+}
+
+novian_difficulty_1 = {
+    army_health = -0.33
+    army_damage_mult = -0.33
+    army_morale = -0.33
+    army_morale_damage_mult = -0.33
+
+    ship_weapon_damage = -0.33
+    ship_fire_rate_mult = -0.33
+    ship_weapon_range_mult = 1.1
+
+    ship_hull_mult = -0.33
+    ship_armor_mult = -0.33
+    ship_shield_mult = -0.33
+
+    ship_evasion_mult = -0.1
+    ship_tracking_add = 2
+
+    ship_hull_regen_add_static = 100
+    ship_armor_regen_add_static = 100
+    ship_shield_regen_add_static = 100
+    ship_hull_regen_add_perc = 0.01
+    ship_armor_regen_add_perc = 0.01
+    ship_shield_regen_add_perc = 0.01
+
+    ship_base_speed_mult = -0.5
+    ship_interstellar_speed_mult = -0.5
+    ship_windup_mult = -0.5
+    ship_winddown_mult = -0.5
+
+    ship_cloaking_detection_add = 1
+
+    #giga_katzen_cost_discount_mult = 0.25
+    planet_jobs_produces_mult = -0.33
+    planet_jobs_upkeep_mult = 0.1
+}
+
+novian_difficulty_2 = {
+    # army_health = 0.5
+    # army_damage_mult = 0.5
+    # army_morale = 0.5
+    # army_morale_damage_mult = 0.15
+
+    #ship_weapon_damage = -0.30
+    #ship_fire_rate_mult = -0.20
+    ship_weapon_range_mult = 1.2
+
+    #ship_hull_mult = -0.40
+    #ship_armor_mult = -0.40
+    #ship_shield_mult = -0.40
+
+    #ship_evasion_mult = 0
+    ship_tracking_add = 4
+
+    ship_hull_regen_add_static = 150
+    ship_armor_regen_add_static = 150
+    ship_shield_regen_add_static = 150
+    ship_hull_regen_add_perc = 0.01 #0.02
+    ship_armor_regen_add_perc = 0.01 #0.02
+    ship_shield_regen_add_perc = 0.01 #0.02
+
+    ship_base_speed_mult = -0.4
+    ship_interstellar_speed_mult = -0.45
+    ship_windup_mult = -0.45
+    ship_winddown_mult = -0.45
+
+    ship_cloaking_detection_add = 2
+
+    #giga_katzen_cost_discount_mult = 0.25
+    #planet_jobs_produces_mult = 1
+    planet_jobs_upkeep_mult = 0.2
+}
+
+novian_difficulty_3 = {
+    army_health = 0.75
+    army_damage_mult = 0.75
+    army_morale = 0.75
+    army_morale_damage_mult = 0.75
+
+    ship_weapon_damage = 0.75
+    ship_fire_rate_mult = 0.75
+    ship_weapon_range_mult = 1.3
+
+    ship_hull_mult = 0.75
+    ship_armor_mult = 0.75
+    ship_shield_mult = 0.75
+
+    ship_evasion_mult = 0.1
+    ship_tracking_add = 6
+
+    ship_hull_regen_add_static = 250
+    ship_armor_regen_add_static = 250
+    ship_shield_regen_add_static = 250
+    ship_hull_regen_add_perc = 0.01 #0.03
+    ship_armor_regen_add_perc = 0.01 #0.03
+    ship_shield_regen_add_perc = 0.01 #0.03
+
+    ship_base_speed_mult = -0.3
+    ship_interstellar_speed_mult = -0.4
+    ship_windup_mult = -0.4
+    ship_winddown_mult = -0.4
+
+    ship_cloaking_detection_add = 3
+
+    #giga_katzen_cost_discount_mult = 0.25
+    planet_jobs_produces_mult = 0.5
+    planet_jobs_upkeep_mult = 0.3
+}
+
+novian_difficulty_4 = {
+    army_health = 3
+    army_damage_mult = 3
+    army_morale = 3
+    army_morale_damage_mult = 3
+
+    ship_weapon_damage = 3
+    ship_fire_rate_mult = 3
+    ship_weapon_range_mult = 1.4
+
+    ship_hull_mult = 3
+    ship_armor_mult = 3
+    ship_shield_mult = 3
+
+    ship_evasion_mult = 0.2
+    ship_tracking_add = 8
+
+    ship_hull_regen_add_static = 400
+    ship_armor_regen_add_static = 400
+    ship_shield_regen_add_static = 400
+    ship_hull_regen_add_perc = 0.01 #0.04
+    ship_armor_regen_add_perc = 0.01 #0.04
+    ship_shield_regen_add_perc = 0.01 #0.04
+
+    ship_base_speed_mult = -0.2
+    ship_interstellar_speed_mult = -0.35
+    ship_windup_mult = -0.35
+    ship_winddown_mult = -0.35
+
+    ship_cloaking_detection_add = 4
+
+    #giga_katzen_cost_discount_mult = 0.25
+    planet_jobs_produces_mult = 2
+    planet_jobs_upkeep_mult = 0.4
+}
+
+novian_difficulty_5 = {
+    army_health = 8
+    army_damage_mult = 8
+    army_morale = 8
+    army_morale_damage_mult = 8
+
+    ship_weapon_damage = 8
+    ship_fire_rate_mult = 8
+    ship_weapon_range_mult = 1.5
+
+    ship_hull_mult = 8
+    ship_armor_mult = 8
+    ship_shield_mult = 8
+
+    ship_evasion_mult = 0.3
+    ship_tracking_add = 10
+
+    ship_hull_regen_add_static = 600
+    ship_armor_regen_add_static = 600
+    ship_shield_regen_add_static = 600
+    ship_hull_regen_add_perc = 0.01 #0.05
+    ship_armor_regen_add_perc = 0.01 #0.05
+    ship_shield_regen_add_perc = 0.01 #0.05
+
+    ship_base_speed_mult = -0.1
+    ship_interstellar_speed_mult = -0.3
+    ship_windup_mult = -0.3
+    ship_winddown_mult = -0.3
+
+    ship_cloaking_detection_add = 5
+
+    #giga_katzen_cost_discount_mult = 0.25
+    planet_jobs_produces_mult = 5
+    planet_jobs_upkeep_mult = 0.5
+}
+
+# novian_standard_system_starbase = {
+# }
+
+novian_colony_system_starbase = {
+    ship_weapon_range_mult = 1
+    ship_weapon_damage = 1
+    ship_fire_rate_mult = 1
+    ship_hull_mult = 2
+    ship_armor_mult = 2
+    ship_shield_mult = 2
+}
+
+novian_raider_swiftness = {
+    ship_speed_mult = 0.50
+    ship_orbital_bombardment_mult = 0.25 #tune this way up if they're given a Raiding-alt - or put it in the stance itself.
+    ship_interstellar_speed_mult = 0.25
+    ship_windup_mult = 0.25
+    ship_winddown_mult = 0.25
+    command_limit_add = 100000
+}
+
+novian_hypership_regen_debuff = {
+    ship_hull_regen_add_perc = -0.009
+    ship_armor_regen_add_perc = -0.009
+    ship_shield_regen_add_perc = -0.009
+}
+
+
+    ### PLANET MODIFIERS ###
+agartha_scavenger_program = {
+    job_giga_novian_scavenger_leader_per_pop = 0.02 # 1 per 50
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
+    icon_frame = 1
+}
+
+agartha_scavenger_program_gestalt = {
+    job_giga_novian_scavenger_leader_gestalt_per_pop = 0.02 # 1 per 50
+
+    icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
+    icon_frame = 1
+}

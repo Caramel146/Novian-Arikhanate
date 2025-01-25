@@ -1,0 +1,8 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "novian_escort_ship_mesh"
+		file = "gfx/models/ships/novian/escort/novian_escort.mesh"
+		scale = 1.0
+	}
+}

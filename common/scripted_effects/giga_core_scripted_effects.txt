@@ -1,0 +1,1047 @@
+spawn_core_smbh_aeternum = {
+    no_scope = {
+        spawn_system = {
+            min_distance >= 0
+            max_distance <= 0
+            min_orientation_angle = 44
+            max_orientation_angle = 46
+            initializer = "giga_black_hole_aeternum_initializer"
+            hyperlane = no
+        }
+    }
+    every_country = {
+        limit = {
+            is_ai = no
+        }
+        country_event = {
+            id = giga_aeternum.2010
+            days = 30
+        }
+    }
+    event_target:giga_core_system = {
+        #Aeternum's perfect hexagon
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 90
+            max_orientation_angle = 90
+            initializer = "giga_inner_1_aeternum_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 150
+            max_orientation_angle = 150
+            initializer = "giga_inner_2_aeternum_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 210
+            max_orientation_angle = 210
+            initializer = "giga_inner_3_aeternum_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 270
+            max_orientation_angle = 270
+            initializer = "giga_inner_4_aeternum_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 330
+            max_orientation_angle = 330
+            initializer = "giga_inner_5_aeternum_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 30
+            max_orientation_angle = 30
+            initializer = "giga_inner_6_aeternum_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 55
+            max_distance <= 55
+            min_orientation_angle = 90
+            max_orientation_angle = 90
+            initializer = "giga_outer_1_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 55
+            max_distance <= 55
+            min_orientation_angle = 210
+            max_orientation_angle = 210
+            initializer = "giga_outer_2_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 55
+            max_distance <= 55
+            min_orientation_angle = 330
+            max_orientation_angle = 330
+            initializer = "giga_outer_3_initializer"
+            hyperlane = no
+        }
+        #Inner hexagon lanes
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_inner_1
+        }
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_inner_2
+        }
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_inner_3
+        }
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_inner_4
+        }
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_inner_5
+        }
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_inner_6
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_1
+            to = event_target:giga_inner_2
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_2
+            to = event_target:giga_inner_3
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_3
+            to = event_target:giga_inner_4
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_4
+            to = event_target:giga_inner_5
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_5
+            to = event_target:giga_inner_6
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_6
+            to = event_target:giga_inner_1
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_1
+            to = event_target:giga_outer_1
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_3
+            to = event_target:giga_outer_2
+        }
+        add_hyperlane = {
+            from = event_target:giga_inner_5
+            to = event_target:giga_outer_3
+        }
+        #Outer systems connect to allow going around the hexagon
+        add_hyperlane = {
+            from = event_target:giga_outer_1
+            to = event_target:giga_outer_2
+        }
+        add_hyperlane = {
+            from = event_target:giga_outer_2
+            to = event_target:giga_outer_3
+        }
+        add_hyperlane = {
+            from = event_target:giga_outer_3
+            to = event_target:giga_outer_1
+        }
+        event_target:birch_aeternum = {
+            #Initialize stuff
+            country_event = {
+                id = giga_aeternum.1000
+                days = 2
+            }
+        }
+    }
+    spawn_core_connectors_generic = yes
+}
+
+spawn_core_smbh = {
+    no_scope = {
+        spawn_system = {
+            min_distance >= 0
+            max_distance <= 0
+            min_orientation_angle = 44
+            max_orientation_angle = 46
+            initializer = "giga_black_hole_core_initializer"
+            hyperlane = no
+        }
+    }
+    spawn_core_empty_generic = yes
+    spawn_core_connectors_generic = yes
+}
+
+spawn_core_quasar_novian = {
+    create_novians = yes
+    create_novian_raid_country = yes
+
+    no_scope = {
+        spawn_system = {
+            min_distance >= 0
+            max_distance <= 0
+            min_orientation_angle = 44
+            max_orientation_angle = 46
+            initializer = "giga_black_hole_novian_initializer"
+            hyperlane = no
+        }
+    }
+    event_target:giga_core_system = {
+        #The Inner Ring (7 systems)
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 47
+            max_orientation_angle = 47
+            initializer = "giga_novian_inner_1_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 89
+            max_orientation_angle = 89
+            initializer = "giga_novian_inner_2_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 138
+            max_orientation_angle = 138
+            initializer = "giga_novian_inner_3_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 194
+            max_orientation_angle = 194
+            initializer = "giga_novian_inner_4_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 241
+            max_orientation_angle = 241
+            initializer = "giga_novian_inner_5_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 297
+            max_orientation_angle = 297
+            initializer = "giga_novian_inner_6_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 15
+            max_distance <= 15
+            min_orientation_angle = 356
+            max_orientation_angle = 356
+            initializer = "giga_novian_inner_7_initializer"
+            hyperlane = no
+        }
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_novian_inner_1
+        }
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_novian_inner_3
+        }
+        add_hyperlane = {
+            from = event_target:giga_core_system
+            to = event_target:giga_novian_inner_6
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_1
+            to = event_target:giga_novian_inner_2
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_2
+            to = event_target:giga_novian_inner_3
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_3
+            to = event_target:giga_novian_inner_4
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_4
+            to = event_target:giga_novian_inner_5
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_5
+            to = event_target:giga_novian_inner_6
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_6
+            to = event_target:giga_novian_inner_7
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_7
+            to = event_target:giga_novian_inner_1
+        }
+        #The Middle Ring (9 systems)
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 42
+            max_orientation_angle = 42
+            initializer = "giga_novian_middle_1_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 83
+            max_orientation_angle = 83
+            initializer = "giga_novian_middle_2_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 117
+            max_orientation_angle = 117
+            initializer = "giga_novian_middle_3_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 161
+            max_orientation_angle = 161
+            initializer = "giga_novian_middle_4_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 197
+            max_orientation_angle = 197
+            initializer = "giga_novian_middle_5_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 239
+            max_orientation_angle = 239
+            initializer = "giga_novian_middle_6_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 283
+            max_orientation_angle = 283
+            initializer = "giga_novian_middle_7_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 317
+            max_orientation_angle = 317
+            initializer = "giga_novian_middle_8_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 30
+            max_distance <= 30
+            min_orientation_angle = 6
+            max_orientation_angle = 6
+            initializer = "giga_novian_middle_9_initializer"
+            hyperlane = no
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_1
+            to = event_target:giga_novian_middle_1
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_3
+            to = event_target:giga_novian_middle_4
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_5
+            to = event_target:giga_novian_middle_6
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_inner_7
+            to = event_target:giga_novian_middle_8
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_1
+            to = event_target:giga_novian_middle_2
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_2
+            to = event_target:giga_novian_middle_3
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_3
+            to = event_target:giga_novian_middle_4
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_4
+            to = event_target:giga_novian_middle_5
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_5
+            to = event_target:giga_novian_middle_6
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_6
+            to = event_target:giga_novian_middle_7
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_7
+            to = event_target:giga_novian_middle_8
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_8
+            to = event_target:giga_novian_middle_9
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_9
+            to = event_target:giga_novian_middle_1
+        }
+        #The Outer Ring (12 systems)
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 30
+            max_orientation_angle = 30
+            initializer = "giga_novian_outer_1_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 60
+            max_orientation_angle = 60
+            initializer = "giga_novian_outer_2_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 90
+            max_orientation_angle = 90
+            initializer = "giga_novian_outer_3_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 120
+            max_orientation_angle = 120
+            initializer = "giga_novian_outer_4_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 150
+            max_orientation_angle = 150
+            initializer = "giga_novian_outer_5_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 180
+            max_orientation_angle = 180
+            initializer = "giga_novian_outer_6_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 210
+            max_orientation_angle = 210
+            initializer = "giga_novian_outer_7_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 240
+            max_orientation_angle = 240
+            initializer = "giga_novian_outer_8_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 270
+            max_orientation_angle = 270
+            initializer = "giga_novian_outer_9_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 300
+            max_orientation_angle = 300
+            initializer = "giga_novian_outer_10_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 330
+            max_orientation_angle = 330
+            initializer = "giga_novian_outer_11_initializer"
+            hyperlane = no
+        }
+        spawn_system = {
+            min_distance >= 45
+            max_distance <= 45
+            min_orientation_angle = 360
+            max_orientation_angle = 360
+            initializer = "giga_novian_outer_12_initializer"
+            hyperlane = no
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_2
+            to = event_target:giga_novian_outer_3
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_3
+            to = event_target:giga_novian_outer_4
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_5
+            to = event_target:giga_novian_outer_7
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_8
+            to = event_target:giga_novian_outer_10
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_middle_9
+            to = event_target:giga_novian_outer_12
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_1
+            to = event_target:giga_novian_outer_2
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_2
+            to = event_target:giga_novian_outer_3
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_3
+            to = event_target:giga_novian_outer_4
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_4
+            to = event_target:giga_novian_outer_5
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_5
+            to = event_target:giga_novian_outer_6
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_6
+            to = event_target:giga_novian_outer_7
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_7
+            to = event_target:giga_novian_outer_8
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_8
+            to = event_target:giga_novian_outer_9
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_9
+            to = event_target:giga_novian_outer_10
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_10
+            to = event_target:giga_novian_outer_11
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_11
+            to = event_target:giga_novian_outer_12
+        }
+        add_hyperlane = {
+            from = event_target:giga_novian_outer_12
+            to = event_target:giga_novian_outer_1
+        }
+        #Ownership
+        every_system = {
+            limit = {
+                has_star_flag = giga_novian_system
+            }
+            create_novian_citadel = yes
+            every_system_planet = {
+                set_planet_flag = cant_build_here
+                set_planet_flag = cant_target_this_planet
+            }
+        }
+    }
+    spawn_core_connectors_novian = yes
+    event_target:novian_arikhanate = { #Needs to be here instead of in create_novians because the planets must spawn before the economy calculates.
+        country_event = { id = giga_novian.60000 }
+    }
+    every_playable_country = {
+        country_event = {
+            id = giga_novian.2000
+            days = 30
+        }
+    }
+}
+
+spawn_core_quasar = {
+    no_scope = {
+        spawn_system = {
+            min_distance >= 0
+            max_distance <= 0
+            min_orientation_angle = 44
+            max_orientation_angle = 46
+            initializer = "giga_black_hole_quasar_initializer"
+            hyperlane = no
+        }
+    }
+    spawn_core_empty_generic = yes
+    spawn_core_connectors_generic = yes
+}
+
+
+###########################
+spawn_core_empty_generic = {
+    spawn_system = {
+        min_distance >= 30
+        max_distance <= 30
+        min_orientation_angle = 25
+        max_orientation_angle = 25
+        initializer = "giga_inner_1_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 60
+        max_distance <= 60
+        min_orientation_angle = 90
+        max_orientation_angle = 90
+        initializer = "giga_inner_2_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 25
+        max_distance <= 25
+        min_orientation_angle = 80
+        max_orientation_angle = 80
+        initializer = "giga_inner_3_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 60
+        max_distance <= 60
+        min_orientation_angle = 130
+        max_orientation_angle = 130
+        initializer = "giga_inner_7_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 60
+        max_distance <= 60
+        min_orientation_angle = 180
+        max_orientation_angle = 180
+        initializer = "giga_inner_4_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 35
+        max_distance <= 35
+        min_orientation_angle = 220
+        max_orientation_angle = 220
+        initializer = "giga_inner_5_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 60
+        max_distance <= 60
+        min_orientation_angle = 290
+        max_orientation_angle = 290
+        initializer = "giga_inner_6_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 80
+        max_distance <= 80
+        min_orientation_angle = 110
+        max_orientation_angle = 110
+        initializer = "giga_outer_1_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 90
+        max_distance <= 90
+        min_orientation_angle = 230
+        max_orientation_angle = 230
+        initializer = "giga_outer_2_initializer"
+        hyperlane = no
+    }
+    spawn_system = {
+        min_distance >= 80
+        max_distance <= 80
+        min_orientation_angle = 350
+        max_orientation_angle = 350
+        initializer = "giga_outer_3_initializer"
+        hyperlane = no
+    }
+    add_hyperlane = {
+        from = event_target:giga_core_system
+        to = event_target:giga_inner_1
+    }
+    add_hyperlane = {
+        from = event_target:giga_core_system
+        to = event_target:giga_inner_3
+    }
+    add_hyperlane = {
+        from = event_target:giga_core_system
+        to = event_target:giga_inner_6
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_1
+        to = event_target:giga_inner_2
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_1
+        to = event_target:giga_inner_6
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_2
+        to = event_target:giga_inner_4
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_5
+        to = event_target:giga_inner_4
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_5
+        to = event_target:giga_inner_6
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_7
+        to = event_target:giga_inner_4
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_2
+        to = event_target:giga_outer_1
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_4
+        to = event_target:giga_outer_2
+    }
+    add_hyperlane = {
+        from = event_target:giga_inner_6
+        to = event_target:giga_outer_3
+    }
+    event_target:giga_core_system = {
+        star = {
+            random_list = {
+                1 = {
+                    set_name = corey's_gut
+                }
+                1 = {
+                    set_name = time's_agony
+                }
+                1 = {
+                    set_name = undying_fury
+                }
+                1 = {
+                    set_name = eternal_horizon
+                }
+                1 = {
+                    set_name = sagittrevorius_a
+                }
+                1 = {
+                    set_name = pouchkinn's_vortex
+                }
+                1 = {
+                    set_name = the_end
+                }
+                1 = {
+                    set_name = voluptia
+                }
+                1 = {
+                    set_name = powehi
+                }
+                1 = {
+                    set_name = centaurus_a
+                }
+                1 = {
+                    set_name = cygnus_x-1
+                }
+                1 = {
+                    set_name = sagittarius_a_star
+                }
+                1 = {
+                    set_name = ton_618
+                }
+                1 = {
+                    set_name = steve
+                }
+                1 = {
+                    set_name = sbeve
+                }
+                1 = {
+                    set_name = twissell
+                }
+                1 = {
+                    set_name = anulus
+                }
+                1 = {
+                    set_name = aria
+                }
+                1 = {
+                    set_name = nero
+                }
+                1 = {
+                    set_name = diym
+                }
+                1 = {
+                    set_name = the_auditor
+                }
+                1 = {
+                    set_name = calliope
+                }
+                1 = {
+                    set_name = abrogation
+                }
+                1 = {
+                    set_name = wimbleton
+                }
+                1 = {
+                    set_name = mike
+                }
+                1 = {
+                    set_name = supermario
+                }
+                1 = {
+                    set_name = temporal_itch
+                }
+                1 = {
+                    set_name = stellar_beholder
+                }
+                1 = {
+                    set_name = grim_reaper
+                }
+                1 = {
+                    set_name = not_decapitalising_that #"dQw4w9WgXcQ"
+                }
+                1 = {
+                    set_name = shatterer_of_behemoths
+                }
+                1 = {
+                    set_name = grand_gargantua
+                }
+                1 = {
+                    set_name = "111001" #this requires being in quotation marks... the standardisation!
+                }
+                1 = {
+                    set_name = great_mother
+                }
+                1 = {
+                    set_name = placeholder_bh #"Placeholder black hole, real one is being renovated, apologies for the inconvenience"
+                }
+                1 = {
+                    set_name = despacito
+                }
+            }
+        }
+    }
+}
+
+spawn_core_connectors_generic = {
+    event_target:giga_outer_1 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+    event_target:giga_outer_2 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+    event_target:giga_outer_3 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+}
+
+spawn_core_connectors_novian = { #I think that's what these do. Check.
+    event_target:giga_novian_outer_1 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+    event_target:giga_novian_outer_3 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+    event_target:giga_novian_outer_5 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+    event_target:giga_novian_outer_6 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+    event_target:giga_novian_outer_8 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+    event_target:giga_novian_outer_11 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+    event_target:giga_novian_outer_12 = {
+        random_list = {
+            1 = {
+                while = {
+                    count = 1
+                    giga_generate_hyperlane = yes
+                }
+            }
+            1 = {
+                while = {
+                    count = 2
+                    giga_generate_hyperlane = yes
+                }
+            }
+        }
+    }
+}

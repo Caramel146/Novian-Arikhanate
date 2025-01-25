@@ -1,0 +1,9 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "novian_01_portrait_mesh"
+		file = "gfx/models/portraits/novian/novian_01_portrait.mesh"
+		animation = { id = "idle"	type = "novian_anim_idle1" }
+		scale = 1.25
+	}
+}

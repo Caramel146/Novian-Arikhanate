@@ -1,0 +1,149 @@
+#Ship Components
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_reactor_hypership"
+		texturefile = "gfx/interface/icons/ship_parts/novian_reactor_hypership.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_novian_autocannon"
+		texturefile = "gfx/interface/icons/ship_parts/novian_autocannon.dds"
+	}
+}
+
+#Leader Traits
+spriteTypes = {
+	spriteType = {
+		name = "GFX_leader_trait_novian"
+		texturefile = "gfx/interface/icons/traits/leader_trait_novian.dds"
+	}
+}
+
+#Event Pictures
+spriteTypes = {
+	spriteType = {
+		name = "GFX_evt_novian_wreck_1"
+		texturefile = "gfx/event pictures/novian_wreck_1.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_novian_arikouncil_2"
+		texturefile = "gfx/event pictures/novian_arikouncil_2.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_novian_default_1"
+		texturefile = "gfx/event pictures/novian_default_1.dds"
+	}
+}
+
+#Starbase/Orbital Ring Buildings/Modules
+spriteTypes = {
+	spriteType = {
+		name = "GFX_orbitalring_module_novian_listening_post"
+		texturefile = "gfx/interface/icons/modules/orbitalring_module_giga_novian_listening_post.dds"
+	}
+	spriteType = {
+		name = "GFX_orbitalring_module_novian_shipyard"
+		texturefile = "gfx/interface/icons/modules/orbitalring_module_giga_novian_shipyard.dds"
+	}
+	spriteType = {
+		name = "GFX_orbitalring_module_novian_pd_array"
+		texturefile = "gfx/interface/icons/modules/orbitalring_module_giga_novian_pd_array.dds"
+	}
+	spriteType = {
+		name = "GFX_orbitalring_module_novian_aegis_shield"
+		texturefile = "gfx/interface/icons/modules/orbitalring_module_giga_novian_aegis_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_orbitalring_novian_garrison"
+		texturefile = "gfx/interface/icons/modules/orbitalring_giga_novian_garrison.dds"
+	}
+	spriteType = {
+		name = "GFX_orbitalring_novian_logistics"
+		texturefile = "gfx/interface/icons/modules/orbitalring_giga_novian_logistics.dds"
+	}
+}
+
+#GalCom
+spriteTypes = {
+	spriteType = {
+		name = "GFX_resolution_category_novian_focus"
+		texturefile = "gfx/interface/icons/resolutions/resolution_category_novian_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_nov1"
+		texturefile = "gfx/interface/icons/resolutions/resolution_nov1.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_nov2"
+		texturefile = "gfx/interface/icons/resolutions/resolution_nov2.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_nov3"
+		texturefile = "gfx/interface/icons/resolutions/resolution_nov3.dds"
+	}
+}
+
+#Diplomacy
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wg_novian_conquest"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_hyperweapon.dds" #make sure these aren't the wrong way round with the defence one
+	}
+	spriteType = {
+		name = "GFX_wg_novian_defence"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_threat_hyperweapon.dds"
+	}
+}
+
+#Armies
+spriteTypes = {
+	spriteType = {
+		name = "GFX_army_type_novian"
+		texturefile = "gfx/interface/icons/armies/giga_aeternum_icon.dds" #make custom
+	}
+	spriteType = {
+		name = "GFX_army_type_novian_tank"
+		texturefile = "gfx/interface/icons/armies/giga_katzen_panzer_icon.dds" #make custom
+	}
+}
+
+#Bombardment
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_novian"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_armageddon_action.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_novian_selected"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_armageddon_selected.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+}

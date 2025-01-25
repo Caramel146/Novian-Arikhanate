@@ -1,0 +1,139 @@
+#NovAet battle and Shroudbreakers
+site_novian_010 = {
+    desc = site_novian_010_intro
+    picture = GFX_evt_generator_powerup
+    stages = 5
+    weight = { base = 0 }
+    visible = { default_site_visible_trigger = yes }
+    allow = { exists = leader leader = { leader_class = scientist } }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = novian_arc.011
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F2
+        event = novian_arc.012
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = novian_arc.013
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_F4
+        event = novian_arc.014
+    }
+
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_F5
+        event = novian_arc.015
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+#Discovering the Kren
+site_novian_020 = {
+    desc = site_novian_020_intro
+    picture = GFX_evt_generator_powerup
+    stages = 2
+    weight = { base = 0 }
+    visible = { default_site_visible_trigger = yes }
+    allow = { exists = leader leader = { leader_class = scientist } }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = novian_arc.021
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F2
+        event = novian_arc.022
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+#Kren Fortress
+# site_novian_030 = {
+#     desc = site_novian_030_intro
+#     picture = GFX_evt_generator_powerup
+#     stages = 0
+#     weight = { base = 0 }
+#     visible = { default_site_visible_trigger = yes }
+#     allow = { exists = leader leader = { leader_class = scientist } }
+#
+#     stage = {
+#         difficulty = 1
+#         icon = GFX_archaeology_runes_F2
+#         event = ####
+#     }
+#
+#     on_roll_failed = {
+#         from = {
+#             standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+#         }
+#     }
+# }
+
+
+#Temple World Moon Research Station
+site_novian_040 = {
+    desc = site_novian_040_intro
+    picture = GFX_evt_shielded_planet
+    stages = 5
+    weight = { base = 0 }
+    visible = { default_site_visible_trigger = yes }
+    allow = { exists = leader leader = { leader_class = scientist } }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = novian_arc.041
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F2
+        event = novian_arc.042
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F2
+        event = novian_arc.043
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F2
+        event = novian_arc.044
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F2
+        event = novian_arc.045
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}

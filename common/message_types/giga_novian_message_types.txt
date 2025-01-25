@@ -1,0 +1,21 @@
+message_type = {
+    key = "MESSAGE_NOVIAN_BOMBING"
+    icon = "GFX_message_other_alert"
+    icon_frame = 1
+
+    name = "MESSAGE_NOVIAN_BOMBING_TITLE"
+    sound = "notification"
+    ping = "mixed_notification_red"
+}
+
+message_type = {
+    key = "MESSAGE_NOVIAN_BOMBING_PLANET_MELTED"
+    icon = "GFX_message_planet_destroyed"
+    icon_frame = 1
+
+    name = "MESSAGE_NOVIAN_BOMBING_PLANET_MELTED_TITLE"
+    sound = "event_air_raid_siren"
+    ping = "mixed_notification_red"
+
+    category = planets
+}

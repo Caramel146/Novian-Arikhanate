@@ -1,0 +1,80 @@
+giga_novian_iodizium_station_count = {
+    # outpost station fleets
+    complex_trigger_modifier = {
+        trigger = count_owned_fleet
+        parameters = {
+            limit = {
+                is_ship_class = shipclass_starbase
+                is_disabled = no
+            }
+        }
+        mode = weight
+    }
+}
+
+
+novian_cost = {
+    add = $COST$
+    multiply = value:novian_cost_discount
+}
+novian_upkeep = {
+    add = $UPKEEP$
+    multiply = value:novian_upkeep_discount
+}
+novian_cost_discount = {
+    add = 1
+    add = modifier:giga_novian_cost_discount_mult
+}
+novian_upkeep_discount = {
+    add = 1
+    add = modifier:giga_novian_upkeep_discount_mult
+}
+
+
+novian_overseer_toiler_count = {
+    base = 0
+    complex_trigger_modifier = {
+        trigger = count_owned_pop
+        trigger_scope = planet
+        parameters = {
+            limit = {
+                has_job = giga_novian_toiler
+            }
+        }
+        mode = add
+    }
+}
+novian_overseer_toiler_boost = {
+    base = 0
+    add = value:novian_overseer_toiler_count #count number of toilers
+    multiply = 0.01 #reduce number to get +1% toiler output per toiler
+    complex_trigger_modifier = { #multiply boost for number of overseers
+        trigger = count_owned_pop
+        trigger_scope = planet
+        parameters = {
+            limit = {
+                has_job = giga_novian_overseer
+            }
+        }
+        mode = mult
+    }
+    min = 1 #make sure toiler output has a floor for if there are no overseers
+}
+novian_scavenger_leader_boost = {
+    base = 0
+    complex_trigger_modifier = {
+        trigger = count_owned_pop
+        trigger_scope = planet
+        parameters = {
+            limit = {
+                OR = {
+                    has_job = giga_novian_scavenger_leader
+                    has_job = giga_novian_scavenger_leader_gestalt
+                }
+            }
+        }
+        mode = add
+    }
+    multiply = 0.5 #each foreman adds +50% output
+    add = 1 #base scavenger output multiplier of 1
+}

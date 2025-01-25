@@ -1,0 +1,402 @@
+tech_novian_autocannons = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_autocannons_3" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_reactors = {
+    cost = @giga_tier9cost2
+    area = physics
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { particles }
+    ai_update_type = military
+
+    prerequisites = { "tech_zero_point_power" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_reactor_boosters = { #singular for compoennt
+    cost = @giga_tier9cost2
+    area = physics
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { particles }
+    ai_update_type = military
+
+    prerequisites = { "tech_reactor_boosters_3" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_shields = {
+    cost = @giga_tier9cost2
+    area = physics
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { field_manipulation }
+    ai_update_type = military
+
+    prerequisites = { "tech_shields_5" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_armor = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { materials }
+    ai_update_type = military
+
+    prerequisites = { "tech_ship_armor_5" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_hull = { #consider balance #heat sink?
+    cost = @giga_tier9cost2
+    area = engineering #placeholder
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { materials }
+    ai_update_type = military
+
+    prerequisites = { "tech_crystal_armor_2" } #placeholder
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_afterburners = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_afterburners_2" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_thrusters = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_thrusters_4" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_hyperdrive = { #wormhole generator
+    cost = @giga_tier9cost2
+    area = physics
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { particles }
+    ai_update_type = military
+
+    prerequisites = { "tech_hyper_drive_3" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_sensors = { #looks like subspace sensors
+    cost = @giga_tier9cost2
+    area = physics
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { computing }
+    ai_update_type = military
+
+    prerequisites = { "tech_sensors_4" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_torpedoes = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_torpedoes_3" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_missiles = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_missiles_5" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_swarmer_missiles = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_swarmer_missiles_2" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_mass_drivers = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_mass_drivers_5" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_kinetic_artillery = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_kinetic_artillery_2" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_mass_accelerator = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { propulsion }
+    ai_update_type = military
+
+    prerequisites = { "tech_mass_accelerator_2" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_combat_computers = {
+    cost = @giga_tier9cost2
+    area = physics
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { computing }
+    ai_update_type = military
+
+    prerequisites = { "tech_combat_computers_2" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_strike_craft = {
+    cost = @giga_tier9cost2
+    area = engineering
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { voidcraft }
+    ai_update_type = military
+
+    prerequisites = { "tech_strike_craft_3" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+tech_novian_lasers = {
+    cost = @giga_tier9cost2
+    area = physics
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { particles }
+    ai_update_type = military
+
+    prerequisites = { "tech_lasers_5" }
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}
+
+#################
+### Hypership ###
+#################
+tech_novian_hypership_aura = {
+    cost = @giga_tier9cost2
+    area = physics
+    is_reverse_engineerable = no
+    is_rare = no
+    tier = 5
+    category = { computing }
+    ai_update_type = military
+
+    prerequisites = { "tech_juggernaut" } #placeholder
+    prereqfor_desc = { }
+
+    weight = 0
+    weight_modifier = { }
+    ai_weight = { }
+
+    modifier = { }
+    potential = { }
+}

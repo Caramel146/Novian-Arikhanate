@@ -1,0 +1,241 @@
+
+arikhan_bulava = {
+    icon = "GFX_specimen_black_needle_ceremonial_sword"
+    type = aesthetic_wonder
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = exceptional
+    }
+
+    triggered_country_modifier = {
+        mult = value:aesthetic_wonder_specimens_modifiers_mult
+        edicts_upkeep_mult = -0.07
+    }
+}
+
+cnilscale = {
+    icon = "GFX_specimen_sonic_reflective_prism"
+    type = xeno_geology
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = rare
+    }
+
+    triggered_country_modifier = {
+        mult = value:xeno_geology_specimens_modifiers_mult
+        country_energy_produces_mult = 0.02
+    }
+}
+
+pilemind_biopsy = {
+    icon = "GFX_specimen_organic_computer"
+    type = xeno_geology
+    #Gained
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = rare
+    }
+
+    triggered_country_modifier = {
+        mult = value:xeno_geology_specimens_modifiers_mult
+        country_engineering_tech_research_speed = 0.07
+    }
+}
+
+scorned_modifications = {
+    icon = "GFX_specimen_alien_brain_scans"
+    type = aesthetic_wonder
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = epic
+    }
+
+    triggered_country_modifier = {
+        mult = value:aesthetic_wonder_specimens_modifiers_mult
+        pop_government_ethic_attraction = 0.24 #doesn't help Innate Design
+    }
+}
+
+videre_pamphlet = {
+    icon = "GFX_specimen_adakkaria_propaganda_poster"
+    type = historical_item
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = exceptional
+    }
+
+    triggered_country_modifier = {
+        mult = value:historical_item_specimens_modifiers_mult
+        country_physics_tech_research_speed = 0.11
+    }
+}
+
+arikian_national_epic = {
+    icon = "GFX_specimen_pilgrimage_last_days"
+    type = aesthetic_wonder
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = epic
+    }
+
+    triggered_country_modifier = {
+        mult = value:aesthetic_wonder_specimens_modifiers_mult
+        country_society_tech_research_speed = 0.08
+    }
+}
+
+novian_foetus = {
+    icon = "GFX_specimen_genetic_code"
+    type = xeno_geology
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = common
+    }
+
+    triggered_country_modifier = {
+        mult = value:xeno_geology_specimens_modifiers_mult
+        planet_pop_assembly_mult = 0.05
+    }
+}
+
+sektian_stem_cell = {
+    icon = "GFX_specimen_irassian_bacterium_javoria"
+    type = xeno_geology
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = epic
+    }
+
+    triggered_country_modifier = {
+        mult = value:xeno_geology_specimens_modifiers_mult
+        planet_pops_upkeep_mult = -0.04
+    }
+}
+
+reactive_iodizium_armour = {
+    icon = "GFX_specimen_molten_slag"
+    type = xeno_geology
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = rare
+    }
+
+    triggered_country_modifier = {
+        mult = value:xeno_geology_specimens_modifiers_mult
+        ship_armor_mult = 0.12
+    }
+}
+
+hypership_alcubierre = {
+    icon = "GFX_specimen_primitive_mega_electromagnet"
+    type = historical_item
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = rare
+    }
+
+    triggered_country_modifier = {
+        mult = value:historical_item_specimens_modifiers_mult
+        ship_interstellar_speed_mult = 0.14
+    }
+}
+
+intergalactic_map = {
+    icon = "GFX_specimen_curator_survey"
+    type = historical_item
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = common
+    }
+
+    triggered_country_modifier = {
+        mult = value:historical_item_specimens_modifiers_mult
+        ship_ftl_jumpdrive_range_mult = 0.07
+    }
+}
+
+arikian_toxins = {
+    icon = "GFX_specimen_acidic_spores"
+    type = xeno_geology
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = common
+    }
+
+    triggered_country_modifier = {
+        mult = value:xeno_geology_specimens_modifiers_mult
+        habitability_floor_add = 0.1
+    }
+}
+
+kren_spine = {
+    icon = "GFX_specimen_vultaum_vr_video_game"
+    type = aesthetic_wonder
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = epic
+    }
+
+    triggered_country_modifier = {
+        mult = value:aesthetic_wonder_specimens_modifiers_mult
+        army_damage_mult = 0.09
+    }
+}
+
+xenoculture_databank = {
+    icon = "GFX_specimen_vault_of_polaris"
+    type = historical_item
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = rare
+    }
+
+    triggered_country_modifier = {
+        mult = value:historical_item_specimens_modifiers_mult
+        empire_size_pops_mult = -0.03
+    }
+}
+
+novian_medal = {
+    icon = "GFX_specimen_last_general_badge"
+    type = historical_item
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = rare
+    }
+
+    triggered_country_modifier = {
+        mult = value:historical_item_specimens_modifiers_mult
+        army_experience_gain_mult = 0.22
+    }
+}
+
+agartha_toy = {
+    icon = "GFX_specimen_destroyed_mascot_of_colony"
+    type = aesthetic_wonder
+
+    inline_script = {
+        script = "grand_archive/set_specimen_rarity"
+        RARITY = epic
+    }
+
+    triggered_country_modifier = {
+        mult = value:aesthetic_wonder_specimens_modifiers_mult
+        planet_amenities_mult = 0.04
+    }
+}

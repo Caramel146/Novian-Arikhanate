@@ -1,0 +1,340 @@
+# # Gatzo System
+giga_paluush_initializer = {
+    name = gatzo
+    class = "sc_k"
+    flags = { Paluush_system giga_system_six abandoned_gateway }
+    asteroid_belt = { type = rocky_asteroid_belt radius = 30 }
+
+    planet = {
+        name = gatzo
+        class = "pc_k_star"
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 20
+        has_ring = no
+    }
+
+    planet = {
+        name = rp-189
+        class = "pc_asteroid"
+        orbit_distance = 30
+        orbit_angle = 15
+        size = 1
+        has_ring = no
+
+        init_effect = {
+            save_global_event_target_as = gatzo_asteroid_1
+        }
+    }
+
+    planet = {
+        name = rp-123
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = 47
+        size = 2
+        has_ring = no
+
+        init_effect = {
+            save_global_event_target_as = gatzo_asteroid_2
+        }
+    }
+
+    planet = {
+        name = rp-156
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = -145
+        size = 3
+        has_ring = no
+
+        init_effect = {
+            save_global_event_target_as = gatzo_asteroid_3
+        }
+    }
+
+    planet = {
+        name = potradus
+        class = "pc_barren"
+        orbit_distance = 25
+        orbit_angle = 47
+        size = 21
+        has_ring = yes
+
+        init_effect = {
+            save_global_event_target_as = potradus
+            save_event_target_as = ignitor_planet
+            set_planet_flag = hot_zone				# Real Space (Prevents Rings)
+            giga_set_has_mega_flag = yes
+            set_planet_flag = giga_terraforming_megastructure
+        }
+    }
+
+    planet = {
+        name = katzenland
+        class = "pc_katzenland"
+        orbit_distance = 25
+        orbit_angle = 71
+        size = 24
+        has_ring = no
+        init_effect = {
+            add_modifier = { modifier = "katzenland_planet" days = -1 }
+            clear_blockers = yes
+            prevent_anomaly = yes
+            set_planet_flag = katzenland
+            setup_katzenland_planet = yes
+            save_global_event_target_as = katzenland
+        }
+
+        moon = {
+            name = nienet
+            class = "pc_barren_cold"
+            entity = "nuked_planet_01_entity"
+            size = 12
+            orbit_distance = 10
+            orbit_angle = 40
+            has_ring = no
+            init_effect = {
+                save_global_event_target_as = nienet
+            }
+        }
+
+        moon = {
+            name = paluushia
+            class = "pc_continental"
+            size = 16
+            starting_planet = yes
+            orbit_distance = 5
+            orbit_angle = 140
+            has_ring = no
+            init_effect = {
+                prevent_anomaly = yes
+                save_global_event_target_as = paluushia
+                generate_paluush_primitives_on_planet = yes
+                set_planet_flag = paluushia
+                set_planet_flag = forbid_guillis_planet_modifiers
+                add_modifier = { modifier = "paluush_shield" days = -1 }
+            }
+        }
+    }
+
+    planet = {
+        name = forcinia
+        class = "pc_molten"
+        orbit_distance = 25
+        orbit_angle = 74
+        size = 10
+        has_ring = yes
+
+        init_effect = {
+            save_global_event_target_as = forcinia
+        }
+
+        moon = {
+            name = ruspiayama
+            class = "pc_barren_cold"
+            size = 7
+            orbit_distance = 7
+            orbit_angle = 40
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = vicke
+        class = "pc_frozen"
+        orbit_distance = 25
+        orbit_angle = 17
+        size = 14
+        has_ring = no
+
+        init_effect = {
+            save_global_event_target_as = vicke
+        }
+    }
+
+    planet = {
+        name = teratre
+        class = "pc_barren"
+        orbit_distance = 25
+        orbit_angle = 85
+        size = 17
+        has_ring = no
+
+        init_effect = {
+            save_global_event_target_as = teratre
+        }
+
+        moon = {
+            name = vertrois
+            class = "pc_barren_cold"
+            size = 5
+            orbit_distance = 10
+            orbit_angle = 110
+            has_ring = no
+        }
+    }
+
+    init_effect = {
+        spawn_megastructure = { type = "terraform_barren_2_disabled" coords_from = event_target:ignitor_planet }
+        if = {
+            limit = {
+                check_galaxy_setup_value = { setting = num_gateways value > 0}
+            }
+            spawn_megastructure = { type = "gateway_ruined" random_pos = yes orbit_angle = 360 }
+        }
+    }
+}
+
+
+# Titan's Cradle
+giga_system_one_init_04 = {
+    class = "sc_neutron_star"
+    usage = misc_system_init
+    usage_odds = 100
+    flags = { giga_system_four }
+    name = titan's_cradle
+    max_instances = 1
+    scaled_spawn_chance = 3
+
+    planet = {
+        name = ackai
+        class = pc_neutron_star
+        orbit_distance = 0
+        init_effect = {
+            giga_field_debris = yes
+            save_event_target_as = neutroniumgigaforge_star
+            set_planet_flag = hot_zone				# Real Space (Prevents Rings)
+            giga_set_has_mega_flag = yes
+        }
+    }
+
+    change_orbit = 30
+
+    planet = {
+        class = pc_shattered
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+    }
+
+    planet = {
+        class = pc_broken
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+        init_effect = {
+            giga_field_debris = yes
+
+            # Create Defense Fleet
+            save_event_target_as = defensefleet_planet
+            create_country = { name = "Forgotten Titans" type = faction }
+            last_created_country = {
+                create_fleet = {
+                    name = "Antique Titans"
+                    settings = { spawn_debris = no }
+                    effect = {
+                        set_formation_scale = 3
+                        create_ship = { name = "Wings of Old"			design = "Antique Titan" }
+                        create_ship = { name = "Fallen Guardian"		design = "Antique Titan" }
+                        create_ship = { name = "The Sword"				design = "Ancient Protector" }
+                        create_ship = { name = "Golden Trident"			design = "Ancient Protector" }
+                        create_ship = { name = "Almighty Wrath"			design = "Ancient Protector" }
+                        create_ship = { name = "Kitten"					design = "Ancient Protector" }
+                        create_ship = { name = "Striker of Devastation"	design = "Ancient Protector" }
+                        create_ship = { name = "Striker Jones"			design = "Ancient Protector" }
+                        set_owner = prev
+                        set_location = event_target:defensefleet_planet
+                    }
+                }
+            }
+        }
+    }
+
+    planet = {
+        class = pc_shattered
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+        init_effect = {
+            save_event_target_as = testsite_planet
+            giga_field_debris = yes
+            set_planet_flag = hot_zone				# Real Space (Prevents Rings)
+            giga_set_has_mega_flag = yes
+        }
+    }
+
+    planet = {
+        class = pc_giga_orbital
+        size = 20
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+        init_effect = {
+            giga_field_debris = yes
+            set_planet_flag = titan_orbital_elysium
+            set_planet_flag = hot_zone
+            set_planet_flag = megastructure
+
+            while = {
+                count = 3
+                add_blocker = {
+                    type = d_city_ruins
+                }
+            }
+            while = {
+                count = 4
+                add_blocker = {
+                    type = d_ruined_arcology
+                }
+            }
+            while = {
+                count = 3
+                add_blocker = {
+                    type = d_radioactive_wasteland
+                }
+            }
+            add_blocker = {
+                type = d_dangerous_wildlife_blocker
+            }
+            while = {
+                count = 2
+                add_blocker = {
+                    type = d_dense_jungle
+                }
+            }
+        }
+    }
+
+    planet = {
+        class = pc_gas_giant
+        orbit_distance = 25
+        has_ring = no
+        orbit_angle = { min = 90 max = 270 }
+        init_effect = { giga_field_debris = yes }
+
+        moon = {
+            class = "pc_barren"
+            size = 6
+            orbit_distance = 15
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+        }
+
+        moon = {
+            class = "pc_barren_cold"
+            size = 9
+            orbit_distance = 5
+            orbit_angle = { min = 90 max = 270 }
+            has_ring = no
+        }
+    }
+
+    planet = {
+        class = pc_molten
+        orbit_distance = 25
+        init_effect = { giga_field_debris = yes }
+    }
+
+    init_effect = {
+        giga_field_system_debris = yes
+        spawn_megastructure = { type = "neutronium_gigaforge_ruined"	coords_from = event_target:neutroniumgigaforge_star }
+        spawn_megastructure = { type = "macro_test_site_ruined"	coords_from = event_target:testsite_planet }
+    }
+}

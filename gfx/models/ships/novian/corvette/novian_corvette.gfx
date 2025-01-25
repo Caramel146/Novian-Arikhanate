@@ -1,0 +1,8 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "novian_corvette_ship_mesh"
+		file = "gfx/models/ships/novian/corvette/novian_corvette.mesh"
+		scale = 1.0
+	}
+}

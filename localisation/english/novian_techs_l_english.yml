@@ -1,0 +1,13 @@
+﻿l_english:
+  novian_strange_matter_harvesting:0 "Strange Matter Harvesting"
+  novian_strange_matter_harvesting_desc:0 "By blah blah blah replace this with technobabble maybe ask uknwn or someone idc harvest strange matter"
+  novian_strange_matter_storing:0 "Strange Matter Collection"
+  novian_strange_matter_storing_desc:0 "By blah blah technobabble here we can store harvested strange matter."
+
+  tech_novian_cybernetics:0 "Novian Hypermilitarized Cybernetics"
+  tech_novian_cybernetics_desc:0 "The Novians have achieved a mastery of cybernetics, especially in their military applications - even their average citizen is an augmented killing machine."
+  allow_novian_cybernetics_traits:0 "§HUnlocks Feature:§! Novian Cybernetic Traits"
+  allow_novian_cybernetics_traits_desc:0 "Unlocks §RNovian§! Cybernetic Traits for Species Modification."
+
+  tech_asteroid_craft:0 "Mobile Assault Asteroids"
+  tech_asteroid_craft_desc:0 "Our sociologists are baffled as to why we didn't think of this sooner."

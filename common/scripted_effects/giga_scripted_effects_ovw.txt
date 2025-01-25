@@ -1,0 +1,49 @@
+#Not changed yet
+remove_flags_galactic_core = {
+    remove_global_flag = giga_core_disabled
+    remove_global_flag = giga_core_inactive
+    remove_global_flag = giga_core_inactive_empty
+    remove_global_flag = giga_core_inactive_aeternum
+    remove_global_flag = giga_core_active
+    remove_global_flag = giga_core_active_empty #new, unused
+    remove_global_flag = giga_core_active_novian #new, unused
+    remove_global_flag = giga_core_shuffle
+    remove_global_flag = giga_core_always_empty
+}
+
+#Put below remove_flags_aeternum_difficulty
+remove_flags_novian_difficulty = {
+    remove_global_flag = giga_core_novian_1
+    remove_global_flag = giga_core_novian_2
+    remove_global_flag = giga_core_novian_3
+    remove_global_flag = giga_core_novian_4
+    remove_global_flag = giga_core_novian_5
+}
+
+remove_all_menu_flags = { #condensed and subdivided also now includes ALL settings since its no longer bound to all the megastructure capacity buttons and is only really used for presets
+    if = {#self explanatory but if its likely to break something if changed after the game has started put it in here
+        limit = {
+            NOT = {
+                has_global_flag = giga_game_started
+            }
+        }
+        remove_flags_giga_fe = yes
+        remove_flags_aeternum_difficulty = yes
+        remove_flags_novian_difficulty = yes
+        remove_flags_katzen = yes
+        remove_flags_galactic_core = yes
+        remove_all_flags_unique_systems = yes
+        remove_flags_compound = yes
+        remove_flags_blokkat = yes
+        remove_variables_sirens = yes
+        remove_flags_ehof_ai = yes #compound and Ehof flags were missing
+        remove_flags_buildcap = yes
+        remove_flags_galactic_fed = yes
+        remove_variable_player_megas = yes
+        remove_variable_ai_megas = yes
+    }
+    remove_all_mega_flags = yes
+    remove_flags_scaling = yes
+    remove_flags_achievements = yes
+    remove_global_flag = giga_disable_influence_upkeep
+}

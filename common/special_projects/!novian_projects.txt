@@ -1,0 +1,245 @@
+#only these two projects are overwritten, will need some changes if/when it gets integrated into gigas (menu stuff)
+special_project = {
+	key = "INVESTIGATE_GALACTIC_CORE"
+	cost = 100 #normally 10000
+	tech_department = physics_technology
+	picture = GFX_evt_black_hole
+	location = no
+	timelimit = 3600
+	event_scope = country_event
+	on_success = {
+		if = {
+			limit = {
+				exists = THIS
+				NOR = {
+					has_global_flag = giga_core_birch
+					has_global_flag = giga_core_qso
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = giga_core_inactive
+				}
+				set_global_flag = giga_core_birch
+				random = {
+					chance = 50
+					set_global_flag = giga_core_aeternum
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_flag = giga_core_always_empty
+				}
+				random_list = {
+					50 = {
+						set_global_flag = giga_core_birch
+					}
+					50 = {
+						set_global_flag = giga_core_qso
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_flag = giga_core_active
+				}
+				set_global_flag = giga_core_qso
+			}
+			else_if = {
+				limit = {
+					has_global_flag = giga_core_inactive_empty
+				}
+				set_global_flag = giga_core_birch
+			}
+			else_if = {
+				limit = {
+					has_global_flag = giga_core_inactive_aeternum
+				}
+				set_global_flag = giga_core_birch
+				set_global_flag = giga_core_aeternum
+			}
+			else_if = {
+				limit = {
+					NOR = {
+						has_global_flag = giga_core_inactive
+						has_global_flag = giga_core_active
+						has_global_flag = giga_core_inactive_empty
+						has_global_flag = giga_core_inactive_aeternum
+						has_global_flag = giga_core_always_empty
+					}
+				}
+				random_list = {
+					66 = {
+						set_global_flag = giga_core_birch
+						random = {
+							chance = 50
+							set_global_flag = giga_core_aeternum
+						}
+					}
+					33 = {
+						set_global_flag = giga_core_qso
+					}
+				}
+			}
+			#temp novian
+			remove_global_flag = giga_core_birch
+			remove_global_flag = giga_core_aeternum
+			set_global_flag = giga_core_qso
+			set_global_flag = giga_core_novian
+			THIS = {
+				country_event = {
+					id = giga_mega.403
+				}
+			}
+		}
+	}
+	on_fail = {
+		if = {
+			limit = {
+				exists = THIS
+				NOR = {
+					has_global_flag = giga_core_birch
+					has_global_flag = giga_core_qso
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = giga_core_inactive
+				}
+				set_global_flag = giga_core_birch
+				random = {
+					chance = 50
+					set_global_flag = giga_core_aeternum
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_flag = giga_core_always_empty
+				}
+				random_list = {
+					50 = {
+						set_global_flag = giga_core_birch
+					}
+					50 = {
+						set_global_flag = giga_core_qso
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_flag = giga_core_active
+				}
+				set_global_flag = giga_core_qso
+			}
+			else_if = {
+				limit = {
+					has_global_flag = giga_core_inactive_empty
+				}
+				set_global_flag = giga_core_birch
+			}
+			else_if = {
+				limit = {
+					has_global_flag = giga_core_inactive_aeternum
+				}
+				set_global_flag = giga_core_birch
+				set_global_flag = giga_core_aeternum
+			}
+			else_if = {
+				limit = {
+					NOR = {
+						has_global_flag = giga_core_inactive
+						has_global_flag = giga_core_active
+						has_global_flag = giga_core_inactive_empty
+						has_global_flag = giga_core_inactive_aeternum
+						has_global_flag = giga_core_always_empty
+					}
+				}
+				random_list = {
+					66 = {
+						set_global_flag = giga_core_birch
+						random = {
+							chance = 50
+							set_global_flag = giga_core_aeternum
+						}
+					}
+					33 = {
+						set_global_flag = giga_core_qso
+					}
+				}
+			}
+			#temp novian
+			remove_global_flag = giga_core_birch
+			remove_global_flag = giga_core_aeternum
+			set_global_flag = giga_core_qso
+			set_global_flag = giga_core_novian
+			THIS = {
+				country_event = {
+					id = giga_mega.403
+				}
+			}
+		}
+	}
+}
+
+#If your guess on the purpose is correct, this mechanic has been removed anyway.
+# special_project = { #i have no clue what this is but i think it might be for finding the hyperlanes with the birch origin, not gonna touch it just incase
+# special_project = {
+# 	key = "INVESTIGATE_GALACTIC_CORE_LINK"
+# 	cost = 10000
+# 	tech_department = physics_technology
+# 	picture = GFX_evt_black_hole
+# 	location = no
+# 	timelimit = -1
+# 	event_scope = country_event
+# 	on_success = {
+# 		set_country_flag = birch_completed_hyperlane_project
+# 		country_event = {
+# 			id = giga_birch.003
+# 		}
+# 	}
+# }
+
+special_project = {
+	key = "STUDY_NOVIAN_TECH"
+	cost = 15000
+	tech_department = physics_technology
+	picture = GFX_evt_vortex
+	location = no
+	timelimit = -1
+	event_scope = country_event
+	on_success = {
+		country_event = {
+			id = giga_novian.10001
+		}
+	}
+}
+
+special_project = {
+	key = "STUDY_NOVIAN_SOCIETY"
+	cost = 15000
+	tech_department = society_technology
+	picture = GFX_evt_in_the_dark
+	location = no
+	timelimit = -1
+	event_scope = country_event
+	on_success = {
+		country_event = {
+			id = giga_novian.10002
+		}
+	}
+}
+
+special_project = {
+	key = "STUDY_NOVIAN_DESIGNS"
+	cost = 15000
+	tech_department = engineering_technology
+	picture = GFX_evt_unknown_ships
+	location = no
+	timelimit = -1
+	event_scope = country_event
+	on_success = {
+		country_event = {
+			id = giga_novian.10003
+		}
+	}
+}

@@ -1,0 +1,65 @@
+﻿l_english:
+ # leader_trait_admiral_novian:0 "Novian Military Augments"
+ # leader_trait_admiral_novian_desc:0 "This leader is equipped with precursor military cybernetics that, among other things, can run sophisticated battlefield simulations based on millennia of data from ancient wars. The internal algorithms weigh inflicting enemy casualties much higher than avoiding losses."
+ # leader_trait_general_novian:0 "$leader_trait_admiral_novian$"
+ # leader_trait_general_novian_desc:0 "This leader is equipped with precursor military cybernetics which, among other things, provide masterful, real-time battle tactics ranging from strategic positioning to opportunities for psychological warfare. Scorched earth tactics receive disproportionate priority."
+ # leader_trait_governor_novian:0 "$leader_trait_admiral_novian$"
+ # leader_trait_governor_novian_desc:0 "This leader is equipped with precursor military cybernetics that, among other things, can devise counter-terrorism operations based on intel gathered from uplinks to surveillance systems, as well as provide running assessments of the standings of notable power brokers... and if necessary, means of sabotage."
+ # leader_trait_scientist_novian:0 "$leader_trait_admiral_novian$"
+ # leader_trait_scientist_novian_desc:0 "This leader has been heavily augmented with cybernetic implants, which, among other things, seemlessly integrate low-level AI directly into neural activity, drastically increasing cognitive capabilities. Generative capabilities of the AI use training sets compiled entirely from military research."
+ # leader_trait_ruler_novian:0 "$leader_trait_admiral_novian$"
+ # leader_trait_ruler_novian_desc:0 "This leader has been heavily augmented with precursor military cybernetics that, among other things, have vast suites of programs to assist in assessing the galactic political landscape, maintaining long-term hegemony, conducting espionage, and managing wartime logistics."
+ leader_trait_novian:0 "Novian Military Augments"
+ leader_trait_novian_desc:0 "This leader is equipped with first-class military cybernetics from a technologically advanced, but rabidly violent precursor civilization. They not only enhance cognition, but also carry extensive archives of knowledge and myriad sophisticated programs."
+
+ trait_arikhan: "REPLACE_ME"
+ trait_arikhan_desc: "REPLACE_ME"
+ trait_governor_capital: "REPLACE_ME"
+ trait_governor_capital_desc: "REPLACE_ME"
+ trait_governor_temple: "REPLACE_ME"
+ trait_governor_temple_desc: "REPLACE_ME"
+ trait_governor_shipyard: "REPLACE_ME"
+ trait_governor_shipyard_desc: "REPLACE_ME"
+ trait_governor_quashab: "REPLACE_ME"
+ trait_governor_quashab_desc: "REPLACE_ME"
+ trait_governor_agartha: "REPLACE_ME"
+ trait_governor_agartha_desc: "REPLACE_ME"
+
+ trait_novian_alloys:0 "Integrated Nano-Forge"
+ trait_novian_alloys_desc:0 "§RThis cybernetic species is fitted with portable-sized fusion torches, arc welders, and other forge machinery, enhancing metallurgical proficiency and allowing for battlefield repair of equipment.§!"
+ ##Robot/cyborg trait for alloys boost, +15%, 1 trait point and 0.5 energy upkeep. Boost army health by 10%.
+
+ trait_novian_consumer_goods:0 "Integrated Nano-Printers"
+ trait_novian_consumer_goods_desc:0 "§RA product of Novian cybernetics research, this cybernetic species is outfitted with portable-sized industrial nano-printers, capable of fabricating complex parts that would once require large machinery.§!"
+ ##Robot/cyborg trait for consumer goods boost, +15%, 1 trait point and 0.5 energy upkeep. This is tech made by player character, the Novians don't use this trait.
+
+ trait_novian_army:0 "Novian Military Augments"
+ trait_novian_army_desc:0 "§RThis cybernetic species is fitted with a vast suite of integrated precursor weaponry platforms and war protocols.§!"
+ ##Something enormous like +50% to army damage and maybe a smaller boost to army health (25%?), along with unlocking Novian leader traits. 2 trait points, +0.5 energy upkeep
+
+ trait_novian_assembly:0 "Cybernetic Overcompatibility"
+ trait_novian_assembly_desc:0 "§RThis species' biology has been genetically engineered to be unnaturally receptive to cybernetic augmentation, to the extent of accepting nanotech implants in the fetal stage without immune system rejection. This, however, trades-off with a weakened immune system without supplementation with in-vitro augmentations, making natural reproduction more difficult.§!"
+ ##Cybernetic form of Vat-Grown. 2 trait point cost, no upkeep.
+
+ trait_novian_fanaticism:0 "Fanaticism Implants"
+ trait_novian_fanaticism_desc:0 "§RA combination of a heavyhanded rewiring of aggression centers along with a ready supply of a synthesized arcane hormonal mixture breeds a constant state of rabid, jingoistic fervor in this cyborg species.§!" #Probably xenophobe + militarist ethics attraction, and unity buff. Maybe army morale buff too. 1 trait points, 0.5 energy upkeep
+
+ trait_novian_overcharge:0 "Hypercharged Systems"
+ trait_novian_overcharge_desc:0 "§RThe cybernetic architecture of this species is in a constant state of overcharge, vastly expanding the number of systems they can support at the cost of exorbitant power usage.§!"  #+2 energy upkeep, but -4 trait point cost. Maybe buff resources by a bit - should be a staple trait.
+
+ trait_novian_lobotomy:0 "Servitor Drone"
+ trait_novian_lobotomy_desc:0 "§RThe minds and bodies of this species have been cybernetically resculpted into obedient drones. Supplemented with low level integrated AI, they can perform certain higher complexity tasks but remain outwardly devoid of any personality or sense of self.§!" #Same capabilities as Droids? 1 trait point cost, 0.5 energy upkeep
+ TRAIT_NOVIAN_LOBOTOMY_EFFECT:2 "$mod_planet_jobs_produces_mult$: §G+5%§!\nIncreases $r_energy$ Upkeep by §R+0.5§!\nCannot generate §YLeaders§!\nCannot be employed in §Y$pop_cat_ruler$ Jobs§!\n\nSome complex £pop_cat_specialist£ §Y$pop_cat_specialist$ Jobs§! such as £job_researcher£ §YResearch§! can only be performed if AI is not outlawed.§!"
+
+ NOVIAN_CYBORG_ENERGY_UPKEEP_EFFECT:0 "Increases $r_energy$ Upkeep by §R+0.5§!"
+ TRAIT_NOVIAN_OVERCHARGED_UPKEEP_EFFECT:0 "Increases $r_energy$ Upkeep by §R+2§!"
+
+ trait_pc_novian_preference:0 "Arikian World Preference"
+ trait_pc_novian_preference_desc:0 "The Novians have a very unique biology, taking the word extremophile to its extreme. They are thus unable to live on any world that other species would consider habitable, but in turn are able to live on worlds others would consider to be uninhabitable."
+ mod_pc_novian_habitability:0 "Arikian World Habitability"
+ mod_pc_novian_habitability_desc:0 "REPLACE_ME"
+
+ trait_pc_agartha_preference:0 "Agartha World Preference"
+ trait_pc_agartha_preference_desc:0 "REPLACE_ME"
+ mod_pc_agartha_habitability:0 "Agartha World Habitability"
+ mod_pc_agartha_habitability_desc:0 "REPLACE_ME"

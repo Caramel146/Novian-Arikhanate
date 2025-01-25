@@ -1,0 +1,15 @@
+pm_agartha_scavenger_program = {
+    spawn_chance = {
+        #None - From event
+    }
+
+    modifier = "agartha_scavenger_program"
+}
+
+pm_agartha_scavenger_program_gestalt = {
+    spawn_chance = {
+        #None - From event
+    }
+
+    modifier = "agartha_scavenger_program_gestalt"
+}

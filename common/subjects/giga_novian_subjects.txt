@@ -1,0 +1,31 @@
+@collaborator_tech_threshold = 0.4
+@collaborator_tech_switch = 0.5
+
+novian_collaborator = {
+    potential = { 	#if possible to select in diplomatic interactions
+        from = { is_country_type = novian_arikhanate }
+    }
+    become_vassal = 	#trigger when it converts into a vassal
+    diplo_threat 	#threat generated from diplomatically vassalising this type of subject
+    effect #executes when subject relation is created
+    can_be_integrated = no
+    can_switch_to 	#a list of other subject types this type can switch to
+
+    #overlord_resources = 	#resources cost, upkeep and production paid by and to the overlord
+    #subject_resources = 	#resources cost, upkeep and production paid by and to the subject
+
+    #joins_overlord_wars = 	#joins in if overlord goes to war (defensive or offensive)
+    #calls_overlord_to_war = 	#calls overlord to war (defensive only)
+    #overlord_becomes_warleader = 	#If overlord takes over as warleader. Default true
+
+    #can_do_diplomacy =  	#can do some limited diplomacy
+    can_expand = yes 	#allowed to build outposts to expand borders
+    gets_access(yes) 	#gets overlord border access
+    gets_sensor(yes) 	#gets overlord sensors
+    intel_from_being_subject = 30
+    intel_from_being_overlord = 100
+
+    research_agreement = yes
+    research_sharing = yes		#for tech sharing modifier
+    tech_cost_mult = -0.40 	#tech cost multiplier if overlord has a tech
+}

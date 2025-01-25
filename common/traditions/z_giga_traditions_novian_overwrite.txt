@@ -1,0 +1,21 @@
+tr_gigaengineering_anticrisis = {
+	possible = {
+		has_tradition = tr_gigaengineering_power_cores
+	}
+
+	modifier = {
+		damage_vs_country_type_katzenartig_imperium_mult = 0.15
+		damage_vs_country_type_hke_country_mult = 0.15
+		damage_vs_country_type_dormant_aeternum_mult = 0.15
+		damage_vs_country_type_novian_arikhanate_mult = 0.15 #same as in ascension perk file
+		damage_vs_country_type_novian_raiders_mult = 0.15
+		damage_vs_country_type_compound_empire_mult = 0.15
+		damage_vs_country_type_giga_eawaf_sirens_mult = 0.15
+		damage_vs_country_type_blokkat_stripminers_mult = 0.15
+		category_blokkats_research_speed_mult = 0.15
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

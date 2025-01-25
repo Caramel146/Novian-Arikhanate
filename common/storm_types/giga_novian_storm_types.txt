@@ -1,0 +1,97 @@
+# #Novian "Tapestry of Souls" Shroud Storm.
+# tapestry_storm = {
+#     inline_script = "cosmic_storms/BaseModifier" #Only Nexus doesn't have
+#
+#     inline_script = {
+#         script = "cosmic_storms/StormConfig"
+#         MIN_RADIUS = 25 #(non-Nexus), 55 (Nexus)
+#         MAX_RADIUS = 50 #(non-Nexus), 70 (Nexus)
+#         MIN_RANGE = value:storm_range_min
+#         MAX_RANGE = value:storm_range_max
+#         STORM_SPEED = 0.02 #(non-Nexus), 0.1 (Nexus)
+#         ACTIVATION_PERIOD_IN_MONTHS = 12
+#         MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation #(non-Nexus), @nexus_storm_monthly_devastation (Nexus)
+#     }
+#
+#     occlude_system = yes #only for Celestial
+#     affect_hp_regen = yes #particle, nexus
+#     affect_armor_regen = yes #particle, nexus
+#     affect_shield_regen = yes #electric, particle, nexus
+#
+#     description = tapestry_storm_lore_description
+#     custom_tooltip = "tapestry_storm_tt" #(this line is only used for the solar and celestial storms)
+#
+#     spawn_weight = { base = 0 }
+#     on_start = {
+#         every_system_within_storm = {
+#             added_to_storm_base_effect = yes
+#             tapestry_storm_add = yes #in cosmic_storms_scripted_effects.txt
+#         }
+#     }
+#
+#     on_finished = {
+#         every_system_within_storm = {
+#             removed_from_storm_base_effect = yes
+#             tapestry_storm_remove = yes
+#         }
+#     }
+#
+#     on_moved = {
+#         every_system_added_to_storm = {
+#             added_to_storm_base_effect = yes
+#             tapestry_storm_add = yes
+#         }
+#         every_system_removed_from_storm = {
+#             removed_from_storm_base_effect = yes
+#             tapestry_storm_remove = yes
+#         }
+#     }
+#
+#     cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
+#     cosmic_storm_texture_color_path = "gfx/map/storms/tapestry_storm_color.dds"
+#     cosmic_storm_event_sprite = "GFX_tapestry_storm"
+#     icon = GFX_planetview_storm_tapestry_modifier_frame
+#
+#     cosmic_storm_texture_lightning_paths = {
+#         "gfx/map/storms/lightning/lightning_small_storm_01.dds" #unused by Electric/Nexus
+#         "gfx/map/storms/lightning/lightning_small_storm_02.dds" #unused by Electric/Nexus
+#         "gfx/map/storms/lightning/lightning_mid_storm_01.dds"
+#         "gfx/map/storms/lightning/lightning_mid_storm_02.dds"
+#         "gfx/map/storms/lightning/lightning_big_storm_01.dds" #only used by Electric/Nexus
+#         "gfx/map/storms/lightning/lightning_big_storm_02.dds" #only used by Electric/Nexus
+#     }
+#
+#     cosmic_storm_galaxy_lightning_time = 10 #(Shroud, Solar), 7 (Celestial, Gravity, Magnetic, Particle), 5 (Nexus, Electrical)
+#     cosmic_storm_galaxy_max_opacity = 0.4 #(Shroud, Nexus, Solar, Magneic, Particle, Electric), 0.5 (Celestial, Gravity)
+#
+#     #show_notification = { #only for Nexus
+#     #    NOT = { has_country_flag = is_nexus_spawner }
+#     #}
+# }
+#
+#
+# #Effect ideas:
+# #Crack worlds
+# #Shroud worlds
+# #Devastate worlds
+# #Damage and destroy ships, stations and starbases
+# #Impede visibility and movement
+# #Finally eating all the systems.
+# #Mass schizophrenia.
+# #More effects the more psychic the victim (Novians get Shroudbreakered).
+# #Variable effects, the values changing almost randomly, chance of changing per month?
+# #Use of cnilscale to mitigate the Shroud effects (ofc the Novians try this too).
+#
+#
+# #=== common/dust_clouds/giga_novian_dust_clouds.txt ===
+# #Tapestry Storm Type - variant for those without Storms DLC
+# #Based on content in 00_dust_clouds.txt
+#
+#
+# #Custom tooltips for effects.
+# # Some modifiers with custom tooltips have show_only_custom_tooltip = no
+# # Modifiers multiplied by variables.
+# # Triggered fleet modifier with potential of always = yes that applies "nexus_storm_modifier = 1".
+# # Consider is_colony and is_colonizable.
+# # Colonies with system_has_negating_storm_building = no have debuffs multed by storm_resistant_production_multiplier.
+# # Modifiers triggered based on factors such as whether the empire has breached the Shroud.

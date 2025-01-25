@@ -1,0 +1,55 @@
+wg_novian_conquest = { #Consider drawing on loc, icons etc for hyperweapon stuff for this wg and cb
+	casus_belli = cb_novian_attacker
+
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_novian_defence
+
+	allowed_peace_offers = {
+		surrender
+	}
+
+	surrender_acceptance = -5000
+
+	war_exhaustion = 0
+
+	potential = {
+		always = no
+	}
+
+	possible = {
+		always = yes
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+wg_novian_defence = {
+	casus_belli = cb_novian_defender
+
+	hide_if_no_cb = yes
+	total_war = yes
+	set_defender_wargoal = wg_novian_conquest
+
+	allowed_peace_offers = {
+		surrender
+	}
+
+	war_exhaustion = 0
+	
+	surrender_acceptance = -5000
+
+	potential = {
+		always = no
+	}
+
+	possible = {
+		always = yes
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

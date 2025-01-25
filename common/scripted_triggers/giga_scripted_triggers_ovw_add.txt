@@ -1,0 +1,102 @@
+giga_uses_city_district = {
+    or = {
+        uses_district_set = giga_planetary_computer
+        uses_district_set = giga_equatorial_shipyard
+        AND = {
+            uses_district_set = giga_orbital
+            OR = {
+                has_planet_flag = cat_orbital_elysium
+                has_planet_flag = titan_orbital_elysium
+                has_planet_flag = novian_orbital_conquered
+            }
+        }
+        uses_district_set = giga_ancient_elysium
+    }
+}
+
+giga_uses_admin_district = {
+    or = {
+        AND = {
+            uses_district_set = giga_orbital
+            OR = {
+                has_planet_flag = cat_orbital_elysium
+                has_planet_flag = titan_orbital_elysium
+                has_planet_flag = novian_orbital_conquered
+            }
+        }
+        uses_district_set = giga_ancient_elysium
+    }
+}
+
+is_giga_crisis_faction = {
+    OR = {
+        is_country_type = katzenartig_imperium
+        is_country_type = dormant_aeternum
+        is_country_type = novian_arikhanate
+        is_country_type = swarm_fleeing_blokkats
+        is_country_type = compound_empire
+        is_country_type = awakaned_corrona
+        is_country_type = giga_hypersiphon_major_incursion
+        AND = {
+            has_country_flag = giga_pouchkinn_meopa_fe
+            is_country_type = awakened_fallen_empire
+            has_ai_personality = fallen_empire_awoken_pouchkinn
+        }
+        is_blokkat_country_type = yes
+    }
+}
+
+giga_habitable_structure = {
+    OR = {
+        giga_is_ringworld = yes
+        giga_is_habitat = yes
+        giga_is_habitable_gas_giant = yes
+        is_non_giga_habitat = yes
+        giga_is_birch_world = yes
+        is_planet_class = pc_equatorial_shipyard
+        # is_planet_class = pc_virtual_reality
+        # is_planet_class = pc_virtual_industry
+        # is_planet_class = pc_virtual_stellar_industry
+        is_planet_class = pc_alderson_slice_gaia
+        is_planet_class = pc_alderson_slice_pc
+        is_planet_class = pc_alderson_slice_ecu
+        is_planet_class = pc_alderson_slice_hive
+        is_planet_class = pc_alderson_slice_machine
+        is_planet_class = pc_pouchkinn_black_hole
+        is_planet_class = pc_giga_orbital
+        is_planet_class = pc_agartha
+    }
+}
+
+#Under subsection "# Habitable / pseudo hab"
+giga_is_pc_novian = {
+    is_planet_class = pc_novian
+}
+giga_is_pc_agartha = {
+    is_planet_class = pc_agartha
+}
+
+hyperlane_eligible = {
+    NOR = {
+        is_same_value = prev
+        has_hyperlane_to = prev
+        giga_compat_hyperlane_exclude = yes
+        giga_is_core_system = yes
+        has_star_flag = has_new_hyperlane
+        cohesive_system = yes
+        compound_cluster = yes
+        annihilator_system = yes
+        urmazin_system = yes
+    }
+}
+
+giga_is_core_system = {
+    OR = {
+        has_star_flag = giga_inner
+        has_star_flag = giga_outer_01
+        has_star_flag = giga_outer_02
+        has_star_flag = giga_outer_03
+        has_star_flag = giga_galactic_center
+        has_star_flag = giga_novian_system
+    }
+}

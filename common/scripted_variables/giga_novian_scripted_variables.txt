@@ -1,0 +1,55 @@
+#Sets the scaling values for easy access here, so that a bunch of code doesn't have to be changed everywhere
+
+#Relaxed
+# @easyKatzenWeapons = 0
+# @easyKatzenOther = 0
+
+#Default
+# @defaultKatzenWeapons = 0.01
+# @defaultKatzenOther = 0.01
+
+#Wild Ride
+# @wildRideKatzenWeapons = 0.025
+# @wildRideKatzenOther = 0.05
+
+#Stellarite
+# @stellariteKatzenWeapons = 0.03
+# @stellariteKatzenOther = 0.06
+
+#Improbable
+# @improbableKatzenWeapons = 0.04
+# @improbableKatzenOther = 0.07
+
+# EOF
+
+#@kaiser_warforge_build_capacity = 8
+#Cost values
+# @min_kaiser_ship_cost = 250
+@novian_corvette_cost = 50
+@novian_escort_cost = 200
+@novian_asteroidcraft_cost = 2000
+@novian_juggernaut_cost = 5000
+@novian_moon_cost = 10000
+
+# @kaiser_panzer_cost = 250
+# @kaiser_bomber_cost = 500
+# @kaiser_cruiser_cost = 1000
+# @kaiser_submarine_cost = 500
+# @kaiser_moon_cost = 0
+# @kaiser_mega_cost = 2000
+# @kaiser_terraform_cost = 100
+
+@novian_corvette_upkeep = 0.1
+@novian_escort_upkeep = 1
+@novian_asteroidcraft_upkeep = 3
+@novian_juggernaut_upkeep = 5
+@novian_moon_upkeep = 10
+@novian_hypership_upkeep = 50
+
+#Upkeeps
+# @min_kaiser_ship_upkeep = 0.5
+# @kaiser_panzer_upkeep = 0.5
+# @kaiser_bomber_upkeep = 1
+# @kaiser_cruiser_upkeep = 2
+# @kaiser_moon_upkeep = 0
+# @kaiser_submarine_upkeep = 0.5

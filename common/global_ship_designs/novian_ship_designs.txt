@@ -1,0 +1,521 @@
+ship_design = { #Reaver (Corvette)
+	name = "Erkitak"
+	ship_size = giga_novian_corvette
+	section = {
+		template = "NOVIAN_CORVETTE"
+		slot = "mid"
+
+		component = { slot = "SMALL_GUN_01"		template = "SMALL_GAMMA_LASER" }
+		component = { slot = "SMALL_GUN_02"		template = "SMALL_MASS_DRIVER_5" }
+		component = { slot = "SMALL_GUN_03"		template = "MISSILE_5" }
+
+		component = { slot = "SMALL_UTILITY_1"		template = "SMALL_ARMOR_5" }
+		component = { slot = "SMALL_UTILITY_2"		template = "SMALL_ARMOR_5" }
+		component = { slot = "SMALL_UTILITY_3"		template = "SMALL_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "SMALL_UTILITY_4"		template = "SMALL_DARK_MATTER_DEFLECTOR" }
+	}
+
+	required_component = "COMBAT_COMPUTER_SWARM_SAPIENT"
+	required_component = "SENSOR_4"
+	required_component = "CORVETTE_DARK_MATTER_REACTOR"
+	required_component = "HYPER_DRIVE_3"
+	required_component = "SHIP_THRUSTER_5"
+}
+
+
+ship_design = { #Escort (FE Escort)
+	name = "Arikinovarat" #change?
+	ship_size = giga_novian_escort
+	section = {
+		template = "NOVIAN_ESCORT"
+		slot = "mid"
+
+		component = { slot = "MEDIUM_GUN_01"		template = "MEDIUM_PLASMA_3" }
+		component = { slot = "MEDIUM_GUN_02"		template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_03"		template = "SWARMER_MISSILE_2" }
+
+		component = { slot = "POINT_DEFENCE_01"		template = "FLAK_BATTERY_4" }
+		component = { slot = "POINT_DEFENCE_02"		template = "ARCHAEO_POINTDEFENCE" }
+
+		component = { slot = "LARGE_GUN_01"			template = "ENERGY_TORPEDO_2" }
+
+		component = { slot = "MEDIUM_UTILITY_1"		template = "MEDIUM_ARMOR_5" }
+		component = { slot = "MEDIUM_UTILITY_2"		template = "MEDIUM_ARMOR_5" }
+		component = { slot = "MEDIUM_UTILITY_3"		template = "MEDIUM_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "MEDIUM_UTILITY_4"		template = "MEDIUM_DARK_MATTER_DEFLECTOR" }
+	}
+
+	required_component = "COMBAT_COMPUTER_LINE_SAPIENT"
+	required_component = "SENSOR_4"
+	required_component = "DESTROYER_DARK_MATTER_REACTOR"
+	required_component = "HYPER_DRIVE_3"
+	required_component = "DESTROYER_SHIP_THRUSTER_5"
+}
+
+
+ship_design = { #[x] (new size)
+	name = "Akitaliata"
+	ship_size = giga_novian_asteroidcraft
+	section = {
+		template = "NOVIAN_ASTEROID"
+		slot = "mid"
+
+		component = { slot = "LARGE_GUN_01"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_02"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_03"		template = "LARGE_ARCHAEO_LASER" }
+
+		component = { slot = "OMEGA_GUN_01"			template = "PERDITION_BEAM_TITAN" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+	}
+
+	required_component = "COMBAT_COMPUTER_LINE_SAPIENT"
+	required_component = "SENSOR_4"
+	required_component = "TITAN_DARK_MATTER_REACTOR"
+	required_component = "HYPER_DRIVE_3"
+	required_component = "TITAN_SHIP_THRUSTER_5"
+}
+
+
+ship_design = { #Herald (Juggernaut)
+	name = "Aridominikus"
+	ship_size = giga_novian_juggernaut
+	section = {
+		template = "NOVIAN_JUGGERNAUT"
+		slot = "mid"
+
+		component = { slot = "EXTRA_LARGE_01"			template = "ENERGY_LANCE_2" }
+		component = { slot = "EXTRA_LARGE_02"			template = "ENERGY_LANCE_2" }
+
+		component = { slot = "STRIKE_CRAFT_01"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_02"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_03"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_04"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_05"		template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_06"		template = "STRIKE_CRAFT_HANGAR_3" }
+
+		component = { slot = "MEDIUM_GUN_01"			template = "MEDIUM_AUTOCANNON_3" }
+		component = { slot = "MEDIUM_GUN_02"			template = "MEDIUM_AUTOCANNON_3" }
+		component = { slot = "MEDIUM_GUN_03"			template = "MEDIUM_AUTOCANNON_3" }
+		component = { slot = "MEDIUM_GUN_04"			template = "MEDIUM_AUTOCANNON_3" }
+		component = { slot = "MEDIUM_GUN_05"			template = "MEDIUM_AUTOCANNON_3" }
+	}
+
+	required_component = "COMBAT_COMPUTER_CARRIER_SAPIENT"
+	required_component = "SENSOR_4"
+	required_component = "JUGGERNAUT_DARK_MATTER_REACTOR"
+	required_component = "HYPER_DRIVE_3"
+	required_component = "COLOSSUS_SHIP_THRUSTER_5"
+}
+
+
+ship_design = { #Sleepless Moon (Attack Moon)
+	name = "Lunovvie"
+	ship_size = giga_novian_moon
+	section = {
+		template = "NOVIAN_MOON"
+		slot = "mid"
+
+		component = { slot = "OMEGA_GUN_01"		template = "GIGA_OMEGA_LANCE_1" }
+
+		component = { slot = "MISSILE_01"			template = "GIGA_MOON_MISSILE_1" }
+		component = { slot = "MISSILE_02"			template = "GIGA_MOON_MISSILE_1" }
+		component = { slot = "MISSILE_03"			template = "GIGA_MOON_MISSILE_1" }
+		component = { slot = "MISSILE_04"			template = "GIGA_MOON_MISSILE_1" }
+
+		component = { slot = "STRIKE_CRAFT_01"	template = "GIGA_MOON_FIGHTER_1" }
+		component = { slot = "STRIKE_CRAFT_02"	template = "GIGA_MOON_FIGHTER_1" }
+	}
+
+	required_component = "GIGA_MOON_COMPUTER"
+	required_component = "SENSOR_4"
+	required_component = "REACTOR_MOON"
+	required_component = "HYPER_DRIVE_3"
+	required_component = "COLOSSUS_SHIP_THRUSTER_5"
+}
+
+
+ship_design = { #Citadel
+	name = "novian_starbase"
+	ship_size = starbase_nov
+	#country_type = novian_arikhanate #added
+	section = {
+		template = "NOVIAN_CITADEL_STARBASE_SECTION"
+		slot = "core"
+
+		component = { slot = "MEDIUM_GUN_01" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_02" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_03" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_04" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_05" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_06" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_07" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_08" template = "MEDIUM_GAMMA_LASER" }
+
+		component = { slot = "MEDIUM_GUN_09" template = "MEDIUM_PLASMA_3" }
+		component = { slot = "MEDIUM_GUN_010" template = "MEDIUM_PLASMA_3" }
+		component = { slot = "MEDIUM_GUN_011" template = "MEDIUM_PLASMA_3" }
+		component = { slot = "MEDIUM_GUN_012" template = "MEDIUM_PLASMA_3" }
+		component = { slot = "MEDIUM_GUN_013" template = "MEDIUM_AUTOCANNON_3" }
+		component = { slot = "MEDIUM_GUN_014" template = "MEDIUM_AUTOCANNON_3" }
+		component = { slot = "MEDIUM_GUN_015" template = "MEDIUM_AUTOCANNON_3" }
+		component = { slot = "MEDIUM_GUN_016" template = "MEDIUM_AUTOCANNON_3" }
+
+		component = { slot = "MEDIUM_GUN_017" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_018" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_019" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_020" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_021" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_022" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_023" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_024" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_025" template = "MEDIUM_MASS_DRIVER_5" }
+		component = { slot = "MEDIUM_GUN_026" template = "MEDIUM_MASS_DRIVER_5" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_6"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_7"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_8"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_9"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_10"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_11"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_12"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_13"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_14"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_15"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_16"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_17"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_18"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_19"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_20"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_21"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_22"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_23"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_24"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_25"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_26"		template = "LARGE_ARMOR_5" }
+
+		component = { slot = "AUX_UTILITY_1" template = "AUTO_REPAIR_2" }
+	}
+
+	required_component = "STARBASE_DARK_MATTER_REACTOR"
+	required_component = "SENSOR_4"
+	required_component = "COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+	required_component = "STARBASE_AURA_FTL_INHIBITOR"
+}
+
+ship_design = { #Orbital Ring
+	name = "novian_orbital"
+	ship_size = orbital_ring_tier_3
+	#country_type = novian_arikhanate #added
+	section = {
+		template = "NOVIAN_ORBITAL_STARBASE_SECTION"
+		slot = "core"
+
+		component = { slot = "LARGE_GUN_01" template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_02" template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_03" template = "LARGE_PLASMA_3" }
+
+		component = { slot = "MEDIUM_GUN_01" template = "SWARMER_MISSILE_2" }
+		component = { slot = "MEDIUM_GUN_02" template = "SWARMER_MISSILE_2" }
+		component = { slot = "MEDIUM_GUN_03" template = "SWARMER_MISSILE_2" }
+		component = { slot = "MEDIUM_GUN_04" template = "SWARMER_MISSILE_2" }
+		component = { slot = "MEDIUM_GUN_05" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_06" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_07" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_08" template = "MEDIUM_GAMMA_LASER" }
+		component = { slot = "MEDIUM_GUN_09" template = "MEDIUM_GAMMA_LASER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_SHIELD_ARMOR_AETERNUM" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_SHIELD_ARMOR_AETERNUM" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_SHIELD_ARMOR_AETERNUM" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_SHIELD_ARMOR_AETERNUM" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_SHIELD_ARMOR_AETERNUM" }
+		component = { slot = "LARGE_UTILITY_6"		template = "LARGE_SHIELD_ARMOR_AETERNUM" }
+
+		component = { slot = "AUX_UTILITY_1" template = "SENTIENT_AUTO_REPAIR" }
+	}
+
+	required_component = "REACTOR_AETERNUM"
+	required_component = "SENSOR_4"
+	required_component = "COMBAT_COMPUTER_ARTILLERY_PRECOG"
+	#required_component = "STARBASE_AURA_FTL_INHIBITOR"
+}
+
+
+####################################
+######       HYPERSHIP        ######
+####################################
+
+ship_design = {
+	name = arm_of_intent
+	ship_size = giga_novian_hypership
+	section = {
+		template = "hypership_ship_bowgun_01_key"
+		slot = "bowgun"
+
+		#component = { slot = "PLANET_KILLER_01"			template = "PLANET_KILLER_CRACKER_SYSTEMCRAFT" }
+
+		component = { slot = "TITANIC_GUN_01"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_02"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_03"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_04"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_05"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_06"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_07"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_08"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_09"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_10"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_11"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_12"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_13"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_14"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_15"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_16"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_17"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_18"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_19"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_20"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_21"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_22"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_23"		template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "TITANIC_GUN_24"		template = "KINETIC_ARTILLERY_2" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_6"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_7"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_8"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_9"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_10"		template = "LARGE_ARMOR_5" }
+	}
+
+	section = {
+		template = "hypership_ship_bow_01_key"
+		slot = "bow"
+
+		component = { slot = "TITANIC_GUN_25"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_26"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_27"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_28"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_29"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_30"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_31"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_32"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_33"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_34"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_35"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_36"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_37"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_38"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_39"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_40"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_41"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_42"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_43"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_44"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_45"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_46"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_47"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_48"		template = "LARGE_GAMMA_LASER" }
+		component = { slot = "TITANIC_GUN_49"		template = "LARGE_GAMMA_LASER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_6"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_7"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_8"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_9"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_10"		template = "LARGE_ARMOR_5" }
+	}
+
+	section = {
+		template = "hypership_ship_mid_01_key"
+		slot = "mid"
+
+		component = { slot = "XL_GUN_01"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_02"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_03"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_04"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_05"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_06"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_07"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_08"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_09"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_10"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_11"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_12"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_13"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_14"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_15"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_16"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_17"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_18"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_19"		template = "ENERGY_LANCE_2" }
+		component = { slot = "XL_GUN_20"		template = "ENERGY_LANCE_2" }
+
+		component = { slot = "PD_01"		template = "FLAK_BATTERY_4" }
+		component = { slot = "PD_02"		template = "FLAK_BATTERY_4" }
+		component = { slot = "PD_03"		template = "FLAK_BATTERY_4" }
+		component = { slot = "PD_04"		template = "FLAK_BATTERY_4" }
+		component = { slot = "PD_05"		template = "FLAK_BATTERY_4" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_6"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_7"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_8"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_9"		template = "LARGE_ARMOR_5" }
+		component = { slot = "LARGE_UTILITY_10"		template = "LARGE_ARMOR_5" }
+	}
+
+	section = {
+		template = "hypership_ship_stern_01_key"
+		slot = "stern"
+
+		component = { slot = "XL_GUN_21"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_22"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_23"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_24"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_25"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_26"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_27"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_28"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_29"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_30"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_31"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_32"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_33"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_34"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_35"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_36"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_37"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_38"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_39"		template = "MASS_ACCELERATOR_2" }
+		component = { slot = "XL_GUN_40"		template = "MASS_ACCELERATOR_2" }
+
+		component = { slot = "PD_06"		template = "ARCHAEO_POINTDEFENCE" }
+		component = { slot = "PD_07"		template = "ARCHAEO_POINTDEFENCE" }
+		component = { slot = "PD_08"		template = "ARCHAEO_POINTDEFENCE" }
+		component = { slot = "PD_09"		template = "ARCHAEO_POINTDEFENCE" }
+		component = { slot = "PD_10"		template = "ARCHAEO_POINTDEFENCE" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_6"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_7"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_8"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_9"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_10"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+	}
+
+	section = {
+		template = "hypership_ship_sternthrusters_01_key"
+		slot = "sternthrusters"
+
+		component = { slot = "STRIKE_CRAFT_01"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_02"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_03"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_04"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_05"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_06"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_07"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_08"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_09"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_10"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_11"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_12"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_13"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_14"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_15"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_16"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_17"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_18"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_19"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_20"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_21"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_22"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_23"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_24"			template = "STRIKE_CRAFT_HANGAR_3" }
+		component = { slot = "STRIKE_CRAFT_25"			template = "STRIKE_CRAFT_HANGAR_3" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_6"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_7"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_8"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_9"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_10"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+	}
+
+	section = {
+		template = "hypership_ship_kugel_01_key"
+		slot = "kugel"
+
+		component = { slot = "LARGE_GUN_01"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_02"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_03"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_04"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_05"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_06"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_07"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_08"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_09"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_10"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_11"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_12"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_13"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_14"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_15"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_16"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_17"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_18"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_19"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_20"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_21"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_22"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_23"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_24"			template = "KINETIC_ARTILLERY_2" }
+		component = { slot = "LARGE_GUN_25"			template = "KINETIC_ARTILLERY_2" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_2"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_3"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_4"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_5"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_6"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_7"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_8"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_9"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+		component = { slot = "LARGE_UTILITY_10"		template = "LARGE_DARK_MATTER_DEFLECTOR" }
+	}
+
+	required_component = "COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+	required_component = "SENSOR_4"
+	required_component = "COLOSSUS_DARK_MATTER_REACTOR"
+	required_component = "HYPER_DRIVE_3"
+	required_component = "COLOSSUS_SHIP_THRUSTER_5"
+}

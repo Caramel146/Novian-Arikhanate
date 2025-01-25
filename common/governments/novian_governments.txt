@@ -1,0 +1,15 @@
+gov_arikhanate = {
+    ruler_title = arikhan
+    ruler_title_female = arikhan
+
+    should_force_rename = yes #??
+
+    possible = {
+        is_ai = yes
+        is_country_type = novian_arikhanate
+    }
+
+    weight = {
+        base = @gov_galactic_sovereign_weight
+    }
+}

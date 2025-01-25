@@ -1,0 +1,241 @@
+﻿l_english:
+
+ novian_barrage_of_death:0 "The Barrage of Death"
+ novian_barrage_of_death_desc:0 "This gigantic weapons array batters at enemy ships, fortifications, and anything else the Novians want to destroy to ensure that death is delivered quickly, efficently, and brutally.  Do not point at self."
+
+ novian_the_missile:0 "Novian Missile"
+ novian_the_missile_desc:0 "The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting where it is from where it isn't, or where it isn't from where it is (whichever is greater), it obtains a difference, or deviation. The guidance subsystem uses deviations to generate corrective commands to drive the missile from a position where it is to a position where it isn't, and arriving at a position where it wasn't, it now is. Consequently, the position where it is, is now the position that it wasn't, and it follows that the position that it was, is now the position that it isn't.  In the event that the position that it is in is not the position that it wasn't, the system has acquired a variation, the variation being the difference between where the missile is, and where it wasn't. If variation is considered to be a significant factor, it too may be corrected by the GEA. However, the missile must also know where it was.  The missile guidance computer scenario works as follows. Because a variation has modified some of the information the missile has obtained, it is not sure just where it is. However, it is sure where it isn't, within reason, and it knows where it was. It now subtracts where it should be from where it wasn't, or vice-versa, and by differentiating this from the algebraic sum of where it shouldn't be, and where it was, it is able to obtain the deviation and its variation, which is called error."
+
+ novian_titan_lance:0 "Novian USM Field Projector"
+ novian_titan_lance_desc:0 "A fearsome Novian weapon equipped only on Celestial ships and the flagships of expeditionary fleets. It exploits electrodynamic properties of charged strangelets to produce a cataclysmically strong linear magnetic field, tearing almost all forms of physical matter asunder."
+
+ novian_planet_lance:0 "Quasaric Absolution"
+ novian_planet_lance_desc:0 "The ultimate emblem of Novian bloodlust, this weapon employs the same technology found in the Quasi-Stellar Obliterator with a contained artificial singularity to produce an apocalyptic beam of cataclysmic power."
+
+#Ship Components
+
+ SHIP_MOBILE_HYPERSHIP:0 "REPLACE_ME"
+ aura_hypership:0 "REPLACE_ME"
+ REACTOR_HYPERSHIP:0 "Novian Stellar Reactor"
+ REACTOR_HYPERSHIP_desc:0 "A star-sized mass of fusile material capable of powering a Novian Hypership, stabilized by an array of gravitopanels that allow for fine output control."
+
+
+#Ship stuff
+ novian_frigate_title:0 "Novian Frigate"
+ novian_frigate_desc:0 "This frigate was once meant for civilian purposes, but the Novians have since modified it to escort their larger ships."
+
+ novian_hypership:0 "Novian Hypership"
+ novian_hypership_desc:0 "Truly the epitome of a stellar-scale warship, the Hypership is completely assembled and built from scratch, rather than bolting together celestial bodies like the measly Systemcraft.  Powered by a self-sustaining M-class Star, the Novians use it as a primary flagship and mobile command centers."
+ 
+ #hypership_modern:0 "Hypership"
+ #hypership_modern_desc:0 "While this design originated from the barbaric Novian Arikhanate, it has since been refined to take full advantage of Strange Matter tech, psionics, and even higher dimensions.  It's power eclipses even Novian defense fleets, truly the paramount of Galactic Warfare."
+
+#Ship section Names
+ hypership_ship_bowgun_01_key:0 "Nicoll-Dyson Lance"
+ hypership_ship_bow_01_key:0 "Celestial Broadside"
+ hypership_ship_mid_01_key:0 "Close-in Weapons Array"
+ hypership_ship_stern_01_key:0 "Grand Hangar Complex"
+ hypership_ship_sternthrusters_01_key:0 "Rearguard Weapons System"
+ hypership_ship_kugel_01_key:0 "Stern Defense System"
+
+
+#Components
+ NOVIAN_AUTOCANNON:0 "Novian Lepton Cannon"
+ NOVIAN_AUTOCANNON_DESC:0 "A Novian weapon which rapidly fires dense bursts of muons. These beams are short-lived, but cause devastating cold fusion chain reactions when they do reach a target."
+ SMALL_NOVIAN_AUTOCANNON: "Small Novian Lepton Cannon"
+ MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Lepton Cannon"
+ LARGE_NOVIAN_AUTOCANNON: "Large Novian Lepton Cannon"
+ tech_novian_autocannons: "Novian Autocannons"
+ tech_novian_autocannons_desc: "Novian autocannon desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_AUTOCANNON_TITLE:0 "§HUnlocks Component:§! $NOVIAN_AUTOCANNON$"
+ TECH_UNLOCK_NOVIAN_AUTOCANNON_DESC:0 "§H$NOVIAN_AUTOCANNON$§!\n$tech_novian_autocannon_desc$"
+
+ NOVIAN_REACTORS:0 "Novian Reactor"
+ NOVIAN_REACTORS_DESC:0 "Nov reactor desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_reactors: "Novian Reactors"
+ tech_novian_reactors_desc: "Novian reactor desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_REACTORS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_REACTORS$"
+ TECH_UNLOCK_NOVIAN_REACTORS_DESC:0 "§H$NOVIAN_REACTORS$§!\n$tech_novian_reactors_desc$"
+
+ NOVIAN_REACTOR_BOOSTERS:0 "Novian Reactor Booster"
+ NOVIAN_REACTOR_BOOSTERS_DESC:0 "Nov reactor booster desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_reactor_boosters: "Novian Reactor Booster"
+ tech_novian_reactor_boosters_desc: "Novian reactor booster desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_REACTOR_BOOSTERS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_REACTOR_BOOSTERS$"
+ TECH_UNLOCK_NOVIAN_REACTOR_BOOSTERS_DESC:0 "§H$NOVIAN_REACTOR_BOOSTERS$§!\n$tech_novian_reactor_boosters_desc$"
+
+ NOVIAN_SHIELDS:0 "Novian Shields"
+ NOVIAN_SHIELDS_DESC:0 "Nov shield desc"
+ SMALL_NOVIAN_SHIELD: "Small Novian Shield"
+ MEDIUM_NOVIAN_SHIELD: "Medium Novian Shield"
+ LARGE_NOVIAN_SHIELD: "Large Novian Shield"
+ tech_novian_shields: "Novian Shields"
+ tech_novian_shields_desc: "Novian shield desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_SHIELDS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_SHIELD$"
+ TECH_UNLOCK_NOVIAN_SHIELDS_DESC:0 "§H$NOVIAN_SHIELDS$§!\n$tech_novian_shield_desc$"
+
+ NOVIAN_ARMOR:0 "Novian Armor"
+ NOVIAN_ARMOR_DESC:0 "Nov armor desc"
+ SMALL_NOVIAN_ARMOR: "Small Novian Armor"
+ MEDIUM_NOVIAN_ARMOR: "Medium Novian Armor"
+ LARGE_NOVIAN_ARMOR: "Large Novian Armor"
+ tech_novian_armor: "Novian Armor"
+ tech_novian_armor_desc: "Novian armor desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_ARMOR_TITLE:0 "§HUnlocks Component:§! $NOVIAN_ARMOR$"
+ TECH_UNLOCK_NOVIAN_ARMOR_DESC:0 "§H$NOVIAN_ARMOR$§!\n$tech_novian_armor_desc$"
+
+ NOVIAN_HULL:0 "Novian Hull"
+ NOVIAN_HULL_DESC:0 "Nov hull desc"
+ SMALL_NOVIAN_HULL: "Small Novian Hull"
+ MEDIUM_NOVIAN_HULL: "Medium Novian Hull"
+ LARGE_NOVIAN_HULL: "Large Novian Hull"
+ tech_novian_hull: "Novian Hull"
+ tech_novian_hull_desc: "Novian hull desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_HULL_TITLE:0 "§HUnlocks Component:§! $NOVIAN_HULL$"
+ TECH_UNLOCK_NOVIAN_HULL_DESC:0 "§H$NOVIAN_HULL$§!\n$tech_novian_hull_desc$"
+
+ NOVIAN_AFTERBURNERS:0 "Novian Afterburners"
+ NOVIAN_AFTERBURNERS_DESC:0 "Nov afterburner desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_afterburners: "Novian Afterburners"
+ tech_novian_afterburners_desc: "Novian afterburner desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_AFTERBURNERS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_AFTERBURNERS$"
+ TECH_UNLOCK_NOVIAN_AFTERBURNERS_DESC:0 "§H$NOVIAN_AFTERBURNERS$§!\n$tech_novian_afterburners_desc$"
+
+ NOVIAN_THRUSTERS:0 "Novian Thrusters"
+ NOVIAN_THRUSTERS_DESC:0 "Nov thruster desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_thrusters: "Novian Thrusters"
+ tech_novian_thrusters_desc: "Novian thruster desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_THRUSTERS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_THRUSTERS$"
+ TECH_UNLOCK_NOVIAN_THRUSTERS_DESC:0 "§H$NOVIAN_THRUSTERS$§!\n$tech_novian_thrusters_desc$"
+
+ NOVIAN_HYPERDRIVE:0 "Alerium Drive"
+ NOVIAN_HYPERDRIVE_DESC:0 "Originally designed by Huaki Alerious, the Novian High Engineer of Majesty, this is one of the fastest FTL methods in the universe.  The Novians employ it to ensure speedy transport across a single galaxy."
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_hyperdrive: "Novian Hyperdrive"
+ tech_novian_hyperdrive_desc: "Novian hyperdrive desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_HYPERDRIVE_TITLE:0 "§HUnlocks Component:§! $NOVIAN_HYPERDRIVE$"
+ TECH_UNLOCK_NOVIAN_HYPERDRIVE_DESC:0 "§H$NOVIAN_HYPERDRIVE$§!\n$tech_novian_hyperdrive_desc$"
+
+ NOVIAN_SENSORS:0 "Novian Sensors"
+ NOVIAN_SENSORS_DESC:0 "Nov sensor desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_sensors: "Novian Sensors"
+ tech_novian_sensors_desc: "Novian sensor desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_SENSORS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_SENSORS$"
+ TECH_UNLOCK_NOVIAN_SENSORS_DESC:0 "§H$NOVIAN_SENSORS$§!\n$tech_novian_sensors_desc$"
+
+ NOVIAN_TORPEDOES:0 "Novian Dark Energy Torpedo"
+ NOVIAN_TORPEDOES_DESC:0 "A Novian guided explosive weapon. The warhead siphons dark energy from surrounding space to produce a devastating burst of radiation, far more powerful than any explosive that could be contained within the torpedo itself."
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_torpedoes: "Novian Torpedoes"
+ tech_novian_torpedoes_desc: "Novian torpedoes desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_TORPEDOES_TITLE:0 "§HUnlocks Component:§! $NOVIAN_TORPEDOES$"
+ TECH_UNLOCK_NOVIAN_TORPEDOES_DESC:0 "§H$NOVIAN_TORPEDOES$§!\n$tech_novian_torpedoes_desc$"
+
+ NOVIAN_MISSILES:0 "Novian Missiles"
+ NOVIAN_MISSILES_DESC:0 "Nov missile desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_missiles: "Novian Missiles"
+ tech_novian_missiles_desc: "Novian missile desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_MISSILES_TITLE:0 "§HUnlocks Component:§! $NOVIAN_MISSILES$"
+ TECH_UNLOCK_NOVIAN_MISSILES_DESC:0 "§H$NOVIAN_MISSILES$§!\n$tech_novian_missiles_desc$"
+
+ NOVIAN_SWARMER_MISSILES:0 "Novian Swarmer Missiles"
+ NOVIAN_SWARMER_MISSILES_DESC:0 "Nov swarmer missile desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_swarmer_missiles: "Novian Swarmer Missiles"
+ tech_novian_swarmer_missiles_desc: "Novian swarmer missile desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_SWARMER_MISSILES_TITLE:0 "§HUnlocks Component:§! $NOVIAN_SWARMER_MISSILES$"
+ TECH_UNLOCK_NOVIAN_SWARMER_MISSILES_DESC:0 "§H$NOVIAN_SWARMER_MISSILES$§!\n$tech_novian_swarmer_missiles_desc$"
+
+ NOVIAN_MASS_DRIVERS:0 "Novian Microsingularity Bombard"
+ NOVIAN_MASS_DRIVERS_DESC:0 "A Novian weapon which compresses a carefully measured mass of charged particles into a short-lived microscopic black hole which is then fired at relativistic speeds to detonate precisely on impact with enemy ships."
+ SMALL_NOVIAN_MASS_DRIVERS: "Small Novian Microsingularity Bombard"
+ MEDIUM_NOVIAN_MASS_DRIVERS: "Medium Novian Microsingularity Bombard"
+ LARGE_NOVIAN_MASS_DRIVERS: "Large Novian Microsingularity Bombard"
+ tech_novian_mass_drivers: "Novian Mass Driver"
+ tech_novian_mass_drivers_desc: "Novian mass driver desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_MASS_DRIVERS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_MASS_DRIVERS$"
+ TECH_UNLOCK_NOVIAN_MASS_DRIVERS_DESC:0 "§H$NOVIAN_MASS_DRIVERS$§!\n$tech_novian_mass_drivers_desc$"
+
+ NOVIAN_KINETIC_ARTILLERY:0 "Novian Kinetic Artillery"
+ NOVIAN_KINETIC_ARTILLERY_DESC:0 "Nov kinetic artillery desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_kinetic_artillery: "Novian Kinetic Artillery"
+ tech_novian_kinetic_artillery_desc: "Novian kinetic artillery desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_KINETIC_ARTILLERY_TITLE:0 "§HUnlocks Component:§! $NOVIAN_KINETIC_ARTILLERY$"
+ TECH_UNLOCK_NOVIAN_KINETIC_ARTILLERY_DESC:0 "§H$NOVIAN_KINETIC_ARTILLERY$§!\n$tech_novian_kinetic_artillery_desc$"
+
+ NOVIAN_MASS_ACCELERATOR:0 "Novian Mass Accelerator"
+ NOVIAN_MASS_ACCELERATOR_DESC:0 "Nov mass accelerator desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_mass_accelerator: "Novian Mass Accelerator"
+ tech_novian_mass_accelerator_desc: "Novian mass accelerator desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_MASS_ACCELERATOR_TITLE:0 "§HUnlocks Component:§! $NOVIAN_MASS_ACCELERATOR$"
+ TECH_UNLOCK_NOVIAN_MASS_ACCELERATOR_DESC:0 "§H$NOVIAN_MASS_ACCELERATOR$§!\n$tech_novian_mass_accelerator_desc$"
+
+ NOVIAN_COMBAT_COMPUTERS:0 "Novian Combat Computers"
+ NOVIAN_COMBAT_COMPUTERS_DESC:0 "Nov combat computers desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_combat_computers: "Novian Combat Computers"
+ tech_novian_combat_computers_desc: "Novian combat computers desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_COMBAT_COMPUTERS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_COMBAT_COMPUTERS$"
+ TECH_UNLOCK_NOVIAN_COMBAT_COMPUTERS_DESC:0 "§H$NOVIAN_COMBAT_COMPUTERS$§!\n$tech_novian_combat_computers_desc$"
+
+ NOVIAN_STRIKE_CRAFT:0 "Novian Voidhawk"
+ NOVIAN_STRIKE_CRAFT_DESC:0 "A small carrier-based Novian ship equipped with an Alcubierre drive. These craft are capable of superluminal speeds and on-the-spot turning while experiencing no acceleration from its internal frame of reference, allowing for brutally fast assaults on enemy strike craft and capital ships alike."
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_strike_craft: "Novian Strike Craft"
+ tech_novian_strike_craft_desc: "Novian strike craft desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_STRIKE_CRAFT_TITLE:0 "§HUnlocks Component:§! $NOVIAN_STRIKE_CRAFT$"
+ TECH_UNLOCK_NOVIAN_STRIKE_CRAFT_DESC:0 "§H$NOVIAN_STRIKE_CRAFT$§!\n$tech_novian_strike_craft_desc$"
+
+ NOVIAN_LASERS:0 "Novian Photograviton Coherence Beam"
+ NOVIAN_LASERS_DESC:0 "A Novian weapon which generates a high frequency laser and energetic gravitational wave, harmonized to perpetuate each other before violently interacting upon impact with a target."
+ SMALL_NOVIAN_LASERS: "Small Novian Lasers"
+ MEDIUM_NOVIAN_LASERS: "Medium Novian Lasers"
+ LARGE_NOVIAN_LASERS: "Large Novian Lasers"
+ tech_novian_lasers: "Novian Lasers"
+ tech_novian_lasers_desc: "Novian laser desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_LASERS_TITLE:0 "§HUnlocks Component:§! $NOVIAN_LASERS$"
+ TECH_UNLOCK_NOVIAN_LASERS_DESC:0 "§H$NOVIAN_LASERS$§!\n$tech_novian_lasers_desc$"
+
+ NOVIAN_HYPERSHIP_AURA:0 "Novian Hypership Aura"
+ NOVIAN_HYPERSHIP_AURA_DESC:0 "Nov hypership aura desc"
+ #SMALL_NOVIAN_AUTOCANNON: "Small Novian Autocannon"
+ #MEDIUM_NOVIAN_AUTOCANNON: "Medium Novian Autocannon"
+ #LARGE_NOVIAN_AUTOCANNON: "Large Novian Autocannon"
+ tech_novian_hypership_aura: "Novian Hypership Aura"
+ tech_novian_hypership_aura_desc: "Novian hypership aura desc goes here maybe" #placeholder
+ TECH_UNLOCK_NOVIAN_HYPERSHIP_AURA_TITLE:0 "§HUnlocks Component:§! $NOVIAN_HYPERSHIP_AURA$"
+ TECH_UNLOCK_NOVIAN_HYPERSHIP_AURA_DESC:0 "§H$NOVIAN_HYPERSHIP_AURA$§!\n$tech_novian_hypership_aura_desc$"

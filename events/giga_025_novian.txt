@@ -1,0 +1,2091 @@
+namespace = giga_novian
+
+#Debug event to set up Novian core.
+event = {
+    id = giga_novian.1231
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        remove_global_flag = giga_core_aeternum
+        remove_global_flag = giga_core_birch
+        set_global_flag = giga_core_novian
+        #set_global_flag = giga_core_qso
+        country_event = {
+            id = giga_mega.403
+            days = 2
+        }
+    }
+}
+
+#Debug event to give all Novian techs as research options.
+country_event = {
+    id = giga_novian.1232
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = novian_cybernetics_possible
+        add_research_option = tech_novian_cybernetics
+        add_research_option = tech_asteroid_craft
+        add_research_option = tech_ndb_shield
+
+        add_research_option = tech_novian_autocannons
+        add_research_option = tech_novian_reactors
+        add_research_option = tech_novian_reactor_boosters
+        add_research_option = tech_novian_shields
+        add_research_option = tech_novian_armor
+        add_research_option = tech_novian_hull
+        add_research_option = tech_novian_afterburners
+        add_research_option = tech_novian_thrusters
+        add_research_option = tech_novian_hyperdrive
+        add_research_option = tech_novian_sensors
+        add_research_option = tech_novian_torpedoes
+        add_research_option = tech_novian_missiles
+        add_research_option = tech_novian_swarmer_missiles
+        add_research_option = tech_novian_mass_drivers
+        add_research_option = tech_novian_kinetic_artillery
+        add_research_option = tech_novian_mass_accelerator
+        add_research_option = tech_novian_combat_computers
+        add_research_option = tech_novian_strike_craft
+        add_research_option = tech_novian_lasers
+        add_research_option = tech_novian_hypership_aura
+    }
+}
+
+#Spawns fleet with one of each ship type
+planet_event = {
+    id = giga_novian.1233
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        create_fleet = {
+            name = "testies"
+            settings = {
+                spawn_debris = no
+                #can_change_composition = no
+                #can_disband = no
+                #can_change_leader = no
+                can_upgrade = no
+            }
+            effect = {
+                set_owner = event_target:novian_arikhanate
+                create_novian_corvette = yes
+                create_novian_escort = yes
+                create_novian_asteroidcraft = yes
+                create_novian_juggernaut = yes
+                create_novian_moon = yes
+                create_novian_hypership = yes
+                set_formation_scale = 3
+                #set_fleet_flag = aeternum_home_platform
+                set_location = {
+                    target = PREV
+                    distance = 1
+                    angle = 0
+                }
+            }
+        }
+    }
+}
+
+#Debug event to give all Novian specimens.
+country_event = {
+    id = giga_novian.1234
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        give_specimen = { key = arikhan_bulava origin = "novian_name_capital"}
+        give_specimen = { key = cnilscale origin = "novian_name_quashab" }
+        give_specimen = { key = pilemind_biopsy origin = "TREASURE_TROVE" }
+        give_specimen = { key = scorned_modifications origin = "TREASURE_TROVE" }
+        give_specimen = { key = videre_pamphlet origin = "TREASURE_TROVE" }
+        give_specimen = { key = arikian_national_epic origin = "novian_name_temple" }
+        give_specimen = { key = novian_foetus origin = "TREASURE_TROVE" }
+        give_specimen = { key = sektian_stem_cell origin = "TREASURE_TROVE" }
+        give_specimen = { key = reactive_iodizium_armour origin = "TREASURE_TROVE" }
+        give_specimen = { key = hypership_alcubierre origin = "novian_name_shipyard" }
+        give_specimen = { key = intergalactic_map origin = "novian_name_hypership" }
+        give_specimen = { key = arikian_toxins origin = "TREASURE_TROVE" }
+        give_specimen = { key = kren_spine origin = "TREASURE_TROVE" }
+        give_specimen = { key = xenoculture_databank origin = "TREASURE_TROVE" }
+        give_specimen = { key = novian_medal origin = "TREASURE_TROVE" }
+        give_specimen = { key = agartha_toy origin = "novian_name_agartha"}
+    }
+}
+
+#Debug event to trigger War
+country_event = {
+	id = giga_novian.1235
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:novian_arikhanate = {
+			set_variable = {
+                which = novian_mobilisation
+                value = 100
+            }
+		}
+ 	}
+}
+
+#Debug event to trigger Raid
+country_event = {
+    id = giga_novian.1236
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        remove_global_flag = novian_raid_ongoing
+        delete_novian_raiders = yes
+        event_target:novian_raid_country = {
+            country_event = { id = giga_novian.140 }
+        }
+    }
+}
+
+#Debug event to query existence of Raiders
+planet_event = {
+    id = giga_novian.1237
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                exists = event_target:novian_raid_country
+            }
+            add_deposit = d_boggy_fens
+        }
+        else = {
+            add_deposit = d_searing_desert
+        }
+    }
+}
+
+#Temporary on_game_start event to give host option to set Novian crisis and difficulty. This event gives a 30-day delay to let the normal Gigas menu stuff play out.
+country_event = {
+    id = giga_novian.10
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+
+    immediate = {
+        country_event = { id = giga_novian.11 days = 30 }
+    }
+}
+country_event = {
+    id = giga_novian.11
+    title = giga_novian.11.name
+    desc = giga_novian.11.desc
+    picture = GFX_evt_face_off_in_space
+
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = giga_host #if I understand how this works correctly, only the game host should get this event.
+    }
+
+    immediate = {
+        remove_global_flag = giga_core_novian_1
+        remove_global_flag = giga_core_novian_2
+        remove_global_flag = giga_core_novian_3
+        remove_global_flag = giga_core_novian_4
+        remove_global_flag = giga_core_novian_5
+    }
+
+    option = {
+        name = giga_novian.12.a
+        remove_global_flag = giga_core_aeternum
+        remove_global_flag = giga_core_birch
+        set_global_flag = giga_core_novian
+        #remove_global_flag = giga_core_qso
+        set_global_flag = giga_core_novian_1
+    }
+
+    option = {
+        name = giga_novian.13.a
+        remove_global_flag = giga_core_aeternum
+        remove_global_flag = giga_core_birch
+        set_global_flag = giga_core_novian
+        #remove_global_flag = giga_core_qso
+        set_global_flag = giga_core_novian_2
+    }
+
+    option = {
+        name = giga_novian.14.a
+        remove_global_flag = giga_core_aeternum
+        remove_global_flag = giga_core_birch
+        set_global_flag = giga_core_novian
+        #remove_global_flag = giga_core_qso
+        set_global_flag = giga_core_novian_3
+    }
+
+    option = {
+        name = giga_novian.15.a
+        remove_global_flag = giga_core_aeternum
+        remove_global_flag = giga_core_birch
+        set_global_flag = giga_core_novian
+        #remove_global_flag = giga_core_qso
+        set_global_flag = giga_core_novian_4
+    }
+
+    option = {
+        name = giga_novian.16.a
+        remove_global_flag = giga_core_aeternum
+        remove_global_flag = giga_core_birch
+        set_global_flag = giga_core_novian
+        #remove_global_flag = giga_core_qso
+        set_global_flag = giga_core_novian_5
+    }
+
+    option = {
+        name = giga_novian.17.a
+    }
+}
+
+# event = {
+#     id = giga_novian.12
+#     hide_window = yes
+#
+#     is_triggered_only = yes
+#     trigger = {
+#         has_global_flag = giga_core_novian
+#     }
+#
+#     immediate = {
+#         if = {
+#             limit = {
+#                 NOT = {
+#                 }
+#             }
+#             every_country = {
+#                 limit = {
+#                     OR = {
+#                         has_special_project = INVESTIGATE_GALACTIC_CORE
+#                         is_researching_special_project = INVESTIGATE_GALACTIC_CORE
+#                     }
+#                 }
+#                 abort_special_project = {
+#                     type = "INVESTIGATE_GALACTIC_CORE_LINK"
+#                     #location = prev #why would a location be needed for aborting a project?
+#                 }
+#             }
+#         }
+#     }
+# }
+
+
+
+##################################
+########### DIPLOMACY ############
+##################################
+#After opening the Core, your scientists discover the Novians.
+country_event = {
+    id = giga_novian.2000
+    title = giga_novian.2000.name
+    desc = giga_novian.2000.desc
+    picture = GFX_evt_ship_travel
+    show_sound = event_radio_chatter
+    location = event_target:novian_colony_capital
+
+    is_triggered_only = yes
+
+    option = {
+        name = giga_novian.2000.a
+        country_event = {
+            id = giga_novian.2001
+        }
+    }
+}
+
+#The Novians introduce themselves.
+country_event = {
+    id = giga_novian.2001
+    title = giga_novian.2001.name
+    desc = giga_novian.2001.desc
+    diplomatic = yes
+    location = event_target:novian_colony_capital
+    show_sound = event_radio_chatter #change to not be same as previous event
+
+    is_triggered_only = yes
+
+    picture_event_data = {
+        portrait = event_target:giga_novian_species_novian
+        #graphical_culture = event_target:giga_novian_species_novian
+        room = giga_novian_room
+        planet_background = pc_novian
+    }
+
+    option = {
+        name = giga_novian.2001.a
+        establish_novian_contact = yes
+    }
+}
+
+#On opening diplomacy with the Novians.
+country_event = {
+    id = giga_novian.1001
+    title = giga_novian.1001.name
+    desc = giga_novian.1001.desc
+    diplomatic = yes #what does this actually do?
+    #location = from
+    #force_open = yes
+
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            OR = {
+                is_country_type = novian_arikhanate
+                is_country_type = novian_raiders
+            }
+        }
+        has_country_flag = novians_contacted
+        NOT = {
+            has_active_novian_diplo = yes
+        }
+    }
+
+    picture_event_data = {
+        portrait = event_target:giga_novian_species_novian
+        #graphical_culture = event_target:novian_arikhanate
+        room = giga_novian_room
+        planet_background = pc_novian
+    }
+
+    option = { #gives you some history on the Novians
+        name = giga_novian.1001.who
+        is_dialog_only = yes
+        response_text = giga_novian.1001.who.response
+    }
+
+    option = { #tells you about how old they are
+        name = giga_novian.1001.capital
+        is_dialog_only = yes
+        response_text = giga_novian.1001.capital.response
+    }
+
+    # option = { #Declare War
+    # 	name = giga_novian.1001.war
+    # 	custom_tooltip = giga_novian.1001.war.tooltip
+    # 	response_text = giga_novian.1001.war.response
+    # 	trigger = {
+    # 		NOT = { is_at_war_with = event_target:novian_arikhanate }
+    # 		NOT = { is_multiplayer = yes } #Why does Aeternum have this for pre-awakening-started instances? To prevent trolling?
+    # 		#has_global_flag = aeternum_awakening_started
+    # 	}
+    # 	hidden_effect = {
+    # 		#save_global_event_target_as = aeternum_war_not_aet #aeternum_war_not_aet
+    # 		declare_war = {
+    # 			target = event_target:novian_arikhanate
+    # 			attacker_war_goal = wg_novian_defence
+    # 			effect ={
+    # 				save_global_event_target_as = novian_crusade #aeternum_crusade
+    # 			}
+    # 		}
+    # 	}
+    # }
+
+    option = {
+        name = giga_novian.1001.a
+        default_hide_option = yes
+    }
+}
+
+
+##################################
+##### SPECIAL PROJECT EVENTS #####
+##################################
+#Investigations become available
+country_event = {
+    id = giga_novian.3001
+    title = giga_novian.3001.name
+    desc = giga_novian.3001.desc
+    picture = GFX_evt_surreal_visions
+
+    is_triggered_only = yes
+
+    option = {
+        name = giga_novian.3001.a
+        enable_special_project = {
+            name = STUDY_NOVIAN_TECH
+        }
+        enable_special_project = {
+            name = STUDY_NOVIAN_SOCIETY
+        }
+        enable_special_project = {
+            name = STUDY_NOVIAN_DESIGNS
+        }
+    }
+}
+
+#Physics investigation complete
+country_event = {
+    id = giga_novian.10001
+    title = giga_novian.10001.name
+    desc = giga_novian.10001.desc
+    picture = GFX_evt_glitchy_matrix
+
+    is_triggered_only = yes
+
+    option = {
+        name = giga_novian.10001.a
+        add_modifier = {
+            modifier = novian_analysis_physics
+            days = -1
+        }
+        hidden_effect = {
+            set_country_flag = novian_analysis_physics_complete
+            check_all_analyses_complete = yes
+        }
+    }
+}
+
+#Society investigation complete
+country_event = {
+    id = giga_novian.10002
+    title = giga_novian.10002.name
+    desc = giga_novian.10002.desc
+    picture = GFX_evt_surreal_visions
+
+    is_triggered_only = yes
+
+    option = {
+        name = giga_novian.10002.a
+        add_modifier = {
+            modifier = novian_analysis_society
+            days = -1
+        }
+        hidden_effect = {
+            set_country_flag = novian_analysis_society_complete
+            check_all_analyses_complete = yes
+        }
+    }
+}
+
+#Engineering investigation complete
+country_event = {
+    id = giga_novian.10003
+    title = giga_novian.10003.name
+    desc = giga_novian.10003.desc
+    picture = GFX_evt_ancient_alien_temple
+
+    is_triggered_only = yes
+
+    option = {
+        name = giga_novian.10003.a
+        add_modifier = {
+            modifier = novian_analysis_engineering
+            days = -1
+        }
+        hidden_effect = {
+            set_country_flag = novian_analysis_engineering_complete
+            check_all_analyses_complete = yes
+        }
+    }
+}
+
+#All investigations complete
+country_event = {
+    id = giga_novian.10004
+    title = giga_novian.10004.name
+    desc = giga_novian.10004.desc
+    picture = GFX_evt_fleet_from_surface
+
+    is_triggered_only = yes
+
+    # immediate = {
+    #     set_country_flag = novian_analysis_all_complete
+    # }
+
+    option = {
+        name = giga_novian.10004.a
+        # hidden_effect = {
+        # 	country_event = {
+        # 		id = giga_novian.11000 #What is this supposed to be? The arcsite system?
+        # 		days = 360
+        # 	}
+        # }
+    }
+}
+
+
+
+##########################
+##### RAIDING EVENTS #####
+##########################
+#10% monthly chance of sending out a raid if no raiders are already deployed.
+event = {
+    id = giga_novian.130
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        AND = {
+            has_global_flag = novian_raids_begun
+            NOR = {
+                has_global_flag = arikhanate_defeated
+                has_global_flag = novian_mobilisation_complete
+                has_global_flag = novian_raid_ongoing
+            }
+        }
+    }
+
+    immediate = {
+        if = { #1 in 10 chance for Diff 1
+            limit = { has_global_flag = giga_core_novian_1 }
+            random_list = {
+                1 = {
+                    event_target:novian_raid_country = {
+                        country_event = { id = giga_novian.140 }
+                    }
+                }
+                9 = { }
+            }
+        }
+        else_if = { #1 in 9 chance for Diff 2
+            limit = { has_global_flag = giga_core_novian_2 }
+            random_list = {
+                1 = {
+                    event_target:novian_raid_country = {
+                        country_event = { id = giga_novian.140 }
+                    }
+                }
+                8 = { }
+            }
+        }
+        else_if = { #1 in 8 chance for Diff 3
+            limit = { has_global_flag = giga_core_novian_3 }
+            random_list = {
+                1 = {
+                    event_target:novian_raid_country = {
+                        country_event = { id = giga_novian.140 }
+                    }
+                }
+                7 = { }
+            }
+        }
+        else_if = { #1 in 7 chance for Diff 4
+            limit = { has_global_flag = giga_core_novian_4 }
+            random_list = {
+                1 = {
+                    event_target:novian_raid_country = {
+                        country_event = { id = giga_novian.140 }
+                    }
+                }
+                6 = { }
+            }
+        }
+        else_if = { #1 in 6 chance for Diff 5
+            limit = { has_global_flag = giga_core_novian_5 }
+            random_list = {
+                1 = {
+                    event_target:novian_raid_country = {
+                        country_event = { id = giga_novian.140 }
+                    }
+                }
+                5 = { }
+            }
+        }
+    }
+}
+
+#Deletes raiders if they are out for 4 years (1440 days) to prevent them getting stuck forever
+event = {
+    id = giga_novian.131
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        AND = {
+            has_global_flag = novian_raid_ongoing
+            event_target:novian_raid_country = {
+                NOT = {
+                    has_country_flag = novian_raid_timer
+                }
+            }
+        }
+    }
+
+    immediate = {
+        remove_global_flag = novian_raid_ongoing
+        delete_novian_raiders = yes
+    }
+}
+
+#Set global flag that raids can begin 360 days after Novians spawn
+country_event = {
+    id = giga_novian.135
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = novian_raids_begun
+    }
+}
+
+#Remove all references to an ongoing raid if the raiding fleet is destroyed
+country_event = {
+    id = giga_novian.136
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = {
+            has_fleet_flag = novian_raid_fleet
+        }
+    }
+
+    immediate = {
+        remove_global_flag = novian_raid_ongoing
+        delete_novian_raiders = yes
+    }
+}
+
+#Reset hostilities of raider country
+# country_event = {
+#     id = giga_novian.137
+#     hide_window = yes
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         set_faction_hostility = {
+#             set_hostile = no
+#             set_neutral = yes
+#             set_friendly = no
+#         }
+#     }
+# }
+
+
+#Select random normal country's planet to raid, and deploys raiders
+country_event = {
+    id = giga_novian.140
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        #delete_novian_raiders = yes
+        set_global_flag = novian_raid_ongoing
+        set_timed_country_flag = { flag = novian_raid_timer days = 1440 }
+        select_novian_raid_target = yes
+        create_novian_raiders = yes
+        set_novian_raider_hostilities = yes
+        event_target:novian_raid_fleet = {
+            auto_move_to_planet = {
+                target = event_target:novian_raid_target_planet
+                clear_auto_move_on_arrival = yes
+            }
+        }
+        if = {
+            limit = {
+                exists = event_target:novian_raid_target_country
+                event_target:novian_raid_target_country = {
+                    is_ai = no
+                }
+            }
+            event_target:novian_raid_target_country = {
+                country_event = { id = giga_novian.144 } #Occurs on a delay to increase surprise? More delay on higher difficulties?
+            }
+        }
+        every_playable_country = {
+            limit = {
+                exists = event_target:novian_raid_target_country
+                is_ai = no
+                NOT = {
+                    #is_same_value = event_target:novian_raid_target_country
+                    #is_same_value = event_target:novian_raid_target_country
+                    event_target:novian_raid_target_country = { is_same_value = prev }
+                }
+            }
+            country_event = { id = giga_novian.145 } #Ensure delay is same as, or a set or random time later than, above.
+        }
+
+        # every_playable_country = {
+        #     if = {
+        #         limit = {
+        #             is_same_value = event_target:novian_raid_target_country
+        #         }
+        #         country_event = { id = giga_novian.144 }
+        #     }
+        #     else = {
+        #         country_event = { id = giga_novian.145 }
+        #     }
+        # }
+    }
+}
+
+#Novians inform of an incoming raid
+country_event = {
+    id = giga_novian.144
+    title = giga_novian.144.name
+    desc = giga_novian.144.desc
+    diplomatic = yes
+
+    is_triggered_only = yes
+
+    picture_event_data = {
+        portrait = event_target:giga_novian_species_novian
+        #graphical_culture = event_target:giga_novian_species_novian
+        room = giga_novian_room
+        #planet_background = pc_novian
+    }
+    option = {
+        name = giga_novian.144.a
+    }
+}
+
+#Receive word of a Novian raid on others
+#Rework with triggered descs and responses based on the player, such as if they're a collaborator.
+country_event = {
+    id = giga_novian.145
+    title = giga_novian.145.name
+    desc = giga_novian.145.desc
+    picture = GFX_evt_pirate_armada
+
+    is_triggered_only = yes
+
+    option = {
+        name = giga_novian.145.a
+    }
+}
+
+#Planet raided by Novians.
+planet_event = {
+    id = giga_novian.150
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        AND = {
+            this = {
+                planet_devastation >= 25 #for reference, marauder raid devastation trigger is 15
+            }
+            from = {
+                is_country_type = novian_raiders
+            }
+        }
+    }
+
+    immediate = {
+        owner = {
+            #save_global_event_target_as = novian_raid_victim
+            country_event = { id = giga_novian.160 }
+        }
+        set_timed_planet_flag = {
+            flag = novian_raid_victim_planet
+            days = 1800 #5 year cooldown, consider for raid selection event
+        }
+
+        export_trigger_value_to_variable = {
+            trigger = num_pops
+            variable = novian_raid_loot_size
+        }
+        while = {
+            count = novian_raid_loot_size
+            seize_novian_loot = yes
+        }
+
+        random_fleet_in_orbit = {
+            limit = {
+                has_fleet_flag = novian_raid_fleet
+            }
+            # export_trigger_value_to_variable = { #this and the below section should be merged somehow
+            #     trigger = root.num_pops
+            #     variable = novian_raid_loot_size
+            # }
+            set_variable = { which = novian_raid_loot_size value = root.novian_raid_loot_size }
+            # set_variable = {
+            #     which = novian_raid_loot_size
+            #     value = 100
+            # }
+            divide_variable = {
+                which = novian_raid_loot_size
+                value = 10
+            }
+        }
+
+        divide_variable = {
+            which = novian_raid_loot_size
+            value = 20
+        }
+        ceiling_variable = novian_raid_loot_size
+        while = { #this count will need to be more brutal for bigger planets and less so for smaller planets
+            count = novian_raid_loot_size #Ensure pop count does not drop below 1?
+            random_owned_pop = {
+                limit = {
+                    has_virtual_species_trait = no #these will presumably immediately despawn upon transfer #Instead, raids on virtuals could temporarily increase virtuality sprawl, based on the affected planet?
+                    #has_trait = trait_hive_mind #these will die off after arrival
+                    #has_trait = trait_machine_unit #these will die off after arrival
+
+                }
+                species = { save_global_event_target_as = agartha_captured_pop }
+                kill_pop = yes
+            }
+            event_target:novian_colony_agartha = {
+                create_pop = { species = event_target:agartha_captured_pop }
+                clear_global_event_target = agartha_captured_pop
+            }
+        }
+
+        random_fleet_in_orbit = { #can this be merged with above scope to the raid fleet?
+            limit = {
+                has_fleet_flag = novian_raid_fleet
+            }
+            fleet_event = { id = giga_novian.110 }
+        }
+    }
+}
+
+# Notify raid victim country of being successfully raided.
+country_event = {
+    id = giga_novian.160
+    title = giga_novian.160.name
+    desc = giga_novian.160.desc
+    picture = GFX_evt_burning_settlement
+    show_sound = event_planetary_riot
+    location = root
+
+    is_triggered_only = yes
+
+    option = {
+        name = giga_novian.160.a
+    }
+}
+
+#Raid fleet defeated by self
+country_event = {
+    id = giga_novian.170
+    hide_window = no
+
+    is_triggered_only = yes
+
+    title = giga_novian.170.name
+    desc = giga_novian.170.desc
+    picture = GFX_evt_novian_wreck_1
+    option = { name = utopia.4004.a }
+}
+
+#Create event: Raid fleet defeated by others
+
+#Raiders begin return journey after successful pillaging.
+fleet_event = {
+    id = giga_novian.110
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        clear_fleet_actions = this
+        set_fleet_flag = novian_raid_fleet_returning
+        #set_fleet_flag = returning_to_core		#just in case i need to use them in the future or people make submods
+        auto_move_to_planet = {
+            target = event_target:novian_colony_agartha
+            #destroy_on_arrival = no #?
+            clear_auto_move_on_arrival = yes #not relevant?
+        }
+        #owner = {
+        #save_global_event_target_as = raiding_marauder
+        # if = {
+        # 	limit = {
+        # 		has_country_flag = novian_arikhanate
+        # 	}
+        # 	random_system = {
+        # 		limit = {
+        # 			has_star_flag = giga_novian_raider_1
+        # 		}
+        # 		solar_system = {  }
+        # 	}
+        # }
+        #}
+        # solar_system = {
+        # 	save_global_event_target_as = fleet_system
+        # }
+        # owner = {
+        # 	remove_country_flag = raid_ongoing #is this supposed to apply to the fleet or planet?
+        # }
+    }
+}
+
+#Raiders return safely to Agartha.
+country_event = {
+    id = giga_novian.200
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        AND = {
+            from = {
+                has_fleet_flag = novian_raid_fleet_returning
+            }
+            fromfrom = { #are both necessary?
+                has_planet_flag = novian_colony_agartha
+            }
+        }
+    }
+
+    immediate = {
+        while = {
+            count = from.novian_raid_loot_size
+            event_target:novian_arikhanate = {
+                country_event = { id = giga_novian.151 }
+            }
+        }
+        remove_global_flag = novian_raid_ongoing
+        delete_novian_raiders = yes
+    }
+}
+country_event = {
+    id = giga_novian.151
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        stash_novian_loot = yes
+    }
+}
+
+#Manages deposition of Iodizium Slag blockers during Novian Bombardment. Fired by on_planet_bombarded.
+# This = Planet
+# From = Bombarder
+#Based on origin.7200	(Fruitful Origin: Seed Bombing stance creates blockers)
+planet_event = {
+    id = giga_novian.300
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_orbital_bombardment_stance = novian
+        OR = {
+            AND = {
+                planet_devastation >= 10
+                NOT = { is_variable_set = novian_bombardment_blockers }
+            }
+            AND = {
+                is_variable_set = novian_bombardment_blockers
+                check_variable_arithmetic = {
+                    which = novian_bombardment_blockers
+                    add = 1
+                    divide = trigger:planet_devastation
+                    value <= 0.1
+                }
+            }
+        }
+    }
+
+    immediate = {
+        # Set variables if not done before
+        if = {
+            limit = {
+                NOT = { is_variable_set = novian_bombardment_blockers }
+            }
+            set_variable = {
+                which = novian_bombardment_blockers
+                value = 1
+            }
+            add_blocker = {
+                type = d_giga_novian_iodizium_slag
+                blocked_deposit = random #destroy a deposit, if not too annoying?
+            }
+            create_message = {
+                type = MESSAGE_NOVIAN_BOMBING
+                localization = MESSAGE_NOVIAN_BOMBING
+                days = 30
+                target = this
+                variable = {
+                    type = name
+                    localization = PLANET
+                    scope = this
+                }
+            }
+        }
+        #If already at nine blockers, melt the planet instead of adding the tenth (this will occur at 100% devastation).
+        else_if = {
+            limit = {
+                check_variable = {
+                    which = novian_bombardment_blockers
+                    value = 9
+                }
+            }
+            clear_variable = novian_bombardment_blockers
+            destroy_colony = yes
+            #clear_planet_modifiers = yes
+            #clear_deposits = yes
+            change_pc = pc_molten
+            add_deposit = d_iodizium_deposit_1
+            create_message = {
+                type = MESSAGE_NOVIAN_BOMBING_PLANET_MELTED
+                localization = MESSAGE_NOVIAN_BOMBING_PLANET_MELTED
+                days = 30
+                target = this
+                variable = {
+                    type = name
+                    localization = PLANET
+                    scope = this
+                }
+            }
+        }
+        #If less than 9 blockers, add another one (ie, up to 9)
+        else = {
+            change_variable = {
+                which = novian_bombardment_blockers
+                value = 1
+            }
+            add_blocker = {
+                type = d_giga_novian_iodizium_slag
+                blocked_deposit = random #destroy a deposit, if not too annoying?
+            }
+            create_message = {
+                type = MESSAGE_NOVIAN_BOMBING
+                localization = MESSAGE_NOVIAN_BOMBING
+                days = 30
+                target = this
+                variable = {
+                    type = name
+                    localization = PLANET
+                    scope = this
+                }
+            }
+        }
+
+        # Notify player
+        # if = {
+        #     limit = {
+        #         owner = {
+        #             has_country_flag = novian_bombardment_tutorial
+        #         }
+        #     }
+        #     create_message = {
+        #         type = MESSAGE_FRUITFUL_SEED_BOMBING
+        #         localization = MESSAGE_FRUITFUL_SEED_BOMBING
+        #         days = 30
+        #         target = this
+        #         variable = {
+        #             type = name
+        #             localization = PLANET
+        #             scope = this
+        #         }
+        #     }
+        # }
+        # Tutorial event for the first time it happens
+        # else = {
+        #     planet_event = { id = origin.7201 }
+        # }
+    }
+}
+
+#Turns planets molten after Novian Bombardment, or otherwise destroys them
+
+#Pop transferred to Agartha
+#DEPRECATED
+#(deprecated comment) Currently untriggered, eventually the pop should instead be captured by the fleet and transferred upon raid fleet return.
+# planet_event = {
+# 	id = giga_novian.210
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#
+# 	immediate = {
+# 		while = {
+# 			count = 10
+# 			random_owned_pop = {
+# 				limit = {
+# 					has_virtual_species_trait = no #these will immediately despawn upon transfer
+# 					#has_trait = trait_hive_mind #these will die off after arrival
+# 					#has_trait = trait_machine_unit #these will die off after arrival
+#
+# 				}
+# 				species = { save_global_event_target_as = agartha_captured_pop }
+# 				kill_pop = yes
+# 			}
+# 			event_target:novian_colony_agartha = {
+# 				create_pop = { species = event_target:agartha_captured_pop }
+# 				clear_global_event_target = agartha_captured_pop
+# 			}
+# 		}
+# 	}
+# }
+
+###################################################################################################################################
+# ARCH SITE EVENTS
+# country_event = {
+# 	id = giga_novian.50000
+# 	hide_window = yes
+# 	mean_time_to_happen = { #Laggy to use
+# 		months = 120 #Long time
+# 	}
+# 	trigger = {
+# 		is_ai = no
+# 		has_country_flag = novian_projects_event_finish
+# 	}
+# 	fire_only_once = yes
+# 	immediate = {
+# 		random_system_within_border = {
+# 			save_global_event_target_as = novian_ruin_spawn_system
+# 		} #Is this line above and below necessary?
+# 		event_target:novian_ruin_spawn_system = {
+# 			spawn_system = {
+# 				min_distance = 10
+# 				max_distance = 30
+# 				max_jumps = 0
+# 				initializer = giga_novian_ruin_system_initializer
+# 			}
+# 			if = {
+# 				limit = {
+# 					last_created_system = {
+# 						NOT = {
+# 							has_hyperlane_to = prev
+# 						}
+# 					}
+# 				}
+# 				add_hyperlane = {
+# 					from = this
+# 					to = last_created_system
+# 				}
+# 			}
+# 			else = { #Check hyperlanes are functional and code is efficient.
+# 				add_extra_hyperlane_to_spawned_system_effect = yes
+# 			}
+# 		}
+# 		country_event = {
+# 			id = giga_novian.50001
+# 			days = 1
+# 		}
+# 	}
+# }
+# country_event = { #This event should also mark it on the situation log.
+# 	id = giga_novian.50001
+# 	title = giga_novian.50001.name
+# 	desc = giga_novian.50001.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_evt_ship_travel #placeholder
+# 	option = { name = utopia.4004.a } #placeholder
+# }
+
+
+
+#############################################
+##### ECONOMY, FLEETS, CRISIS MECHANICS #####
+#############################################
+country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
+    id = giga_novian.60000
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        NOT = { has_global_flag = novian_arikhanate_defeated }
+        #is_country_type = novian_arikhanate
+    }
+
+    immediate = {
+        if = { #roll to increase mobilisation monthly
+            limit = {
+                check_variable = {
+                    which = novian_mobilisation
+                    value < 100
+                }
+            }
+            if = { #diff 1
+                limit = { has_global_flag = giga_core_novian_1 }
+                #1200 months in a default midgame (assuming instantaneous core opening), so 100-in-1200 to awaken roughly at endgame. Halved this value to let raids factor in, so it should take ~2 centuries.
+                random_list = {
+                    100 = { change_variable = { which = novian_mobilisation value = 1 } }
+                    2300 = { }
+                }
+            }
+            else_if = { #diff 2
+                limit = { has_global_flag = giga_core_novian_2 }
+                random_list = {
+                    100 = { change_variable = { which = novian_mobilisation value = 1 } }
+                    2175 = { }
+                }
+            }
+            else_if = { #diff 3
+                limit = { has_global_flag = giga_core_novian_3 }
+                random_list = {
+                    100 = { change_variable = { which = novian_mobilisation value = 1 } }
+                    2050 = { }
+                }
+            }
+            else_if = { #diff 4
+                limit = { has_global_flag = giga_core_novian_4 }
+                random_list = {
+                    100 = { change_variable = { which = novian_mobilisation value = 1 } }
+                    1925 = { }
+                }
+            }
+            else_if = { #diff 5
+                limit = { has_global_flag = giga_core_novian_5 }
+                random_list = {
+                    100 = { change_variable = { which = novian_mobilisation value = 1 } }
+                    1800 = { } #1-in-18 means that, assuming no raiders succeed, there is half as much time after endgame start (assuming default game timing)
+                }
+            }
+        }
+        if = { #prevent mobilisation from going over 100%
+            limit = {
+                check_variable = {
+                    which = novian_mobilisation
+                    value > 100
+                }
+            }
+            set_variable = {
+                which = novian_mobilisation
+                value = 100
+            }
+        }
+        if = { #check for mobilisation reaching 100%
+            limit = {
+                AND = {
+                    check_variable = {
+                        which = novian_mobilisation
+                        value = 100
+                    }
+                    NOT = {
+                        has_global_flag = novian_mobilisation_complete
+                    }
+                }
+            }
+            set_global_flag = novian_mobilisation_complete
+            country_event = {
+                id = giga_novian.61000
+            }
+        }
+
+        # event_target:novian_arikhanate = {
+        # 	every_planet_within_border = {
+        # 		limit = {
+        # 			is_colony = yes
+        # 			owner = { is_country_type = novian_arikhanate }
+        # 			NOT = { has_planet_flag = katzen_planet_set_up }
+        # 			NOT = { has_planet_flag = gigaflusion }
+        # 		}
+        # 		planet_event = { id = giga_katzen.110 days = 30 } #katzenize all non katzen planets
+        # 	}
+        # }
+
+        #Creates research and mining stations in Novian territory
+        #create_research_mining_stations = yes
+
+
+        #Creates starbases in every securely colonised/occupied system
+        # every_owned_planet = {
+        # 	limit = {
+        # 		solar_system = {
+        # 			NOT = {
+        # 				exists = starbase
+        # 				any_fleet_in_system = {
+        # 					owner = {
+        # 						is_hostile = event_target:novian_arikhanate
+        # 					}
+        # 				}
+        # 			}
+        # 		}
+        # 	}
+        # 	star = {
+        # 		create_starbase = { #Make a starbase
+        # 			size = starbase_outpost
+        # 			owner = event_target:novian_arikhanate
+        # 		}
+        # 	}
+        # }
+
+        #event_target:novian_arikhanate = { #not necessary?
+        calculate_novian_spending = yes
+        zero_novian_incomes = yes
+        obtain_novian_incomes = yes
+        finalise_novian_economy_variables = yes
+
+
+        #If the balance is negative (oh no!!!), disband ships until no longer negative
+        if = {
+            limit = {
+                check_variable = {
+                    which = novian_resource_balance
+                    value < 1
+                }
+                check_variable = {
+                    which = novian_resource_stockpile
+                    value = 0
+                }
+                OR = {
+                    any_owned_ship = { is_ship_size = giga_novian_corvette }
+                    any_owned_ship = { is_ship_size = giga_novian_escort }
+                    any_owned_ship = { is_ship_size = giga_novian_asteroidcraft }
+                }
+            }
+            while = {
+                limit = {
+                    check_variable = { #Scuttle ships until they get enough resources to last at least another month
+                        which = novian_resource_spending
+                        value > novian_resource_stockpile
+                    }
+                    any_owned_ship = {
+                        OR = {
+                            is_ship_size = giga_novian_corvette
+                            is_ship_size = giga_novian_escort
+                            is_ship_size = giga_novian_asteroidcraft
+                        }
+                    }
+                }
+                random_owned_ship = {
+                    limit = {
+                        OR = {
+                            is_ship_size = giga_novian_corvette
+                            is_ship_size = giga_novian_escort
+                            is_ship_size = giga_novian_asteroidcraft
+                        }
+                    }
+                    switch = { #all ship types return 50% of build cost #find way to reference half of build cost directly
+                        trigger = is_ship_size
+                        giga_novian_corvette = {
+                            event_target:novian_arikhanate = {
+                                change_variable = {
+                                    which = novian_resource_stockpile
+                                    value = 25
+                                }
+                            }
+                        }
+                        giga_novian_escort = {
+                            event_target:novian_arikhanate = {
+                                change_variable = {
+                                    which = novian_resource_stockpile
+                                    value = 100
+                                }
+                            }
+                        }
+                        giga_novian_asteroidcraft = {
+                            event_target:novian_arikhanate = {
+                                change_variable = {
+                                    which = novian_resource_stockpile
+                                    value = 1000
+                                }
+                            }
+                        }
+                    }
+
+                    delete_ship = this
+                }
+                calculate_novian_spending = yes
+            }
+        }
+        calculate_novian_spending = yes
+
+        #check_novian_new_fleet_spawn = yes
+
+        # when hypership destroyed:
+        # 	# every_country = {
+        # 	# 	limit = { has_country_flag = allied_to_kaiser }
+        # 	# 	country_event = { id = giga_katzen.3003 days = 15 } #FTO collapses
+        # 	# }
+        # 	# every_country = {
+        # 	# 	limit = { has_country_flag = katzen_vassal }
+        # 	# 	country_event = { id = giga_katzen.0033 days = 15 } #Vassals rebel
+        # 	# }
+        # 	every_country = {
+        # 		country_event = { id = giga_novian.60010 }
+        # 	}
+        # 	set_country_flag = novian_hypership_destroyed
+        # 	#country_event = { id = giga_katmoons.001 days = 3600 } #make a new one CHANGE TO 10 YEARS
+        # }
+        #}
+
+        #repeats event monthly. Make sure it first happens on first day of month. It currently doesn't, instead using a month after the Novians spawned. Which is monthly, so nvm. Maybe.
+        country_event = { id = giga_novian.60000 days = 30 }
+
+        #Wardec any new countries that emerge during crisis war
+        if = {
+            limit = {
+                has_global_flag = novian_mobilisation_complete
+            }
+            every_country = {
+                limit = {
+                    NOT = {
+                        is_at_war_with = event_target:novian_arikhanate
+                    }
+                    OR = {
+                        is_country_type = default
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                        is_country_type = katzenartig_imperium
+                        is_country_type = katzen_submarines #necessary or not?
+                        is_country_type = ascended_empire #ZOFE
+                        is_country_type = lost_empire #ZOFE
+                    }
+                }
+                #country_event = { id = giga_novian.61100 }
+                declare_war = {
+                    target = prev
+                    attacker_war_goal = wg_novian_conquest
+                    name = "Novian Galactic Crusade"
+                    effect = {
+                        save_global_event_target_as = novian_crusade #aeternum_crusade
+                    }
+                }
+            }
+        }
+
+        #Check for another raid
+        # event_target:novian_raid_country = {
+        #     country_event = { id = giga_novian.130 }
+        # }
+
+        # event_target:novian_arikhanate = {
+        # 	set_variable = {
+        # 		which = kaiser_ehof_count
+        # 		value = 0
+        # 	}
+        # 	every_owned_megastructure = {
+        # 		limit = { is_megastructure_type = kaiser_ehof_1 }
+        # 		event_target:novian_arikhanate = {
+        # 			change_variable = {
+        # 				which = kaiser_ehof_count
+        # 				value = 1
+        # 			}
+        # 		}
+        # 	}
+        # }
+
+        #remove attachés from nations at war with kaiser
+        # every_country = {
+        # 	limit = {
+        # 		is_at_war_with = event_target:novian_arikhanate
+        # 		has_modifier = katzen_attache
+        # 	}
+        # 	country_event = { id = giga_katzen.5001 days = 10 }
+        # }
+
+        # every_country = { #if a country allied to kaiser somehow ends up at war with him, end the war
+        # 	limit = {
+        # 		has_country_flag = allied_to_kaiser
+        # 		is_at_war_with = event_target:novian_arikhanate
+        # 	}
+        # 	every_war = {
+        # 		limit = {
+        # 			any_war_participant = {
+        # 				is_country_type = novian_arikhanate
+        # 			}
+        # 			any_war_participant = {
+        # 				is_country = THIS
+        # 			}
+        # 		}
+        # 		end_war_effect = yes
+        # 	}
+        # 	while = {
+        # 		count = 8
+        # 		increase_kaiser_opinion = yes
+        # 	}
+        # }
+
+        # every_country = {
+        # 	limit = {
+        # 		is_at_war_with = event_target:novian_arikhanate
+        # 		any_owned_leader = {
+        # 			has_leader_flag = katzen_given_admiral
+        # 		}
+        # 	}
+        # 	country_event = { id = giga_katzen.3015 days = 20 } #katzen admirals defect
+        # }
+
+        # every_country = { #add kaiser neutral flag to all countries that dont have it
+        # 	limit = {
+        # 		NOR = {
+        # 			has_country_flag = kaiser_angry_3
+        # 			has_country_flag = kaiser_angry_2
+        # 			has_country_flag = kaiser_angry_1
+        # 			has_country_flag = kaiser_neutral
+        # 			has_country_flag = kaiser_happy_1
+        # 			has_country_flag = kaiser_happy_2
+        # 			has_country_flag = kaiser_happy_3
+        # 			has_country_flag = kaiser_happy_4
+        # 			katzen_is_genocidal = yes
+        # 		}
+        # 	}
+        # 	set_country_flag = kaiser_neutral
+        # }
+        # every_country = { #add kaiser neutral flag to all countries that dont have it
+        # 	limit = {
+        # 		NOR = {
+        # 			has_country_flag = kaiser_angry_3
+        # 			has_country_flag = kaiser_angry_2
+        # 			has_country_flag = kaiser_angry_1
+        # 			has_country_flag = kaiser_neutral
+        # 			has_country_flag = kaiser_happy_1
+        # 			has_country_flag = kaiser_happy_2
+        # 			has_country_flag = kaiser_happy_3
+        # 			has_country_flag = kaiser_happy_4
+        # 		}
+        # 		katzen_is_genocidal = yes
+        # 	}
+        # 	set_country_flag = kaiser_angry_1
+        # }
+
+        # event_target:novian_arikhanate = { #Check if can construct a war forge
+        # 	random_owned_planet = {
+        # 		limit = {
+        # 			exists = space_owner
+        # 			space_owner = {
+        # 				OR = {
+        # 					is_country_type = novian_arikhanate
+        # 					has_country_flag = katzen_vassal
+        # 				}
+        # 			}
+        # 			OR = {
+        # 				has_active_building = building_giga_flusion_capital
+        # 				has_active_building = building_giga_katzen_capital
+        # 				has_active_building = building_colony_shelter
+        # 				has_active_building = building_capital
+        # 				has_active_building = building_major_capital
+        # 				has_active_building = building_system_capital
+        # 				has_active_building = building_deployment_post
+        # 				has_active_building = building_machine_capital
+        # 				has_active_building = building_machine_major_capital
+        # 				has_active_building = building_machine_system_capital
+        # 				has_active_building = building_hive_capital
+        # 				has_active_building = building_hive_major_capital
+        # 			}
+        # 			solar_system = {
+        # 				NOR = {
+        # 					any_system_megastructure = { is_megastructure_type = katzen_forge_0 } #not another one
+        # 					any_system_megastructure = { is_megastructure_type = katzen_forge_1 } #not another one
+        # 					any_fleet_in_system = { #no hostiles
+        # 						controller = {
+        # 							OR = {
+        # 								is_at_war_with = event_target:novian_arikhanate
+        # 								is_hostile = event_target:novian_arikhanate
+        # 							}
+        # 						}
+        # 					}
+        # 				}
+        # 			}
+        # 		}
+        # 		save_global_event_target_as = katzen_war_forge_target
+        # 		event_target:novian_arikhanate = {
+        # 			set_country_flag = found_war_forge_target
+        # 		}
+        # 	}
+        # }
+        # if = { #This flag ensures it won't spawn another one ontop of the existing one
+        # 	limit = {
+        # 		event_target:novian_arikhanate = {
+        # 			has_country_flag = found_war_forge_target
+        # 		}
+        # 	}
+        # 	event_target:katzen_war_forge_target = {
+        # 		solar_system = {
+        # 			spawn_megastructure = {
+        # 				type = katzen_forge_0
+        # 				planet = event_target:katzen_war_forge_target
+        # 				owner = event_target:novian_arikhanate
+        # 			}
+        # 			random_system_megastructure = {
+        # 				limit = {
+        # 					is_megastructure_type = katzen_forge_0
+        # 				}
+        # 				upgrade_megastructure_to = katzen_forge_1
+        # 			}
+        # 		}
+        # 	}
+        # 	event_target:novian_arikhanate = {
+        # 		remove_country_flag = found_war_forge_target
+        # 	}
+        # }
+        # every_megastructure = { #Delete any katzen war forges in construction in systems with hostile ships
+        # 	limit = {
+        # 		is_megastructure_type = katzen_forge_0
+        # 		solar_system = {
+        # 			any_fleet_in_system = { #no hostiles
+        # 				controller = {
+        # 					OR = {
+        # 						is_at_war_with = event_target:novian_arikhanate
+        # 						is_hostile = event_target:novian_arikhanate
+        # 					}
+        # 				}
+        # 			}
+        # 		}
+        # 	}
+        # 	remove_megastructure = THIS
+        # }
+        # every_megastructure = { #Delete any finished war forges in system with ONLY hostile ships
+        # 	limit = {
+        # 		is_megastructure_type = katzen_forge_1
+        # 		solar_system = {
+        # 			any_fleet_in_system = { #no hostiles
+        # 				controller = {
+        # 					OR = {
+        # 						is_at_war_with = event_target:novian_arikhanate
+        # 						is_hostile = event_target:novian_arikhanate
+        # 					}
+        # 				}
+        # 			}
+        # 			NOT = { #No katzens
+        # 				any_fleet_in_system = {
+        # 					owner = { is_country_type = novian_arikhanate }
+        # 				}
+        # 			}
+        # 			# space_owner = { #Doesn't own it
+        # 			# 	NOT = { is_country_type = katzenartig_imperium }
+        # 			# }
+        # 		}
+        # 	}
+        # 	remove_megastructure = THIS
+        # 	solar_system = {
+        # 		save_event_target_as = war_forge_destroyed_system
+        # 		every_system_planet = {
+        # 			limit = { has_planet_flag = has_katzen_warform }
+        # 			remove_planet_flag = has_katzen_warform
+        # 		}
+        # 		space_owner = { country_event = { id = giga_katzen.031 } }
+        # 		starbase = { fleet = { if = { limit = { has_modifier = warforge_detection } remove_modifier = warforge_detection } } }
+        # 	}
+        # }
+
+        # every_megastructure = { #Delete any katzen EHOFS in construction in systems with hostile ships
+        # 	limit = {
+        # 		is_megastructure_type = kaiser_ehof_0
+        # 		solar_system = {
+        # 			any_fleet_in_system = { #no hostiles
+        # 				controller = {
+        # 					OR = {
+        # 						is_at_war_with = event_target:novian_arikhanate
+        # 						is_hostile = event_target:novian_arikhanate
+        # 					}
+        # 				}
+        # 			}
+        # 		}
+        # 	}
+        # 	remove_megastructure = THIS
+        # }
+        # every_megastructure = { #Delete any finished EHOFs in system with ONLY hostile ships
+        # 	limit = {
+        # 		is_megastructure_type = kaiser_ehof_1
+        # 		solar_system = {
+        # 			any_fleet_in_system = { #no hostiles
+        # 				controller = {
+        # 					OR = {
+        # 						is_at_war_with = event_target:novian_arikhanate
+        # 						is_hostile = event_target:novian_arikhanate
+        # 					}
+        # 				}
+        # 			}
+        # 			NOT = { #No katzens
+        # 				any_fleet_in_system = {
+        # 					owner = {
+        # 						is_country_type = novian_arikhanate
+        # 					}
+        # 				}
+        # 			}
+        # 			space_owner = { #Doesn't own it
+        # 				NOT = { is_country_type = novian_arikhanate }
+        # 			}
+        # 		}
+        # 	}
+        # 	if = {
+        # 		limit = {
+        # 			exists = planet
+        # 		}
+        # 		planet = {
+        # 			giga_clear_has_mega_flag = { MEGA = prev }
+        # 		}
+        # 	}
+        # 	remove_megastructure = THIS
+        # 	solar_system = {
+        # 		save_event_target_as = ehof_destroyed_system
+        # 		remove_star_flag = has_kaiser_ehof
+        # 	}
+        # 	space_owner = { country_event = { id = giga_katehof.006 } }
+        # }
+    }
+}
+
+#Novians declare war
+country_event = {
+    id = giga_novian.61000
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            limit = {
+                NOT = {
+                    is_at_war_with = event_target:novian_arikhanate
+                }
+                OR = {
+                    is_country_type = default
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                    is_country_type = katzenartig_imperium
+                    is_country_type = katzen_submarines #necessary or not?
+                    is_country_type = ascended_empire #ZOFE
+                    is_country_type = lost_empire #ZOFE
+                }
+            }
+            country_event = { id = giga_novian.61100 }
+            event_target:novian_raid_country = { destroy_country = yes }
+            declare_war = {
+                target = prev
+                attacker_war_goal = wg_novian_conquest
+                name = "Novian Galactic Crusade"
+                effect = {
+                    save_global_event_target_as = novian_crusade #aeternum_crusade
+                }
+            }
+        }
+
+        #Establish comms with any country that emerges after core opening
+        every_country = {
+            limit = {
+                is_country_type = default
+                NOT = { has_country_flag = novians_contacted }
+            }
+            establish_novian_contact = yes
+        }
+
+        # while = {
+        #     count = 2
+        #     create_novian_fleet_assault = yes
+        # }
+    }
+}
+
+#Players informed of Novian wardec
+country_event = {
+    id = giga_novian.61100
+    title = giga_novian.61100.name
+    desc = giga_novian.61100.desc
+    location = event_target:novian_colony_capital
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_crisis_declared
+    show_sound = event_red_alert
+
+    option = {
+        name = giga_novian.61100.a
+        custom_tooltip = giga_novian.61100.a.tooltip
+    }
+}
+
+##########################
+##### VICTORY EVENTS #####
+##########################
+#Hypership destroyed "hub event"
+ship_event = {
+    id = giga_novian.60010
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        this = {
+            #has_ship_flag = novian_hypership
+            is_ship_size = giga_novian_hypership
+        }
+    }
+
+    immediate = {
+        set_global_flag = novian_hypership_defeated
+        this.owner = {
+            add_modifier = {
+                modifier = novian_disarray #rework Novian Disarray to be unique. Make it a morale collapse.
+                days = -1
+            }
+        }
+        #Informs the Hypership's destroyer
+        every_playable_country = {
+            limit = {
+                is_ai = no
+                is_same_value = from.owner #hope this works
+            }
+            country_event = { id = giga_novian.60011 days = 3 } #delay allows battle to finish
+        }
+        #Informs others
+        every_playable_country = {
+            limit = {
+                is_ai = no
+                NOT = { is_same_value = from.owner }
+            }
+            country_event = { id = giga_novian.60012 days = 3 } #delay allows battle to finish
+        }
+        check_arikhanate_defeated = yes
+    }
+}
+
+#Inform Hypership-destroying country of the Hypership's demise
+country_event = {
+    id = giga_novian.60011
+    title = giga_novian.60011.name
+    desc = giga_novian.60011.desc
+    location = event_target:novian_hypership
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_large_explosion
+    show_sound = event_structural_collapse
+
+    option = {
+        name = giga_novian.60011.a
+        custom_tooltip = giga_novian.60010.a.tooltip
+        give_specimen = { key = intergalactic_map origin = "novian_name_hypership" }
+    }
+}
+
+#Inform other countries of the Hypership's demise
+country_event = { #pretty sure using triggered desc or that other tool this can be merged with 60010
+    id = giga_novian.60012
+    title = giga_novian.60012.name
+    desc = giga_novian.60012.desc
+    location = event_target:novian_hypership
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_large_explosion
+    show_sound = event_structural_collapse
+
+    option = {
+        name = giga_novian.60012.a
+        custom_tooltip = giga_novian.60010.a.tooltip
+    }
+}
+
+#Capital conquered
+event = {
+    id = giga_novian.60100
+    title = giga_novian.60100.name
+    desc = giga_novian.60100.desc
+    location = this
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_surrender
+    show_sound = event_structural_collapse
+
+    trigger = { #can I use trigger = { switch = { to combine all these events?
+        this = {
+            has_planet_flag = novian_colony_capital
+        }
+    }
+
+    immediate = {
+        set_global_flag = novian_colony_capital_conquered
+        this = {
+            change_pc = pc_ll_foggy
+            add_deposit = d_giga_novian_capital_energy
+            add_deposit = d_giga_novian_capital_minerals
+            add_deposit = d_giga_novian_capital_food
+        }
+    }
+
+    option = {
+        name = giga_novian.60100.a
+        check_arikhanate_defeated = yes
+    }
+}
+
+#Temple conquered
+event = {
+    id = giga_novian.60110
+    title = giga_novian.60110.name
+    desc = giga_novian.60110.desc
+    location = this
+    is_triggered_only = yes
+
+    picture = GFX_evt_astral_rift_riftworld_visit
+    show_sound = event_ground_battle
+
+    trigger = {
+        this = {
+            has_planet_flag = novian_colony_temple
+        }
+    }
+
+    immediate = {
+        set_global_flag = novian_colony_temple_conquered
+        this = {
+            change_pc = pc_ll_foggy
+            add_deposit = d_giga_novian_temple_energy
+            add_deposit = d_giga_novian_temple_minerals
+            add_deposit = d_giga_novian_temple_food
+        }
+    }
+
+    option = {
+        name = giga_novian.60110.a
+        from = { give_specimen = { key = arikian_national_epic origin = "novian_name_temple" } }
+        check_arikhanate_defeated = yes
+    }
+}
+
+#Shipyard Conquered
+event = {
+    id = giga_novian.60120
+    title = giga_novian.60120.name
+    desc = giga_novian.60120.desc
+    location = this
+    is_triggered_only = yes
+
+    picture = GFX_evt_sabotaged_ship
+    show_sound = event_ground_battle
+
+    trigger = {
+        this = {
+            has_planet_flag = novian_colony_shipyard
+        }
+    }
+
+    immediate = {
+        set_global_flag = novian_colony_shipyard_conquered
+        this = {
+            set_planet_flag = novian_orbital_conquered
+            planet_event = { id = giga_mega.003 }
+        }
+    }
+
+    option = {
+        name = giga_novian.60120.a
+        from = { give_specimen = { key = hypership_alcubierre origin = "novian_name_shipyard" } }
+        check_arikhanate_defeated = yes
+    }
+}
+
+#Quashab Conquered
+event = {
+    id = giga_novian.60130
+    title = giga_novian.60130.name
+    desc = giga_novian.60130.desc
+    location = this
+    is_triggered_only = yes
+
+    picture = GFX_evt_ruined_system
+    show_sound = event_ground_battle
+
+    trigger = {
+        this = {
+            has_planet_flag = novian_colony_quashab
+        }
+    }
+
+    immediate = {
+        set_global_flag = novian_colony_quashab_conquered
+        this = {
+            set_planet_flag = novian_orbital_conquered
+            planet_event = { id = giga_mega.003 }
+        }
+    }
+
+    option = {
+        name = giga_novian.60130.a
+        from = { give_specimen = { key = cnilscale origin = "novian_name_quashab" } }
+        check_arikhanate_defeated = yes
+    }
+}
+
+#Agartha Conquered
+event = {
+    id = giga_novian.60140
+    title = giga_novian.60140.name
+    desc = giga_novian.60140.desc
+    location = this
+    is_triggered_only = yes
+
+    picture = GFX_evt_victorious_army
+    show_sound = event_ground_battle
+
+    trigger = {
+        this = {
+            has_planet_flag = novian_colony_agartha
+        }
+    }
+
+    immediate = {
+        set_global_flag = novian_colony_agartha_conquered
+    }
+
+    option = {
+        name = giga_novian.60140.a
+        from = { give_specimen = { key = agartha_toy origin = "novian_name_agartha"} }
+        if = {
+            limit = { from = { is_gestalt = no } }
+            add_modifier = { modifier = "agartha_scavenger_program" days = -1 }
+        }
+        else = {
+            add_modifier = { modifier = "agartha_scavenger_program_gestalt" days = -1 }
+        }
+        check_arikhanate_defeated = yes
+    }
+}
+
+#Arikhanate defeated #semi-duplicate of giga_novian.60100 - rework these two somehow.
+country_event = {
+    id = giga_novian.60200
+    title = giga_novian.60200.name
+    desc = giga_novian.60200.desc
+    location = event_target:novian_colony_capital
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_crisis_defeated
+    show_sound = event_celebration
+
+    immediate = {
+        set_global_flag = novian_arikhanate_defeated
+        event_target:novian_arikhanate = { destroy_country = yes }
+        #event_target:novian_crusade = { end_war_effect = yes }
+        country_event = { id = giga_novian.60210 days = 30 }
+    }
+
+    option = {
+        name = giga_novian.60200.a
+        add_resource = {
+            unity = 50000
+        }
+    }
+}
+
+#Arikhan found dead
+country_event = {
+    id = giga_novian.60210
+    title = giga_novian.60210.name
+    desc = giga_novian.60210.desc
+    location = event_target:novian_colony_capital
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_khan_throne_room
+    show_sound = event_wind_ruins
+
+    immediate = {
+        country_event = { id = giga_novian.60220 days = 180 }
+    }
+
+    option = {
+        name = giga_novian.60210.a
+        give_specimen = { key = arikhan_bulava origin = "novian_name_capital"}
+    }
+}
+
+#Horrors of the Throneworld
+country_event = {
+    id = giga_novian.60220
+    title = giga_novian.60220.name
+    desc = giga_novian.60220.desc
+    location = event_target:novian_colony_capital
+
+    is_triggered_only = yes
+
+    picture = GFX_evt_treasure_cave
+    show_sound = event_wind_ruins
+
+    option = {
+        name = giga_novian.60220.a
+    }
+}

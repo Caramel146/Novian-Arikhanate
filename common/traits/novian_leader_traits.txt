@@ -1,0 +1,191 @@
+leader_trait_novian = {
+	#modifiers need rebalancing, standardising, fleshing out
+	# remove triggered modifiers and link them to individual traits instead?
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_novian"
+		RARITY = free_or_veteran
+		COUNCIL = triggered
+		TIER = none
+	}
+	immortal_leaders = yes
+	leader_class = all
+	initial = no
+	randomized = no
+	notify_on_gained = no
+	triggered_councilor_modifier = { #Ruler
+		potential = {
+			is_ruler = yes
+		}
+		country_ruler_influence_produces_add = 1.0
+	}
+	triggered_councilor_modifier = { #Councillor
+		potential = {
+			is_ruler = no
+		}
+		pop_government_ethic_attraction = 0.20
+	}
+	triggered_fleet_modifier = { #Commander - Fleet Modifier
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_fire_rate_mult = 0.10
+		ship_speed_mult = 0.10
+		ship_weapon_damage = 0.10
+		ship_weapon_range_mult = 0.10
+		ship_orbital_bombardment_mult = 0.5
+		ship_disengage_chance_mult = -0.2
+	}
+	triggered_army_modifier = { #Commander - Army Modifier
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.15
+		army_morale_damage_mult = 0.15
+		army_disengage_chance_mult = -0.2
+		army_collateral_damage_mult = 0.5
+	}
+	# Commander - Self Modifier
+	triggered_self_modifier = { #Commander - Self Modifier
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		planet_combat_width_add = 4 #Novians want intense and quick battles.
+	}
+	triggered_self_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		leader_scientists_physics_research_produces_add = 5
+		leader_scientists_society_research_produces_add = 5
+		leader_scientists_engineering_research_produces_add = 5
+		mult = trigger:has_skill
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+			is_councilor = yes
+		}
+		all_technology_research_speed = 0.1
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_pops_upkeep_mult = -0.15
+		planet_army_build_speed_mult = 0.15
+		planet_jobs_slave_produces_mult = 0.1
+		pop_happiness = -0.05
+	}
+}
+
+#####################
+
+trait_arikhan = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_curator"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+trait_governor_capital = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_curator"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+trait_governor_temple = {
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_curator"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+trait_governor_shipyard = {
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_curator"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+trait_governor_quasar = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_curator"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+trait_governor_agartha = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_curator"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}

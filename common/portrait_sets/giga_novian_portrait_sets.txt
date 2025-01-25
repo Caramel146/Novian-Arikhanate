@@ -1,0 +1,8 @@
+# novian = {
+#     species_class = GIGA_NOVIAN #can be capitalised or not it seems
+#     portraits = { #the actual files that define the individual portraits are in gfx/portraits/portraits
+#         "giga_eawaf_adagio"
+#         "giga_eawaf_aria"
+#         "giga_eawaf_sonata"
+#     }
+# }

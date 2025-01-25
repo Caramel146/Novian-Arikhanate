@@ -1,0 +1,248 @@
+#Novian Cybernetics traits
+trait_novian_alloys = {
+	cost = 1
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+		exists = from
+		from = {
+			has_technology = tech_novian_cybernetics
+		}
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = NOVIAN_CYBORG_ENERGY_UPKEEP_EFFECT
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.15
+		army_health = 0.1
+	}
+
+	slave_cost = {
+		energy = 3000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_industrial_designation = yes }
+		}
+	}
+}
+
+trait_novian_consumer_goods = {
+	cost = 1
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+		exists = from
+		from = {
+			has_technology = tech_novian_cybernetics
+		}
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = NOVIAN_CYBORG_ENERGY_UPKEEP_EFFECT
+	modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.15
+	}
+
+	slave_cost = {
+		energy = 3000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_industrial_designation = yes }
+		}
+	}
+}
+
+trait_novian_army = {
+	cost = 2
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+		exists = from
+		from = {
+			has_technology = tech_novian_cybernetics
+		}
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = NOVIAN_CYBORG_ENERGY_UPKEEP_EFFECT
+	improves_leaders = yes
+	modifier = {
+		army_damage_mult = 0.6
+		army_health = 0.4
+	}
+
+	slave_cost = {
+		energy = 3000
+	}
+	assembly_score = {
+		modifier = {
+			add = 0.5 #always good
+		}
+	}
+}
+
+trait_novian_assembly = {
+	cost = 2
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+		exists = from
+		from = {
+			has_technology = tech_novian_cybernetics
+		}
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	modifier = {
+		planet_pop_assembly_organic_mult = 0.25
+		pop_housing_usage_mult = -0.1
+		pop_growth_speed = -0.25
+	}
+
+	slave_cost = {
+		energy = 2250
+	}
+}
+
+trait_novian_fanaticism = {
+	cost = 1
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+		exists = from
+		from = {
+			has_technology = tech_novian_cybernetics
+		}
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = NOVIAN_CYBORG_ENERGY_UPKEEP_EFFECT
+	modifier = {
+		pop_ethic_authoritarian_attraction_mult = 0.5
+		pop_ethic_militarist_attraction_mult = 0.5
+		pop_ethic_xenophobe_attraction_mult = 0.5
+		planet_jobs_unity_produces_mult = 0.1
+		army_morale = 0.4
+		army_damage_mult = 0.1
+	}
+
+	slave_cost = {
+		energy = 2250
+	}
+}
+
+trait_novian_overcharge = {
+	cost = -4
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+		exists = from
+		from = {
+			has_technology = tech_novian_cybernetics
+		}
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = TRAIT_NOVIAN_OVERCHARGED_UPKEEP_EFFECT
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		army_damage_mult = 0.05
+	}
+}
+
+trait_novian_lobotomy = {
+	cost = 1
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+		exists = from
+		from = {
+			has_technology = tech_novian_cybernetics
+		}
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	forced_happiness = yes
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+	custom_tooltip = TRAIT_NOVIAN_LOBOTOMY_EFFECT
+	slave_cost = {
+		energy = 2250
+	}
+}
+
+
+#Novian Cybernetic infrastructure trait..? This is gonna be tough. Will some things not work, like if they get Driven Assimilatored?
+
+
+
+# === Habitability traits ===
+trait_pc_novian_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_novian_preference.dds"
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+	sorting_priority = 30
+	initial = no
+	randomized = no
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	ideal_planet_class = pc_novian
+	# bound_to_planet_classes = {
+	# 	pc_novian
+	# }
+	# modifier = {
+	# 	pc_novian_habitability = 1.0
+	# 	pc_agartha_habitability = 1.0
+	# }
+	ai_weight = { weight = 0 }
+}
+
+trait_pc_agartha_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_ring_preference.dds"
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+	sorting_priority = 30
+	initial = no
+	randomized = no
+	species_potential_add = { always = no }
+	species_possible_merge_add = { always = yes }
+	ideal_planet_class = pc_agartha
+	# bound_to_planet_classes = {
+	# 	pc_agartha
+	# }
+	# modifier = {
+	# 	pc_agartha_habitability = 1.0
+	# }
+	ai_weight = { weight = 0 }
+}

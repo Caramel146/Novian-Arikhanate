@@ -1,0 +1,125 @@
+col_novian_capital = {
+	icon = GFX_colony_type_capital #GFX_colony_type_fortress
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = novian_arikhanate #check country code
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	weight_modifier = {
+		base = 0
+	}
+}
+
+col_novian_temple = {
+	icon = GFX_colony_type_bureaucratic
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = novian_arikhanate
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	weight_modifier = {
+		base = 0
+	}
+}
+
+col_novian_shipyard = {
+	icon = GFX_colony_type_habitat_foundry
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = novian_arikhanate
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	weight_modifier = {
+		base = 0
+	}
+}
+
+col_novian_quashab = {
+	icon = GFX_colony_type_habitat_energy
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = novian_arikhanate
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	weight_modifier = {
+		base = 0
+	}
+}
+
+col_novian_agartha = {
+	icon = GFX_colony_type_workers
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = novian_arikhanate
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	weight_modifier = {
+		base = 0
+	}
+}
+
+col_novian_fringe = {
+	icon = GFX_colony_type_normal_colony
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = novian_arikhanate
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	weight_modifier = {
+		base = 0
+	}
+}
+
+col_novian_occupied = {
+	icon = GFX_colony_type_normal_colony
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = novian_arikhanate
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	weight_modifier = {
+		base = 0
+	}
+}

@@ -1,0 +1,6 @@
+component_set = {
+    key = "NOVIAN_AUTOCANNON"
+
+    icon = "GFX_ship_part_novian_autocannon"
+    icon_frame = 1
+}

@@ -1,0 +1,68 @@
+on_custom_diplomacy = {
+    events = {
+		giga_novian.1001
+	}
+}
+
+on_planet_bombarded = {
+	events = {
+		giga_novian.150
+	}
+}
+
+on_fleet_auto_move_arrival = {
+	events = {
+		giga_novian.200
+	}
+}
+
+# on_ship_destroyed_perp = {
+on_ship_disabled = {
+	events = {
+		giga_novian.60010
+	}
+}
+
+#on_planet_attackers_win = {
+on_planet_conquer = {
+#on_planet_occupied = {
+#on_planet_transfer = {
+	events = {
+		giga_novian.60100
+		giga_novian.60110
+		giga_novian.60120
+		giga_novian.60130
+		giga_novian.60140
+	}
+}
+
+on_game_start_country = {
+	events = {
+		giga_novian.10
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		giga_novian.130 #raid chance roll
+		giga_novian.131 #delete raiders after 5 years on deployment to prevent getting stuck
+	}
+}
+
+# on_mid_game_pulse = {
+# 	events = {
+# 		giga_novian.12
+# 	}
+# }
+
+on_fleet_destroyed_victim = {
+	events = {
+		giga_novian.136
+	}
+}
+
+on_planet_bombarded = {
+	events = {
+		origin.7200		# Fruitful Origin: Seed Bombing stance creates blockers
+	}
+}

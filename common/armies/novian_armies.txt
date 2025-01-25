@@ -1,0 +1,50 @@
+novian_army_defense = {
+    defensive = yes
+    health = 40
+    damage = 25
+    morale = 35
+    #morale_damage
+    #species?
+    icon = GFX_army_type_novian #needs a custom one, this is just Aeternum's
+    potential = { always = no }
+}
+
+novian_army_occupation = {
+    defensive = yes
+    health = 40
+    damage = 25
+    morale = 35
+    #morale_damage
+    #species?
+    icon = GFX_army_type_novian
+    potential = { always = no }
+}
+
+novian_army_assault = {
+    defensive = no
+    health = 25
+    damage = 10
+    morale = 5
+    #morale_damage
+    #collateral_damage = ?
+    #species?
+    icon = GFX_army_type_novian
+    potential = { always = no }
+}
+
+novian_army_tank = {
+    defensive = yes
+    health = 100.0
+    damage = 20.0
+    has_morale = no
+    #morale_damage = 1.00 #panzers don't have custom morale damage
+    #has_species = no
+    icon = GFX_army_type_novian_tank #change, this is just Reisigerkatzenpanzer
+    potential = { always = no }
+}
+
+#spawn_chance = {
+#	factor = 10
+#}
+#use_armynames_from = machine_defense
+#war exhaustion in the Novian conflict?

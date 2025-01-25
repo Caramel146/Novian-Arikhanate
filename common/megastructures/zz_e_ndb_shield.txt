@@ -1,0 +1,485 @@
+#File naming scheme controls ordering on mega build list. Within a letter, it is sorted alphabetically by *names?*.
+#"the dummies establish the loading order by loading before other mods, the "real" files establish priority by overwriting vanilla and other mods / the first time a specific entry is loaded, that's where it lives in the game's registry and that's the order it uses when iterating, but it's the LAST one which actually sticks / so we have dummies to make the list be ordered how we want, but then overwrite our own dummies to have a more final say on what they do" - TTFT
+#Consumes energy to tank shots?
+#Achievement gives -5% orbital bombardment damage, -5% devastation from storms...?
+#Gives all system bodies a modifier that prevents targeting? Or planets a modifier that protects from storms?
+	#How does it do it mechanically atm?
+#from common/ambient_objects/giga_ambient_objects.txt:
+#ambient_object = {
+	#name = "giga_fe_shield"
+	#entity = "nbd_shield_project_system_effect"
+	#selectable = no
+	#tooltip = "giga_fe_shield_tooltip"
+	#show_name = yes
+#}
+#from events/giga_007_fallen_empire.txt, for most FEs:
+#capital_scope = {
+	#set_planet_flag = cant_target_this_planet #NDB immunity #Not present for the Gatzo FEs in this block:
+	#create_ambient_object = { #funny shield system effect
+		#type = "giga_fe_shield"
+		#location = star
+		#use_3d_location = yes
+		#entity_offset = { min = 0 max = 0 }
+		#entity_offset_angle = { min = 0 max = 0 }
+		#entity_offset_height = { min = -15 max = -15 } #places lower than the star so that you can more easily actually get to the tooltip
+		#scale = 1
+	#}
+#}
+
+
+ndb_shield_0 = {
+	entity = "giga_consite_7_7_entity"
+	construction_entity = "giga_consite_7_7_entity"
+	# construction_blocks_and_blocked_by = none # BLOCKING TEST
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	ai_weight = { factor = 0 }
+	prerequisites = { tech_ndb_shield }
+
+	build_time = 1800
+	resources = {
+		category = giga_gigastructures
+		cost = {
+			alloys = 12500
+			influence = 500
+			unity = @giga_giga_unity_cost
+		}
+		upkeep = { energy = 10 }
+	}
+
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	potential = {
+		has_gigastructural_constructs = yes
+		has_technology = tech_ndb_shield
+		NOR = {
+			#has_global_flag = ndb_disabled
+			has_megastructure = ndb_shield_0
+			has_megastructure = ndb_shield_1
+			has_megastructure = ndb_shield_2
+			has_megastructure = ndb_shield_3
+			has_megastructure = ndb_shield_4
+			#has_megastructure = ndb_shield_cooldown
+			#has_megastructure = ndb_shield_firing
+			#has_megastructure = ndb_shield_menu
+			#has_megastructure = ndb_shield_ready
+			# has_megastructure = ndb_shield_recharge_after_barren
+			# has_megastructure = ndb_shield_recharge_after_crack
+			# has_megastructure = ndb_shield_recharge_after_damage
+			# has_megastructure = ndb_shield_recharge_after_melt
+			# has_megastructure = ndb_shield_recharge_after_system
+			#has_megastructure = ndb_shield_targetting
+		}
+	}
+
+	possible = {
+		#custom_tooltip = { fail_text = "requires_no_binary_trinary"			giga_is_bitrinary = no }
+		custom_tooltip = { fail_text = "requires_inside_border"				is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"			NOT = { any_system_planet = { is_surveyed = { who = prev.from status = no } } } }
+		#custom_tooltip = { fail_text = "requires_no_colonized_planets"		NOT = { any_system_planet = { is_colony = yes } } }
+		#custom_tooltip = { fail_text = "requires_big_star"					OR = { is_star_class = sc_b is_star_class = sc_a } }
+		#custom_tooltip = { fail_text = "requires_no_existing_megastructure"	has_no_non_gate_megastructure = yes }
+		#custom_tooltip = { fail_text = "requires_no_crisis_system"			NOT = { any_system_planet = { has_planet_flag = crisis_vital_planet } } }
+	}
+
+	placement_rules = {
+		planet_possible = {
+			#custom_tooltip = { fail_text = "requires_no_existing_megastructure"		planet_has_no_megastructure = yes }
+			custom_tooltip = { fail_text = "must_build_around_star"					is_star = yes }
+			custom_tooltip = { fail_text = "requires_no_anomaly"					has_anomaly = no }
+		}
+	}
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		fromfrom.planet = {
+			save_event_target_as = giga_planet
+			if = { limit = { exists = orbital_station } orbital_station = { dismantle = yes } }
+			giga_set_has_mega_flag = yes
+			set_planet_flag = cant_build_here
+			set_planet_flag = cant_target_this_planet
+		}
+		#every_system_planet = {
+			#set_planet_flag = cant_build_here
+			#set_planet_flag = cant_target_this_planet
+		#}
+		from = {
+			set_country_flag = giga_has_a_ndb
+			country_event = { id = giga_dialog.3201 }	# Notification
+			change_variable = { which = giga_current_ndb value = 1 }
+		}
+	}
+}
+
+ndb_shield_1 = {
+	entity = "giga_ndb_phase1_entity"
+	construction_entity = "giga_ndb_phase1_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ndb_shield_0 }
+
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	build_time = 3600
+	resources = {
+		category = giga_gigastructures
+		cost = { alloys = 15000 unity = @giga_giga_unity_cost }
+		upkeep = { alloys = 15 }
+	}
+
+	#potential = { NOT = { has_global_flag = ndb_disabled } }
+	possible = {
+		from = {
+			has_gigastructural_constructs = yes
+			has_technology = tech_ndb_shield
+		}
+	}
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		if = { limit = { exists = fromfrom.planet } fromfrom.planet = { save_event_target_as = giga_planet } }
+		from = { country_event = { id = giga_dialog.3202 } }	# Notification
+	}
+}
+
+ndb_shield_2 = {
+	entity = "giga_ndb_phase2_entity"
+	construction_entity = "giga_ndb_phase2_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ndb_shield_1 }
+
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	build_time = 10800
+	resources = {
+		category = giga_gigastructures
+		cost = { alloys = 35000 unity = @giga_giga_unity_cost }
+		upkeep = { alloys = 15 }
+	}
+
+	#potential = { NOT = { has_global_flag = ndb_disabled } }
+	possible = {
+		from = {
+			has_gigastructural_constructs = yes
+			has_technology = tech_ndb_shield
+		}
+	}
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		if = { limit = { exists = fromfrom.planet } fromfrom.planet = { save_event_target_as = giga_planet } }
+		from = { country_event = { id = giga_dialog.3203 } }	# Notification
+	}
+}
+
+ndb_shield_3 = {
+	entity = "giga_ndb_phase3_entity"
+	construction_entity = "giga_ndb_phase3_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ndb_shield_2 }
+
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	build_time = 5400
+	resources = {
+		category = giga_gigastructures
+		cost = { alloys = 30000 unity = @giga_giga_unity_cost }
+		upkeep = { alloys = 150 }
+	}
+
+	#potential = { NOT = { has_global_flag = ndb_disabled } }
+	possible = {
+		from = {
+			has_gigastructural_constructs = yes
+			has_technology = tech_ndb_shield
+		}
+	}
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		star = { save_event_target_as = giga_planet }
+		from = { country_event = { id = giga_dialog.3204 } }	# Notification
+		#giga_ndb_close_gate = yes
+	}
+}
+
+ndb_shield_4 = {
+	entity = "giga_ndb_phase4_entity"
+	construction_entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_nicoll"
+	upgrade_from = { ndb_shield_3 }
+
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	build_time = 5400
+	resources = {
+		category = giga_gigastructures
+		cost = { alloys = 27000 unity = @giga_giga_unity_cost }
+		upkeep = { alloys = 350 }
+		upkeep = {
+			trigger = { NOT = { has_global_flag = giga_disable_influence_upkeep } }
+			influence = 1
+		}
+	}
+
+	#potential = { NOT = { has_global_flag = ndb_disabled } }
+	possible = {
+		from = {
+			has_gigastructural_constructs = yes
+			has_technology = tech_ndb_shield
+		}
+	}
+
+	on_build_complete = {
+		set_star_flag = giga_ndb_system@from
+		save_event_target_as = giga_system
+		star = { save_event_target_as = giga_planet }
+		from = {
+			country_event = { id = giga_ndb.001 days = 1 }
+
+			# Only happens the first time
+			if = {
+				limit = { NOT = { has_country_flag = giga_ndb_completed } }
+				set_country_flag = giga_ndb_completed
+
+				# Notification
+				country_event = { id = giga_dialog.3205 }
+
+				# Achievement
+				#if = {
+					#limit = {
+						#NOR = {
+							#has_global_flag = giga_achievements_disabled
+							#has_country_flag = giga_achievement_86
+						#}
+					#}
+					#set_country_flag = giga_achievement_86
+					#set_timed_country_flag = { flag = giga_achievement_86_notification days = 30 }
+					#giga_achievement_sound = yes
+				#}
+			}
+		}
+	}
+}
+
+
+########### Shots and Recharges ############
+# Recharging after system shot
+ndb_shield_recharge_after_system = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+	upgrade_from = { ndb_shield_cooldown }
+	build_time = 3500
+	resources = {
+		category = giga_gigastructures
+		upkeep = { alloys = 350 }
+		upkeep = {
+			trigger = { NOT = { has_global_flag = giga_disable_influence_upkeep } }
+			influence = 1
+		}
+	}
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	on_build_complete = { from = { country_event = { id = giga_ndb.001 days = 1 } } }
+}
+
+# Recharging after planet shot
+ndb_shield_recharge_after_crack = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+	upgrade_from = { ndb_shield_cooldown }
+	build_time = 2500
+	resources = {
+		category = giga_gigastructures
+		upkeep = { alloys = 350 }
+		upkeep = {
+			trigger = { NOT = { has_global_flag = giga_disable_influence_upkeep } }
+			influence = 1
+		}
+	}
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	on_build_complete = { from = { country_event = { id = giga_ndb.001 days = 1 } } }
+}
+
+# Recharging after planet shot
+ndb_shield_recharge_after_melt = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+	upgrade_from = { ndb_shield_cooldown }
+	build_time = 2000
+	resources = {
+		category = giga_gigastructures
+		upkeep = { alloys = 350 }
+		upkeep = {
+			trigger = { NOT = { has_global_flag = giga_disable_influence_upkeep } }
+			influence = 1
+		}
+	}
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	on_build_complete = { from = { country_event = { id = giga_ndb.001 days = 1 } } }
+}
+
+# Recharging after planet shot
+ndb_shield_recharge_after_barren = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+	upgrade_from = { ndb_shield_cooldown }
+	build_time = 1500
+	resources = {
+		category = giga_gigastructures
+		upkeep = { alloys = 350 }
+		upkeep = {
+			trigger = { NOT = { has_global_flag = giga_disable_influence_upkeep } }
+			influence = 1
+		}
+	}
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	on_build_complete = { from = { country_event = { id = giga_ndb.001 days = 1 } } }
+}
+
+# Recharging after planet shot
+ndb_shield_recharge_after_damage = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+	upgrade_from = { ndb_shield_cooldown }
+	build_time = 1000
+	resources = {
+		category = giga_gigastructures
+		upkeep = { alloys = 350 }
+		upkeep = {
+			trigger = { NOT = { has_global_flag = giga_disable_influence_upkeep } }
+			influence = 1
+		}
+	}
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+	on_build_complete = { from = { country_event = { id = giga_ndb.001 days = 1 } } }
+}
+
+# Cooldown
+ndb_shield_cooldown = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_nicoll"
+	upgrade_from = { ndb_shield_firing }
+	potential = { always = no }
+	on_build_complete = { from = { country_event = { id = giga_ndb.001 days = 1 } } }
+	resources = { category = giga_gigastructures }
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+}
+
+# Ready
+ndb_shield_ready = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_nicoll"
+	upgrade_from = { ndb_shield_menu ndb_shield_cooldown }
+	potential = { always = yes }
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+}
+
+# Select target (Name)
+ndb_shield_targetting = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_nicoll"
+	upgrade_from = { ndb_shield_ready }
+	possible = {
+		custom_tooltip = { fail_text = "requires_ndb_recharge"				NOT = { has_star_flag = nicoll_beam_recharge } }  
+	}
+	on_build_complete = {
+		fromfrom = {
+			upgrade_megastructure_to = ndb_shield_menu
+			finish_upgrade = yes
+		}
+		from = { country_event = { id = giga_ndb.002 } }
+	}
+	resources = { category = giga_gigastructures }
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+		NOT = { has_star_flag = nicoll_beam_recharge }
+	}
+	
+}
+
+# Select target
+ndb_shield_menu = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_nicoll"
+	upgrade_from = { ndb_shield_targetting }
+	potential = { always = no }
+	resources = { category = giga_gigastructures }
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+}
+
+# Firing
+ndb_shield_firing = {
+	entity = "giga_ndb_phase4_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_desc = hide
+	upgrade_from = { ndb_shield_menu }
+	potential = { always = no }
+	resources = { category = giga_gigastructures }
+	
+	outliner_trigger = {
+		exists = owner
+		NOT = { has_megastructure_flag = giga_outliner_hidden_by_@owner }
+	}
+	
+}

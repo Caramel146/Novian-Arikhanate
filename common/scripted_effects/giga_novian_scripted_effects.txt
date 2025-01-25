@@ -1,0 +1,1515 @@
+create_novians = {
+	optimize_memory
+	set_global_flag = novian_arikhanate_happened
+	#create_terra_incognita = yes
+	create_species = {
+		name = "Novian"
+		plural = "Novians"
+		adjective = "Novian"
+		class = AVI
+		portrait = avi13
+		#homeworld = event_target:nov_terra_incognita
+		homeworld = this
+		traits = {
+			ideal_planet_class = pc_novian
+			trait = trait_cybernetic
+			trait = trait_novian_alloys
+			trait = trait_novian_consumer_goods
+			trait = trait_novian_army
+			trait = trait_novian_assembly
+			trait = trait_novian_fanaticism
+			trait = trait_novian_overcharge
+		}
+		effect = {
+			save_global_event_target_as = giga_novian_species_novian
+			# set_citizenship_type = {
+			# 	country = event_target:novian_arikhanate
+			# 	type = citizenship_full
+			# }
+		}
+	}
+	create_species = { #The arthropoid Sektians seem to be primarily focused on mining and farming. Their current number is unknown but it is likely there are §Hsignificantly more§! of them than there are Novians due to their small stature and the sheer amount of labor needed to sustain the decadence of the Novian race.
+		name = "Sektian"
+		plural = "Sektians"
+		adjective = "Sektian"
+		class = ART
+		portrait = art8
+		#homeworld = event_target:nov_terra_incognita
+		homeworld = this
+		traits = {
+			ideal_planet_class = pc_novian
+			trait = trait_cybernetic
+			trait = trait_novian_lobotomy
+			#trait = trait_cave_dweller
+			trait = trait_auto_mod_biological
+		}
+		effect = {
+			save_global_event_target_as = giga_novian_species_sektian
+			# set_citizenship_type = {
+			# 	country = event_target:novian_arikhanate
+			# 	type = citizenship_slavery
+			# }
+		}
+	}
+	create_species = { #Cnil
+		name = "Cnil"
+		plural = "Cnil"
+		adjective = "Cnil"
+		class = LITHOID
+		portrait = lith9
+		#homeworld = event_target:nov_terra_incognita
+		homeworld = this
+		traits = {
+			ideal_planet_class = pc_novian
+			trait = trait_cybernetic
+			#trait = trait_lithoid
+			trait = trait_novian_lobotomy
+			#trait = trait_plantoid_phototrophic #see if this works (and what if a normal empire conquers them?) since the requirements are technically invalid.
+			trait = trait_intelligent
+		}
+		effect = {
+			save_global_event_target_as = giga_novian_species_cnil
+			# set_citizenship_type = {
+			# 	country = event_target:novian_arikhanate
+			# 	type = citizenship_slavery
+			# }
+		}
+	}
+	create_species = { #Kren
+		name = "Kran"
+		plural = "Kren"
+		adjective = "Kren"
+		class = HUM
+		portrait = humanoid_hp_06
+		#homeworld = event_target:nov_terra_incognita
+		homeworld = this
+		traits = {
+			ideal_planet_class = pc_novian
+			trait = trait_cybernetic
+			trait = trait_novian_lobotomy
+			trait = trait_cyborg_integrated_weaponry
+		}
+		effect = {
+			save_global_event_target_as = giga_novian_species_kren
+			# set_citizenship_type = {
+			# 	country = event_target:novian_arikhanate
+			# 	type = citizenship_slavery
+			# }
+		}
+	}
+	#delete_terra_incognita = yes
+	create_country = {
+		species = event_target:giga_novian_species_novian
+		name = "Novian Arikhanate"
+		#ignore_initial_colony_error = yes #what do
+		type = novian_arikhanate
+		authority = auth_novian
+		ethos = { #Bit simple in a way - Novians are fanatic xenophobe-spiritualist-militarist. Can you give them all three as fanatic?
+			ethic = ethic_fanatic_xenophobe
+			ethic = ethic_spiritualist
+		}
+		#origin = origin_default
+		#civics = {
+		#	civic = civic_citizen_service
+		#	civic = civic_agrarian_idyll
+		#}
+		flag = {
+			icon = {
+				category = "flags_novian"
+				file = "novian_flag.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "circle.dds"
+			}
+			colors = {
+				"red"
+				"red_orange"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			set_country_flag = novian_arikhanate #used anywhere or no?
+			save_global_event_target_as = novian_arikhanate
+
+			# must initialize global designs here
+			# add_global_ship_design = "NAME_Enforcer"
+			# add_global_ship_design = "NAME_Savant"
+			# add_global_ship_design = "NAME_Scholar"
+			# add_global_ship_design = "NAME_Sage"
+			# add_global_ship_design = "NAME_Cloaker"
+			# add_global_ship_design = "NAME_Librarian"
+			# add_global_ship_design = "NAME_Seeker"
+			# add_global_ship_design = "NAME_FE_Starbase"
+			create_ship_design = { design = "novian_starbase" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "novian_orbital" }
+			add_ship_design = last_created_design
+
+			create_leader = {
+				class = official
+				species = event_target:giga_novian_species_novian
+				name = "Kirantal"
+				gender = male
+				skill = 10
+				set_age = 19227
+				event_leader = yes # "prevents this leader from leading factions and winning elections"
+				skip_background_generation = yes
+				background_ethic = ethic_authoritarian
+				#custom_catch_phrase = skrand_catch_phrase
+				#custom_description = skrand_desc
+				randomize_traits = no
+				traits = {
+					0 = leader_trait_cyborg
+					1 = leader_trait_novian
+					2 = subclass_official_economy_councilor
+				}
+				effect = {
+					set_leader_flag = novian_arikhan
+					save_global_event_target_as = novian_arikhan
+					#set_leader_flag = legendary_leader
+					#set_leader_flag = immune_to_negative_traits
+					#set_leader_flag = leader_death_events_blocked
+				}
+			}
+			set_leader = event_target:novian_arikhan
+
+			set_country_flag = protected_from_queen_storm
+			set_graphical_culture = fallen_empire_04
+
+			#giga_apply_difficulty_setting = yes #uhh
+			apply_novian_difficulty = yes
+
+			###################
+			##### ECONOMY #####
+			################### Actual monthly economic check is triggered in spawn_core_quasar_novian, AFTER their whole civ has been generated.
+			zero_novian_incomes = yes
+			set_variable = {
+				which = novian_resource_spending
+				value = 0
+			}
+			set_variable = {
+				which = novian_resource_balance
+				value = 0
+			}
+			set_variable = {
+				which = novian_resource_stockpile
+				value = 1000 #ample number to prevent immediate collapse - verify necessity
+			}
+			set_variable = {
+				which = novian_mobilisation
+				value = 0
+			}
+			add_modifier = {
+				modifier = novian_mechanics
+				days = -1
+			}
+		}
+	}
+}
+
+create_novian_raid_country = {
+	optimize_memory
+	create_country = {
+		#name = event_target:novian_arikhanate
+		name = "Novian Arikhanate"
+		species = event_target:giga_novian_species_novian
+		type = novian_raiders
+		auto_delete = no
+		#flag = event_target:novian_arikhanate
+		flag = {
+			icon = {
+				category = "flags_novian"
+				file = "novian_flag.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "circle.dds"
+			}
+			colors = {
+				"red"
+				"red_orange"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			save_global_event_target_as = novian_raid_country
+			apply_novian_difficulty = yes
+			country_event = { id = giga_novian.135 days = 360 }
+			add_modifier = {
+				modifier = novian_raider_swiftness
+				days = -1
+			}
+		}
+	}
+}
+
+apply_novian_difficulty = {
+	optimize_memory
+	if = {
+		limit = { has_global_flag = giga_core_novian_1 }
+		add_modifier = {
+			modifier = novian_difficulty_1
+			days = -1
+		}
+	}
+	else_if = {
+		limit = { has_global_flag = giga_core_novian_2 }
+		add_modifier = {
+			modifier = novian_difficulty_2
+			days = -1
+		}
+	}
+	else_if = {
+		limit = { has_global_flag = giga_core_novian_3 }
+		add_modifier = {
+			modifier = novian_difficulty_3
+			days = -1
+		}
+	}
+	else_if = {
+		limit = { has_global_flag = giga_core_novian_4 }
+		add_modifier = {
+			modifier = novian_difficulty_4
+			days = -1
+		}
+	}
+	else_if = {
+		limit = { has_global_flag = giga_core_novian_5 }
+		add_modifier = {
+			modifier = novian_difficulty_5
+			days = -1
+		}
+	}
+}
+
+# create_terra_incognita = {
+# 	optimize_memory
+# 	event_target:giga_core_system = {
+# 		spawn_planet = {
+# 			class = "pc_continental"
+# 			name = "nov_terra_incognita" #the "nov" is to prevent conflict if other mods use this key anywhere.
+# 			orbit_angle = 0
+# 			orbit_distance = 0
+# 			init_effect = {
+# 				save_global_event_target_as = nov_terra_incognita #the "nov" is to prevent conflict if other mods use this key anywhere.
+# 			}
+# 		}
+# 	}
+# }
+#
+# delete_terra_incognita = {
+# 	optimize_memory
+# 	event_target:nov_terra_incognita = {
+# 		remove_planet = yes
+# 	}
+# }
+
+#############################
+### Mechanics Maintenance ###
+#############################
+
+# add_leader_traits_after_modification = {
+# 	if = {
+# 		limit = {
+# 			species = {
+# 				has_trait = trait_novian_army
+# 				has_trait = trait_cybernetic
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_trait = leader_trait_novian
+# 				}
+# 			}
+# 			add_trait_no_notify = leader_trait_novian
+# 		}
+# 	}
+# }
+#
+# remove_leader_traits_after_modification = {
+# 	if = {
+# 		limit = {
+# 			species = {
+# 				NOR = {
+# 					has_trait = trait_novian_army
+# 					has_trait = trait_cybernetic
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { has_trait = leader_trait_novian }
+# 			remove_trait = leader_trait_novian
+# 		}
+# 	}
+# }
+
+
+#########################
+##### Colony Setups #####
+#########################
+
+novian_setup_colony_default = {
+	optimize_memory
+	clear_deposits = yes
+	set_owner = event_target:novian_arikhanate
+	#create_novian_ring = yes
+	add_building = building_giga_novian_orbital_uplink
+	add_building = building_giga_novian_fort
+	add_building = building_giga_novian_hangars
+	add_building = building_giga_novian_ripperdoc
+	create_army = {
+		owner = event_target:novian_arikhanate
+		species = event_target:giga_novian_species_sektian
+		type = "novian_army_tank"
+	}
+	while = {
+		count = 6
+		create_army = {
+			owner = event_target:novian_arikhanate
+			species = event_target:giga_novian_species_novian
+			type = "novian_army_defense"
+		}
+	}
+}
+
+novian_setup_colony_capital = {
+	optimize_memory
+	add_building = building_giga_novian_capital_throne
+	add_building = building_giga_novian_temple
+	novian_setup_colony_default = yes
+	set_colony_type = col_novian_capital
+	set_name = novian_name_capital
+	set_capital = yes
+	set_planet_flag = novian_colony_capital
+	save_global_event_target_as = novian_colony_capital
+	create_novian_ring = yes
+
+	while = {
+		count = 6
+		create_pop = { species = event_target:giga_novian_species_kren }
+	}
+
+	while = {
+		count = 7
+		add_district = district_giga_novian_city
+	}
+	while = {
+		count = 9
+		add_district = district_giga_novian_industrial
+	}
+	while = {
+		count = 7
+		add_district = district_giga_novian_energy
+	}
+	while = {
+		count = 2
+		add_district = district_giga_novian_mining
+	}
+	while = {
+		count = 5
+		add_district = district_giga_novian_farming
+	}
+
+	add_building = building_giga_novian_colosseum
+
+	add_building = building_giga_novian_encampment
+	add_building = building_giga_novian_encampment
+	add_building = building_giga_novian_encampment
+
+	while = { #this is necessary because novian_populate_colony's "while" is capped at 100 instances, so this bulk creation allows the scripted effect to continue until the desired point.
+		count = 100
+		roll_novian_sektian_pop = yes
+	}
+	novian_populate_colony = yes
+
+	create_novian_fleet_capital = yes
+}
+
+novian_setup_colony_temple = {
+	optimize_memory
+	add_building = building_giga_novian_capital
+	add_building = building_giga_novian_grand_temple
+	novian_setup_colony_default = yes
+	set_colony_type = col_novian_temple
+	set_name = novian_name_temple
+	set_planet_flag = novian_colony_temple
+	save_global_event_target_as = novian_colony_temple
+	create_novian_ring = yes
+	# while = {
+	# 	count = 25
+	# 	create_pop = { species = event_target:giga_novian_species_cnil }
+	# }
+
+	while = {
+		count = 5
+		add_district = district_giga_novian_city
+	}
+	# while = {
+	# 	count = 1
+	# 	add_district = district_giga_novian_industrial
+	# }
+	# while = {
+	# 	count = 1
+	# 	add_district = district_giga_novian_energy
+	# }
+	while = {
+		count = 4
+		add_district = district_giga_novian_mining
+	}
+	while = {
+		count = 2
+		add_district = district_giga_novian_farming
+	}
+
+	add_building = building_giga_novian_civilian_forge
+	add_building = building_giga_novian_civilian_forge
+	add_building = building_giga_novian_autofab
+	add_building = building_giga_novian_autofab
+
+	novian_populate_colony = yes
+
+	create_novian_fleet_defence = yes
+}
+
+novian_setup_colony_shipyard = {
+	optimize_memory
+	add_building = building_giga_novian_capital
+	add_building = building_giga_novian_temple
+	novian_setup_colony_default = yes
+	set_colony_type = col_novian_shipyard
+	set_name = novian_name_shipyard
+	set_planet_flag = novian_colony_shipyard
+	save_global_event_target_as = novian_colony_shipyard
+	create_novian_ring = yes
+	while = {
+		count = 7
+		add_district = district_giga_novian_spacehab
+	}
+	while = {
+		count = 10
+		add_district = district_giga_novian_shipwright
+	}
+
+	novian_populate_colony = yes
+
+	add_building = building_giga_novian_autofab
+}
+
+novian_setup_colony_quashab = {
+	optimize_memory
+	add_building = building_giga_novian_capital
+	add_building = building_giga_novian_temple
+	novian_setup_colony_default = yes
+	set_colony_type = col_novian_quashab
+	set_name = novian_name_quashab
+	set_planet_flag = novian_colony_quashab
+	save_global_event_target_as = novian_colony_quashab
+	create_novian_ring = yes
+	while = {
+		count = 6
+		add_district = district_giga_novian_spacehab
+	}
+	while = {
+		count = 9
+		add_district = district_giga_novian_quastech
+	}
+	add_deposit = d_giga_novian_quastech_uplink
+
+	novian_populate_colony = yes
+}
+
+novian_setup_colony_agartha = {
+	optimize_memory
+	add_building = building_giga_novian_capital
+	add_building = building_giga_novian_temple
+	novian_setup_colony_default = yes
+	set_colony_type = col_novian_agartha
+	set_name = novian_name_agartha
+	set_planet_flag = novian_colony_agartha
+	save_global_event_target_as = novian_colony_agartha
+	create_novian_ring = yes
+	random_list = { #overpopulate the colony to work the uncapped toiler job (semi-randomised distribution to be more immersive)
+		10 = { while = { count = 46 create_pop = { species = event_target:giga_novian_species_sektian } } } #
+		20 = { while = { count = 47 create_pop = { species = event_target:giga_novian_species_sektian } } } ##
+		30 = { while = { count = 48 create_pop = { species = event_target:giga_novian_species_sektian } } } ###
+		40 = { while = { count = 49 create_pop = { species = event_target:giga_novian_species_sektian } } } ####
+		50 = { while = { count = 50 create_pop = { species = event_target:giga_novian_species_sektian } } } #####
+		40 = { while = { count = 51 create_pop = { species = event_target:giga_novian_species_sektian } } } ####
+		30 = { while = { count = 52 create_pop = { species = event_target:giga_novian_species_sektian } } } ###
+		20 = { while = { count = 53 create_pop = { species = event_target:giga_novian_species_sektian } } } ##
+		10 = { while = { count = 54 create_pop = { species = event_target:giga_novian_species_sektian } } } #
+	}
+	add_district = district_giga_novian_agartha
+
+	add_building = building_giga_novian_overseers
+	add_building = building_giga_novian_encampment
+	add_building = building_giga_novian_strange_matter_plant
+
+	novian_populate_colony = yes
+
+	create_novian_fleet_defence = yes
+}
+
+novian_populate_colony = {
+	optimize_memory
+	while = { #spawn some initial Novians so that there are always enough to work the ruler jobs
+		count = 5
+		create_pop = { species = event_target:giga_novian_species_novian }
+	}
+	while = {
+		# limit = { #this bit and the while isn't necessary since the lower bit was changed, is it?
+		# 	free_jobs > 0
+		# }
+		count = trigger:free_jobs
+		roll_novian_sektian_pop = yes #33% chance for Novian, 66% chance for Sektian
+	}
+	check_planet_employment = yes
+	random_list = { #overpopulate the colony to work the uncapped soldier job (semi-randomised distribution to be more immersive)
+		10 = { while = { count = 16 roll_novian_sektian_pop = yes } } #
+		20 = { while = { count = 17 roll_novian_sektian_pop = yes } } ##
+		30 = { while = { count = 18 roll_novian_sektian_pop = yes } } ###
+		40 = { while = { count = 19 roll_novian_sektian_pop = yes } } ####
+		50 = { while = { count = 20 roll_novian_sektian_pop = yes } } #####
+		40 = { while = { count = 21 roll_novian_sektian_pop = yes } } ####
+		30 = { while = { count = 22 roll_novian_sektian_pop = yes } } ###
+		20 = { while = { count = 23 roll_novian_sektian_pop = yes } } ##
+		10 = { while = { count = 24 roll_novian_sektian_pop = yes } } #
+	}
+	#check_planet_employment = yes
+}
+
+roll_novian_sektian_pop = {
+	# random_list = {
+	# 	#33 = {
+	# 	66 = {
+	# 		create_pop = { species = event_target:giga_novian_species_novian }
+	# 	}
+	# 	66 = {
+	# 		create_pop = { species = event_target:giga_novian_species_sektian }
+	# 	}
+	# }
+	create_pop = { species = event_target:giga_novian_species_novian }
+}
+
+check_arikhanate_defeated = {
+	optimize_memory
+	if = {
+		limit = {
+			#has_global_flag = novian_hypership_defeated
+			has_global_flag = novian_colony_capital_conquered
+			has_global_flag = novian_colony_temple_conquered
+			has_global_flag = novian_colony_shipyard_conquered
+			has_global_flag = novian_colony_quashab_conquered
+			has_global_flag = novian_colony_agartha_conquered
+		}
+		every_playable_country = {
+			country_event = { id = giga_novian.60200 days = 30 }
+		}
+	}
+}
+
+check_all_analyses_complete = {
+	if = {
+		limit = {
+			AND = {
+				has_country_flag = novian_analysis_physics_complete
+				has_country_flag = novian_analysis_society_complete
+				has_country_flag = novian_analysis_engineering_complete
+			}
+			# NOT = { #shouldn't be necessary
+			# 	has_country_flag = novian_analysis_all_complete
+			# }
+		}
+		country_event = {
+			id = giga_novian.10004
+			days = 360
+		}
+	}
+}
+
+establish_novian_contact = {
+	begin_event_chain = {
+		event_chain = novian_chain
+		target = ROOT
+	}
+	# create_point_of_interest = {
+	# 	id = novian_chain.1
+	# 	name = novian_chain_1
+	# 	desc = novian_chain_1_desc
+	# 	event_chain = novian_chain
+	# 	location = event_target:novian_system_capital
+	# }
+	# create_point_of_interest = {
+	# 	id = novian_chain.2
+	# 	name = novian_chain_2
+	# 	desc = novian_chain_2_desc
+	# 	event_chain = novian_chain
+	# 	location = event_target:novian_system_capital
+	# }
+	create_point_of_interest = {
+		id = novian_chain.3
+		name = novian_chain_3
+		desc = novian_chain_3_desc
+		event_chain = novian_chain
+		location = event_target:novian_system_capital
+	}
+	create_point_of_interest = {
+		id = novian_chain.4
+		name = novian_chain_4
+		desc = novian_chain_4_desc
+		event_chain = novian_chain
+		location = event_target:novian_system_capital
+	}
+	hidden_effect = {
+		set_country_flag = novians_contacted
+		establish_communications_no_message = event_target:novian_arikhanate
+		establish_communications_no_message = event_target:novian_raid_country
+		country_event = { id = giga_novian.3001 days = 360 }
+	}
+}
+
+
+
+#########################
+#### STATIC DEFENCES ####
+#########################
+
+create_novian_citadel = {
+	optimize_memory
+	create_starbase = {
+		size = starbase_nov
+
+		owner = event_target:novian_arikhanate
+
+		# module = "gun_battery" #Given to their base
+		# module = "gun_battery"
+		# module = "gun_battery"
+		# module = "gun_battery"
+		# module = "gun_battery"
+		# module = "gun_battery"
+
+		# building = "target_uplink_computer"
+		# building = "command_center"
+
+		# effect = {
+		# 	while = {
+		# 		count = 20 #just count of 3 for create_aeternum_citadel rather than create_aeternum_home_citadel
+		# 		create_aeternite_platform = yes
+		# 	}
+		# 	if = {
+		# 		limit = {
+		# 			solar_system = {has_star_flag = giga_galactic_center}
+		# 		}
+		# 		while = {
+		# 			count = 10
+		# 			create_aeternite_platform = yes
+		# 		}
+		# 		starbase = {
+		# 			set_starbase_building = {
+		# 				slot = 2
+		# 				building = giga_aiondia_listening_post
+		# 			}
+		# 		}
+		# 	}
+		# }
+		effect = {
+			if = {
+				limit = {
+					solar_system = {
+						OR = {
+							has_star_flag = novian_system_capital
+							has_star_flag = novian_system_agartha
+							has_star_flag = novian_system_temple
+						}
+					}
+				}
+				add_modifier = {
+					modifier = novian_colony_system_starbase
+					days = -1
+				}
+			}
+		}
+	}
+}
+
+create_novian_ring = {
+	optimize_memory
+	if = {
+		limit = {
+			#has_overlord_dlc = yes
+			always = no
+		}
+		create_starbase = {
+			size = orbital_ring_tier_3
+
+			owner = event_target:novian_arikhanate
+
+			module = "orbital_ring_giga_novian_pd_array"
+			module = "orbital_ring_giga_novian_aegis_shield"
+			module = "orbital_ring_giga_novian_shipyard"
+			module = "orbital_ring_giga_novian_listening_post"
+			building = "ring_giga_novian_garrison"
+			building = "ring_giga_novian_logistics"
+		}
+	}
+}
+
+
+
+##############################
+##### SHIP SPAWN SCRIPTS #####
+############################## Using modular ship spawning scripts to save space in each instance.
+
+create_novian_corvette = {
+	optimize_memory
+	create_ship = {
+		name = Erkitak
+		design = Erkitak
+		prefix = no
+	}
+}
+
+create_novian_escort = {
+	optimize_memory
+	create_ship = {
+		name = Arikinovarat
+		design = Arikinovarat
+		prefix = no
+	}
+}
+
+create_novian_asteroidcraft = {
+	optimize_memory
+	create_ship = {
+		name = Akitaliata
+		design = Akitaliata
+		prefix = no
+	}
+}
+
+create_novian_juggernaut = {
+	optimize_memory
+	create_ship = {
+		name = Aridominikus
+		design = Aridominikus
+		prefix = no
+	}
+}
+
+create_novian_moon = {
+	optimize_memory
+	create_ship = {
+		name = Lunovvie
+		design = Lunovvie
+		prefix = no
+	}
+}
+
+create_novian_hypership = {
+	optimize_memory
+	create_ship = {
+		name = arm_of_intent
+		design = arm_of_intent
+		prefix = no
+		effect = {
+			set_ship_flag = novian_hypership
+			save_global_event_target_as = novian_hypership
+			add_modifier = {
+				modifier = novian_hypership_regen_debuff
+				days = -1
+			}
+		}
+	}
+}
+
+
+
+###################
+##### RAIDING #####
+###################
+select_novian_raid_target = {
+	optimize_memory
+	random_country = {
+		limit = {
+			is_country_type = default
+		}
+		save_global_event_target_as = novian_raid_target_country
+		random_controlled_planet = {
+			limit = {
+				exists = owner
+				num_pops > 0
+				NOR = {
+					has_planet_flag = novian_raid_victim_planet
+					is_planet_class = pc_giga_maginot_world
+					is_planet_class = pc_giga_maginot_gas_giant
+					is_planet_class = pc_giga_maginot_ringworld
+				}
+			}
+			save_global_event_target_as = novian_raid_target_planet
+		}
+	}
+}
+
+create_novian_raiders = {
+	optimize_memory
+	#delete_novian_raiders = yes #Clear pre-existing fleet in case they're not back. Will need descuffing further but this should prevent serious errors.
+	create_leader = {
+		class = commander
+		species = event_target:giga_novian_species_novian
+		name = random #i gotta do the names for them some time later
+		skill = 10 #lower? Or randomise?
+		leader_age_min = 40
+		leader_age_max = 150
+		traits = { #swap trait order?
+			trait = leader_trait_novian
+			trait = leader_trait_cyborg
+		}
+		effect = {
+			save_global_event_target_as = novian_raid_leader
+		}
+	}
+	create_fleet = {
+		name = novian_fleet_raider
+		effect = {
+			set_location = event_target:novian_colony_agartha
+			set_owner = event_target:novian_raid_country
+			set_fleet_stance = passive
+			set_fleet_bombardment_stance = indiscriminate
+			set_aggro_range_measure_from = self
+			set_aggro_range = 150
+			set_formation_scale = 2
+			assign_leader = last_created_leader
+			save_global_event_target_as = novian_raid_fleet
+			set_fleet_flag = novian_raid_fleet
+			calculate_novian_raid_fleet_scale = yes
+		}
+		settings = {
+			can_upgrade = no
+			can_disband = no
+			can_change_composition = no
+			uses_naval_capacity = no
+		}
+	}
+}
+
+set_novian_raider_hostilities = {
+	optimize_memory
+	event_target:novian_raid_country = { #sets relations with bystanders to neutral
+		set_faction_hostility = {
+			set_hostile = no
+			set_neutral = yes
+			set_friendly = no
+		}
+	}
+	event_target:novian_raid_country = { #sets relations with parent country to friendly (lest we forget The Incident)
+		set_faction_hostility = {
+			target = event_target:novian_arikhanate
+			set_hostile = no
+			set_neutral = no
+			set_friendly = yes
+		}
+	}
+	event_target:novian_raid_country = { #sets relations with target to hostile
+		set_faction_hostility = {
+			target = event_target:novian_raid_target_country
+			set_hostile = yes
+			set_neutral = no
+			set_friendly = no
+		}
+	}
+}
+
+delete_novian_raiders = {
+	optimize_memory
+	delete_fleet = event_target:novian_raid_fleet
+	clear_global_event_target = novian_raid_fleet
+	event_target:novian_raid_leader = { kill_leader = { show_notification = no }  }
+	clear_global_event_target = novian_raid_leader
+
+	clear_global_event_target = novian_raid_target_country
+	clear_global_event_target = novian_raid_target_planet
+
+	# event_target:novian_raid_country = {
+	# 	country_event = { id = giga_novian.137 }
+	# }
+}
+
+calculate_novian_raid_fleet_scale = {
+	optimize_memory
+	# set_variable = { #reset scale to base value
+	# 	which = novian_raid_fleet_scale
+	# 	value = 100
+	# }
+	# set_variable = { #reset scale to base value
+	# 	which = novian_raid_fleet_scale_multiplier#_time
+	# 	value = 0
+	# }
+	# change_variable = { #increase time factor of scale multiplier by number of midgame years passed
+	# 	which = novian_raid_fleet_scale_multiplier#_time
+	# 	value = trigger:mid_game_years_passed
+	# }
+	# set_variable = { #reset scale to base value
+	# 	which = novian_raid_fleet_scale_multiplier_difficulty
+	# 	value = 1
+	# }
+	# change_variable = { #increase difficulty factor of scale multiplier by number of midgame years passed
+	# 	which = novian_raid_fleet_scale_multiplier_difficulty
+	# 	value = trigger:mid_game_years_passed
+	# }
+	# multiply_variable = {
+	# 	which = novian_raid_fleet_scale_multiplier_time
+	# 	value = novian_raid_fleet_scale_multiplier_difficulty
+	# }
+	# multiply_variable = {
+	# 	which = novian_raid_fleet_scale
+	# 	value = novian_raid_fleet_scale_multiplier
+	# }
+
+	#Temp simplified block
+	set_variable = { #reset scale to base value
+		which = novian_raid_fleet_scale
+		value = 25
+	}
+	change_variable = {
+		which = novian_raid_fleet_scale
+		value = trigger:mid_game_years_passed
+	}
+
+	divide_variable = { #For corvette numbers
+		which = novian_raid_fleet_scale
+		value = 3
+	}
+	ceiling_variable = novian_raid_fleet_scale #ensure we're trying to spawn a whole number of ships
+	while = {
+		count = novian_raid_fleet_scale
+		create_novian_corvette = yes
+	}
+
+	divide_variable = { #For escort numbers.
+		which = novian_raid_fleet_scale
+		value = 4 #1 escort = 4 corvettes
+	}
+	ceiling_variable = novian_raid_fleet_scale
+	while = {
+		count = novian_raid_fleet_scale
+		create_novian_escort = yes
+	}
+
+	divide_variable = { #For asteroidcraft numbers
+		which = novian_raid_fleet_scale
+		value = 3 #1 asteroidcraft = 3 escorts = 12 corvettes
+	}
+	ceiling_variable = novian_raid_fleet_scale
+	while = {
+		count = novian_raid_fleet_scale
+		create_novian_asteroidcraft = yes
+	}
+}
+
+seize_novian_loot = {
+	optimize_memory
+	owner = {
+		add_resource = {
+			energy = -150
+			minerals = -200
+			food = -50
+			alloys = -25
+		}
+	}
+}
+
+stash_novian_loot = {
+	optimize_memory
+	if = {
+		limit = {
+			AND = {
+				NOT = { #not really necessary
+					has_global_flag = novian_mobilisation_complete
+				}
+				check_variable = {
+					which = novian_mobilisation
+					value < 100
+				}
+			}
+		}
+		change_variable = {
+			which = novian_mobilisation
+			value = 1
+		}
+	}
+	change_variable = {
+		which = novian_resource_stockpile
+		value = 500 #gives enough for 50 moons before mobilisation is complete. #not relevant/true atm
+	}
+}
+
+
+
+######################
+##### WAR FLEETS #####
+######################
+
+#intended for use in multiplying fleet size
+# calculate_novian_difficulty = {
+# }
+
+create_novian_fleet_defence = {
+	optimize_memory
+	create_fleet = {
+		name = novian_fleet_defence
+		settings = {
+			spawn_debris = no
+			can_change_composition = no
+			#can_disband = no
+			#can_change_leader = no
+			can_upgrade = no
+		}
+		effect = {
+			set_owner = event_target:novian_arikhanate
+			while = {
+				count = 120
+				create_novian_corvette = yes
+			}
+			while = {
+				count = 60
+				create_novian_escort = yes
+			}
+			while = {
+				count = 20
+				create_novian_asteroidcraft = yes
+			}
+			while = {
+				count = 2
+				create_novian_moon = yes
+			}
+			set_formation_scale = 3
+			#set_fleet_flag = aeternum_home_platform
+			set_location = {
+				target = prevprev
+				distance = 1
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = return_point
+			set_aggro_range = 500
+			#set_event_locked = yes
+		}
+	}
+}
+
+create_novian_fleet_capital = {
+	optimize_memory
+	create_fleet = {
+		name = novian_fleet_capital
+		settings = {
+			spawn_debris = no
+			can_change_composition = no
+			#can_disband = no
+			#can_change_leader = no
+			can_upgrade = no
+			is_boss = yes
+		}
+		effect = {
+			set_owner = event_target:novian_arikhanate
+			while = {
+				count = 140
+				create_novian_corvette = yes
+			}
+			while = {
+				count = 60
+				create_novian_escort = yes
+			}
+			while = {
+				count = 20
+				create_novian_asteroidcraft = yes
+			}
+			while = {
+				count = 4
+				create_novian_moon = yes
+			}
+			create_novian_hypership = yes
+			set_formation_scale = 3
+			#set_fleet_flag = aeternum_home_platform
+			set_location = {
+				target = event_target:novian_colony_capital
+				distance = 1
+				angle = random
+				#direction = in_system #???
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = return_point
+			set_aggro_range = 1000
+			#set_event_locked = yes
+		}
+	}
+}
+
+create_novian_fleet_assault = {
+	optimize_memory
+	create_fleet = {
+		name = novian_fleet_assault
+		settings = {
+			spawn_debris = no
+			can_change_composition = no
+			#can_disband = no
+			#can_change_leader = no
+			can_upgrade = no
+		}
+		effect = {
+			set_owner = event_target:novian_arikhanate
+			while = {
+				count = 100
+				create_novian_corvette = yes
+			}
+			while = {
+				count = 40
+				create_novian_escort = yes
+			}
+			while = {
+				count = 10
+				create_novian_asteroidcraft = yes
+			}
+			while = {
+				count = 1
+				create_novian_moon = yes
+			}
+			set_formation_scale = 3
+			#set_fleet_flag = aeternum_home_platform
+			set_location = {
+				target = event_target:novian_colony_capital
+				distance = 1
+				angle = 0
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 750
+		}
+	}
+}
+
+
+# create_novian_arikon_defense_fleet = {
+
+check_novian_new_fleet_spawn = {
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					which = novian_resource_balance
+					value > 100 #assault fleet upkeep is 90
+				}
+				check_variable = {
+					which = novian_resource_stockpile
+					value = 50000 #assault fleet "cost" is 43000
+				}
+			}
+		}
+		#event_target:novian_colony_capital = {
+		create_novian_fleet_assault = yes
+		#}
+		subtract_variable = {
+			which = novian_resource_stockpile
+			value = 43000
+		}
+	}
+}
+
+###################
+##### ECONOMY #####
+###################
+
+calculate_novian_spending = {
+	optimize_memory
+	#Determine upkeep
+	set_variable = {
+		which = novian_resource_spending
+		value = 0
+	}
+	every_owned_ship = {
+		limit = { is_ship_size = giga_novian_corvette }
+		event_target:novian_arikhanate = {
+			change_variable = {
+				which = novian_resource_spending
+				value = value:novian_upkeep|UPKEEP|@novian_corvette_upkeep|
+			}
+		}
+	}
+	every_owned_ship = {
+		limit = { is_ship_size = giga_novian_escort }
+		event_target:novian_arikhanate = {
+			change_variable = {
+				which = novian_resource_spending
+				value = value:novian_upkeep|UPKEEP|@novian_escort_upkeep|
+			}
+		}
+	}
+	every_owned_ship = {
+		limit = { is_ship_size = giga_novian_asteroidcraft }
+		event_target:novian_arikhanate = {
+			change_variable = {
+				which = novian_resource_spending
+				value = value:novian_upkeep|UPKEEP|@novian_asteroidcraft_upkeep|
+			}
+		}
+	}
+	every_owned_ship = {
+		limit = { is_ship_size = giga_novian_juggernaut  }
+		event_target:novian_arikhanate = {
+			change_variable = {
+				which = novian_resource_spending
+				value = value:novian_upkeep|UPKEEP|@novian_juggernaut_upkeep|
+			}
+		}
+	}
+	every_owned_ship = {
+		limit = { is_ship_size = giga_novian_moon }
+		event_target:novian_arikhanate = {
+			change_variable = {
+				which = novian_resource_spending
+				value = value:novian_upkeep|UPKEEP|@novian_moon_upkeep|
+			}
+		}
+	}
+	#round_variable = novian_resource_spending
+}
+
+create_research_mining_stations = {
+	optimize_memory
+	every_system_within_border = {
+		limit = {
+			any_system_planet = {
+				OR = {
+					AND = {
+						has_deposit_for = shipclass_research_station
+						has_research_station = no
+					}
+					AND = {
+						has_deposit_for = shipclass_mining_station
+						has_mining_station = no
+					}
+				}
+			}
+		}
+		every_system_planet = {
+			limit = {
+				OR = {
+					AND = {
+						has_deposit_for = shipclass_research_station
+						has_research_station = no
+					}
+					AND = {
+						has_deposit_for = shipclass_mining_station
+						has_mining_station = no
+					}
+				}
+			}
+			switch = {
+				trigger = has_deposit_for
+				shipclass_research_station = {
+					create_research_station = { owner = root }
+				}
+				shipclass_mining_station = {
+					create_mining_station = { owner = root }
+				}
+			}
+		}
+	}
+}
+
+zero_novian_incomes = {
+	optimize_memory
+	set_variable = {
+		which = novian_alloy_income
+		value = 0
+	}
+	set_variable = {
+		which = novian_mineral_income
+		value = 0
+	}
+	set_variable = {
+		which = novian_energy_income
+		value = 0
+	}
+	set_variable = {
+		which = novian_cg_income
+		value = 0
+	}
+
+	set_variable = {
+		which = novian_gas_income
+		value = 0
+	}
+	set_variable = {
+		which = novian_crystal_income
+		value = 0
+	}
+	set_variable = {
+		which = novian_motes_income
+		value = 0
+	}
+	set_variable = {
+		which = novian_rare_resource_income
+		value = 0
+	}
+
+	# set_variable = {
+	# 	which = novian_physics_income
+	# 	value = 0
+	# }
+	# set_variable = {
+	# 	which = novian_society_income
+	# 	value = 0
+	# }
+	# set_variable = {
+	# 	which = novian_engineering_income
+	# 	value = 0
+	# }
+	# set_variable = {
+	# 	which = novian_unity_income
+	# 	value = 0
+	# }
+
+	set_variable = {
+		which = novian_resource_income
+		value = 0
+	}
+}
+
+obtain_novian_incomes = {
+	optimize_memory
+	export_resource_income_to_variable = {
+		resource = alloys
+		variable = novian_alloy_income
+	}
+	export_resource_income_to_variable = {
+		resource = minerals
+		variable = novian_mineral_income
+	}
+	export_resource_income_to_variable = {
+		resource = energy
+		variable = novian_energy_income
+	}
+	export_resource_income_to_variable = {
+		resource = consumer_goods
+		variable = novian_cg_income
+	}
+
+	export_resource_income_to_variable = {
+		resource = exotic_gases
+		variable = novian_gas_income
+	}
+	export_resource_income_to_variable = {
+		resource = rare_crystals
+		variable = novian_crystal_income
+	}
+	export_resource_income_to_variable = {
+		resource = volatile_motes
+		variable = novian_motes_income
+	}
+
+	change_variable = {
+		which = novian_rare_resource_income
+		value = novian_gas_income
+	}
+	change_variable = {
+		which = novian_rare_resource_income
+		value = novian_crystal_income
+	}
+	change_variable = {
+		which = novian_rare_resource_income
+		value = novian_motes_income
+	}
+
+	multiply_variable = {
+		which = novian_rare_resource_income
+		value = 0.2
+	}
+
+	multiply_variable = {
+		which = novian_mineral_income
+		value = 0.05
+	}
+
+	multiply_variable = {
+		which = novian_energy_income
+		value = 0.02
+	}
+
+	multiply_variable = {
+		which = novian_cg_income
+		value = 0.2
+	}
+
+	ceiling_variable = novian_rare_resource_income
+	ceiling_variable = novian_alloy_income
+	ceiling_variable = novian_mineral_income
+	ceiling_variable = novian_energy_income
+	ceiling_variable = novian_cg_income
+
+	change_variable = {
+		which = novian_resource_income
+		value = novian_alloy_income
+	}
+	change_variable = {
+		which = novian_resource_income
+		value = novian_mineral_income
+	}
+	change_variable = {
+		which = novian_resource_income
+		value = novian_energy_income
+	}
+	change_variable = {
+		which = novian_resource_income
+		value = novian_cg_income
+	}
+
+	change_variable = {
+		which = novian_resource_income
+		value = novian_rare_resource_income
+	}
+}
+
+finalise_novian_economy_variables = {
+	optimize_memory
+	change_variable = {
+		which = novian_resource_income
+		value = 15
+	}
+
+	change_variable = {
+		which = novian_resource_stockpile
+		value = novian_resource_income
+	}
+
+	subtract_variable = {
+		which = novian_resource_stockpile
+		value = novian_resource_spending
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				which = novian_resource_stockpile
+				value < 0
+			}
+		}
+		set_variable = {
+			which = novian_resource_stockpile
+			value = 0
+		}
+	}
+
+	set_variable = {
+		which = novian_resource_balance
+		value = novian_resource_income
+	}
+
+	subtract_variable = {
+		which = novian_resource_balance
+		value = novian_resource_spending
+	}
+}

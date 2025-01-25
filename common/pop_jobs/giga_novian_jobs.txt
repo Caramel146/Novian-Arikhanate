@@ -1,0 +1,1030 @@
+
+#"general Agartha slave" job
+giga_novian_toiler = {
+    category = worker
+    is_capped_by_modifier = no
+    building_icon = building_crude_huts
+    clothes_texture_index = 3
+    icon = primitive_laborer
+
+    possible_pre_triggers = {
+        has_owner = yes
+        #is_enslaved = yes
+        has_planet = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        planet = { has_building = building_giga_novian_overseers }
+        NOT = { is_same_species = event_target:giga_novian_species_novian }
+    }
+
+    pop_modifier = {
+        pop_happiness = -2 #like dystopian society
+        pop_political_power = -0.75 #default slave value
+        pop_housing_usage_base = 0.5 #slave normal value is 0.75
+        pop_amenities_usage_base = 0.5 #slave normal value is 0.75
+    }
+
+    resources = {
+        category = planet_jobs
+        produces = {
+            energy = 4
+            minerals = 4
+            food = 2
+            mult = value:novian_overseer_toiler_boost
+        }
+    }
+
+    weight = {
+        weight = @special_job_weight
+        modifier = {
+            factor = 5
+            has_job = giga_novian_toiler
+        }
+    }
+}
+
+#Post-conquest Agartha scavenger
+giga_novian_scavenger = {
+    category = worker
+    is_capped_by_modifier = no
+    building_icon = building_crude_huts
+    clothes_texture_index = 3
+    icon = broken_shackles_scavenger
+
+    possible_pre_triggers = {
+        has_owner = yes
+        #is_enslaved = yes
+        has_planet = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        planet = {
+            AND = { #not necessary?
+                NOT = { has_building = building_giga_novian_overseers }
+                has_planet_flag = novian_colony_agartha
+            }
+        }
+        owner = {
+            NOT = { is_country_type = novian_arikhanate }
+            is_gestalt = no
+        }
+        NOT = { has_trait = trait_robot_digital_2 }
+    }
+
+    pop_modifier = {
+        pop_housing_usage_base = 0.75 #halved reduction from pre-liberation toiler
+    }
+
+    resources = {
+        category = planet_jobs
+        produces = {
+            energy = 2
+            minerals = 2
+            food = 1
+            mult = value:novian_scavenger_leader_boost #base 1, each foreman adds 0.5; therefore every hundred pops on the planet adds another 1.
+        }
+    }
+
+    weight = {
+        weight = @special_job_weight
+        modifier = {
+            factor = 5
+            has_job = giga_novian_scavenger
+        }
+    }
+}
+
+giga_novian_scavenger_gestalt = {
+    category = simple_drone
+    is_capped_by_modifier = no
+    building_icon = building_crude_huts
+    clothes_texture_index = 3
+    icon = broken_shackles_scavenger
+
+    possible_pre_triggers = {
+        has_owner = yes
+        #is_enslaved = yes
+        has_planet = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        planet = {
+            AND = { #not necessary?
+                NOT = { has_building = building_giga_novian_overseers }
+                has_planet_flag = novian_colony_agartha
+            }
+        }
+        owner = {
+            NOT = { is_country_type = novian_arikhanate }
+            is_gestalt = yes
+        }
+        NOT = { has_trait = trait_robot_digital_2 }
+    }
+
+    pop_modifier = {
+        pop_housing_usage_base = 0.75 #halved reduction from pre-liberation toiler
+    }
+
+    resources = {
+        category = planet_jobs
+        produces = {
+            energy = 2
+            minerals = 2
+            food = 1
+            mult = value:novian_scavenger_leader_boost #base 1, each foreman adds 0.5; therefore every hundred pops on the planet adds another 1.
+        }
+    }
+
+    weight = {
+        weight = @special_job_weight
+        modifier = {
+            factor = 5
+            has_job = giga_novian_scavenger_gestalt
+        }
+    }
+}
+
+giga_novian_technician = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_giga_novian_quasar_energy
+    clothes_texture_index = 2 #3?
+    icon = technician
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        OR = {
+            is_same_species = event_target:giga_novian_species_novian
+            is_same_species = event_target:giga_novian_species_sektian
+        }
+    }
+
+    resources = {
+        category = planet_technician
+        produces = {
+            energy = 12 #ordinary technician has 6
+        }
+    }
+
+    triggered_planet_modifier = {
+        planet_amenities_add = 1
+        #planet job production?
+    }
+
+    weight = {
+        weight = @worker_job_weight
+        modifier = {
+             factor = 5
+             has_job = giga_novian_technician
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_energy"
+}
+
+giga_novian_miner = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_wildcat_miners
+    clothes_texture_index = 2 #3?
+    icon = miner
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        OR = {
+            is_same_species = event_target:giga_novian_species_novian
+            is_same_species = event_target:giga_novian_species_sektian
+        }
+    }
+
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 8 #ordinary miner has 4
+            rare_crystals = 0.4
+            volatile_motes = 0.4
+        }
+    }
+
+    # triggered_planet_modifier = { #to represent Sektians digging out homes?
+    #     planet_housing_add = 1
+    # }
+
+    weight = {
+        weight = @worker_job_weight
+        modifier = {
+            factor = 5
+            has_job = giga_novian_miner
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_minerals"
+}
+
+giga_novian_farmer = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_toxic_bath_hive
+    clothes_texture_index = 2
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        OR = {
+            is_same_species = event_target:giga_novian_species_novian
+            is_same_species = event_target:giga_novian_species_sektian
+        }
+    }
+
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 12 #ordinary farmer has 6
+            exotic_gases = 0.4
+        }
+    }
+
+    # triggered_planet_modifier = {
+    #    habitability?
+    # }
+
+    weight = {
+        weight = @worker_job_weight
+        modifier = {
+            factor = 5
+            has_job = giga_novian_farmer
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_food"
+}
+
+giga_novian_ripperdoc = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_giga_novian_ripperdoc
+    clothes_texture_index = 3
+    icon = giga_novian_ripperdoc
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_augmentors
+        produces = {
+            engineering_research = 6
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 8
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    # planet_modifier = {
+    #     pop_growth_speed = 0.1
+    # }
+
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 5
+            has_job = giga_novian_ripperdoc
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+}
+
+giga_novian_oppressor = {
+    category = specialist
+    condition_string = BATTLE_THRALL_JOB_TRIGGER
+    building_icon = building_psi_corps
+    clothes_texture_index = 5
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        #battle_thrall_job_check_trigger = yes
+        is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_enforcers
+        produces = {
+            unity = 3 #from tr_domination_judgment_corps
+        }
+        upkeep = {
+            energy = 2 #from anticrime_campaign
+        }
+    }
+
+    # pop_modifier = {
+    #     pop_defense_armies_add = 2
+    # }
+
+    # triggered_planet_modifier = {
+    #     potential = {
+    #         exists = owner
+    #         owner = {
+    #             exists = ruler
+    #             ruler = {
+    #                 has_trait = leader_trait_legendary_harsh_ruler
+    #             }
+    #         }
+    #     }
+    #     pop_happiness = -0.025
+    # }
+
+    planet_modifier = {
+        planet_crime_add = -40 #base 25, 10 for anti-crime campaign, 5 for trait_cyborg_integrated_weaponry
+        planet_stability_add = 1
+    }
+
+    #is_cyber_dictatorial and cyber_individualist triggers planet_cyborg_jobs_produces_mult = 0.025
+    #is_oligarchic_authority and synth_physical OR synth_virtual triggers planet_jobs_ruler_produces_mult = 0.10
+
+    weight = {
+        weight = @specialist_job_weight
+        # modifier = {
+        #     mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+        #     owner = { has_active_tradition = tr_domination_judgment_corps }
+        # }
+        modifier = {
+            factor = 5
+            has_job = giga_novian_oppressor
+        }
+    }
+}
+
+giga_novian_manufacturer = { #Machinist?
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_archaeo_refinery
+    clothes_texture_index = 3
+    icon = artificer
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        OR = {
+            is_same_species = event_target:giga_novian_species_novian
+            is_same_species = event_target:giga_novian_species_sektian
+        }
+    }
+
+    resources = {
+        category = planet_metallurgists
+        produces = {
+            alloys = 6
+            consumer_goods = 4
+        }
+        upkeep = {
+            minerals = 6
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        # mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_manufacturer
+        }
+    }
+}
+
+giga_novian_priest = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_citadel_of_faith
+    clothes_texture_index = 1
+    icon = technophant
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_ruler_job
+    possible = {
+        is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_priests
+        produces = {
+            unity = 12
+        }
+        upkeep = {
+            consumer_goods = 3
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 4
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @ruler_job_weight
+        # mult = value:job_weights_modifier|JOB|high_priest|RESOURCE|unity|
+        # mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_priest
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+}
+
+giga_novian_acolyte = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_giga_novian_temple
+    clothes_texture_index = 3
+    icon = mortal_initiate
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        #complex_specialist_job_check_trigger = yes
+        is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_priests
+        produces = {
+            unity = 8
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 2
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    #tr_modularity_4 triggers planet_jobs_worker_produces_mult = 0.02 #The Commune of Toil and other cybercreeds could fit Novians.
+
+    weight = {
+        weight = @specialist_job_weight
+        # mult = value:job_weights_modifier|JOB|priest|RESOURCE|unity|
+        # mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_acolyte
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+}
+
+giga_novian_commandant = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_giga_novian_capital
+    clothes_texture_index = 1
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_ruler_job
+    possible = {
+        is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_nobles
+        produces = {
+            unity = 6
+        }
+        upkeep = {
+            alloys = 1
+        }
+    }
+
+    # pop_modifier = {
+    #     pop_defense_armies_add = 2
+    # }
+
+    planet_modifier = {
+        planet_stability_add = 2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 6
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @ruler_job_weight
+        # mult = value:job_weights_modifier|JOB|noble|RESOURCE|unity|
+        # mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_commandant
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+}
+
+giga_novian_soldier = {
+    category = worker
+    is_capped_by_modifier = no
+    #condition_string = SOLDIER_JOB_TRIGGER
+    building_icon = building_military_contractors
+    clothes_texture_index = 4
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        # OR = {
+        #     is_same_species = event_target:giga_novian_species_novian
+        #     is_same_species = event_target:giga_novian_species_sektian
+        # }
+        #NOT = { planet = { has_building = building_giga_novian_overseers } }
+        owner = { is_country_type = novian_arikhanate }
+        is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_soldiers
+        produces = {
+            unity = 3
+        }
+        upkeep = {
+            alloys = 1
+        }
+    }
+
+    # country_modifier = {
+    #     country_naval_cap_add = 6 #tech_ground_defense_planning value added
+    # }
+
+    # pop_modifier = {
+    #     pop_defense_armies_add = 3
+    # }
+
+    planet_modifier = {
+        planet_stability_add = 0.5 #normal soldiers give 0.25
+    }
+
+    # triggered_planet_modifier = {
+    #     modifier = {
+    #         planet_stability_add = 1
+    #     }
+    #     mult = planet.modifier:job_soldier_stability_add
+    # }
+
+    weight = {
+        #weight = @soldier_job_weight
+        #weight = @clerk_job_weight
+        weight = @special_job_weight
+        modifier = {
+            factor = 1.1
+            has_job = giga_novian_soldier
+        }
+    }
+}
+
+giga_novian_shipwright_novian = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_giga_novian_shipyard
+    clothes_texture_index = 3
+    icon = structure_engineer
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        #is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            engineering_research = 4
+        }
+        upkeep = {
+            alloys = 3
+        }
+    }
+
+    triggered_country_modifier = {
+        modifier = {
+            country_naval_cap_add = 10 #soldiers give 6
+        }
+        #mult = planet.modifier:job_researcher_naval_cap_add
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        #mult = value:job_weights_research_modifier|JOB|researcher|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_shipwright_novian
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+}
+
+giga_novian_shipwright_individualist = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_giga_novian_shipyard
+    clothes_texture_index = 3
+    icon = structure_engineer
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            engineering_research = 4
+        }
+        upkeep = {
+            alloys = 3
+        }
+    }
+
+    triggered_country_modifier = {
+        modifier = {
+            country_naval_cap_add = 10 #soldiers give 6
+        }
+        #mult = planet.modifier:job_researcher_naval_cap_add
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_research_modifier|JOB|researcher|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_shipwright_individualist
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+}
+
+giga_novian_shipwright_gestalt = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_giga_novian_shipyard
+    clothes_texture_index = 3
+    icon = structure_engineer
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            engineering_research = 4
+        }
+        upkeep = {
+            alloys = 3
+        }
+    }
+
+    triggered_country_modifier = {
+        modifier = {
+            country_naval_cap_add = 10 #soldiers give 6
+        }
+        #mult = planet.modifier:job_researcher_naval_cap_add
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+        mult = value:job_weights_research_modifier|JOB|calculator|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_shipwright_gestalt
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+}
+
+giga_novian_archivist = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_temple_of_prosperity
+    clothes_texture_index = 3
+    icon = fe_archivist
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        #complex_specialist_job_check_trigger = yes
+        is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 8
+            engineering_research = 8
+            society_research = 8
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        #mult = value:job_weights_research_modifier|JOB|researcher|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_archivist
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_research"
+}
+
+#Exclusively for Kren.
+giga_novian_gladiator = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_giga_novian_colosseum
+    clothes_texture_index = 2 #???
+    icon = beastfighter
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        is_same_species = event_target:giga_novian_species_kren
+    }
+
+    pop_modifier = {
+        pop_political_power = 0.5 #Influential position for slaves.
+    }
+
+    resources = {
+        category = planet_cyberdome_duelist #entertainer? duelist?
+        produces = {
+            unity = 4
+        }
+        upkeep = {
+            alloys = 2
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_amenities_add = 12
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @worker_job_weight
+        modifier = {
+            factor = 5
+            has_job = giga_novian_gladiator
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_amenities"
+}
+
+giga_novian_overseer = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_giga_novian_overseers
+    clothes_texture_index = 1
+    icon = overlord_propagandist
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_ruler_job
+    possible = {
+        is_same_species = event_target:giga_novian_species_novian
+    }
+
+    resources = {
+        category = planet_politicians
+        produces = {
+            unity = 1
+            mult = value:novian_overseer_toiler_count
+        }
+        # upkeep = {
+        #     consumer_goods = 2 #just the right amount of payment to prevent solidarity
+        # }
+    }
+
+    weight = {
+        weight = @ruler_job_weight
+        # mult = value:job_weights_modifier|JOB|noble|RESOURCE|unity|
+        # mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_overseer
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+}
+
+giga_novian_scavenger_leader = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_giga_novian_overseers
+    clothes_texture_index = 1
+    icon = manager
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_ruler_job
+    possible = {
+        always = yes
+    }
+
+    resources = {
+        category = planet_politicians
+        produces = {
+            unity = 6
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    weight = {
+        weight = @ruler_job_weight
+        mult = value:job_weights_modifier|JOB|politician|RESOURCE|unity|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_scavenger_leader
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+}
+
+giga_novian_scavenger_leader_gestalt = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_giga_novian_overseers
+    clothes_texture_index = 1
+    icon = evaluator
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        can_think = yes
+    }
+
+    resources = {
+        category = planet_administrators
+        produces = {
+            unity = 6
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+
+    weight = {
+        weight = @synapse_drone_job_weight
+        mult = value:job_weights_modifier|JOB|coordinator|RESOURCE|unity|
+        modifier = {
+            factor = 5
+            has_job = giga_novian_scavenger_leader_gestalt
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_unity"
+}

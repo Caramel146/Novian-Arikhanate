@@ -1,0 +1,276 @@
+namespace = novian_arc
+
+
+### NovAet War ###
+fleet_event = {
+    id = novian_arc.011
+    title = giga_novian.011.name
+    desc = giga_novian.011.desc
+
+    picture = GFX_evt_physics_research
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.011.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.012
+    title = giga_novian.012.name
+    desc = giga_novian.012.desc
+
+    picture = GFX_evt_physics_research
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.012.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.013
+    title = giga_novian.013.name
+    desc = giga_novian.013.desc
+
+    picture = GFX_evt_physics_research
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.013.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.014
+    title = giga_novian.014.name
+    desc = giga_novian.014.desc
+
+    picture = GFX_evt_physics_research
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.014.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.015
+    title = giga_novian.015.name
+    desc = giga_novian.015.desc
+
+    picture = GFX_evt_physics_research
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.015.a
+        small_artifact_reward = yes
+    }
+}
+
+
+
+### Kren Fleets Discovered ###
+fleet_event = {
+    id = novian_arc.021
+    title = giga_novian.021.name
+    desc = giga_novian.021.desc
+
+    picture = GFX_evt_physics_research
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.021.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.022
+    title = giga_novian.022.name
+    desc = giga_novian.022.desc
+
+    picture = GFX_evt_physics_research
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.022.a
+        small_artifact_reward = yes
+    }
+}
+
+
+
+### Kren Fortress World ###
+
+
+
+### Shrouded Moon ###
+fleet_event = {
+    id = novian_arc.041
+    title = giga_novian.041.name
+    desc = giga_novian.041.desc
+
+    picture = GFX_evt_astral_rift_research_lab #stage 1: immediately obvious that it's a morbid biotech lab - but why so secret?
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.041.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.042
+    title = giga_novian.042.name
+    desc = giga_novian.042.desc
+
+    picture = GFX_evt_synaptic_lathe
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.042.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.043
+    title = giga_novian.043.name
+    desc = giga_novian.043.desc
+
+    picture = GFX_evt_rift_sphere
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.043.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.044
+    title = giga_novian.044.name
+    desc = giga_novian.044.desc
+
+    picture = GFX_evt_shrouded_planet
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.044.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = novian_arc.045
+    title = giga_novian.045.name
+    desc = giga_novian.045.desc
+
+    picture = GFX_evt_cosmic_storms_fleets_of_the_thrice_damned
+    archaeology = yes
+    show_sound = event_dig_site
+
+    is_triggered_only = yes
+
+    immediate = {	fromfrom = { set_site_progress_locked = yes } }
+    after = {		fromfrom = { set_site_progress_locked = no } }
+
+    option = {
+        name = giga_novian.045.a
+        small_artifact_reward = yes
+        hidden_effect = {
+            fleet_event = { id = novian_arc.046 days = 15 }
+        }
+    }
+}
+
+fleet_event = {
+    id = novian_arc.046
+    title = giga_novian.046.name
+    desc = giga_novian.046.desc
+    location = event_target:novian_shielded_moon
+
+    picture = GFX_evt_situation_the_seal
+    show_sound = event_psionic
+
+    is_triggered_only = yes
+
+    option = {
+        name = giga_novian.046.a
+    }
+
+    option = {
+        name = giga_novian.046.b
+    }
+}
