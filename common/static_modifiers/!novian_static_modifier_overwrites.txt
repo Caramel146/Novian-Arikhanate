@@ -1,0 +1,4 @@
+magical_neutronium_deficit = {
+    weapon_type_quasaric_weapon_fire_rate_mult = -9999
+    weapon_type_quasaric_weapon_damage_mult = -9999
+}

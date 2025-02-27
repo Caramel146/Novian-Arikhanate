@@ -2,31 +2,31 @@
  ### NovAet War Battle Site ###
  site_novian_010: "An Ancient Signal"
  site_novian_010_intro: "Our scientists have detected a signal from a long-derelict communications outpost, with its codes seeming to show a very old origin of the transmission. It may be useful to explore it and see why it’s transmitting still."
- giga_novian.011.name:0 "A Very Old Tale"
- giga_novian.011.desc:0 "Based on our studies, the signal appears to be a depiction of some ancient battle, possibly ten thousand to one hundred thousand years ago!  However, further decoding and translation of the events will require more research into this site."
- giga_novian.011.a: "ans"
- giga_novian.012.name:0 "Intent of Conquest"
- giga_novian.012.desc:0 "Our current understanding of the events clearly shows that one of the Novians' monstrous Hyperships, the Arm of Intent, was present at the battle. However, it is unclear what other Novian forces were present, or what they were fighting against. More study is needed to know more."
- giga_novian.012.a: "ans"
- giga_novian.013.name:0 "Far more Ancient"
- giga_novian.013.desc:0 "Upon further review and study of the transmission, it appears we were drastically wrong about when the signal first started broadcasting, at over ten times what we initially believed at over one million years old!\nIn addition, we were able to recover some data about the enemy the Novians were fighting at that time. While we are not yet able to discern a name for them, they appear to have been extremely advanced, even by Novian standards. They utilized cybernetics and had extreme psionic power, defying all known current conventions. We are still attempting to learn more about the force that they were able to yield, but it seems odd such an extremely advanced civilization could be destroyed so completely. More study will be required if we wish to know more. "
- giga_novian.013.a: "ans"
- giga_novian.014.name:0 "A Bomb to threaten the Heavens"
- giga_novian.014.desc:0 "After further review, we have been able to discover more information about the battle. It appears to have been the first conflict of any significance between the two colossi. The Novian Arm of Intent appears to have held a full escort fleet, which at this period in history consisted of hundreds of frigates, hundreds of cruisers, tens of thousands of strike craft, and dozens of other capital ships.\nThe other fleet appears to have had two of what were referred to as Grand Behemoth Planetcraft, Gaia worlds larger than most gas giants and weaponized with advanced weaponry we’ve never seen before, not even among the Novian technology itself. If any remain, even in partially destroyed states, they would no doubt be valuable to our scientific and military communities. These were escorted by massive fleets of Escorts and Battlecruisers, once again with advanced technologies and numbering in the thousands. \n This mix of forces would normally be able to dominate the Novian fleets, however it appears the Novians had some extremely advanced weapon, known as a Shroudbreaker. It appears to have been capable of ripping holes through reality and the Shroud, causing mass destruction and chaos in both our world and the other. When it was activated, all psionic forced in the system appear to have had seizures, died, or experienced extreme pain for long periods of time. In addition, some ships crashed into each other, fought each other, or simply vanished for unknown reasons. If such bombs were still present today, the Novians would no doubt bring Hell upon all of us."
- giga_novian.014.a: "ans"
- giga_novian.015.name:0 "An Eternal Empire"
- giga_novian.015.desc:0 "After much more research, we have finally translated the name of the enemy the Novians faced: The Aeternum. While little is known about them here, we should be able to find more information from other leftover sites from the war."
- giga_novian.015.a: "ans"
+ novian.011.name:0 "A Very Old Tale"
+ novian.011.desc:0 "Based on our studies, the signal appears to be a depiction of some ancient battle, possibly ten thousand to one hundred thousand years ago! However, further decoding and translation of the events will require more research into this site."
+ novian.011.a: "ans"
+ novian.012.name:0 "Intent of Conquest"
+ novian.012.desc:0 "Our current understanding of the events clearly shows that one of the Novians' monstrous Hyperships, the Arm of Intent, was present at the battle. However, it is unclear what other Novian forces were present, or what they were fighting against. More study is needed to know more."
+ novian.012.a: "ans"
+ novian.013.name:0 "Far more Ancient"
+ novian.013.desc:0 "Upon further review and study of the transmission, it appears we were drastically wrong about when the signal first started broadcasting, at over ten times what we initially believed at over one million years old!\nIn addition, we were able to recover some data about the enemy the Novians were fighting at that time. While we are not yet able to discern a name for them, they appear to have been extremely advanced, even by Novian standards. They utilized cybernetics and had extreme psionic power, defying all known current conventions. We are still attempting to learn more about the force that they were able to yield, but it seems odd such an extremely advanced civilization could be destroyed so completely. More study will be required if we wish to know more. "
+ novian.013.a: "ans"
+ novian.014.name:0 "A Bomb to threaten the Heavens"
+ novian.014.desc:0 "After further review, we have been able to discover more information about the battle. It appears to have been the first conflict of any significance between the two colossi. The Novian Arm of Intent appears to have held a full escort fleet, which at this period in history consisted of hundreds of frigates, hundreds of cruisers, tens of thousands of strike craft, and dozens of other capital ships.\nThe other fleet appears to have had two of what were referred to as Grand Behemoth Planetcraft, Gaia worlds larger than most gas giants and weaponized with advanced weaponry we’ve never seen before, not even among the Novian technology itself. If any remain, even in partially destroyed states, they would no doubt be valuable to our scientific and military communities. These were escorted by massive fleets of Escorts and Battlecruisers, once again with advanced technologies and numbering in the thousands. \n This mix of forces would normally be able to dominate the Novian fleets, however it appears the Novians had some extremely advanced weapon, known as a Shroudbreaker. It appears to have been capable of ripping holes through reality and the Shroud, causing mass destruction and chaos in both our world and the other. When it was activated, all psionic forced in the system appear to have had seizures, died, or experienced extreme pain for long periods of time. In addition, some ships crashed into each other, fought each other, or simply vanished for unknown reasons. If such bombs were still present today, the Novians would no doubt bring Hell upon all of us."
+ novian.014.a: "ans"
+ novian.015.name:0 "An Eternal Empire"
+ novian.015.desc:0 "After much more research, we have finally translated the name of the enemy the Novians faced: The Aeternum. While little is known about them here, we should be able to find more information from other leftover sites from the war."
+ novian.015.a: "ans"
 
  #Discovering the Kren from debris of the NovAet War
  site_novian_020: "A Misplaced Piece"
  site_novian_020_intro: "This debris field from the Novian-Aeternite War appears to have several ships we’ve not encountered before, matching neither Novian nor Aeternite design. We should investigate this anomaly further."
- giga_novian.021.name:0 "By the Sword"
- giga_novian.021.desc:0 "We have confirmed that the unknown vessels are indeed of third-party origin. From what we’ve been able to gather, they belonged to an advanced authoritarian state allied with the Aeternites in the Alician Compact, an alliance led by the Aeternum. Their technology, while inarguably less advanced than the Aeternum overall, fared better against the Novians due to their immunity from Shroudbreaker bombs and was still incredibly advanced. They were extremely militaristic, and appear to have played a large role in the war prior to their defeat."
- giga_novian.021.a:0 "ans"
- giga_novian.022.name:0 "Triangulation"
- giga_novian.022.desc:0 "By decoding the few computers still usable in their ships and their trajectories, we can make some educated guesses as to where other Kren bases could be."
- giga_novian.022.a:0 "ans"
+ novian.021.name:0 "By the Sword"
+ novian.021.desc:0 "We have confirmed that the unknown vessels are indeed of third-party origin. From what we’ve been able to gather, they belonged to an advanced authoritarian state allied with the Aeternites in the Alician Compact, an alliance led by the Aeternum. Their technology, while inarguably less advanced than the Aeternum overall, fared better against the Novians due to their immunity from Shroudbreaker bombs and was still incredibly advanced. They were extremely militaristic, and appear to have played a large role in the war prior to their defeat."
+ novian.021.a:0 "ans"
+ novian.022.name:0 "Triangulation"
+ novian.022.desc:0 "By decoding the few computers still usable in their ships and their trajectories, we can make some educated guesses as to where other Kren bases could be."
+ novian.022.a:0 "ans"
 
  #Dead Kren fortress
  site_novian_030:0 "On Target"
@@ -35,23 +35,23 @@
  #Shrouded Moon research station
  site_novian_040: "a"
  site_novian_040_intro: "a" #a research station orbits the shielded world
- giga_novian.041.name:0 "a"
- giga_novian.041.desc:0 "a" #immediately obvious that it's a morbid biotech lab - but why so secret?
- giga_novian.041.a:0 "a"
- giga_novian.042.name:0 "a"
- giga_novian.042.desc:0 "a" #lab is where Cnil are used in pilemind production
- giga_novian.042.a:0 "a"
- giga_novian.043.name:0 "a"
- giga_novian.043.desc:0 "a" #the station exists on both sides of the shield and is the gateway
- giga_novian.043.a:0 "a"
- giga_novian.044.name:0 "a"
- giga_novian.044.desc:0 "a" #on the other side of the shield is a Shrouded world, with sensor instruments keeping an eye on things
- giga_novian.044.a:0 "a"
- giga_novian.045.name:0 "a"
- giga_novian.045.desc:0 "a" #logs of the sensor instruments report this is where a Shroudbreaker went off, #?agh: and the Cnil evolved with the influence of the Shroud here (no - explain Cnil origin earlier in the story)
- giga_novian.045.a:0 "a"
+ novian.041.name:0 "a"
+ novian.041.desc:0 "a" #immediately obvious that it's a morbid biotech lab - but why so secret?
+ novian.041.a:0 "a"
+ novian.042.name:0 "a"
+ novian.042.desc:0 "a" #lab is where Cnil are used in pilemind production
+ novian.042.a:0 "a"
+ novian.043.name:0 "a"
+ novian.043.desc:0 "a" #the station exists on both sides of the shield and is the gateway
+ novian.043.a:0 "a"
+ novian.044.name:0 "a"
+ novian.044.desc:0 "a" #on the other side of the shield is a Shrouded world, with sensor instruments keeping an eye on things
+ novian.044.a:0 "a"
+ novian.045.name:0 "a"
+ novian.045.desc:0 "a" #logs of the sensor instruments report this is where a Shroudbreaker went off, #?agh: and the Cnil evolved with the influence of the Shroud here (no - explain Cnil origin earlier in the story)
+ novian.045.a:0 "a"
  #triggered on a delay after arcsite completion - not strictly an arc event
- giga_novian.046.name:0 "a"
- giga_novian.046.desc:0 "a" #the Tapestry promises to destroy the Novians - do you accept and lower the shield?
- giga_novian.046.a:0 "a" #yes
- giga_novian.046.b:0 "a" #no
+ novian.046.name:0 "a"
+ novian.046.desc:0 "a" #the Tapestry promises to destroy the Novians - do you accept and lower the shield?
+ novian.046.a:0 "a" #yes
+ novian.046.b:0 "a" #no

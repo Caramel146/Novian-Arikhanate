@@ -1,5 +1,5 @@
 name="Novian Arikhanate"
-version="0.81"
+version="0.82"
 tags={
 	"Events"
 	"Gameplay"

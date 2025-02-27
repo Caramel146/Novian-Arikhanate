@@ -1,8 +1,8 @@
-namespace = giga_novian
+namespace = novian
 
 #Debug event to set up Novian core.
 event = {
-    id = giga_novian.1231
+    id = novian.1231
     hide_window = yes
 
     is_triggered_only = yes
@@ -21,7 +21,7 @@ event = {
 
 #Debug event to give all Novian techs as research options.
 country_event = {
-    id = giga_novian.1232
+    id = novian.1232
     hide_window = yes
 
     is_triggered_only = yes
@@ -29,35 +29,35 @@ country_event = {
     immediate = {
         set_country_flag = novian_cybernetics_possible
         add_research_option = tech_novian_cybernetics
-        add_research_option = tech_asteroid_craft
-        add_research_option = tech_ndb_shield
+        add_research_option = tech_novian_asteroid_craft
+        add_research_option = tech_novian_ndb_shield
 
-        add_research_option = tech_novian_autocannons
-        add_research_option = tech_novian_reactors
-        add_research_option = tech_novian_reactor_boosters
-        add_research_option = tech_novian_shields
-        add_research_option = tech_novian_armor
-        add_research_option = tech_novian_hull
-        add_research_option = tech_novian_afterburners
-        add_research_option = tech_novian_thrusters
-        add_research_option = tech_novian_hyperdrive
-        add_research_option = tech_novian_sensors
-        add_research_option = tech_novian_torpedoes
-        add_research_option = tech_novian_missiles
-        add_research_option = tech_novian_swarmer_missiles
-        add_research_option = tech_novian_mass_drivers
-        add_research_option = tech_novian_kinetic_artillery
-        add_research_option = tech_novian_mass_accelerator
-        add_research_option = tech_novian_combat_computers
-        add_research_option = tech_novian_strike_craft
-        add_research_option = tech_novian_lasers
-        add_research_option = tech_novian_hypership_aura
+        # add_research_option = tech_novian_autocannons
+        # add_research_option = tech_novian_reactors
+        # add_research_option = tech_novian_reactor_boosters
+        # add_research_option = tech_SHIELD_NOVIANs
+        # add_research_option = tech_novian_armor
+        # add_research_option = tech_novian_hull
+        # add_research_option = tech_novian_afterburner
+        # add_research_option = tech_novian_thrusters
+        # add_research_option = tech_novian_hyperdrive
+        # add_research_option = tech_novian_sensors
+        # add_research_option = tech_novian_torpedoes
+        # add_research_option = tech_novian_missiles
+        # add_research_option = tech_novian_swarmer_missiles
+        # add_research_option = tech_novian_mass_drivers
+        # add_research_option = tech_novian_kinetic_artillery
+        # add_research_option = tech_novian_mass_accelerator
+        # add_research_option = tech_novian_combat_computers
+        # add_research_option = tech_novian_strike_craft
+        # add_research_option = tech_novian_lasers
+        # add_research_option = tech_novian_hypership_aura
     }
 }
 
 #Spawns fleet with one of each ship type
 planet_event = {
-    id = giga_novian.1233
+    id = novian.1233
     hide_window = yes
 
     is_triggered_only = yes
@@ -94,7 +94,7 @@ planet_event = {
 
 #Debug event to give all Novian specimens.
 country_event = {
-    id = giga_novian.1234
+    id = novian.1234
     hide_window = yes
 
     is_triggered_only = yes
@@ -121,7 +121,7 @@ country_event = {
 
 #Debug event to trigger War
 country_event = {
-	id = giga_novian.1235
+	id = novian.1235
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
@@ -136,21 +136,21 @@ country_event = {
 
 #Debug event to trigger Raid
 country_event = {
-    id = giga_novian.1236
+    id = novian.1236
     hide_window = yes
     is_triggered_only = yes
     immediate = {
         remove_global_flag = novian_raid_ongoing
         delete_novian_raiders = yes
         event_target:novian_raid_country = {
-            country_event = { id = giga_novian.140 }
+            country_event = { id = novian.140 }
         }
     }
 }
 
 #Debug event to query existence of Raiders
 planet_event = {
-    id = giga_novian.1237
+    id = novian.1237
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -166,9 +166,11 @@ planet_event = {
     }
 }
 
+
+
 #Temporary on_game_start event to give host option to set Novian crisis and difficulty. This event gives a 30-day delay to let the normal Gigas menu stuff play out.
 country_event = {
-    id = giga_novian.10
+    id = novian.10
     hide_window = yes
 
     is_triggered_only = yes
@@ -177,13 +179,13 @@ country_event = {
     }
 
     immediate = {
-        country_event = { id = giga_novian.11 days = 30 }
+        country_event = { id = novian.11 days = 30 }
     }
 }
 country_event = {
-    id = giga_novian.11
-    title = giga_novian.11.name
-    desc = giga_novian.11.desc
+    id = novian.11
+    title = novian.11.name
+    desc = novian.11.desc
     picture = GFX_evt_face_off_in_space
 
     is_triggered_only = yes
@@ -200,7 +202,7 @@ country_event = {
     }
 
     option = {
-        name = giga_novian.12.a
+        name = novian.12.a
         remove_global_flag = giga_core_aeternum
         remove_global_flag = giga_core_birch
         set_global_flag = giga_core_novian
@@ -209,7 +211,7 @@ country_event = {
     }
 
     option = {
-        name = giga_novian.13.a
+        name = novian.13.a
         remove_global_flag = giga_core_aeternum
         remove_global_flag = giga_core_birch
         set_global_flag = giga_core_novian
@@ -218,7 +220,7 @@ country_event = {
     }
 
     option = {
-        name = giga_novian.14.a
+        name = novian.14.a
         remove_global_flag = giga_core_aeternum
         remove_global_flag = giga_core_birch
         set_global_flag = giga_core_novian
@@ -227,7 +229,7 @@ country_event = {
     }
 
     option = {
-        name = giga_novian.15.a
+        name = novian.15.a
         remove_global_flag = giga_core_aeternum
         remove_global_flag = giga_core_birch
         set_global_flag = giga_core_novian
@@ -236,7 +238,7 @@ country_event = {
     }
 
     option = {
-        name = giga_novian.16.a
+        name = novian.16.a
         remove_global_flag = giga_core_aeternum
         remove_global_flag = giga_core_birch
         set_global_flag = giga_core_novian
@@ -245,12 +247,12 @@ country_event = {
     }
 
     option = {
-        name = giga_novian.17.a
+        name = novian.17.a
     }
 }
 
 # event = {
-#     id = giga_novian.12
+#     id = novian.12
 #     hide_window = yes
 #
 #     is_triggered_only = yes
@@ -287,9 +289,9 @@ country_event = {
 ##################################
 #After opening the Core, your scientists discover the Novians.
 country_event = {
-    id = giga_novian.2000
-    title = giga_novian.2000.name
-    desc = giga_novian.2000.desc
+    id = novian.2000
+    title = novian.2000.name
+    desc = novian.2000.desc
     picture = GFX_evt_ship_travel
     show_sound = event_radio_chatter
     location = event_target:novian_colony_capital
@@ -297,18 +299,18 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = giga_novian.2000.a
+        name = novian.2000.a
         country_event = {
-            id = giga_novian.2001
+            id = novian.2001
         }
     }
 }
 
 #The Novians introduce themselves.
 country_event = {
-    id = giga_novian.2001
-    title = giga_novian.2001.name
-    desc = giga_novian.2001.desc
+    id = novian.2001
+    title = novian.2001.name
+    desc = novian.2001.desc
     diplomatic = yes
     location = event_target:novian_colony_capital
     show_sound = event_radio_chatter #change to not be same as previous event
@@ -316,23 +318,23 @@ country_event = {
     is_triggered_only = yes
 
     picture_event_data = {
-        portrait = event_target:giga_novian_species_novian
-        #graphical_culture = event_target:giga_novian_species_novian
-        room = giga_novian_room
+        portrait = event_target:novian_species_novian
+        #graphical_culture = event_target:novian_species_novian
+        room = novian_room
         planet_background = pc_novian
     }
 
     option = {
-        name = giga_novian.2001.a
+        name = novian.2001.a
         establish_novian_contact = yes
+        remove_country_flag = novian_contact_ongoing #used to prevent the monthly check event "fixing" lack of contact prior to the initial contact.
     }
 }
 
 #On opening diplomacy with the Novians.
 country_event = {
-    id = giga_novian.1001
-    title = giga_novian.1001.name
-    desc = giga_novian.1001.desc
+    id = novian.1001
+    title = novian.1001.name
     diplomatic = yes #what does this actually do?
     #location = from
     #force_open = yes
@@ -352,28 +354,48 @@ country_event = {
     }
 
     picture_event_data = {
-        portrait = event_target:giga_novian_species_novian
+        portrait = event_target:novian_species_novian
         #graphical_culture = event_target:novian_arikhanate
-        room = giga_novian_room
+        room = novian_room
         planet_background = pc_novian
     }
 
+    desc = { #Peace greeting
+        text = novian.1001.peace.desc
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+    }
+
+    desc = { #War greeting
+        text = novian.1001.war.desc
+        trigger = {
+            has_global_flag = novian_war_begun
+        }
+    }
+
     option = { #gives you some history on the Novians
-        name = giga_novian.1001.who
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+        name = novian.1001.peace.who
         is_dialog_only = yes
-        response_text = giga_novian.1001.who.response
+        response_text = novian.1001.peace.who.response
     }
 
     option = { #tells you about how old they are
-        name = giga_novian.1001.capital
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+        name = novian.1001.peace.capital
         is_dialog_only = yes
-        response_text = giga_novian.1001.capital.response
+        response_text = novian.1001.peace.capital.response
     }
 
     # option = { #Declare War
-    # 	name = giga_novian.1001.war
-    # 	custom_tooltip = giga_novian.1001.war.tooltip
-    # 	response_text = giga_novian.1001.war.response
+    # 	name = novian.1001.wardec
+    # 	custom_tooltip = novian.1001.wardec.tooltip
+    # 	response_text = novian.1001.wardec.response
     # 	trigger = {
     # 		NOT = { is_at_war_with = event_target:novian_arikhanate }
     # 		NOT = { is_multiplayer = yes } #Why does Aeternum have this for pre-awakening-started instances? To prevent trolling?
@@ -392,8 +414,41 @@ country_event = {
     # }
 
     option = {
-        name = giga_novian.1001.a
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+        name = novian.1001.leave.a
         default_hide_option = yes
+    }
+
+    option = {
+        trigger = {
+            has_global_flag = novian_war_begun
+        }
+        name = novian.1001.leave.b
+        default_hide_option = yes
+    }
+}
+
+#Alternative core entry outcome to giga_dialog.4101
+#Triggers via on_entering_system_first_time
+ship_event = { #Give QSO candidacy upon entry of Quasar system
+    id = novian.4000
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = { NOT = { has_country_flag = found_galactic_core } }
+        from = {
+            has_star_flag = giga_core_04
+        }
+    }
+
+    immediate = {
+        fromfrom = {
+            set_country_flag = found_galactic_core
+            set_country_flag = found_qso_candidate
+        }
     }
 }
 
@@ -403,38 +458,59 @@ country_event = {
 ##################################
 #Investigations become available
 country_event = {
-    id = giga_novian.3001
-    title = giga_novian.3001.name
-    desc = giga_novian.3001.desc
+    id = novian.3001
+    title = novian.3001.name
+    desc = novian.3001.desc
     picture = GFX_evt_surreal_visions
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
     option = {
-        name = giga_novian.3001.a
-        enable_special_project = {
-            name = STUDY_NOVIAN_TECH
+        name = novian.3001.a
+        if = {
+            limit = {
+                is_ai = no
+            }
+            enable_special_project = {
+                name = STUDY_NOVIAN_TECH
+            }
+            enable_special_project = {
+                name = STUDY_NOVIAN_SOCIETY
+            }
+            enable_special_project = {
+                name = STUDY_NOVIAN_DESIGNS
+            }
         }
-        enable_special_project = {
-            name = STUDY_NOVIAN_SOCIETY
-        }
-        enable_special_project = {
-            name = STUDY_NOVIAN_DESIGNS
+        else = {
+            add_modifier = {
+                modifier = novian_analysis_physics
+                days = -1
+            }
+            add_modifier = {
+                modifier = novian_analysis_society
+                days = -1
+            }
+            add_modifier = {
+                modifier = novian_analysis_engineering
+                days = -1
+            }
         }
     }
 }
 
 #Physics investigation complete
 country_event = {
-    id = giga_novian.10001
-    title = giga_novian.10001.name
-    desc = giga_novian.10001.desc
+    id = novian.10001
+    title = novian.10001.name
+    desc = novian.10001.desc
     picture = GFX_evt_glitchy_matrix
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
     option = {
-        name = giga_novian.10001.a
+        name = novian.10001.a
         add_modifier = {
             modifier = novian_analysis_physics
             days = -1
@@ -448,15 +524,16 @@ country_event = {
 
 #Society investigation complete
 country_event = {
-    id = giga_novian.10002
-    title = giga_novian.10002.name
-    desc = giga_novian.10002.desc
+    id = novian.10002
+    title = novian.10002.name
+    desc = novian.10002.desc
     picture = GFX_evt_surreal_visions
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
     option = {
-        name = giga_novian.10002.a
+        name = novian.10002.a
         add_modifier = {
             modifier = novian_analysis_society
             days = -1
@@ -470,15 +547,16 @@ country_event = {
 
 #Engineering investigation complete
 country_event = {
-    id = giga_novian.10003
-    title = giga_novian.10003.name
-    desc = giga_novian.10003.desc
+    id = novian.10003
+    title = novian.10003.name
+    desc = novian.10003.desc
     picture = GFX_evt_ancient_alien_temple
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
     option = {
-        name = giga_novian.10003.a
+        name = novian.10003.a
         add_modifier = {
             modifier = novian_analysis_engineering
             days = -1
@@ -492,10 +570,11 @@ country_event = {
 
 #All investigations complete
 country_event = {
-    id = giga_novian.10004
-    title = giga_novian.10004.name
-    desc = giga_novian.10004.desc
+    id = novian.10004
+    title = novian.10004.name
+    desc = novian.10004.desc
     picture = GFX_evt_fleet_from_surface
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
@@ -504,24 +583,639 @@ country_event = {
     # }
 
     option = {
-        name = giga_novian.10004.a
-        # hidden_effect = {
-        # 	country_event = {
-        # 		id = giga_novian.11000 #What is this supposed to be? The arcsite system?
-        # 		days = 360
-        # 	}
-        # }
+        name = novian.10004.a
+        custom_tooltip = novian.10004.a.tooltip
+        if = {
+            limit = {
+                is_ai = no
+            }
+            hidden_effect = {
+                country_event = {
+                    id = novian.20000
+                    days = 720
+                }
+            }
+        }
     }
 }
+
+
+#####################
+##### ESPIONAGE #####
+#####################
+country_event = {
+    id = novian.20000
+    title = novian.20000.name
+    desc = novian.20000.desc
+    picture = GFX_evt_communication_event
+    event_chain = novian_chain
+
+    is_triggered_only = yes
+
+    option = {
+        name = novian.20000.a
+        hidden_effect = {
+            set_country_flag = novian_espionage_unlocked
+            establish_novian_espionage = yes
+        }
+        if = {
+            limit = {
+                is_galactic_community_member = yes
+            }
+            custom_tooltip = novian.20000.a.tooltip.1
+        }
+        else = {
+            custom_tooltip = novian.20000.a.tooltip.2
+        }
+    }
+}
+
+country_event = { #check nos_infil and nos_infil_double
+    id = novian.20008
+    hide_window = yes
+
+    is_triggered_only = yes
+    trigger = {
+        NOT = { has_global_flag = novian_arikhanate_defeated }
+        has_country_flag = novian_espionage_unlocked
+    }
+
+    immediate = {
+        export_modifier_to_variable = {
+            modifier = intel_decryption_add
+            variable = nos_infil
+        }
+        if = {
+            limit = {
+                is_active_resolution = resolution_nov_pooled_espionage
+            }
+            change_variable = {
+                which = nos_infil
+                value = 2
+            }
+        }
+        set_variable = {
+            which = nos_infil_double
+            value = nos_infil
+        }
+        multiply_variable = {
+            which = nos_infil_double
+            value = 2
+        }
+    }
+}
+
+country_event = { #Open NOS
+    id = novian.20001
+    title = novian.20001.name
+    #desc = novian.20001.desc
+    #picture = GFX_evt_communication_event
+
+    is_triggered_only = yes
+
+    diplomatic = yes
+    picture_event_data = {
+        portrait = root.species
+        room = novian_nos_room
+    }
+
+    immediate = {
+        set_country_flag = monitoring_novians
+        country_event = { id = novian.20008 }
+        event_target:novian_arikhanate = { #re-evaluate dissident faction memberhsip
+            country_event = { id = novian.20002 }
+        }
+    }
+
+    desc = {
+        text = novian.20001.desc.pre_wardec.a
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+    }
+    desc = {
+        text = novian.20001.desc.pre_wardec.b
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+    }
+    desc = {
+        text = novian.20001.desc.pre_wardec.c
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+    }
+    desc = {
+        text = novian.20001.desc.pre_wardec.d
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+    }
+    desc = {
+        text = novian.20001.desc.pre_wardec.e
+        trigger = {
+            NOT = { has_global_flag = novian_war_begun }
+        }
+    }
+
+    desc = {
+        text = novian.20001.desc.post_wardec.a
+        trigger = {
+            has_global_flag = novian_war_begun
+        }
+    }
+    desc = {
+        text = novian.20001.desc.post_wardec.b
+        trigger = {
+            has_global_flag = novian_war_begun
+        }
+    }
+    desc = {
+        text = novian.20001.desc.post_wardec.c
+        trigger = {
+            has_global_flag = novian_war_begun
+        }
+    }
+    desc = {
+        text = novian.20001.desc.post_wardec.d
+        trigger = {
+            has_global_flag = novian_war_begun
+        }
+    }
+    desc = {
+        text = novian.20001.desc.post_wardec.e
+        trigger = {
+            has_global_flag = novian_war_begun
+        }
+    }
+
+    option = {
+        trigger = {
+            NOR = {
+                country_has_situation = {
+                    SITUATION = novian_situation_dissidence_general
+                }
+                has_global_flag = novian_situation_dissidence_general_complete
+            }
+        }
+        name = novian.20001.a.1
+        start_situation = {
+            type = novian_situation_dissidence_general
+            target = event_target:novian_arikhanate
+        }
+        add_resource = { influence = -250 }
+        if = {
+            limit = { has_global_flag = giga_core_novian_1 }
+            add_resource = { energy = -40000 }
+        }
+        else_if = {
+            limit = { has_global_flag = giga_core_novian_2 }
+            add_resource = { energy = -50000 }
+        }
+        else_if = {
+            limit = { has_global_flag = giga_core_novian_3 }
+            add_resource = { energy = -80000 }
+        }
+        else_if = {
+            limit = { has_global_flag = giga_core_novian_4 }
+            add_resource = { energy = -150000 }
+        }
+        else_if = {
+            limit = { has_global_flag = giga_core_novian_5 }
+            add_resource = { energy = -400000 }
+        }
+        hidden_effect = {
+            remove_country_flag = monitoring_novians
+        }
+    }
+
+    # option = {
+    #     name = novian.20001.a.2
+    #     hidden_effect = {
+    #         remove_country_flag = monitoring_novians
+    #     }
+    # }
+
+    option = { #bye
+        default_hide_option = yes
+        name = novian.20001.bye
+        hidden_effect = {
+            remove_country_flag = monitoring_novians
+        }
+    }
+}
+
+country_event = { #test event for Novian factions - re-evaluate membership
+    id = novian.20002
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        every_owned_pop = {
+            force_faction_evaluation = yes
+        }
+        export_trigger_value_to_variable = {
+            trigger = pop_percentage
+            parameters = {
+                limit = { NOT = { has_pop_flag = novian_dissident } }
+            }
+            variable = novian_faction_support_loyalist
+        }
+        multiply_variable = {
+            which = novian_faction_support_loyalist
+            value = 100
+        }
+        export_trigger_value_to_variable = {
+            trigger = pop_percentage
+            parameters = {
+                limit = { has_pop_flag = novian_dissident }
+            }
+            variable = novian_faction_support_dissident
+        }
+        multiply_variable = {
+            which = novian_faction_support_dissident
+            value = 100
+        }
+    }
+}
+
+country_event = { #test event for Novian factions - trigger dissidence in Arikhanate
+    id = novian.20003
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        event_target:novian_arikhanate = {
+            country_event = { id = novian.20004 }
+        }
+    }
+}
+
+country_event = { #test event for Novian factions - increase dissidence
+    id = novian.20004
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        while = {
+            count = 1
+            random_owned_pop = {
+                limit = {
+                    NOT = { has_pop_flag = novian_dissident }
+                    is_same_species = event_target:novian_species_novian
+                }
+                set_pop_flag = novian_dissident
+                force_faction_evaluation = yes
+            }
+        }
+    }
+}
+
+situation_event = { #roll to increase dissidence, and evaluate penalties to Novians - triggered by novian_situation_dissidence_general monthly.
+    id = novian.20005
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                current_stage = stage_1
+            }
+            random_list = {
+                2 = { } #nothing
+                1 = { #increase dissidence
+                    event_target:novian_arikhanate = {
+                        country_event = { id = novian.20004 }
+                    }
+                }
+                4 = { #decrease dissidence
+                    event_target:novian_arikhanate = {
+                        country_event = { id = novian.20007 }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                current_stage = stage_2
+            }
+            random_list = {
+                3 = { } #nothing
+                2 = { #increase dissidence
+                    event_target:novian_arikhanate = {
+                        country_event = { id = novian.20004 }
+                    }
+                }
+                3 = { #decrease dissidence
+                    event_target:novian_arikhanate = {
+                        country_event = { id = novian.20007 }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                current_stage = stage_3
+            }
+            random_list = {
+                3 = { } #nothing
+                3 = { #increase dissidence
+                    event_target:novian_arikhanate = {
+                        country_event = { id = novian.20004 }
+                    }
+                }
+                2 = { #decrease dissidence
+                    event_target:novian_arikhanate = {
+                        country_event = { id = novian.20007 }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                current_stage = stage_4
+            }
+            random_list = {
+                2 = { } #nothing
+                4 = { #increase dissidence
+                    event_target:novian_arikhanate = {
+                        country_event = { id = novian.20004 }
+                    }
+                }
+                1 = { #decrease dissidence
+                    event_target:novian_arikhanate = {
+                        country_event = { id = novian.20007 }
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                current_stage = stage_1
+                OR = {
+                    has_global_flag = novian_dissidence_penalty_2
+                    has_global_flag = novian_dissidence_penalty_3
+                    has_global_flag = novian_dissidence_penalty_4
+                }
+            }
+            event_target:novian_arikhanate = {
+                remove_modifier = novian_dissidence_stage_2
+                remove_modifier = novian_dissidence_stage_3
+                remove_modifier = novian_dissidence_stage_4
+            }
+            event_target:novian_raid_country = {
+                remove_modifier = novian_dissidence_stage_2
+                remove_modifier = novian_dissidence_stage_3
+                remove_modifier = novian_dissidence_stage_4
+            }
+            remove_global_flag = novian_dissidence_penalty_2
+            remove_global_flag = novian_dissidence_penalty_3
+            remove_global_flag = novian_dissidence_penalty_4
+        }
+        else_if = {
+            limit = {
+                current_stage = stage_2
+                NOT = { has_global_flag = novian_dissidence_penalty_2 }
+            }
+            event_target:novian_arikhanate = {
+                remove_modifier = novian_dissidence_stage_3
+                remove_modifier = novian_dissidence_stage_4
+                add_modifier = {
+                    modifier = novian_dissidence_stage_2
+                    days = -1
+                }
+            }
+            event_target:novian_raid_country = {
+                remove_modifier = novian_dissidence_stage_3
+                remove_modifier = novian_dissidence_stage_4
+                add_modifier = {
+                    modifier = novian_dissidence_stage_2
+                    days = -1
+                }
+            }
+            set_global_flag = novian_dissidence_penalty_2
+            remove_global_flag = novian_dissidence_penalty_3
+            remove_global_flag = novian_dissidence_penalty_4
+        }
+        else_if = {
+            limit = {
+                current_stage = stage_3
+                NOT = { has_global_flag = novian_dissidence_penalty_3 }
+            }
+            event_target:novian_arikhanate = {
+                remove_modifier = novian_dissidence_stage_2
+                remove_modifier = novian_dissidence_stage_4
+                add_modifier = {
+                    modifier = novian_dissidence_stage_3
+                    days = -1
+                }
+            }
+            event_target:novian_raid_country = {
+                remove_modifier = novian_dissidence_stage_2
+                remove_modifier = novian_dissidence_stage_4
+                add_modifier = {
+                    modifier = novian_dissidence_stage_3
+                    days = -1
+                }
+            }
+            remove_global_flag = novian_dissidence_penalty_2
+            set_global_flag = novian_dissidence_penalty_3
+            remove_global_flag = novian_dissidence_penalty_4
+        }
+        else_if = {
+            limit = {
+                current_stage = stage_4
+                NOT = { has_global_flag = novian_dissidence_penalty_4 }
+            }
+            event_target:novian_arikhanate = {
+                remove_modifier = novian_dissidence_stage_2
+                remove_modifier = novian_dissidence_stage_3
+                add_modifier = {
+                    modifier = novian_dissidence_stage_4
+                    days = -1
+                }
+            }
+            event_target:novian_raid_country = {
+                remove_modifier = novian_dissidence_stage_2
+                remove_modifier = novian_dissidence_stage_3
+                add_modifier = {
+                    modifier = novian_dissidence_stage_4
+                    days = -1
+                }
+            }
+            remove_global_flag = novian_dissidence_penalty_2
+            remove_global_flag = novian_dissidence_penalty_3
+            set_global_flag = novian_dissidence_penalty_4
+        }
+    }
+}
+
+country_event = { #test event for Novian factions - decrease dissidence
+    id = novian.20007
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        while = {
+            count = 1
+            random_owned_pop = {
+                limit = {
+                    has_pop_flag = novian_dissident
+                }
+                remove_pop_flag = novian_dissident
+                force_faction_evaluation = yes
+            }
+        }
+    }
+}
+
+# situation_event = { #on_start in novian_situation_dissidence_general
+#     id = novian.20010
+#     hide_window = yes
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#     }
+# }
+
+
+situation_event = { #Entering stage 2 in novian_situation_dissidence_general
+    id = novian.20011
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        event_target:novian_arikhanate = {
+            add_modifier = {
+                modifier = novian_dissidence_stage_2
+                days = -1
+            }
+        }
+        event_target:novian_raid_country = {
+            add_modifier = {
+                modifier = novian_dissidence_stage_2
+                days = -1
+            }
+        }
+        set_global_flag = novian_dissidence_penalty_2
+    }
+}
+
+situation_event = { #Entering stage 3 in novian_situation_dissidence_general
+
+    id = novian.20012
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        event_target:novian_arikhanate = {
+            remove_modifier = novian_dissidence_stage_2
+            add_modifier = {
+                modifier = novian_dissidence_stage_3
+                days = -1
+            }
+        }
+        event_target:novian_raid_country = {
+            remove_modifier = novian_dissidence_stage_2
+            add_modifier = {
+                modifier = novian_dissidence_stage_3
+                days = -1
+            }
+        }
+        remove_global_flag = novian_dissidence_penalty_2
+        set_global_flag = novian_dissidence_penalty_3
+    }
+}
+
+situation_event = { #Entering stage 4 in novian_situation_dissidence_general
+    id = novian.20013
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        event_target:novian_arikhanate = {
+            remove_modifier = novian_dissidence_stage_3
+            add_modifier = {
+                modifier = novian_dissidence_stage_4
+                days = -1
+            }
+        }
+        event_target:novian_raid_country = {
+            remove_modifier = novian_dissidence_stage_3
+            add_modifier = {
+                modifier = novian_dissidence_stage_4
+                days = -1
+            }
+        }
+        remove_global_flag = novian_dissidence_penalty_3
+        set_global_flag = novian_dissidence_penalty_4
+    }
+}
+
+situation_event = { #Completing novian_situation_dissidence_general
+    id = novian.20014
+    title = novian.20014.name
+    desc = novian.20014.desc
+    picture = GFX_evt_civil_action
+    event_chain = novian_chain
+
+    is_triggered_only = yes
+
+    option = {
+        name = novian.20014.a
+        custom_tooltip = novian.20014.tooltip
+    }
+
+    immediate = {
+        set_global_flag = novian_situation_dissidence_general_complete
+        event_target:novian_arikhanate = {
+            remove_modifier = novian_dissidence_stage_2
+            remove_modifier = novian_dissidence_stage_3
+            remove_modifier = novian_dissidence_stage_4
+            add_modifier = {
+                modifier = novian_dissidence_stage_post
+                days = -1
+            }
+        }
+        event_target:novian_raid_country = {
+            remove_modifier = novian_dissidence_stage_2
+            remove_modifier = novian_dissidence_stage_3
+            remove_modifier = novian_dissidence_stage_4
+            add_modifier = {
+                modifier = novian_dissidence_stage_post
+                days = -1
+            }
+        }
+    }
+}
+
+# situation_event = { #Failing novian_situation_dissidence_general
+#     id = novian.20014
+#     hide_window = yes
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#     }
+# }
 
 
 
 ##########################
 ##### RAIDING EVENTS #####
 ##########################
-#10% monthly chance of sending out a raid if no raiders are already deployed.
-event = {
-    id = giga_novian.130
+event = { #Monthly chance of sending out a raid if no raiders are already deployed.
+    id = novian.130
     hide_window = yes
 
     is_triggered_only = yes
@@ -542,7 +1236,7 @@ event = {
             random_list = {
                 1 = {
                     event_target:novian_raid_country = {
-                        country_event = { id = giga_novian.140 }
+                        country_event = { id = novian.140 }
                     }
                 }
                 9 = { }
@@ -553,7 +1247,7 @@ event = {
             random_list = {
                 1 = {
                     event_target:novian_raid_country = {
-                        country_event = { id = giga_novian.140 }
+                        country_event = { id = novian.140 }
                     }
                 }
                 8 = { }
@@ -564,7 +1258,7 @@ event = {
             random_list = {
                 1 = {
                     event_target:novian_raid_country = {
-                        country_event = { id = giga_novian.140 }
+                        country_event = { id = novian.140 }
                     }
                 }
                 7 = { }
@@ -575,7 +1269,7 @@ event = {
             random_list = {
                 1 = {
                     event_target:novian_raid_country = {
-                        country_event = { id = giga_novian.140 }
+                        country_event = { id = novian.140 }
                     }
                 }
                 6 = { }
@@ -586,7 +1280,7 @@ event = {
             random_list = {
                 1 = {
                     event_target:novian_raid_country = {
-                        country_event = { id = giga_novian.140 }
+                        country_event = { id = novian.140 }
                     }
                 }
                 5 = { }
@@ -595,20 +1289,21 @@ event = {
     }
 }
 
-#Deletes raiders if they are out for 4 years (1440 days) to prevent them getting stuck forever
-event = {
-    id = giga_novian.131
+event = { #Deletes raiders if they are out for 4 years (1440 days) to prevent them getting stuck forever
+    id = novian.131
     hide_window = yes
 
     is_triggered_only = yes
     trigger = {
         AND = {
             has_global_flag = novian_raid_ongoing
-            event_target:novian_raid_country = {
+            event_target:novian_raid_country = { #Invalid context switch [event_target:novian_raid_country] from  [(invalid scope / scope not set)], file: events/giga_025_novian.txt line: 1231
                 NOT = {
                     has_country_flag = novian_raid_timer
                 }
             }
+            has_global_flag = novian_arikhanate_happened
+            NOT = { has_global_flag = novian_mobilisation_complete }
         }
     }
 
@@ -618,9 +1313,8 @@ event = {
     }
 }
 
-#Set global flag that raids can begin 360 days after Novians spawn
-country_event = {
-    id = giga_novian.135
+country_event = { #Set global flag that raids can begin 360 days after Novians spawn
+    id = novian.135
     hide_window = yes
 
     is_triggered_only = yes
@@ -630,9 +1324,8 @@ country_event = {
     }
 }
 
-#Remove all references to an ongoing raid if the raiding fleet is destroyed
-country_event = {
-    id = giga_novian.136
+country_event = { #Remove all references to an ongoing raid if the raiding fleet is destroyed
+    id = novian.136
     hide_window = yes
 
     is_triggered_only = yes
@@ -650,7 +1343,7 @@ country_event = {
 
 #Reset hostilities of raider country
 # country_event = {
-#     id = giga_novian.137
+#     id = novian.137
 #     hide_window = yes
 #
 #     is_triggered_only = yes
@@ -665,9 +1358,8 @@ country_event = {
 # }
 
 
-#Select random normal country's planet to raid, and deploys raiders
-country_event = {
-    id = giga_novian.140
+country_event = { #Select random normal country's planet to raid, and deploys raiders
+    id = novian.140
     hide_window = yes
 
     is_triggered_only = yes
@@ -677,7 +1369,7 @@ country_event = {
         set_global_flag = novian_raid_ongoing
         set_timed_country_flag = { flag = novian_raid_timer days = 1440 }
         select_novian_raid_target = yes
-        create_novian_raiders = yes
+        create_novian_fleet_raiders = yes
         set_novian_raider_hostilities = yes
         event_target:novian_raid_fleet = {
             auto_move_to_planet = {
@@ -693,7 +1385,7 @@ country_event = {
                 }
             }
             event_target:novian_raid_target_country = {
-                country_event = { id = giga_novian.144 } #Occurs on a delay to increase surprise? More delay on higher difficulties?
+                country_event = { id = novian.144 } #Occurs on a delay to increase surprise? More delay on higher difficulties?
             }
         }
         every_playable_country = {
@@ -706,7 +1398,7 @@ country_event = {
                     event_target:novian_raid_target_country = { is_same_value = prev }
                 }
             }
-            country_event = { id = giga_novian.145 } #Ensure delay is same as, or a set or random time later than, above.
+            country_event = { id = novian.145 } #Ensure delay is same as, or a set or random time later than, above.
         }
 
         # every_playable_country = {
@@ -714,53 +1406,52 @@ country_event = {
         #         limit = {
         #             is_same_value = event_target:novian_raid_target_country
         #         }
-        #         country_event = { id = giga_novian.144 }
+        #         country_event = { id = novian.144 }
         #     }
         #     else = {
-        #         country_event = { id = giga_novian.145 }
+        #         country_event = { id = novian.145 }
         #     }
         # }
     }
 }
 
-#Novians inform of an incoming raid
-country_event = {
-    id = giga_novian.144
-    title = giga_novian.144.name
-    desc = giga_novian.144.desc
+country_event = { ##Novians inform of an incoming raid
+    id = novian.144
+    title = novian.144.name
+    desc = novian.144.desc
     diplomatic = yes
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
     picture_event_data = {
-        portrait = event_target:giga_novian_species_novian
-        #graphical_culture = event_target:giga_novian_species_novian
-        room = giga_novian_room
+        portrait = event_target:novian_species_novian
+        #graphical_culture = event_target:novian_species_novian
+        room = novian_raider_deployed_room
         #planet_background = pc_novian
     }
     option = {
-        name = giga_novian.144.a
+        name = novian.144.a
     }
 }
 
-#Receive word of a Novian raid on others
 #Rework with triggered descs and responses based on the player, such as if they're a collaborator.
-country_event = {
-    id = giga_novian.145
-    title = giga_novian.145.name
-    desc = giga_novian.145.desc
+country_event = { #Receive word of a Novian raid on others
+    id = novian.145
+    title = novian.145.name
+    desc = novian.145.desc
     picture = GFX_evt_pirate_armada
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
     option = {
-        name = giga_novian.145.a
+        name = novian.145.a
     }
 }
 
-#Planet raided by Novians.
-planet_event = {
-    id = giga_novian.150
+planet_event = { #Planet raided by Novians.
+    id = novian.150
     hide_window = yes
 
     is_triggered_only = yes
@@ -778,7 +1469,7 @@ planet_event = {
     immediate = {
         owner = {
             #save_global_event_target_as = novian_raid_victim
-            country_event = { id = giga_novian.160 }
+            country_event = { id = novian.160 }
         }
         set_timed_planet_flag = {
             flag = novian_raid_victim_planet
@@ -822,7 +1513,7 @@ planet_event = {
             count = novian_raid_loot_size #Ensure pop count does not drop below 1?
             random_owned_pop = {
                 limit = {
-                    has_virtual_species_trait = no #these will presumably immediately despawn upon transfer #Instead, raids on virtuals could temporarily increase virtuality sprawl, based on the affected planet?
+                    NOT = { has_trait = trait_robot_digital_2} #these will presumably immediately despawn upon transfer #Instead, raids on virtuals could temporarily increase virtuality sprawl, based on the affected planet?
                     #has_trait = trait_hive_mind #these will die off after arrival
                     #has_trait = trait_machine_unit #these will die off after arrival
 
@@ -840,45 +1531,44 @@ planet_event = {
             limit = {
                 has_fleet_flag = novian_raid_fleet
             }
-            fleet_event = { id = giga_novian.110 }
+            fleet_event = { id = novian.110 }
         }
     }
 }
 
-# Notify raid victim country of being successfully raided.
-country_event = {
-    id = giga_novian.160
-    title = giga_novian.160.name
-    desc = giga_novian.160.desc
+country_event = { # Notify raid victim country of being successfully raided.
+    id = novian.160
+    title = novian.160.name
+    desc = novian.160.desc
     picture = GFX_evt_burning_settlement
     show_sound = event_planetary_riot
     location = root
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
     option = {
-        name = giga_novian.160.a
+        name = novian.160.a
     }
 }
 
-#Raid fleet defeated by self
-country_event = {
-    id = giga_novian.170
+country_event = { #Raid fleet defeated by self
+    id = novian.170
     hide_window = no
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
-    title = giga_novian.170.name
-    desc = giga_novian.170.desc
+    title = novian.170.name
+    desc = novian.170.desc
     picture = GFX_evt_novian_wreck_1
     option = { name = utopia.4004.a }
 }
 
 #Create event: Raid fleet defeated by others
 
-#Raiders begin return journey after successful pillaging.
-fleet_event = {
-    id = giga_novian.110
+fleet_event = { #Raiders begin return journey after successful pillaging.
+    id = novian.110
     hide_window = yes
 
     is_triggered_only = yes
@@ -900,7 +1590,7 @@ fleet_event = {
         # 	}
         # 	random_system = {
         # 		limit = {
-        # 			has_star_flag = giga_novian_raider_1
+        # 			has_star_flag = novian_raider_1
         # 		}
         # 		solar_system = {  }
         # 	}
@@ -915,9 +1605,8 @@ fleet_event = {
     }
 }
 
-#Raiders return safely to Agartha.
-country_event = {
-    id = giga_novian.200
+country_event = { #Raiders return safely to Agartha.
+    id = novian.200
     hide_window = yes
 
     is_triggered_only = yes
@@ -936,15 +1625,15 @@ country_event = {
         while = {
             count = from.novian_raid_loot_size
             event_target:novian_arikhanate = {
-                country_event = { id = giga_novian.151 }
+                country_event = { id = novian.151 }
             }
         }
         remove_global_flag = novian_raid_ongoing
         delete_novian_raiders = yes
     }
 }
-country_event = {
-    id = giga_novian.151
+country_event = { #Stash loot
+    id = novian.151
     hide_window = yes
 
     is_triggered_only = yes
@@ -954,12 +1643,12 @@ country_event = {
     }
 }
 
-#Manages deposition of Iodizium Slag blockers during Novian Bombardment. Fired by on_planet_bombarded.
+#Fired by on_planet_bombarded.
 # This = Planet
 # From = Bombarder
 #Based on origin.7200	(Fruitful Origin: Seed Bombing stance creates blockers)
-planet_event = {
-    id = giga_novian.300
+planet_event = { #Manages deposition of Iodizium Slag blockers during Novian Bombardment.
+    id = novian.300
     hide_window = yes
 
     is_triggered_only = yes
@@ -994,20 +1683,20 @@ planet_event = {
                 value = 1
             }
             add_blocker = {
-                type = d_giga_novian_iodizium_slag
+                type = d_novian_iodizium_slag
                 blocked_deposit = random #destroy a deposit, if not too annoying?
             }
-            create_message = {
-                type = MESSAGE_NOVIAN_BOMBING
-                localization = MESSAGE_NOVIAN_BOMBING
-                days = 30
-                target = this
-                variable = {
-                    type = name
-                    localization = PLANET
-                    scope = this
-                }
-            }
+            # create_message = { #put the tutorial section here
+            #     type = MESSAGE_NOVIAN_BOMBING
+            #     localization = MESSAGE_NOVIAN_BOMBING
+            #     days = 30
+            #     target = this
+            #     variable = {
+            #         type = name
+            #         localization = PLANET
+            #         scope = this
+            #     }
+            # }
         }
         #If already at nine blockers, melt the planet instead of adding the tenth (this will occur at 100% devastation).
         else_if = {
@@ -1019,21 +1708,23 @@ planet_event = {
             }
             clear_variable = novian_bombardment_blockers
             destroy_colony = yes
-            #clear_planet_modifiers = yes
-            #clear_deposits = yes
+            clear_planet_modifiers = yes
+            clear_deposits = yes
+            add_planet_devastation = -100
             change_pc = pc_molten
             add_deposit = d_iodizium_deposit_1
-            create_message = {
-                type = MESSAGE_NOVIAN_BOMBING_PLANET_MELTED
-                localization = MESSAGE_NOVIAN_BOMBING_PLANET_MELTED
-                days = 30
-                target = this
-                variable = {
-                    type = name
-                    localization = PLANET
-                    scope = this
-                }
-            }
+            #add_deposit = d_iodizium_deposit_1
+            # create_message = {
+            #     type = MESSAGE_NOVIAN_BOMBING_PLANET_MELTED
+            #     localization = MESSAGE_NOVIAN_BOMBING_PLANET_MELTED
+            #     days = 30
+            #     target = this
+            #     variable = {
+            #         type = name
+            #         localization = PLANET
+            #         scope = this
+            #     }
+            # }
         }
         #If less than 9 blockers, add another one (ie, up to 9)
         else = {
@@ -1042,20 +1733,20 @@ planet_event = {
                 value = 1
             }
             add_blocker = {
-                type = d_giga_novian_iodizium_slag
+                type = d_novian_iodizium_slag
                 blocked_deposit = random #destroy a deposit, if not too annoying?
             }
-            create_message = {
-                type = MESSAGE_NOVIAN_BOMBING
-                localization = MESSAGE_NOVIAN_BOMBING
-                days = 30
-                target = this
-                variable = {
-                    type = name
-                    localization = PLANET
-                    scope = this
-                }
-            }
+            # create_message = { #this'd be too annoying and spammy each time a blocker was created due to how fast they bombard. Just do the tutorial section below.
+            #     type = MESSAGE_NOVIAN_BOMBING
+            #     localization = MESSAGE_NOVIAN_BOMBING
+            #     days = 30
+            #     target = this
+            #     variable = {
+            #         type = name
+            #         localization = PLANET
+            #         scope = this
+            #     }
+            # }
         }
 
         # Notify player
@@ -1084,13 +1775,11 @@ planet_event = {
     }
 }
 
-#Turns planets molten after Novian Bombardment, or otherwise destroys them
-
 #Pop transferred to Agartha
 #DEPRECATED
 #(deprecated comment) Currently untriggered, eventually the pop should instead be captured by the fleet and transferred upon raid fleet return.
 # planet_event = {
-# 	id = giga_novian.210
+# 	id = novian.210
 # 	hide_window = yes
 # 	is_triggered_only = yes
 #
@@ -1118,7 +1807,7 @@ planet_event = {
 ###################################################################################################################################
 # ARCH SITE EVENTS
 # country_event = {
-# 	id = giga_novian.50000
+# 	id = novian.50000
 # 	hide_window = yes
 # 	mean_time_to_happen = { #Laggy to use
 # 		months = 120 #Long time
@@ -1137,7 +1826,7 @@ planet_event = {
 # 				min_distance = 10
 # 				max_distance = 30
 # 				max_jumps = 0
-# 				initializer = giga_novian_ruin_system_initializer
+# 				initializer = novian_ruin_system_initializer
 # 			}
 # 			if = {
 # 				limit = {
@@ -1157,15 +1846,15 @@ planet_event = {
 # 			}
 # 		}
 # 		country_event = {
-# 			id = giga_novian.50001
+# 			id = novian.50001
 # 			days = 1
 # 		}
 # 	}
 # }
 # country_event = { #This event should also mark it on the situation log.
-# 	id = giga_novian.50001
-# 	title = giga_novian.50001.name
-# 	desc = giga_novian.50001.desc
+# 	id = novian.50001
+# 	title = novian.50001.name
+# 	desc = novian.50001.desc
 # 	is_triggered_only = yes
 # 	picture = GFX_evt_ship_travel #placeholder
 # 	option = { name = utopia.4004.a } #placeholder
@@ -1177,7 +1866,7 @@ planet_event = {
 ##### ECONOMY, FLEETS, CRISIS MECHANICS #####
 #############################################
 country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
-    id = giga_novian.60000
+    id = novian.60000
     hide_window = yes
 
     is_triggered_only = yes
@@ -1187,6 +1876,127 @@ country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
     }
 
     immediate = {
+        calculate_novian_spending = yes
+        obtain_novian_incomes = yes
+        finalise_novian_economy_variables = yes
+
+        #If the balance is negative (oh no!!!), disband ships until no longer negative
+        # if = {
+        #     limit = {
+        #         check_variable = {
+        #             which = novian_resource_balance
+        #             value < 1
+        #         }
+        #         check_variable = {
+        #             which = novian_resource_stockpile
+        #             value = 0
+        #         }
+        #         OR = {
+        #             any_owned_ship = { is_ship_size = novian_corvette }
+        #             any_owned_ship = { is_ship_size = novian_escort }
+        #             any_owned_ship = { is_ship_size = novian_asteroidcraft }
+        #         }
+        #     }
+        #     while = {
+        #         limit = {
+        #             check_variable = { #Scuttle ships until they get enough resources to last at least another month
+        #                 which = novian_resource_spending
+        #                 value > novian_resource_stockpile
+        #             }
+        #             any_owned_ship = {
+        #                 OR = {
+        #                     is_ship_size = novian_corvette
+        #                     is_ship_size = novian_escort
+        #                     is_ship_size = novian_asteroidcraft
+        #                 }
+        #             }
+        #         }
+        #         random_owned_ship = {
+        #             limit = {
+        #                 OR = {
+        #                     is_ship_size = novian_corvette
+        #                     is_ship_size = novian_escort
+        #                     is_ship_size = novian_asteroidcraft
+        #                 }
+        #             }
+        #             switch = { #all ship types return 50% of build cost #find way to reference half of build cost directly
+        #                 trigger = is_ship_size
+        #                 novian_corvette = {
+        #                     event_target:novian_arikhanate = {
+        #                         change_variable = {
+        #                             which = novian_resource_stockpile
+        #                             value = 25
+        #                         }
+        #                     }
+        #                 }
+        #                 novian_escort = {
+        #                     event_target:novian_arikhanate = {
+        #                         change_variable = {
+        #                             which = novian_resource_stockpile
+        #                             value = 100
+        #                         }
+        #                     }
+        #                 }
+        #                 novian_asteroidcraft = {
+        #                     event_target:novian_arikhanate = {
+        #                         change_variable = {
+        #                             which = novian_resource_stockpile
+        #                             value = 1000
+        #                         }
+        #                     }
+        #                 }
+        #             }
+        #
+        #             delete_ship = this
+        #         }
+        #         calculate_novian_spending = yes
+        #     }
+        # }
+        # calculate_novian_spending = yes
+
+        #check_novian_new_fleet_spawn = yes
+
+        if = { #ascend a planet if Fervour stockpile is sufficient
+            limit = {
+                check_variable = {
+                    which = novian_fervour_stockpile
+                    value >= 100000
+                }
+                any_owned_planet = {
+                    # limit = {
+                    #     OR = {
+                    #         has_planet_flag = novian_colony_capital
+                    #         has_planet_flag = novian_colony_temple
+                    #         has_planet_flag = novian_colony_shipyard
+                    #         has_planet_flag = novian_colony_quashab
+                    #         has_planet_flag = novian_colony_agartha
+                    #     }
+                    # }
+                    has_planetary_ascension_tier < 10
+                }
+            }
+            random_owned_planet = {
+                limit = {
+                    # OR = {
+                    #     has_planet_flag = novian_colony_capital
+                    #     has_planet_flag = novian_colony_temple
+                    #     has_planet_flag = novian_colony_shipyard
+                    #     has_planet_flag = novian_colony_quashab
+                    #     has_planet_flag = novian_colony_agartha
+                    # }
+                    NOT = {
+                        has_planetary_ascension_tier = 10
+                    }
+                }
+                set_planetary_ascension_tier = value:add_planet_ascension_tier
+            }
+            subtract_variable = {
+                which = novian_fervour_stockpile
+                value = 100000
+            }
+        }
+
+
         if = { #roll to increase mobilisation monthly
             limit = {
                 check_variable = {
@@ -1256,9 +2066,41 @@ country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
                 }
             }
             set_global_flag = novian_mobilisation_complete
-            country_event = {
-                id = giga_novian.61000
+            country_event = { #War begins
+                id = novian.61000
             }
+        }
+
+        random_list = { #slightly randomises dissidence #redo
+            2 = { } #nothing
+            1 = { #increase dissidence
+                event_target:novian_arikhanate = {
+                    country_event = { id = novian.20004 }
+                }
+            }
+            1 = { #decrease dissidence
+                event_target:novian_arikhanate = {
+                    country_event = { id = novian.20007 }
+                }
+            }
+        }
+
+        #Establish comms with any country that emerges after core opening
+        every_country = {
+            limit = {
+                OR = {
+                    is_country_type = default
+                    is_country_type = ascended_empire #ZOFE
+                    is_country_type = lost_empire #ZOFE
+                }
+                NOT = {
+                    OR = {
+                        has_country_flag = novians_contacted
+                        has_country_flag = novian_contact_ongoing
+                    }
+                }
+            }
+            establish_novian_contact = yes
         }
 
         # event_target:novian_arikhanate = {
@@ -1299,89 +2141,6 @@ country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
         # 	}
         # }
 
-        #event_target:novian_arikhanate = { #not necessary?
-        calculate_novian_spending = yes
-        zero_novian_incomes = yes
-        obtain_novian_incomes = yes
-        finalise_novian_economy_variables = yes
-
-
-        #If the balance is negative (oh no!!!), disband ships until no longer negative
-        if = {
-            limit = {
-                check_variable = {
-                    which = novian_resource_balance
-                    value < 1
-                }
-                check_variable = {
-                    which = novian_resource_stockpile
-                    value = 0
-                }
-                OR = {
-                    any_owned_ship = { is_ship_size = giga_novian_corvette }
-                    any_owned_ship = { is_ship_size = giga_novian_escort }
-                    any_owned_ship = { is_ship_size = giga_novian_asteroidcraft }
-                }
-            }
-            while = {
-                limit = {
-                    check_variable = { #Scuttle ships until they get enough resources to last at least another month
-                        which = novian_resource_spending
-                        value > novian_resource_stockpile
-                    }
-                    any_owned_ship = {
-                        OR = {
-                            is_ship_size = giga_novian_corvette
-                            is_ship_size = giga_novian_escort
-                            is_ship_size = giga_novian_asteroidcraft
-                        }
-                    }
-                }
-                random_owned_ship = {
-                    limit = {
-                        OR = {
-                            is_ship_size = giga_novian_corvette
-                            is_ship_size = giga_novian_escort
-                            is_ship_size = giga_novian_asteroidcraft
-                        }
-                    }
-                    switch = { #all ship types return 50% of build cost #find way to reference half of build cost directly
-                        trigger = is_ship_size
-                        giga_novian_corvette = {
-                            event_target:novian_arikhanate = {
-                                change_variable = {
-                                    which = novian_resource_stockpile
-                                    value = 25
-                                }
-                            }
-                        }
-                        giga_novian_escort = {
-                            event_target:novian_arikhanate = {
-                                change_variable = {
-                                    which = novian_resource_stockpile
-                                    value = 100
-                                }
-                            }
-                        }
-                        giga_novian_asteroidcraft = {
-                            event_target:novian_arikhanate = {
-                                change_variable = {
-                                    which = novian_resource_stockpile
-                                    value = 1000
-                                }
-                            }
-                        }
-                    }
-
-                    delete_ship = this
-                }
-                calculate_novian_spending = yes
-            }
-        }
-        calculate_novian_spending = yes
-
-        #check_novian_new_fleet_spawn = yes
-
         # when hypership destroyed:
         # 	# every_country = {
         # 	# 	limit = { has_country_flag = allied_to_kaiser }
@@ -1392,7 +2151,7 @@ country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
         # 	# 	country_event = { id = giga_katzen.0033 days = 15 } #Vassals rebel
         # 	# }
         # 	every_country = {
-        # 		country_event = { id = giga_novian.60010 }
+        # 		country_event = { id = novian.60010 }
         # 	}
         # 	set_country_flag = novian_hypership_destroyed
         # 	#country_event = { id = giga_katmoons.001 days = 3600 } #make a new one CHANGE TO 10 YEARS
@@ -1400,18 +2159,13 @@ country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
         #}
 
         #repeats event monthly. Make sure it first happens on first day of month. It currently doesn't, instead using a month after the Novians spawned. Which is monthly, so nvm. Maybe.
-        country_event = { id = giga_novian.60000 days = 30 }
+        country_event = { id = novian.60000 days = 30 }
 
         #Wardec any new countries that emerge during crisis war
         if = {
             limit = {
                 has_global_flag = novian_mobilisation_complete
-            }
-            every_country = {
-                limit = {
-                    NOT = {
-                        is_at_war_with = event_target:novian_arikhanate
-                    }
+                any_country = {
                     OR = {
                         is_country_type = default
                         is_country_type = fallen_empire
@@ -1421,22 +2175,37 @@ country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
                         is_country_type = ascended_empire #ZOFE
                         is_country_type = lost_empire #ZOFE
                     }
+                    NOT = { is_at_war_with = event_target:novian_arikhanate }
                 }
-                #country_event = { id = giga_novian.61100 }
-                declare_war = {
-                    target = prev
-                    attacker_war_goal = wg_novian_conquest
-                    name = "Novian Galactic Crusade"
-                    effect = {
-                        save_global_event_target_as = novian_crusade #aeternum_crusade
+            }
+            every_country = {
+                limit = {
+                    OR = {
+                        is_country_type = default
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                        is_country_type = katzenartig_imperium
+                        is_country_type = katzen_submarines #necessary or not?
+                        is_country_type = ascended_empire #ZOFE
+                        is_country_type = lost_empire #ZOFE
                     }
+                    NOT = { is_at_war_with = event_target:novian_arikhanate }
+                }
+                save_event_target_as = nov_war_selection
+            }
+            declare_war = {
+                target = event_target:nov_war_selection
+                attacker_war_goal = wg_novian_conquest
+                name = "Novian Galactic Crusade"
+                effect = {
+                    save_global_event_target_as = novian_crusade #aeternum_crusade
                 }
             }
         }
 
         #Check for another raid
         # event_target:novian_raid_country = {
-        #     country_event = { id = giga_novian.130 }
+        #     country_event = { id = novian.130 }
         # }
 
         # event_target:novian_arikhanate = {
@@ -1709,7 +2478,7 @@ country_event = { #Stolen from "Manage war forges and the Kaiser's eco"
 
 #Novians declare war
 country_event = {
-    id = giga_novian.61000
+    id = novian.61000
     hide_window = yes
 
     is_triggered_only = yes
@@ -1730,25 +2499,18 @@ country_event = {
                     is_country_type = lost_empire #ZOFE
                 }
             }
-            country_event = { id = giga_novian.61100 }
+            save_event_target_as = nov_war_selection
+            country_event = { id = novian.61100 }
             event_target:novian_raid_country = { destroy_country = yes }
-            declare_war = {
-                target = prev
-                attacker_war_goal = wg_novian_conquest
-                name = "Novian Galactic Crusade"
-                effect = {
-                    save_global_event_target_as = novian_crusade #aeternum_crusade
-                }
-            }
+            set_global_flag = novian_war_begun
         }
-
-        #Establish comms with any country that emerges after core opening
-        every_country = {
-            limit = {
-                is_country_type = default
-                NOT = { has_country_flag = novians_contacted }
+        declare_war = {
+            target = event_target:nov_war_selection
+            attacker_war_goal = wg_novian_conquest
+            name = "Novian Galactic Crusade"
+            effect = {
+                save_global_event_target_as = novian_crusade #aeternum_crusade
             }
-            establish_novian_contact = yes
         }
 
         # while = {
@@ -1760,10 +2522,11 @@ country_event = {
 
 #Players informed of Novian wardec
 country_event = {
-    id = giga_novian.61100
-    title = giga_novian.61100.name
-    desc = giga_novian.61100.desc
+    id = novian.61100
+    title = novian.61100.name
+    desc = novian.61100.desc
     location = event_target:novian_colony_capital
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
@@ -1771,8 +2534,8 @@ country_event = {
     show_sound = event_red_alert
 
     option = {
-        name = giga_novian.61100.a
-        custom_tooltip = giga_novian.61100.a.tooltip
+        name = novian.61100.a
+        custom_tooltip = novian.61100.a.tooltip
     }
 }
 
@@ -1781,70 +2544,64 @@ country_event = {
 ##########################
 #Hypership destroyed "hub event"
 ship_event = {
-    id = giga_novian.60010
+    id = novian.60010
     hide_window = yes
 
     is_triggered_only = yes
     trigger = {
-        this = {
-            #has_ship_flag = novian_hypership
-            is_ship_size = giga_novian_hypership
-        }
+        has_ship_flag = novian_hypership
     }
 
     immediate = {
-        set_global_flag = novian_hypership_defeated
-        this.owner = {
-            add_modifier = {
-                modifier = novian_disarray #rework Novian Disarray to be unique. Make it a morale collapse.
-                days = -1
-            }
-        }
+        #set_global_flag = novian_hypership_defeated
+        #owner = { add_modifier = { modifier = novian_disarray days = -1 } }
+
         #Informs the Hypership's destroyer
-        every_playable_country = {
-            limit = {
-                is_ai = no
-                is_same_value = from.owner #hope this works
-            }
-            country_event = { id = giga_novian.60011 days = 3 } #delay allows battle to finish
-        }
+        from.owner = { country_event = { id = novian.60011 } } #delay allows battle to finish
+
         #Informs others
-        every_playable_country = {
-            limit = {
-                is_ai = no
-                NOT = { is_same_value = from.owner }
-            }
-            country_event = { id = giga_novian.60012 days = 3 } #delay allows battle to finish
-        }
-        check_arikhanate_defeated = yes
+        # every_playable_country = {
+        #     limit = {
+        #         #is_ai = no
+        #         NOT = { has_country_flag = hypership_round_1_champion }
+        #     }
+        #     country_event = { id = novian.60012 days = 3 } #delay allows battle to finish
+        # }
+        # check_arikhanate_defeated = yes
     }
 }
 
 #Inform Hypership-destroying country of the Hypership's demise
 country_event = {
-    id = giga_novian.60011
-    title = giga_novian.60011.name
-    desc = giga_novian.60011.desc
+    id = novian.60011
+    title = novian.60011.name
+    desc = novian.60011.desc
     location = event_target:novian_hypership
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
     picture = GFX_evt_large_explosion
     show_sound = event_structural_collapse
 
+    immediate = {
+        set_country_flag = hypership_round_1_champion
+    }
+
     option = {
-        name = giga_novian.60011.a
-        custom_tooltip = giga_novian.60010.a.tooltip
+        name = novian.60011.a
+        custom_tooltip = novian.60010.a.tooltip
         give_specimen = { key = intergalactic_map origin = "novian_name_hypership" }
     }
 }
 
 #Inform other countries of the Hypership's demise
 country_event = { #pretty sure using triggered desc or that other tool this can be merged with 60010
-    id = giga_novian.60012
-    title = giga_novian.60012.name
-    desc = giga_novian.60012.desc
+    id = novian.60012
+    title = novian.60012.name
+    desc = novian.60012.desc
     location = event_target:novian_hypership
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
@@ -1852,23 +2609,23 @@ country_event = { #pretty sure using triggered desc or that other tool this can 
     show_sound = event_structural_collapse
 
     option = {
-        name = giga_novian.60012.a
-        custom_tooltip = giga_novian.60010.a.tooltip
+        name = novian.60012.a
+        custom_tooltip = novian.60010.a.tooltip
     }
 }
 
 #Capital conquered
 event = {
-    id = giga_novian.60100
-    title = giga_novian.60100.name
-    desc = giga_novian.60100.desc
+    id = novian.60100
+    title = novian.60100.name
+    desc = novian.60100.desc
     location = this
-
-    is_triggered_only = yes
+    event_chain = novian_chain
 
     picture = GFX_evt_surrender
     show_sound = event_structural_collapse
 
+    is_triggered_only = yes
     trigger = { #can I use trigger = { switch = { to combine all these events?
         this = {
             has_planet_flag = novian_colony_capital
@@ -1879,29 +2636,37 @@ event = {
         set_global_flag = novian_colony_capital_conquered
         this = {
             change_pc = pc_ll_foggy
-            add_deposit = d_giga_novian_capital_energy
-            add_deposit = d_giga_novian_capital_minerals
-            add_deposit = d_giga_novian_capital_food
+            add_deposit = d_novian_capital_energy
+            add_deposit = d_novian_capital_minerals
+            add_deposit = d_novian_capital_food
+        }
+        event_target:novian_arikhanate = {
+            add_modifier = {
+                modifier = novian_colony_capital_lost
+                days = -1
+            }
         }
     }
 
     option = {
-        name = giga_novian.60100.a
+        name = novian.60100.a
+        custom_tooltip = novian_colony_capital_lost_tooltip
         check_arikhanate_defeated = yes
     }
 }
 
 #Temple conquered
 event = {
-    id = giga_novian.60110
-    title = giga_novian.60110.name
-    desc = giga_novian.60110.desc
+    id = novian.60110
+    title = novian.60110.name
+    desc = novian.60110.desc
     location = this
-    is_triggered_only = yes
+    event_chain = novian_chain
 
     picture = GFX_evt_astral_rift_riftworld_visit
     show_sound = event_ground_battle
 
+    is_triggered_only = yes
     trigger = {
         this = {
             has_planet_flag = novian_colony_temple
@@ -1912,14 +2677,21 @@ event = {
         set_global_flag = novian_colony_temple_conquered
         this = {
             change_pc = pc_ll_foggy
-            add_deposit = d_giga_novian_temple_energy
-            add_deposit = d_giga_novian_temple_minerals
-            add_deposit = d_giga_novian_temple_food
+            add_deposit = d_novian_temple_energy
+            add_deposit = d_novian_temple_minerals
+            add_deposit = d_novian_temple_food
+        }
+        event_target:novian_arikhanate = {
+            add_modifier = {
+                modifier = novian_colony_temple_lost
+                days = -1
+            }
         }
     }
 
     option = {
-        name = giga_novian.60110.a
+        name = novian.60110.a
+        custom_tooltip = novian_colony_temple_lost_tooltip
         from = { give_specimen = { key = arikian_national_epic origin = "novian_name_temple" } }
         check_arikhanate_defeated = yes
     }
@@ -1927,15 +2699,16 @@ event = {
 
 #Shipyard Conquered
 event = {
-    id = giga_novian.60120
-    title = giga_novian.60120.name
-    desc = giga_novian.60120.desc
+    id = novian.60120
+    title = novian.60120.name
+    desc = novian.60120.desc
     location = this
-    is_triggered_only = yes
+    event_chain = novian_chain
 
     picture = GFX_evt_sabotaged_ship
     show_sound = event_ground_battle
 
+    is_triggered_only = yes
     trigger = {
         this = {
             has_planet_flag = novian_colony_shipyard
@@ -1948,10 +2721,23 @@ event = {
             set_planet_flag = novian_orbital_conquered
             planet_event = { id = giga_mega.003 }
         }
+        event_target:novian_arikhanate = {
+            add_modifier = {
+                modifier = novian_colony_shipyard_lost
+                days = -1
+            }
+        }
+        event_target:novian_hypership = {
+            add_modifier = {
+                modifier = novian_colony_shipyard_lost_hypership_counter
+                days = -1
+            }
+        }
     }
 
     option = {
-        name = giga_novian.60120.a
+        name = novian.60120.a
+        custom_tooltip = novian_colony_shipyard_lost_tooltip
         from = { give_specimen = { key = hypership_alcubierre origin = "novian_name_shipyard" } }
         check_arikhanate_defeated = yes
     }
@@ -1959,15 +2745,16 @@ event = {
 
 #Quashab Conquered
 event = {
-    id = giga_novian.60130
-    title = giga_novian.60130.name
-    desc = giga_novian.60130.desc
+    id = novian.60130
+    title = novian.60130.name
+    desc = novian.60130.desc
     location = this
-    is_triggered_only = yes
+    event_chain = novian_chain
 
     picture = GFX_evt_ruined_system
     show_sound = event_ground_battle
 
+    is_triggered_only = yes
     trigger = {
         this = {
             has_planet_flag = novian_colony_quashab
@@ -1980,10 +2767,21 @@ event = {
             set_planet_flag = novian_orbital_conquered
             planet_event = { id = giga_mega.003 }
         }
+        event_target:novian_arikhanate = {
+            add_modifier = {
+                modifier = novian_colony_quashab_lost
+                days = -1
+            }
+            add_modifier = {
+                modifier = magical_neutronium_deficit
+                days = -1
+            }
+        }
     }
 
     option = {
-        name = giga_novian.60130.a
+        name = novian.60130.a
+        custom_tooltip = novian_colony_quashab_lost_tooltip
         from = { give_specimen = { key = cnilscale origin = "novian_name_quashab" } }
         check_arikhanate_defeated = yes
     }
@@ -1991,15 +2789,16 @@ event = {
 
 #Agartha Conquered
 event = {
-    id = giga_novian.60140
-    title = giga_novian.60140.name
-    desc = giga_novian.60140.desc
+    id = novian.60140
+    title = novian.60140.name
+    desc = novian.60140.desc
     location = this
-    is_triggered_only = yes
+    event_chain = novian_chain
 
     picture = GFX_evt_victorious_army
     show_sound = event_ground_battle
 
+    is_triggered_only = yes
     trigger = {
         this = {
             has_planet_flag = novian_colony_agartha
@@ -2008,10 +2807,17 @@ event = {
 
     immediate = {
         set_global_flag = novian_colony_agartha_conquered
+        event_target:novian_arikhanate = {
+            add_modifier = {
+                modifier = novian_colony_agartha_lost
+                days = -1
+            }
+        }
     }
 
     option = {
-        name = giga_novian.60140.a
+        name = novian.60140.a
+        custom_tooltip = novian_colony_agartha_lost_tooltip
         from = { give_specimen = { key = agartha_toy origin = "novian_name_agartha"} }
         if = {
             limit = { from = { is_gestalt = no } }
@@ -2023,13 +2829,50 @@ event = {
         check_arikhanate_defeated = yes
     }
 }
+event = { #Swap modifier from gestalt to non-gestalt if necessary as ownership swaps
+    id = novian.60141
+    hide_window = yes
+    is_triggered_only = yes
 
-#Arikhanate defeated #semi-duplicate of giga_novian.60100 - rework these two somehow.
+    trigger = {
+        this = {
+            has_planet_flag = novian_colony_agartha
+        }
+    }
+
+    immediate = {
+        if = { #swap from gestalt to non-gestalt
+            limit = {
+                from = { is_gestalt = no }
+                this = { has_modifier = agartha_scavenger_program_gestalt }
+            }
+            remove_modifier = agartha_scavenger_program_gestalt
+            add_modifier = {
+                modifier = agartha_scavenger_program
+                days = -1
+            }
+        }
+        else_if = { #swap from non-gestalt to gestalt
+            limit = {
+                from = { is_gestalt = yes }
+                this = { has_modifier = agartha_scavenger_program }
+            }
+            remove_modifier = agartha_scavenger_program
+            add_modifier = {
+                modifier = agartha_scavenger_program_gestalt
+                days = -1
+            }
+        }
+    }
+}
+
+#Arikhanate defeated #semi-duplicate of novian.60100 - rework these two somehow.
 country_event = {
-    id = giga_novian.60200
-    title = giga_novian.60200.name
-    desc = giga_novian.60200.desc
+    id = novian.60200
+    title = novian.60200.name
+    desc = novian.60200.desc
     location = event_target:novian_colony_capital
+    event_chain = novian_chain
 
     is_triggered_only = yes
 
@@ -2040,22 +2883,27 @@ country_event = {
         set_global_flag = novian_arikhanate_defeated
         event_target:novian_arikhanate = { destroy_country = yes }
         #event_target:novian_crusade = { end_war_effect = yes }
-        country_event = { id = giga_novian.60210 days = 30 }
+        country_event = { id = novian.60210 days = 30 }
+        every_situation = {
+            limit = { is_situation_type = novian_situation_dissidence_general }
+            abort_situation = this
+        }
     }
 
     option = {
-        name = giga_novian.60200.a
+        name = novian.60200.a
         add_resource = {
             unity = 50000
         }
+        end_event_chain = novian_chain
     }
 }
 
 #Arikhan found dead
 country_event = {
-    id = giga_novian.60210
-    title = giga_novian.60210.name
-    desc = giga_novian.60210.desc
+    id = novian.60210
+    title = novian.60210.name
+    desc = novian.60210.desc
     location = event_target:novian_colony_capital
 
     is_triggered_only = yes
@@ -2064,21 +2912,22 @@ country_event = {
     show_sound = event_wind_ruins
 
     immediate = {
-        country_event = { id = giga_novian.60220 days = 180 }
+        country_event = { id = novian.60220 days = 180 }
     }
 
     option = {
-        name = giga_novian.60210.a
+        name = novian.60210.a
         give_specimen = { key = arikhan_bulava origin = "novian_name_capital"}
     }
 }
 
 #Horrors of the Throneworld
 country_event = {
-    id = giga_novian.60220
-    title = giga_novian.60220.name
-    desc = giga_novian.60220.desc
+    id = novian.60220
+    title = novian.60220.name
+    desc = novian.60220.desc
     location = event_target:novian_colony_capital
+
 
     is_triggered_only = yes
 
@@ -2086,6 +2935,6 @@ country_event = {
     show_sound = event_wind_ruins
 
     option = {
-        name = giga_novian.60220.a
+        name = novian.60220.a
     }
 }

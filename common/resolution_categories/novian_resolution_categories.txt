@@ -1,0 +1,11 @@
+resolution_category_novian_focus = {
+	group = galactic_focus
+	#icon = "GFX_resolution_category_novian_focus"
+	icon = "GFX_resolution_mutual_defense"
+
+	resolution_types = {
+		"resolution_nov_anti_raider"
+		"resolution_nov_pooled_espionage"
+		#"resolution_nov3"
+	}
+}

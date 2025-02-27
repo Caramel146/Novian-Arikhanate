@@ -18,7 +18,7 @@ tech_novian_cybernetics = {
     }
 }
 
-tech_asteroid_craft = {
+tech_novian_asteroid_craft = {
     cost = @giga_tier9cost2
     area = engineering
     is_reverse_engineerable = no
@@ -40,7 +40,7 @@ tech_asteroid_craft = {
     }
 }
 
-tech_ndb_shield = {
+tech_novian_ndb_shield = {
     cost = @giga_tier7cost2
     area = physics
     tier = 5

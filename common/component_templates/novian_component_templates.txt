@@ -1,0 +1,564 @@
+# utility_component_template = {
+#     key = "REACTOR_HYPERSHIP"
+#     size = small
+#     icon = "GFX_ship_part_reactor_hypership"
+#     icon_frame = 1
+#     power = 1000000
+#     component_set = "power_core"
+#     size_restriction = { novian_hypership }
+#     ai_weight = { weight = 10000 }
+# }
+#
+# utility_component_template = {
+#     key = "GIGA_HYPERSHIP_COMPUTER"
+#     size = small
+#     icon = "GFX_ship_part_aura_hyperlane"
+#     icon_frame = 1
+#     power = -50
+#     ai_weight = { weight = 2 }
+#     size_restriction = { novian_hypership }
+#     component_set = "combat_computers"
+#     ship_behavior = "giga_system"
+#
+#     ship_modifier = {
+#         ship_fire_rate_mult = 1
+#         ship_tracking_add = 25
+#         ship_accuracy_add = 25
+#         ship_weapon_range_mult = 1
+#     }
+# }
+#
+# utility_component_template = {
+#     key = "SHIP_MOBILE_HYPERSHIP"
+#     size = medium
+#     icon = "GFX_ship_part_aura_bombardment"
+#     icon_frame = 1
+#     power = 0
+#     size_restriction = { novian_hypership }
+#     component_set = "ship_aura_components"
+#
+#     friendly_aura = {
+#         name = "NOVIAN_HYPERSHIP_AURA"
+#         system_wide = yes
+#
+#         stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+#             id = friendly_hypership
+#             priority = 10
+#         }
+#
+#         modifier = {
+#             ship_orbital_bombardment_mult = 0.1
+#             ship_speed_mult = 0.1
+#             ships_upkeep_mult = -0.1
+#             ship_hull_regen_add_perc = 1
+#             ship_shield_regen_add_perc = 1
+#             ship_armor_regen_add_perc = 1
+#             ship_weapon_range_mult = 0.1
+#             ship_fire_rate_mult = 0.1
+#         }
+#
+#         graphics = {
+#             area_effect = {
+#                 entity = "circle_area_entity"
+#                 dynamic_scale = yes
+#             }
+#             ship_effect = {
+#                 entity = "ship_aura_negative_entity"
+#                 dynamic_scale = no
+#             }
+#         }
+#     }
+#
+#     ai_weight = {
+#         weight = 10
+#         modifier = {
+#             factor = 2
+#             is_ai = yes
+#             is_preferred_weapons = weapon_type_energy
+#         }
+#     }
+# }
+#
+#
+#
+#
+# #Autocannon
+# weapon_component_template = {
+#     type = instant
+#
+#     key = "SMALL_NOVIAN_AUTOCANNON"
+#     size = small
+#
+#     icon = "GFX_ship_part_novian_autocannon"
+#     icon_frame = 1
+#
+#     prerequisites = { "tech_novian_autocannons" }
+#     component_set = "NOVIAN_AUTOCANNON"
+#     projectile_gfx = "stormfire_auto_cannons_s"
+#     tags = { weapon_type_kinetic }
+#     ai_tags = { weapon_role_anti_shield brawler }
+#     resources = {
+#         category = ship_components
+#         cost = {
+#             alloys = @s_t5_cost
+#             volatile_motes = @s_t5_rare
+#         }
+#         upkeep = {
+#             energy = @s_t5_upkeep_energy
+#             alloys = @s_t5_upkeep_alloys
+#         }
+#     }
+#
+#     power = -46
+#     damage = { min = 87 max = 174 }
+#     windup = { min = 1 max = 4 }
+#     total_fire_time = 6
+#     range = 15
+#     accuracy = 0.85
+#     tracking = 0.75
+#
+#     ai_weight = {
+#         weight = 1
+#         modifier = {
+#             factor = 0.0
+#             no_resource_for_component = { RESOURCE = volatile_motes }
+#         }
+#     }
+# }
+# weapon_component_template = {
+#     type = instant
+#
+#     key = "MEDIUM_NOVIAN_AUTOCANNON"
+#     size = medium
+#
+#     icon = "GFX_ship_part_novian_autocannon"
+#     icon_frame = 1
+#
+#     prerequisites = { "tech_novian_autocannons" }
+#     component_set = "NOVIAN_AUTOCANNON"
+#     projectile_gfx = "stormfire_auto_cannons_m"
+#     tags = { weapon_type_kinetic }
+#     ai_tags = { weapon_role_anti_shield brawler }
+#     resources = {
+#         category = ship_components
+#         cost = {
+#             alloys = @l_t5_cost
+#             volatile_motes = @l_t5_rare
+#         }
+#         upkeep = {
+#             energy = @l_t5_upkeep_energy
+#             alloys = @l_t5_upkeep_alloys
+#         }
+#     }
+#
+#     power = -102
+#     damage = { min = 221 max = 442 }
+#     windup = { min = 2 max = 6 }
+#     total_fire_time = 9
+#     range = 18
+#     accuracy = 0.85
+#     tracking = 0.25
+#
+#     ai_weight = {
+#         weight = 1
+#         modifier = {
+#             factor = 0.0
+#             no_resource_for_component = { RESOURCE = volatile_motes }
+#         }
+#     }
+# }
+# weapon_component_template = {
+#     type = instant
+#
+#     key = "LARGE_NOVIAN_AUTOCANNON"
+#     size = large
+#
+#     icon = "GFX_ship_part_novian_autocannon"
+#     icon_frame = 1
+#
+#     prerequisites = { "tech_novian_autocannons" }
+#     component_set = "NOVIAN_AUTOCANNON"
+#     projectile_gfx = "stormfire_auto_cannons_l"
+#     tags = { weapon_type_kinetic }
+#     ai_tags = { weapon_role_anti_shield brawler }
+#     resources = {
+#         category = ship_components
+#         cost = {
+#             alloys = @s_t5_cost
+#             volatile_motes = @s_t5_rare
+#         }
+#         upkeep = {
+#             energy = @s_t5_upkeep_energy
+#             alloys = @s_t5_upkeep_alloys
+#         }
+#     }
+#
+#     power = -46
+#     damage = { min = 529 max = 1058 }
+#     windup = { min = 2 max = 8 }
+#     total_fire_time = 12
+#     range = 20
+#     accuracy = 0.85
+#     tracking = 0.25
+#
+#     ai_weight = {
+#         weight = 1
+#         modifier = {
+#             factor = 0.0
+#             no_resource_for_component = { RESOURCE = volatile_motes }
+#         }
+#     }
+# }
+#
+# #Torpedo Not updated to 3.6
+# weapon_component_template = {
+#     key = "NOVIAN_TORPEDO"
+#     size = small
+#     entity = "invisible_turret_entity"
+#     icon = "GFX_ship_part_torpedo_3"
+#     icon_frame = 1
+#     type = missile
+#     #component_set = "NOVIAN_TORPEDO"
+#     prerequisites = { "tech_novian_torpedoes" }
+#     projectile_gfx = "large_torpedo_03"
+#     tags = { weapon_type_explosive }
+#     ai_tags = { weapon_role_artillery }
+#     ai_tag_weight = 0
+#
+#     damage = { min = 7000 max = 8000 }
+#     windup = { min = 5 max = 15 }
+#     total_fire_time = 40
+#     range = 250
+#     accuracy = 1.00
+#     tracking = 0.25
+#     missile_speed = 20
+#     missile_evasion = 0.40
+#     missile_health = 3000.00
+#     shield_penetration = 1.00
+#     missile_retarget_range = 100
+#
+#     resources = {
+#         category = ship_components
+#         cost = {
+#             alloys = @m_t5_cost
+#             volatile_motes = @m_t5_rare
+#         }
+#         upkeep = {
+#             energy = @m_t5_upkeep_energy
+#             alloys = @m_t5_upkeep_alloys
+#         }
+#     }
+#
+#     ai_weight = {
+#         weight = 1
+#         modifier = {
+#             factor = 0.0
+#             no_resource_for_component = { RESOURCE = volatile_motes }
+#         }
+#     }
+# }
+
+
+
+### Shields ###
+utility_component_template = {
+    key = "SMALL_SHIELD_NOVIAN"
+    size = small
+    icon = "GFX_ship_part_shield_novian"
+    icon_frame = 1
+    power = -110 #@power_S6 = -55.
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @shield_s_t6_cost
+            sr_dark_matter = 0.25
+        }
+        upkeep = {
+            energy = @shield_s_t6_upkeep_energy
+            alloys = @shield_s_t6_upkeep_alloys
+        }
+    }
+    modifier = {
+        ship_shield_add = 500 #@shield_S6 = 280. Each size up is generally ~2.5x HP that of the last.
+        ship_shield_regen_add_static = 3.7 #@regen_S6 = 1.85
+    }
+    #prerequisites = { "tech_dark_matter_deflector" }
+    component_set = "SHIELD_NOVIAN"
+}
+
+utility_component_template = {
+    key = "MEDIUM_SHIELD_NOVIAN"
+    size = medium
+    icon = "GFX_ship_part_shield_novian"
+    icon_frame = 1
+    power = -220 #@power_M6 = -110.
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @shield_m_t6_cost
+            sr_dark_matter = 0.5
+        }
+        upkeep = {
+            energy = @shield_m_t6_upkeep_energy
+            alloys = @shield_m_t6_upkeep_alloys
+        }
+    }
+    modifier = {
+        ship_shield_add = 1250 #@shield_M6 = 700. Each size up is generally ~2.5x HP that of the last.
+        ship_shield_regen_add_static = 9.3 #@regen_M6 = 4.65
+    }
+    #prerequisites = { "tech_dark_matter_deflector" }
+    component_set = "SHIELD_NOVIAN"
+}
+
+utility_component_template = {
+    key = "LARGE_SHIELD_NOVIAN"
+    size = large
+    icon = "GFX_ship_part_shield_novian"
+    icon_frame = 1
+    power = -440 #@power_L6 = -220.
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @shield_l_t6_cost
+            sr_dark_matter = 1
+        }
+        upkeep = {
+            energy = @shield_l_t6_upkeep_energy
+            alloys = @shield_l_t6_upkeep_alloys
+        }
+    }
+    modifier = {
+        ship_shield_add = 3125 #@shield_L6 = 1680. Each size up is generally ~2.5x HP that of the last.
+        ship_shield_regen_add_static = 22.2 #@regen_L6 = 11.10
+    }
+    #prerequisites = { "tech_dark_matter_deflector" }
+    component_set = "SHIELD_NOVIAN"
+}
+
+
+### ARMOUR ###
+utility_component_template = {
+    key = "SMALL_ARMOR_NOVIAN"
+    size = small
+    icon = "GFX_ship_part_armor_novian"
+    icon_frame = 1
+    power = 0
+    modifier = {
+        ship_armor_add = 500 #@armor_S6 = 370. Each size up is generally ~2.5x HP that of the last.
+    }
+
+    prerequisites = { "tech_dragon_armor" }
+    component_set = "ARMOR_NOVIAN"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @s_t6_cost
+        }
+        upkeep = {
+            energy = @s_t6_upkeep_energy
+            alloys = @s_t6_upkeep_alloys
+        }
+    }
+}
+
+utility_component_template = {
+    key = "MEDIUM_ARMOR_NOVIAN"
+    size = medium
+    icon = "GFX_ship_part_armor_novian"
+    icon_frame = 1
+    power = 0
+    modifier = {
+        ship_armor_add = 1250 #@armor_M6 = 925. Each size up is generally ~2.5x HP that of the last.
+    }
+
+    #prerequisites = { "tech_dragon_armor" }
+    component_set = "ARMOR_NOVIAN"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @m_t6_cost
+        }
+        upkeep = {
+            energy = @m_t6_upkeep_energy
+            alloys = @m_t6_upkeep_alloys
+        }
+    }
+}
+
+utility_component_template = {
+    key = "LARGE_ARMOR_NOVIAN"
+    size = large
+    icon = "GFX_ship_part_armor_novian"
+    icon_frame = 1
+    power = 0
+    modifier = {
+        ship_armor_add = 3125 #@armor_L6 = 2220. Each size up is generally ~2.5x HP that of the last.
+    }
+
+    #prerequisites = { "tech_dragon_armor" }
+    component_set = "ARMOR_NOVIAN"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @l_t6_cost
+        }
+        upkeep = {
+            energy = @l_t6_upkeep_energy
+            alloys = @l_t6_upkeep_alloys
+        }
+    }
+}
+
+weapon_component_template = { #based on ENERGY_LANCE_2
+    key = "ENERGY_LANCE_NOVIAN"
+    icon = GFX_ship_part_energy_lance_novian
+    icon_frame = 1
+    size = extra_large
+    type = instant
+    projectile_gfx = "tachyon_lance"
+    #prio_projectile = yes
+
+    tags = { weapon_type_energy weapon_type_anticompound }
+    ai_tags = { weapon_role_artillery }	#tags must be pre-registered in common/weapon_tags
+    ai_tag_weight = 0
+
+    #prerequisites
+
+    power = -520 #260
+
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 45000
+            rare_crystals = 7500
+        }
+        upkeep = {
+            alloys = 500
+            sr_magical_neutronium = 3
+        }
+    }
+
+    component_set = "ENERGY_LANCE_NOVIAN"
+    size_restriction = { novian_hypership }
+    hidden = yes #must be removed if this is made designable
+
+    damage = { min = 1560 max = 3900 } #720-1950
+    windup = { min = 12 max = 47 } #same as ENERGY_LANCE_2 #slow these down? once the short-range weapons are sped up
+    total_fire_time = 70
+
+    hull_damage = 2 #1.5
+    shield_damage = 0.3 #0.5
+    shield_penetration = 0
+    armor_damage = 2.5 #2
+    armor_penetration = 0.1 #0 #slight armour pen - you want shields up against these
+
+    range = 200 #150 #+20% per diff from 0
+    accuracy = 0.75
+    tracking = 0.05 #0
+
+    #firing_arc = 25 #no firing arc because it would become too cheesable. Say canonically the weapons are aiming different directions when mounted on the Hypership anyway.
+    min_range = 50 #reconsider based on short-range weapons range
+}
+
+weapon_component_template = { #based on PLANET_LANCE_AETERNUM and SYSTEMCRAFT_RAY_OF_DOOM_1
+    key = "PLANET_LANCE_NOVIAN"
+    icon = GFX_ship_part_planet_lance_novian
+    icon_frame = 1
+    size = titanic
+    type = instant
+    projectile_gfx = "paluush_planetcraft_lance"
+    prio_projectile = yes
+
+    tags = { weapon_type_quasaric weapon_type_energy weapon_type_anticompound }
+    ai_tags = { weapon_role_artillery }	#tags must be pre-registered in common/weapon_tags
+    ai_tag_weight = 0
+
+    #prerequisites
+
+    power = -500000
+
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 45000
+            rare_crystals = 7500
+        }
+        upkeep = {
+            alloys = 500
+            sr_magical_neutronium = 3
+        }
+    }
+
+    component_set = "PLANET_LANCE_NOVIAN"
+    size_restriction = { novian_hypership }
+    hidden = yes #must be removed if this is made designable
+
+    damage = { min = 5000000 max = 10000000 }
+    windup = { min = 150 max = 150 } #2 shots per month
+    total_fire_time = 150
+
+    hull_damage = 1
+    shield_damage = 0.75
+    shield_penetration = 0.25 #shield and armour pen in case of mods that give stupidly strong shield/armour components without touching hull
+    armor_damage = 1.5
+    armor_penetration = 0.25
+
+    range = 500 #range = yes
+    accuracy = 1.00 #can't really miss when the projectile is so chonky
+    tracking = 0 #they wouldn't bother
+
+    #firing_arc = 100
+    #min_range = 50
+}
+
+weapon_component_template = { #based on MASS_ACCELERATOR_2
+    key = "MASS_ACCELERATOR_NOVIAN"
+    icon = GFX_ship_part_mass_accelerator_novian
+    icon_frame = 1
+    size = extra_large
+    type = instant
+    projectile_gfx = "tachyon_lance"
+    #prio_projectile = yes
+
+    tags = { weapon_type_kinetic weapon_type_anticompound }
+    ai_tags = { weapon_role_artillery }	#tags must be pre-registered in common/weapon_tags
+    ai_tag_weight = 0
+
+    #prerequisites
+
+    power = -520 #260
+
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 45000
+            rare_crystals = 7500
+        }
+        upkeep = {
+            alloys = 500
+            sr_magical_neutronium = 3
+        }
+    }
+
+    component_set = "MASS_ACCELERATOR_NOVIAN"
+    size_restriction = { novian_hypership }
+    hidden = yes #must be removed if this is made designable
+
+    damage = { min = 1820 max = 5200 } #910-2600
+    windup = { min = 14 max = 54 } #same as MASS_ACCELERATOR_2 #slow these down? once the short-range weapons are sped up
+    total_fire_time = 80
+
+    hull_damage = 1
+    shield_damage = 2 #1.5
+    shield_penetration = 0.1 #slight shield pen
+    armor_damage = 0.5 #0.75
+    armor_penetration = 0
+
+    range = 200 #150 #+20% per diff from 0
+    accuracy = 0.85
+    tracking = 0.05
+
+    #firing_arc = 25 #no firing arc because it would become too cheesable. Say canonically the weapons are aiming different directions when mounted on the Hypership anyway.
+    min_range = 50 #reconsider based on short-range weapons range
+}

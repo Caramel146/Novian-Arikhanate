@@ -9,5 +9,5 @@
   allow_novian_cybernetics_traits:0 "§HUnlocks Feature:§! Novian Cybernetic Traits"
   allow_novian_cybernetics_traits_desc:0 "Unlocks §RNovian§! Cybernetic Traits for Species Modification."
 
-  tech_asteroid_craft:0 "Mobile Assault Asteroids"
-  tech_asteroid_craft_desc:0 "Our sociologists are baffled as to why we didn't think of this sooner."
+  tech_novian_asteroid_craft:0 "Mobile Assault Asteroids"
+  tech_novian_asteroid_craft_desc:0 "Our sociologists are baffled as to why we didn't think of this sooner."

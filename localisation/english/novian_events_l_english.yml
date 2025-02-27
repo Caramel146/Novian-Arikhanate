@@ -3,10 +3,10 @@
  ######################
  ##### SITUATIONS #####
  ######################
- giga_novian_situation_rehab_agartha:0 "REPLACE ME"
- giga_novian_situation_rehab_agartha_type:0 "$giga_novian_situation_rehab_agartha$"
- giga_novian_situation_rehab_agartha_desc:0 "REPLACE ME"
- giga_novian_situation_rehab_agartha_monthly_change_tooltip: "REPLACE ME"
+ novian_situation_rehab_agartha:0 "REPLACE ME"
+ novian_situation_rehab_agartha_type:0 "$novian_situation_rehab_agartha$"
+ novian_situation_rehab_agartha_desc:0 "REPLACE ME"
+ novian_situation_rehab_agartha_monthly_change_tooltip: "REPLACE ME"
 
 
 
@@ -16,45 +16,48 @@
  ###################################
  ##### Greetings and Diplomacy #####
  ###################################
- giga_novian.2000.name:0 "The Heart of the Problem"
- giga_novian.2000.desc:0 "Preliminary scans of the Galactic Core prior to the discovery of its hyperlanes had predicted that it would be completely devoid of any intelligent lifeforms, as we failed to detect any traces of artificial radio-waves or other elements pointing towards the existence of an advanced civilization residing there.\n\nHowever, as the first few explorer probes began heading into the newly-revealed core, they started picking up faint yet persistent signals emanating from the region around the core itself. Originally assumed to be from the supermassive black hole at the very center of the galaxy, these signals only intensified in both strength and complexity before the explorer probes were finally shot down by what seemed to be some sort of automated defense system.\n\nBefore our scientists were even able to formulate theories as to how or why our scanners somehow missed an entire civilization residing within the galactic core, sensors across the galaxy picked up an extremely powerful subspace transmission coming from the edges of the central cluster.\n\nWhoever these mysterious beings residing within the core might be, they are now addressing the rest of the galaxy directly..."
- giga_novian.2000.a:0 "On screen."
+ novian.2000.name:0 "The Heart of the Problem"
+ novian.2000.desc:0 "Preliminary scans of the Galactic Core prior to the discovery of its hyperlanes had predicted that it would be completely devoid of any intelligent lifeforms, as we failed to detect any traces of artificial radio-waves or other elements pointing towards the existence of an advanced civilization residing there.\n\nHowever, as the first few explorer probes began heading into the newly-revealed core, they started picking up faint yet persistent signals emanating from the region around the core itself. Originally assumed to be from the supermassive black hole at the very center of the galaxy, these signals only intensified in both strength and complexity before the explorer probes were finally shot down by what seemed to be some sort of automated defense system.\n\nBefore our scientists were even able to formulate theories as to how or why our scanners somehow missed an entire civilization residing within the galactic core, sensors across the galaxy picked up an extremely powerful subspace transmission coming from the edges of the central cluster.\n\nWhoever these mysterious beings residing within the core might be, they are now addressing the rest of the galaxy directly..."
+ novian.2000.a:0 "On screen."
 
- giga_novian.2001.name:0 "The Novians"
- giga_novian.2001.desc:0 "§H<<CORE HYPERLANES STATUS: PRESENT>>\n<<GALACTIC POPULATION: PLENTIFUL>>\n<<CRYOGENIC STASIS SHUTTING DOWN>>§!\n§R<<INITIALIZING NOVIAN CIVILIZATION RE-ACTIVATION PROTOCOLS>>§!\n\nAT LAST, THE §R<<GALACTIC VERMIN>>§! HAS ONCE AGAIN PROSPERED AND SPREAD THROUGHOUT THE STARS. WORK SHALL THEREFORE IMMEDIATELY RESUME ON THE §R<<ULTIMATE ANSWER>>§!\n\nVERMIN! PROVING YOURSELVES §R<<USEFUL>>§! TO THE NOVIANS WILL BE GOOD FOR YOUR SURVIVAL. COMPLY WITH OUR DEMANDS AND YOUR INEVITABLE CONVERSION WILL BE MADE MORE §R<<PLEASANT>>§! BY YOUR STANDARDS."
- giga_novian.2001.a:0 "That's... not good."
+ novian.2001.name:0 "The Novians"
+ novian.2001.desc:0 "§H<<CORE HYPERLANES STATUS: PRESENT>>\n<<GALACTIC POPULATION: PLENTIFUL>>\n<<CRYOGENIC STASIS SHUTTING DOWN>>§!\n§R<<INITIALIZING NOVIAN CIVILIZATION RE-ACTIVATION PROTOCOLS>>§!\n\nAT LAST, THE §R<<GALACTIC VERMIN>>§! HAS ONCE AGAIN PROSPERED AND SPREAD THROUGHOUT THE STARS. WORK SHALL THEREFORE IMMEDIATELY RESUME ON THE §R<<ULTIMATE ANSWER>>.§!\n\nVERMIN! PROVING YOURSELVES §R<<USEFUL>>§! TO THE NOVIANS WILL BE GOOD FOR YOUR SURVIVAL. COMPLY WITH OUR DEMANDS AND YOUR INEVITABLE CONVERSION WILL BE MADE MORE §R<<PLEASANT>>§! BY YOUR STANDARDS."
+ novian.2001.a:0 "That's... not good."
 
- giga_novian.1001.name:0 "Incoming Transmission"
- giga_novian.1001.desc:0 "Greetings xenos, we are the Novians. I have been regretfully tasked with the job of speaking to your kind, we wish to be left alone. If you attempt to interfere in our isolation you will be §R<<EXTERMINATED LIKE THE VERMIN YOU ARE!>>§!"
+ novian.1001.name:0 "Incoming Transmission"
+ novian.1001.peace.desc:0 "Greetings xenos, we are the Novians. I have been regretfully tasked with the job of speaking to your kind, we wish to be left alone. If you attempt to interfere in our isolation you will be §R<<EXTERMINATED LIKE THE VERMIN YOU ARE!>>§!"
+ novian.1001.war.desc:0 "It is delusion to think your resistance is meaningful. §R<<SCUM>>§! like you will be only a footnote in the history of §R<<OUR GALAXY>>§!."
 
- giga_novian.1001.who:0 "Tell us about your civilization."
- giga_novian.1001.who.response:0 "We are a very old civilization, much older than the 'precursors' that you may know. Your cycle of empires is the 12th to develop §R<ACCESS TO THE CORE>§!\n\nThe Novian people measure our history in geological timescales, having developed faster-than-light travel long before your kind even gained sentience. We do not enjoy speaking to you and many in our civlization are repulsed by the fact that we are even speaking to xenos instead of simply §R<<EXTERMINATING>>§! them."
+ novian.1001.peace.who:0 "Tell us about your civilization."
+ novian.1001.peace.who.response:0 "We are a very old civilization, much older than the 'precursors' that you may know. Your cycle of empires is the 12th to develop §R<ACCESS TO THE CORE>.§!\n\nThe Novian people measure our history in geological timescales, having developed faster-than-light travel long before your kind even gained sentience. We do not enjoy speaking to you and many in our civilization are repulsed by the fact that we are even speaking to xenos instead of simply §R<<EXTERMINATING>>§! them."
 
- giga_novian.1001.capital:0 "Your civilization makes entensive use of cybernetic enhancements."
- giga_novian.1001.capital.response:0 "We assumed that your kind would be interested in our enhancements!\n\nYour kind will likely be §R<<UNABLE>>§! to acquire such technology due to your sheer ineptitude.\n\nWe chose to become cybernetic instead of uploading our 'consciousnesses' to robotic §R<HUSKS>§! due to us not being interested in committing §R<COLLECTIVE SUICIDE>§!. This way we are able to §R<EFFICIENTLY>§! interface with our technology.\n\nPlease do not bore us with analogies of primitive seafaring vessels, §R<LIMBLESS SPACE SLUGS!>§ \n\n§R<<WE HAVE HEARD IT ALL BEFORE>>§!"
+ novian.1001.peace.capital:0 "Your civilization makes entensive use of cybernetic enhancements."
+ novian.1001.peace.capital.response:0 "We assumed that your kind would be interested in our enhancements!\n\nYour kind will likely be §R<<UNABLE>>§! to acquire such technology due to your sheer ineptitude.\n\nWe chose to become cybernetic instead of uploading our 'consciousnesses' to robotic §R<HUSKS>§! due to us not being interested in committing §R<COLLECTIVE SUICIDE>§!. This way we are able to §R<EFFICIENTLY>§! interface with our technology.\n\nPlease do not bore us with analogies of primitive seafaring vessels, §R<LIMBLESS SPACE SLUGS!>§ \n\n§R<<WE HAVE HEARD IT ALL BEFORE>>§!"
 
- giga_novian.1001.war:0 "Your decrepit civilisation has no place here. | §RDECLARE WAR§!" #We shall not let you finish your awakening!
- giga_novian.1001.war.tooltip:0 "We will §RDECLARE WAR§! on the ancient nation of §YAeternum§!.\n\nThey will §RNOT§! accept peace.\n\nThe only outcomes are either total victory, or total destruction." #\n\nAs they are currently preparing their §YAwakening§!, they will be more powerful the closer they were to awakening.
- giga_novian.1001.war.response:0 "§R<<WARNING: NONCOMPLIANT PRIMITIVES EXHIBITING HOSTILE BEHAVIOR>>§!\n\n§R<<INITIATING DEFENSIVE PROTOCOLS>>§!" #exhibiting hostile behaviour DURING RECONSTRUCTION PROTOCOLS
+ novian.1001.wardec:0 "Your decrepit civilisation has no place here. | §RDECLARE WAR§!" #We shall not let you finish your awakening!
+ novian.1001.wardec.tooltip:0 "We will §RDECLARE WAR§! on the ancient nation of §YAeternum§!.\n\nThey will §RNOT§! accept peace.\n\nThe only outcomes are either total victory, or total destruction." #\n\nAs they are currently preparing their §YAwakening§!, they will be more powerful the closer they were to awakening.
+ novian.1001.wardec.response:0 "§R<<WARNING: NONCOMPLIANT PRIMITIVES EXHIBITING HOSTILE BEHAVIOR>>§!\n\n§R<<INITIATING DEFENSIVE PROTOCOLS>>§!" #exhibiting hostile behaviour DURING RECONSTRUCTION PROTOCOLS
 
- giga_novian.1001.a:0 "We have other matters to attend to, Novians."
+ novian.1001.leave.a:0 "We have other matters to attend to, Novians."
+ novian.1001.leave.b:0 "See you on the battlefield."
+
 
  ##########################################
  ##### Event Chain: Novian Arikhanate #####
  ##########################################
  novian_chain_title:0 "Novian Arikhanate"
- novian_chain_desc:0 "The Novians have awoken from their long hibernation, and look to the wider galaxy to satisfy their bloodlust. When they come for us, we must be prepared.\n\n"
+ novian_chain_desc:0 "An ancient galactic hyperpower has awoken from a long hibernation, and looks to the wider galaxy with growing bloodthirst. Should they come for us, we must be prepared.\n\n"
  novian_ship_count:0 "§YNovian Ship Count§!"
  novian_planet_count:0 "§YNovian Planet Count§!"
  novian_system_count:0 "§YNovian System Count§!"
  novian_mining_rig_count:0 "§YNovian Mining Rig Count§!"
- ships_lost_to_novian:0 "§RShips Destroyed By Novians§!"
+ ships_lost_to_novians:0 "§RShips Destroyed By Novians§!"
  novian_ships_lost:0 "§GNovian Ships Destroyed§!"
 
  #katzenartig_chain_1:0 "Flusion & Katzen Expansion"
  #katzenartig_chain_1_desc:0 "The Katzen government is heavily centralized around §YFlusion§!, the Katzen capital. Seizing or destroying Flusion would undoubtedly mean the complete end and collapse of the Imperium.\n\nIn order to expand their navy, the Katzens construct §YKatzen Warforges§! around owned planets in their space, which will periodically create more ships. They will §Yself-destruct§! if their system is captured.\n\nKatzen planets will also project §YJump-Drive Scrambling Fields§! to their own system, preventing tactical jumps into these areas. Capturing the planet will deactivate the field.\n\nThe §YKaiser Moon§! will §Rrecall§! to Jublio if Flusion is bombarded, invaded, or if a Colossus enters the system!"
- novian_chain_1:0 "" #title
- novian_chain_1_desc:0 "" #equivalent flavour to Katzen one informing of the basic reqs to defeat the Novians.
+ novian_chain_1:0 "a" #title
+ novian_chain_1_desc:0 "a" #equivalent flavour to Katzen one informing of the basic reqs to defeat the Novians.
 
  #katzenartig_chain_2:0 "Katzen E.H.V.Es"
  #katzenartig_chain_2_desc:0 "The §YEreignis Horizont Versatz Einrichtungs§! are Katzen-built E.H.O.Fs, which allow them to generate wormholes to unaccessible areas.\nThe Katzens will periodically use them to gain access to far-fetched parts of the galaxy, or areas not connected to the hyperlane network.\nThey will convert captured §YE.H.O.Fs§! into §YE.H.V.Es§! over 5 years.\nCapturing a system with an §YE.H.V.E.§! will allow us to destroy it, turning it into a §YRuined E.H.O.F.§!\nDestroying all §YE.H.V.Es§! will §Ydissipate§! any wormholes they generated.\n§YKatzen E.H.V.E. Count§!: §W[flusion_primitives_country.kaiser_ehof_count]§!"
@@ -66,75 +69,111 @@
  novian_chain_3:0 "Economic Resources" #Stagnating agartha captive stream causes desperation somehow? #...heavily reliant on a steady stream of captives to populate the slave labour megafacilities of their Agartha...
  novian_chain_3_desc:0 "Despite a mammoth technoindustrial base and the power of a quasar, the Arikhanate's fundamentally-unsustainable economy teeters on a knife edge. By intercepting raiding fleets or even hitting Novian industry directly, we can cripple the Arikhanate's ability to field its armada against us. \n\nCurrent §GIncome§!: §Y[novian_arikhanate.novian_resource_income]§! §PNovian Resources§!\nCurrent §RSpending§!: §Y[novian_arikhanate.novian_resource_spending]§! §PNovian Resources§!\n\nCurrent §HBalance§!: §Y[novian_arikhanate.novian_resource_balance]§! §PNovian Resources§!\nCurrent §BStockpile§!: §Y[novian_arikhanate.novian_resource_stockpile]§! §PNovian Resources§!"
 
+ novian_chain_4:0 "Fervour"
+ novian_chain_4_desc:0 "The Arikhanate's population lives under a ceaseless flood of indoctrination, propaganda and ultranationalist vitriol. Their society relies on this almost completely to stave off collapse. \n\nCurrent §GIncome§!: §Y[novian_arikhanate.novian_fervour_income]§! §PNovian Fervour§!\nCurrent §BStockpile§!: §Y[novian_arikhanate.novian_fervour_stockpile]§! §PNovian Fervour§!" #\nCurrent §RSpending§!: §Y[novian_arikhanate.novian_fervour_spending]§! §PNovian Fervour§!\n\nCurrent §HBalance§!: §Y[novian_arikhanate.novian_fervour_balance]§! §PNovian Fervour§!\n
+
  #katzenartig_chain_4:0 "Katzen Research Efforts"
  #katzenartig_chain_4_desc:0 "§BKatzen Research Output§! represents how much technological progress the Katzens are making every month as they work towards their next tech level.\n\n§GKatzen Tech Level§! represents how advanced the Katzens have become, with each level increasing §YHull§!, §YArmor§! & §YShields§! §YHP§! by §Y[flusion_primitives_country.cdk_kaiser_other_buff_desc]%§!, §YFire Rate§! and §YWeapons Damage§! by §Y[flusion_primitives_country.cdk_kaiser_weapon_buff_desc]%§!, §YArmy Damage§! and §YArmy Health§! by §Y[flusion_primitives_country.cdk_kaiser_other_buff_desc]%§! and §YMegastructure Build Speed§! by §Y[flusion_primitives_country.cdk_kaiser_other_buff_desc]%§!.\n\nCurrent Monthly §BKatzen Research§!: §Y[flusion_primitives_country.kaiser_tech_income]§!\nProgress to next §GKatzen Tech Level§!: §Y[flusion_primitives_country.kaiser_tech_stockpile]§!/§Y[flusion_primitives_country.kaiser_tech_to_next_level]§!\n\nCurrent §GKatzen Tech Level§!: §Y[flusion_primitives_country.kaiser_tech_level]§!\nExtra §HShip Hull§!/§HArmor§!/§HShields§!: §Y[flusion_primitives_country.kaiser_tech_ship_hp_buff]%§!\nExtra §HWeapons Damage§! & §HFire Rate§!: §Y[flusion_primitives_country.kaiser_tech_damage_buff]%§!\nExtra §HArmy Damage§! & §HArmy Health§!: §Y[flusion_primitives_country.kaiser_tech_army_buff]%§!\nExtra §HMegastructure Build Speed§!: §Y[flusion_primitives_country.kaiser_tech_mega_speed_buff]%§!"
- novian_chain_4:0 "Mobilisation Status"
- novian_chain_4_desc:0 "The Novian population has emerged from its slumber, and now toils day and night to bring the Arikhanate's dormant war machine to full steam. Current mobilisation progress: §Y[novian_arikhanate.novian_mobilisation]§!%"
+ novian_chain_5:0 "Mobilisation Status"
+ novian_chain_5_desc:0 "The Novian population has emerged from its slumber, and now toils day and night to bring the Arikhanate's dormant war machine to full steam.\n\nCurrent mobilisation progress: §Y[novian_arikhanate.novian_mobilisation]§!%"
 
- giga_novian.61100.name:0 "Novians Declare War!"
- giga_novian.61100.desc:0 "Our intelligence agencies have been observing the Arikhanate's war preparations for some time now, and it seems they are complete. Ranks are filled with trained recruits, enough munitions have been stockpiled to turn a thousand worlds to ash, and the armada has been assembled with the Hypership at its head. As the Novians declare total war against the entire galaxy, we can only hope our preparations have been enough."
- giga_novian.61100.a:0 "Ready or not, here they come..."
- giga_novian.61100.a.tooltip:0 "The Novian Arikhanate will declare total war."
 
- giga_novian.60011.name:0 "Novian Hypership Destroyed!" #shamelessly copied from Katzens
- giga_novian.60011.desc:0 "A savage blow was today dealt to the §YNovian Arikhanate§!. Indeed, our forces have managed to successfully cripple and destroy the Arikhanate's flagship, the mighty §YHypership§!.\n\nThe vessel, which served as a forward base of operations for the Novians, has been reduced to a gigantic metallic wreck, causing immense Novian casualties. The Arikhanate has entered a state of panic following the loss of their most important military asset, with their high-command retreating to the fortified homeworld of §Ynovian_name_capital§!.\n\nThe §YArikhan§! has reportedly gone into a mad rage, and it seems their entire empire is now falling into disarray..." #\n\nAs an added bonus, we also have managed to recover some resources from the wreck.
- giga_novian.60011.a:0 "Today, the Arikhan will know fear."
- giga_novian.60012.name:0 "Novian Hypership Destroyed!" #shamelessly copied from Katzens
- giga_novian.60012.desc:0 "A savage blow was today dealt to the §YNovian Arikhanate§!. Indeed, the forces of the §Y[novian_hypership_slayer.GetName]§! have managed to successfully cripple and destroy the Arikhanate's flagship, the mighty §YHypership§!.\n\nThe vessel, which served as a forward base of operations for the Novians, has been reduced to a gigantic metallic wreck, causing immense Novian casualties. The Arikhanate has entered a state of panic following the loss of their most important military asset, with their high-command retreating to the fortified homeworld of §Ynovian_name_capital§!.\n\nThe §YArikhan§! has reportedly gone into a mad rage, and it seems their entire empire is now falling into disarray..."
- giga_novian.60012.a:0 "A light at the end of the tunnel."
- giga_novian.60010.a.tooltip:0 "The §YNovian Arikhanate§! will suffer from §Rpenalties§! to §Yfire rate§!, §Yorbital bombardment§!, §Yarmy damage§! and §Yship speed§!."
+ #####################
+ ##### ESPIONAGE #####
+ #####################
+ novian.20000.name:0 "Novian Threat Analysis"
+ novian.20000.desc:0 "After years scouring sensor data, running simulations and cross-referencing galactic history records, our intelligence agencies have come to one unanimous conclusion: §Rthe Arikhanate intends on war.§!\n\nWe have immediately enacted a host of measures to re-evaluate our strategic posture and begin sweeping intelligence efforts against the Novian menace."
+ novian.20000.a:0 "A threat that cannot be neglected."
+ novian.20000.a.tooltip.1:0 "The §PNovian Operations Section§! is now accessible through the edicts menu, the situation log tracks additional information under the $novian_chain_title$ event chain, and new resolutions are available in the Galactic Community."
+ novian.20000.a.tooltip.2:0 "The §PNovian Operations Section§! is now accessible through the edicts menu, and the situation log tracks additional information under the $novian_chain_title$ event chain."
 
- giga_novian.60100.name:0 "Novian Throneworld Seized!"
- giga_novian.60100.desc:0 "At last, we have broken enemy ranks and seized ground on the Novian Throneworld. The political core of the Arikhanate is in flames, and their remaining forces will struggle to coordinate. \n\nMany of the evil empire's leaders have already been killed, committed suicide, or have been taken into custody for us to interrogate or put on public trial. The fall of the once-eternal pillar of oppression that was the Throneworld has unveiled a truly horrific interior, previously unbeknownst to us, that must now be cleared.  Criminals are brazen, trafficking innocents and smuggling contraband relentlessly.  This will take a while to clean to become a proper, civilized world once again.  Despite this, the loss of the Throneworld is a significant blow to the Novians and their reign of madness."
- giga_novian.60100.a:0 "Another cog removed from their war machine."
+ edict_novian_bureau_edict:0 "Open the §PNovian Operations Section§!"
+ edict_novian_bureau_edict_desc:0 "Contact the Novian Operations Section to manage Novian Arikhanate intel and operations."
+ already_monitoring_novians:0 "Already monitoring Novians"
 
- giga_novian.60110.name:0 "Novian Temple World Seized!"
- giga_novian.60110.desc:0 "The Arikian holy grounds have been take, dealing a crushing blow to morale across the Novian populace. Not only this, but the Novitic religion is now laid bare for us to bluntly see and learn from, which will allow us to better anticipate their tactics and outmaneuver their society." # In addition, we have taken hold of several military officers that will give us significant insight into the Arikian armed forces.
- giga_novian.60110.a:0 "Another cog removed from their war machine."
+ novian.20001.name:0 "§PNovian Operations Section§!"
+ novian.20001.bye: "Exit the §PNovian Operations Section§!"
+ novian.20001.data: "§PNOS Infiltration§!: §Y[root.nos_infil]§!\n§RArikhanate Counterintelligence§!: §Y[nos_counter]§!\nLoyalist Membership: [novian_arikhanate.novian_faction_support_loyalist]%\nDissident Membership: [novian_arikhanate.novian_faction_support_dissident]%"
+ novian.20001.desc.pre_wardec.a: "Reports from the Arikhanate are as disturbing as ever.\n\n$novian.20001.data$"
+ novian.20001.desc.pre_wardec.b: "Our stealthed probes in the core are observing a massive movement of materiel.\n\n$novian.20001.data$"
+ novian.20001.desc.pre_wardec.c: "We need more funding!\n\n$novian.20001.data$"
+ novian.20001.desc.pre_wardec.d: "Novian industries are fabricating volatile short-lived ammunition as we speak. That means war, and soon.\n\n$novian.20001.data$"
+ novian.20001.desc.pre_wardec.e: "Sometimes I envy what Novian internal security has to work with.\n\n$novian.20001.data$"
+ novian.20001.desc.post_wardec.a: "Reports on the Arikhanate's cultural mobilisation are equally inspiring and terrifying.\n\n$novian.20001.data$"
+ novian.20001.desc.post_wardec.b: "Remember, operations behind enemy lines are just as important as those on the frontlines.\n\n$novian.20001.data$"
+ novian.20001.desc.post_wardec.c: "Don't let up the fight. There isn't the slightest hint they'll consider negotiation.\n\n$novian.20001.data$"
+ novian.20001.desc.post_wardec.d: "Just saying, this war would be easier if we stooped down to their level...\n\n$novian.20001.data$"
+ novian.20001.desc.post_wardec.e: "We should plan in advance to withhold any captured tech from our rivals. And our allies.\n\n$novian.20001.data$" #That last bit doesn't work for those without allies.
+ novian.20001.a.1: "Begin disruptive infiltration efforts."
+ novian.20001.a.2: "Placeholder action 2"
 
- giga_novian.60120.name:0 "Novian Shipyard Seized!"
- giga_novian.60120.desc:0 "$novian_name_shipyard$, the largest Novian shipyard has been taken by our forces, dealing a crippling blow to the Novian Armada. Their ability to repair and replace ships has been greatly diminished - including the Hypership.  With this victory, the Novians are doomed to an inevitable long-term fall, given their inability to replenish their naval forces."
- giga_novian.60120.a:0 "Another cog removed from their war machine."
+ ######################
+ ##### WAR EVENTS #####
+ ######################
+ novian.61100.name:0 "Novians Declare War!"
+ novian.61100.desc:0 "Our intelligence agencies have been observing the Arikhanate's war preparations for some time now, and it seems they are complete. Ranks are filled with trained recruits, enough munitions have been stockpiled to turn a thousand worlds to ash, and the armada has been assembled with the Hypership at its head. As the Novians declare total war against the entire galaxy, we can only hope our preparations have been enough."
+ novian.61100.a:0 "Ready or not, here they come..."
+ novian.61100.a.tooltip:0 "The Novian Arikhanate will declare total war."
 
- giga_novian.60130.name:0 "Novian Quasaric Station Seized!"
- giga_novian.60130.desc:0 "With $novian_name_quashab$ ."
- giga_novian.60130.a:0 "Another cog removed from their war machine."
+ novian.60011.name:0 "Novian Hypership Destroyed!" #shamelessly copied from Katzens
+ novian.60011.desc:0 "A savage blow was today dealt to the §YNovian Arikhanate§!. Indeed, our forces have managed to successfully cripple and destroy the Arikhanate's flagship, the mighty §YHypership§!.\n\nThe vessel, which served as a forward base of operations for the Novians, has been reduced to a gigantic metallic wreck, causing immense Novian casualties. The Arikhanate has entered a state of panic following the loss of their most important military asset, with their high-command retreating to the fortified homeworld of §Ynovian_name_capital§!.\n\nThe §YArikhan§! has reportedly gone into a mad rage, and it seems their entire empire is now falling into disarray..." #\n\nAs an added bonus, we also have managed to recover some resources from the wreck.
+ novian.60011.a:0 "Today, the Arikhan will know fear."
+ novian.60012.name:0 "$novian.60011.name$"
+ novian.60012.desc:0 "A savage blow was today dealt to the §YNovian Arikhanate§!. Indeed, the forces of the §Y[novian_hypership_slayer.GetName]§! have managed to successfully cripple and destroy the Arikhanate's flagship, the mighty §YHypership§!.\n\nThe vessel, which served as a forward base of operations for the Novians, has been reduced to a gigantic metallic wreck, causing immense Novian casualties. The Arikhanate has entered a state of panic following the loss of their most important military asset, with their high-command retreating to the fortified homeworld of §Ynovian_name_capital§!.\n\nThe §YArikhan§! has reportedly gone into a mad rage, and it seems their entire empire is now falling into disarray..."
+ novian.60012.a:0 "A light at the end of the tunnel."
+ novian.60010.a.tooltip:0 "The §YNovian Arikhanate§! will suffer from §Rpenalties§! to §Y$MOD_ARMY_MORALE$§! and §Y$MOD_ARMY_DAMAGE_MULT$§!."
 
- giga_novian.60140.name:0 "Novian Agartha Seized!"
- giga_novian.60140.desc:0 "Good job us."
- giga_novian.60140.a:0 "Another cog removed from their war machine."
+ novian.60100.name:0 "Novian Throneworld Seized!"
+ novian.60100.desc:0 "At last, we have broken enemy ranks and seized ground on the Novian Throneworld. The political core of the Arikhanate is in flames, and their remaining forces will struggle to coordinate. Many of the evil empire's leaders have already been killed, committed suicide, or have been taken into custody for us to interrogate or put on public trial.\n\nThe fall of the once-eternal pillar of oppression that was the Throneworld has unveiled a truly horrific interior, previously unbeknownst to us, that must now be cleared. Even where Novian social structures have not broken down, normal business here constitutes of the gravest crimes in our society. The task to turn this place into a proper, civilized world is daunting. Nonetheless, the loss of the Throneworld is a significant blow to the Novians and their reign of madness."
+ novian.60100.a:0 "Find the Arikhan, now!"
 
- giga_novian.60200.name:0 "The Fall of $novian_name_capital$"
- giga_novian.60200.desc:0 "At no small price, the Novian capital has been conquered and the last armed holdouts are being encircled and routed. There is much work to be done here, but the Arikhanate is all but destroyed."
- giga_novian.60200.a:0 "The galaxy is safer for it."
+ novian.60110.name:0 "Novian Temple World Seized!"
+ novian.60110.desc:0 "The Arikian holy grounds have been taken, dealing a crushing blow to morale across the Novian populace. Not only this, but the Novitic religion is now laid bare for us to bluntly see and learn from, which will allow us to better anticipate their tactics and outmaneuver their society." # In addition, we have taken hold of several military officers that will give us significant insight into the Arikian armed forces.
+ novian.60110.a:0 "Finally, something that can take the wind out their sails."
+
+ novian.60120.name:0 "Novian Shipyard Seized!"
+ novian.60120.desc:0 "$novian_name_shipyard$, the largest Novian shipyard, has been taken by our forces. A crippling blow to the Novian Armada, this will greatly diminish their ability to repair and replace warships.\n\nWith this victory, the Novians are doomed to an inevitable long-term fall, given an inability to fully replenish their naval forces."
+ novian.60120.a:0 "A crippling blow to their Armada."
+
+ novian.60130.name:0 "Novian Quasaric Station Seized!"
+ novian.60130.desc:0 "With $novian_name_quashab$ under our control, the Arikhanate's economy will grind to a halt as they are forced to readjust to the loss of nigh-infinite energy. This deficit will also force them to take a more conservative approach to planetary bombardment.\n\nOn the flipside, our own engineers have managed to interface with a portion of the habitat's enigmatic machinery, allowing us to inherit a degree of the Novians' prolific energy extraction operations."
+ novian.60130.a:0 "Another cog removed from their war machine."
+
+ novian.60140.name:0 "Novian Agartha Seized!"
+ novian.60140.desc:0 "$novian_name_agartha$, the beating heart of Novian industry and the nexus of their slave trade, has been liberated from the Arikhanate's grasp.\n\nThough the hardy resistance of the Novian ground forces has left many sections in ruin, the sheer volume of advanced resources built into and stored on this world has our economic projections up."
+ novian.60140.a:0 "What is half of this stuff for...?"
+
+ novian.60200.name:0 "The Fall of $novian_name_capital$"
+ novian.60200.desc:0 "At no small price, the Novian capital has been conquered and the last armed holdouts are being encircled and routed. There is much work to be done here, but the Arikhanate is all but destroyed."
+ novian.60200.a:0 "The galaxy is safer for it."
  #Pacifist response: ~"A shame so few will consider surrender, even now."
 
- giga_novian.60210.name:0 "A Goliath Laid Bare"
- giga_novian.60210.desc:0 "As our ground forces gained tactical superiority on $novian_name_capital$, elite units moved quickly to hunt down the Arikhan himself, fuelled by the thirst for imminent vengeance. The discovery was less than climactic: the Arikhan's corpse slumped in a dark corner, hands clasped around an ornamental blade twisting deep into his cyberised brain stem."
- giga_novian.60210.a:0 "Too easy an escape for one so monstrous."
+ novian.60210.name:0 "A Goliath Laid Bare"
+ novian.60210.desc:0 "As our ground forces gained tactical superiority on $novian_name_capital$, elite units moved quickly to hunt down the Arikhan himself, fuelled by the thirst for imminent vengeance.\n\nThe discovery was less than climactic: the Arikhan's corpse slumped in a dark corner, hands clasped around an ornamental blade twisting deep into his cyberised brain stem."
+ novian.60210.a:0 "Too easy an escape for one so monstrous."
  #Reanimators+variants response to revive him for punishment?
  #The knife should be a Specimen given from this event (inspiration from Ukrainian Bulava - even decorative items have hidden lethal capabilities for those as untrusting as Novians)
- #Canonically, he ran a cybernetic program so that the non-sentient parts of his body would decisively kill him. Still not enough for reanimators ofc.
+ #Canonically, he ran a cybernetic program so that the non-sentient parts of his body would decisively kill him. Still not enough for reanimators though.?
 
- giga_novian.60220.name:0 "Heart of Darkness"
- giga_novian.60220.desc:0 "We thought we knew the horrors of Noviankind, but... $novian_name_capital$ is an excavation of sedimented atrocities, dating back eons. Even in light of our total victory, morale issues cripple our forces; the personnel assigned to the planet work leadenly, efforts impeded by a high turnover rate. The Arikhanate may be gone, but perhaps even now the Arikhan's influence touches us from beyond the veil."
- giga_novian.60220.a:0 "What is this...?"
+ novian.60220.name:0 "Heart of Darkness"
+ novian.60220.desc:0 "We thought we knew the horrors of Noviankind, but... $novian_name_capital$ is an excavation of sedimented atrocities, dating back eons. Even in light of our total victory, morale issues cripple our forces; the personnel assigned to the planet work leadenly, efforts impeded by a high turnover rate. The Arikhanate may be gone, but perhaps even now the Arikhan's influence touches us from beyond the veil."
+ novian.60220.a:0 "What is this...?"
  #This event gives a negative happiness modifier empirewide?
 
 
  ###################
  ##### RAIDING #####
  ###################
- giga_novian.144.name:0 "Incoming Transmission"
- giga_novian.144.desc:0 "Hello xenos\n\nYou are harboring resources which can and will be used in the construction of the §RULTIMATE ANSWER§!, please do not resist primitive, as that would negatively impact your nation and its people."
- giga_novian.144.a:0 "What about the trout population on [Root.GetHomeWorldName]" #gonna have to remove this
- giga_novian.145.name:0 "Novian Raid"
- giga_novian.145.desc:0 "The Novians have seemingly sent a raiding party to assault a foreign power in an effort to gather resources for their so called 'Ultimate Answer.'"
- giga_novian.145.a:0 "Let us hope that this attempt fails..."
- giga_novian.160.name:0 "Planet Raided!"
- giga_novian.160.desc:0 "Following a vicious assault, the Novians have plundered one of our planets! Fortunately, they seem content with their loot and captives, and are departing for now..." #placeholder
- giga_novian.160.a:0 "They will pay.. somehow..."
- giga_novian.170.name:0 "Raiders Defeated!"
- giga_novian.170.desc:0 "Our forces have successfully rallied to defend our planets from Novian raiders!" #This assumes your fleet destroyed them.
- giga_novian.50001.name:0 "Ancient Ruins"
- giga_novian.50001.desc:0 "While revisiting our studies of the Novians, our scientists managed to deduce the location of a system they once visited. We should investigate it as soon as possible."
+ novian.144.name:0 "Incoming Transmission"
+ novian.144.desc:0 "Hello xenos\n\nYou are harboring resources which can and will be used in the construction of the §RULTIMATE ANSWER§!, please do not resist primitive, as that would negatively impact your nation and its people."
+ novian.144.a:0 "What about the trout population on [Root.GetHomeWorldName]" #gonna have to remove this
+ novian.145.name:0 "Novian Raid"
+ novian.145.desc:0 "The Novians have seemingly sent a raiding party to assault a foreign power in an effort to gather resources for their so called 'Ultimate Answer.'"
+ novian.145.a:0 "Let us hope that this attempt fails..."
+ novian.160.name:0 "Planet Raided!"
+ novian.160.desc:0 "Following a vicious assault, the Novians have plundered one of our planets! Fortunately, they seem content with their loot and captives, and are departing for now..." #placeholder
+ novian.160.a:0 "They will pay.. somehow..."
+ novian.170.name:0 "Raiders Defeated!"
+ novian.170.desc:0 "Our forces have successfully rallied to defend our planets from Novian raiders!" #This assumes your fleet destroyed them.
+ novian.50001.name:0 "Ancient Ruins"
+ novian.50001.desc:0 "While revisiting our studies of the Novians, our scientists managed to deduce the location of a system they once visited. We should investigate it as soon as possible."

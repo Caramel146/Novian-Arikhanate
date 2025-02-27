@@ -45,7 +45,7 @@
  trait_novian_fanaticism_desc:0 "§RA combination of a heavyhanded rewiring of aggression centers along with a ready supply of a synthesized arcane hormonal mixture breeds a constant state of rabid, jingoistic fervor in this cyborg species.§!" #Probably xenophobe + militarist ethics attraction, and unity buff. Maybe army morale buff too. 1 trait points, 0.5 energy upkeep
 
  trait_novian_overcharge:0 "Hypercharged Systems"
- trait_novian_overcharge_desc:0 "§RThe cybernetic architecture of this species is in a constant state of overcharge, vastly expanding the number of systems they can support at the cost of exorbitant power usage.§!"  #+2 energy upkeep, but -4 trait point cost. Maybe buff resources by a bit - should be a staple trait.
+ trait_novian_overcharge_desc:0 "§RThe cybernetic architecture of this species is in a constant state of overcharge, vastly expanding the number of systems they can support at the cost of exorbitant power usage.§!" #+2 energy upkeep, but -4 trait point cost. Maybe buff resources by a bit - should be a staple trait.
 
  trait_novian_lobotomy:0 "Servitor Drone"
  trait_novian_lobotomy_desc:0 "§RThe minds and bodies of this species have been cybernetically resculpted into obedient drones. Supplemented with low level integrated AI, they can perform certain higher complexity tasks but remain outwardly devoid of any personality or sense of self.§!" #Same capabilities as Droids? 1 trait point cost, 0.5 energy upkeep

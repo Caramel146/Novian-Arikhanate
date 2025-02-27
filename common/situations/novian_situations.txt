@@ -1,0 +1,298 @@
+novian_situation_rehab_agartha = {
+    # picture = GFX_evt_archaeology_camp
+    # picture = GFX_evt_black_market
+    # picture = GFX_evt_busy_spaceport
+    # picture = GFX_evt_city_ruins
+    # picture = GFX_evt_collapsing_roof
+    # picture = GFX_evt_derelict_interior
+    # picture = GFX_evt_relic_world
+    # picture = GFX_evt_relic_world_building
+    # picture = GFX_evt_relic_world_street
+    picture = GFX_evt_poor_stormshelter
+    # picture = GFX_evt_treasure_pile
+    # picture = GFX_evt_treasure_trove
+
+    category = positive
+
+    fail_icon = GFX_situation_outcome_giga_calm
+    fail_icon_frame = GFX_situation_outcome_frame_green
+    complete_icon = GFX_situation_outcome_unknown
+    complete_icon_frame = GFX_situation_outcome_frame_blue
+
+    start_value = 0
+    progress_direction = monodirectional
+    monthly_progress = { base = 0 }
+
+    target_modifier = {}
+    triggered_modifier = {}
+    triggered_target_modifier = {}
+
+    approach = {
+        name = giga_situation_birch_origin_approach_frugal
+        icon = GFX_situation_approach_balance_sheet
+        icon_background = GFX_situation_approach_bg_red
+
+        on_select = {
+            custom_tooltip = giga_situation_birch_origin_approach_frugal_effect
+        }
+
+        resources = {
+            category = situations
+            cost = {
+                influence = 50
+            }
+        }
+
+        modifier = {
+        }
+    }
+
+    desc = {
+        text = compound_situation_desc_1
+        trigger = {
+            current_stage = stage_1
+        }
+    }
+
+    on_start = {}
+    on_monthly = {}
+    abort_trigger = {}
+    on_abort = {}
+    on_fail = {}
+    on_progress_complete = {}
+
+    stages = {
+        stage_1 = {
+            icon = GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_blue
+            end = 15
+            custom_tooltip = compound_situation_stage_1_tooltip
+        }
+
+        stage_2 = {
+            icon = GFX_situation_stage_2
+            icon_background = GFX_situation_stage_frame_blue
+            end = 70
+            custom_tooltip = compound_situation_stage_2_tooltip
+
+            on_first_enter = {
+            }
+        }
+
+        stage_3 = {
+            icon = GFX_situation_stage_3
+            icon_background = GFX_situation_stage_frame_blue
+            end = 100
+            custom_tooltip = compound_situation_stage_3_tooltip
+
+            on_first_enter = {
+            }
+        }
+    }
+}
+
+
+novian_situation_dissidence_general = {
+    picture = GFX_evt_dark_alley
+
+    category = neutral
+
+    fail_icon = GFX_situation_outcome_negative
+    fail_icon_frame = GFX_situation_outcome_frame_red
+    complete_icon = GFX_situation_outcome_revolt
+    complete_icon_frame = GFX_situation_outcome_frame_green
+
+    start_value = 50
+    progress_direction = monodirectional
+    monthly_progress = {
+        base = 0
+        modifier = { #Decay from counterintelligence
+            subtract = value:nos_counter
+            desc = novian_situation_dissidence_general_counterintel
+        }
+        modifier = { #Medium investment
+            add = owner.nos_infil
+            desc = novian_situation_dissidence_general_approach_medium
+            current_situation_approach = novian_situation_dissidence_general_approach_medium
+        }
+        modifier = { #Intense investment
+            add = owner.nos_infil_double
+            desc = novian_situation_dissidence_general_approach_high
+            current_situation_approach = novian_situation_dissidence_general_approach_high
+        }
+        modifier = { #Self-sustaining dissidence (trivial)
+            add = 1
+            desc = novian_situation_dissidence_general_self_sustaining_low
+            current_stage = stage_2
+        }
+        modifier = { #Self-sustaining dissidence (problematic)
+            add = 3
+            desc = novian_situation_dissidence_general_self_sustaining_medium
+            current_stage = stage_3
+        }
+        modifier = { #Self-sustaining dissidence (crippling)
+            add = 6
+            desc = novian_situation_dissidence_general_self_sustaining_high
+            current_stage = stage_4
+        }
+    }
+
+    target_modifier = { }
+
+    approach = {
+        name = novian_situation_dissidence_general_approach_low
+        icon = GFX_situation_approach_shrug
+        icon_background = GFX_situation_approach_bg_green
+
+        on_select = {
+            custom_tooltip = novian_situation_dissidence_general_approach_low_effect
+        }
+
+        modifier = { }
+    }
+
+    approach = {
+        name = novian_situation_dissidence_general_approach_medium
+        icon = GFX_situation_approach_pop
+        icon_background = GFX_situation_approach_bg_yellow
+
+        on_select = {
+            custom_tooltip = novian_situation_dissidence_general_approach_medium_effect
+        }
+
+        resources = {
+            category = situations
+            cost = {
+                influence = 50
+            }
+        }
+
+        modifier = { #ideally this would be a flat cost based on the difficulty
+            country_influence_produces_mult = -0.10
+            country_energy_produces_mult = -0.10
+            country_society_research_produces_mult = -0.10
+        }
+    }
+
+    approach = {
+        name = novian_situation_dissidence_general_approach_high
+        icon = GFX_situation_approach_influence
+        icon_background = GFX_situation_approach_bg_red
+
+        on_select = {
+            custom_tooltip = novian_situation_dissidence_general_approach_high_effect
+        }
+
+        resources = {
+            category = situations
+            cost = {
+                influence = 100
+            }
+        }
+
+        modifier = { #ideally this would be a flat cost based on the difficulty
+            country_influence_produces_mult = -0.25
+            country_energy_produces_mult = -0.25
+            country_society_research_produces_mult = -0.25
+        }
+    }
+
+    desc = {
+        text = novian_situation_dissidence_general_desc_1
+        trigger = {
+            current_stage = stage_1
+        }
+    }
+
+    desc = {
+        text = novian_situation_dissidence_general_desc_2
+        trigger = {
+            current_stage = stage_2
+        }
+    }
+
+    desc = {
+        text = novian_situation_dissidence_general_desc_3
+        trigger = {
+            current_stage = stage_3
+        }
+    }
+
+    desc = {
+        text = novian_situation_dissidence_general_desc_4
+        trigger = {
+            current_stage = stage_4
+        }
+    }
+
+    on_start = {
+        set_situation_approach = novian_situation_dissidence_general_approach_medium
+    }
+    on_monthly = {
+        events = {
+            novian.20005 #increases dissident faction membership and evaluates correct penalty modifier to Arikhanate
+        }
+    }
+    abort_trigger = { }
+    on_abort = { }
+    on_fail = {
+        custom_tooltip = novian_situation_dissidence_general_failure_tooltip
+        hidden_effect = {
+            #situation_event = { id = novian_20015 }
+            destroy_situation = this
+        }
+    }
+    on_progress_complete = {
+        custom_tooltip = novian_situation_dissidence_general_success_tooltip
+        situation_event = { id = novian.20014 }
+        hidden_effect = {
+            destroy_situation = this
+        }
+    }
+
+    stages = {
+        stage_1 = {
+            icon = GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_red
+            end = 250
+            custom_tooltip = novian_situation_dissidence_general_stage_1_tooltip
+
+            # on_first_enter = {
+            #     situation_event = { id = novian.20010 }
+            # }
+        }
+
+        stage_2 = {
+            icon = GFX_situation_stage_2
+            icon_background = GFX_situation_stage_frame_blue
+            end = 500
+            custom_tooltip = novian_situation_dissidence_general_stage_2_tooltip
+
+            on_first_enter = {
+                situation_event = { id = novian.20011 }
+            }
+        }
+
+        stage_3 = {
+            icon = GFX_situation_stage_3
+            icon_background = GFX_situation_stage_frame_blue
+            end = 750
+            custom_tooltip = novian_situation_dissidence_general_stage_3_tooltip
+
+            on_first_enter = {
+                situation_event = { id = novian.20012 }
+            }
+        }
+
+        stage_4 = {
+            icon = GFX_situation_stage_4
+            icon_background = GFX_situation_stage_frame_green
+            end = 1000
+            custom_tooltip = novian_situation_dissidence_general_stage_4_tooltip
+
+            on_first_enter = {
+                situation_event = { id = novian.20013 }
+            }
+        }
+    }
+}

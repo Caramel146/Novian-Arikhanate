@@ -3,15 +3,13 @@
 ###################################
 
 #Urban
-district_giga_novian_city = {
+district_novian_city = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = novian_districts
-		}
+		uses_district_set = novian_districts
 	}
 
 	potential = {
@@ -32,21 +30,19 @@ district_giga_novian_city = {
 	planet_modifier = {
 		planet_housing_add = 10
 		planet_amenities_add = 15
-		job_giga_novian_oppressor_add = 2
+		job_novian_oppressor_add = 2
 	}
 }
 
 
 #Industrial
-district_giga_novian_industrial = {
+district_novian_industrial = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = novian_districts
-		}
+		uses_district_set = novian_districts
 	}
 
 	potential = {
@@ -67,21 +63,19 @@ district_giga_novian_industrial = {
 	planet_modifier = {
 		planet_housing_add = 10
 		planet_jobs_alloys_produces_mult = 0.1
-		job_giga_novian_manufacturer_add = 5
+		job_novian_manufacturer_add = 5
 	}
 }
 
 
 #Energy
-district_giga_novian_energy = {
+district_novian_energy = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = novian_districts
-		}
+		uses_district_set = novian_districts
 	}
 
 	potential = {
@@ -102,21 +96,19 @@ district_giga_novian_energy = {
 	planet_modifier = {
 		planet_housing_add = 5
 		planet_jobs_energy_produces_mult = 0.1
-		job_giga_novian_technician_add = 5
+		job_novian_technician_add = 5
 	}
 }
 
 
 #Mining
-district_giga_novian_mining = {
+district_novian_mining = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = novian_districts
-		}
+		uses_district_set = novian_districts
 	}
 
 	potential = {
@@ -137,21 +129,19 @@ district_giga_novian_mining = {
 	planet_modifier = {
 		planet_housing_add = 5
 		planet_jobs_minerals_produces_mult = 0.1
-		job_giga_novian_miner_add = 5
+		job_novian_miner_add = 5
 	}
 }
 
 
 #Farming
-district_giga_novian_farming = {
+district_novian_farming = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = novian_districts
-		}
+		uses_district_set = novian_districts
 	}
 
 	potential = {
@@ -172,7 +162,7 @@ district_giga_novian_farming = {
 	planet_modifier = {
 		planet_housing_add = 5
 		planet_jobs_food_produces_mult = 0.10
-		job_giga_novian_farmer_add = 5
+		job_novian_farmer_add = 5
 	}
 }
 
@@ -183,15 +173,13 @@ district_giga_novian_farming = {
 ##################################
 
 ### Agartha ###
-district_giga_novian_agartha = {
+district_novian_agartha = {
 	base_buildtime = 480
 	is_capped_by_modifier = yes
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = agartha_districts
-		}
+		uses_district_set = agartha_districts
 	}
 	potential = {
 		exists = owner
@@ -224,21 +212,19 @@ district_giga_novian_agartha = {
 				is_country_type = novian_arikhanate
 			}
 		}
-		job_giga_novian_oppressor_add = 10
+		job_novian_oppressor_add = 10
 	}
 }
 
 
 #Shipyard and Quashab Habitation
-district_giga_novian_spacehab = {
+district_novian_spacehab = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = giga_orbital
-		}
+		uses_district_set = giga_orbital
 		OR = {
 			has_planet_flag = novian_colony_shipyard
 			has_planet_flag = novian_colony_quashab
@@ -277,21 +263,19 @@ district_giga_novian_spacehab = {
 
 	planet_modifier = {
 		planet_housing_add = 8
-		job_giga_novian_oppressor_add = 1
+		job_novian_oppressor_add = 1
 	}
 }
 
 
 #Shipwright
-district_giga_novian_shipwright = {
+district_novian_shipwright = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = giga_orbital
-		}
+		uses_district_set = giga_orbital
 		has_planet_flag = novian_colony_shipyard
 	}
 
@@ -333,7 +317,7 @@ district_giga_novian_shipwright = {
 	        owner = { is_country_type = novian_arikhanate }
 	    }
 	    modifier = {
-	        job_giga_novian_shipwright_novian_add = 4
+	        job_novian_shipwright_novian_add = 4
 	    }
 	}
 
@@ -344,7 +328,7 @@ district_giga_novian_shipwright = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_giga_novian_shipwright_individualist_add = 4
+			job_novian_shipwright_individualist_add = 4
 		}
 	}
 
@@ -355,22 +339,20 @@ district_giga_novian_shipwright = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_giga_novian_shipwright_gestalt_add = 4
+			job_novian_shipwright_gestalt_add = 4
 		}
 	}
 }
 
 
 #Quasar Energy
-district_giga_novian_quastech = {
+district_novian_quastech = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
 		exists = from
-		from = {
-			uses_district_set = giga_orbital
-		}
+		uses_district_set = giga_orbital
 		has_planet_flag = novian_colony_quashab
 	}
 
@@ -397,7 +379,6 @@ district_giga_novian_quastech = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		job_giga_dark_matter_weaver_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -405,7 +386,7 @@ district_giga_novian_quastech = {
 			exists = owner
 			owner = { is_country_type = novian_arikhanate }
 		}
-		job_giga_novian_technician_add = 3
+		job_novian_technician_add = 4 #one more due to merging technician and dark matter weaver count
 	}
 
 	triggered_planet_modifier = {
@@ -419,6 +400,7 @@ district_giga_novian_quastech = {
 		}
 		job_technician_add = 3
 		#mult = owner.value:hab_void_dweller_jobs
+		job_giga_dark_matter_weaver_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -428,6 +410,7 @@ district_giga_novian_quastech = {
 		}
 		job_fe_acolyte_generator_add = 3
 		#mult = owner.value:hab_void_dweller_jobs
+		job_giga_dark_matter_weaver_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -437,22 +420,15 @@ district_giga_novian_quastech = {
 		}
 		job_technician_drone_add = 3
 		#mult = owner.value:hab_void_dweller_jobs
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		job_technician_drone_add = 3
+		job_giga_dark_matter_weaver_drone_add = 1
 	}
 
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_gestalt = yes }
+			owner = { is_fallen_empire_spiritualist = yes }
 		}
-		text = job_technician_drone_effect_desc
+		text = job_fe_acolyte_generator_effect_desc
 	}
 
 	triggered_desc = {
@@ -470,8 +446,8 @@ district_giga_novian_quastech = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_fallen_empire_spiritualist = yes }
+			owner = { is_gestalt = yes }
 		}
-		text = job_fe_acolyte_generator_effect_desc
+		text = job_technician_drone_effect_desc
 	}
 }

@@ -34,7 +34,7 @@ ndb_shield_0 = {
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
 	ai_weight = { factor = 0 }
-	prerequisites = { tech_ndb_shield }
+	prerequisites = { tech_novian_ndb_shield }
 
 	build_time = 1800
 	resources = {
@@ -54,7 +54,7 @@ ndb_shield_0 = {
 	
 	potential = {
 		has_gigastructural_constructs = yes
-		has_technology = tech_ndb_shield
+		has_technology = tech_novian_ndb_shield
 		NOR = {
 			#has_global_flag = ndb_disabled
 			has_megastructure = ndb_shield_0
@@ -136,7 +136,7 @@ ndb_shield_1 = {
 	possible = {
 		from = {
 			has_gigastructural_constructs = yes
-			has_technology = tech_ndb_shield
+			has_technology = tech_novian_ndb_shield
 		}
 	}
 
@@ -169,7 +169,7 @@ ndb_shield_2 = {
 	possible = {
 		from = {
 			has_gigastructural_constructs = yes
-			has_technology = tech_ndb_shield
+			has_technology = tech_novian_ndb_shield
 		}
 	}
 
@@ -202,7 +202,7 @@ ndb_shield_3 = {
 	possible = {
 		from = {
 			has_gigastructural_constructs = yes
-			has_technology = tech_ndb_shield
+			has_technology = tech_novian_ndb_shield
 		}
 	}
 
@@ -240,7 +240,7 @@ ndb_shield_4 = {
 	possible = {
 		from = {
 			has_gigastructural_constructs = yes
-			has_technology = tech_ndb_shield
+			has_technology = tech_novian_ndb_shield
 		}
 	}
 

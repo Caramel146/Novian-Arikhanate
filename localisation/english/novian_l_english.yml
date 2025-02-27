@@ -30,6 +30,7 @@
  GIGANOVIAN_remnant:0 "Sludge"
  GIGANOVIAN_remnant_plural:0 "Sludge"
 
+
  ############################
  ##### CELESTIAL BODIES #####
  ############################
@@ -37,295 +38,301 @@
  pc_strange_star_desc:0 "This star seems to be made of a uniquely poorly understood form of matter. This star's corona is violent and chaotic, making coronal mass ejections commonplace and exceptionally destructive, although orbiting planets towards the edge of the system seem to be mostly spared. The star also rotates with such speed and force that it mimicks the polar electromagnetic emissions of a pulsar."
  sc_strange:1 "$pc_strange_star$" #Idk what the 0 or 1 does, but this is how vanilla does star locs. - Caramel
  sc_strange_desc:1 "$pc_strange_star_desc$"
- pc_novian:0 "Arikian World" #rewrite desc to better reference the name Arikian, and redo the no-enviro thing.
- pc_novian_desc:0 "This toxic world has been shaped to fulfill the needs of the Novians. The lack of a need to care for the environment in any right enables local industries to be extremely productive." #redo loc
+ pc_novian:0 "Arikian World"
+ pc_novian_desc:0 "Extremophilic microbes are widespread across this toxic world. Being both reliant on and integral to Novian industry, the ecology here seems to be synergistic with environmental exploitation."
  pc_novian_adj:0 "Arikian World"
  pc_agartha:0 "Agartha"
- pc_agartha_desc:0 "A "miniature" birch world designed to securely house and employ a diverse slave population."
+ pc_agartha_desc:0 "A "small" shellworld designed to streamline the exploitation of a galaxy's diversity of slave races."
  pc_agartha_adj:0 "Agarthine"
+
 
  #######################################
  ##### Starbases and Orbital Rings #####
  #######################################
- sm_orbital_ring_giga_novian_listening_post: "Galactic Eye" #The Arikhan's Eye
- sm_orbital_ring_giga_novian_listening_post_desc: "A massive surveillance platfrom, providing the Arikhanate with near-total intelligence on the state of the galaxy." #This titanic listening post enables Arikhanate intelligence agencies to gather extremely reliable intel on events in this galaxy. All communications to the Arikhanate are also routed through this station.
- sm_orbital_ring_giga_novian_shipyard: "Armadal Shipyard" #Arikian Shipforge
- sm_orbital_ring_giga_novian_shipyard_desc: "This facility provides essential shipbuilding facilities for the Arikhan's fleet." #What appear to be barbs on this equatorial ring reveal themselves to actually be highly advanced shipyards, enabling one of these rings to make a fleet of considerable size in a remarkably short period.
- sm_orbital_ring_giga_novian_pd_array: "Bulwark Array"
- sm_orbital_ring_giga_novian_pd_array_desc: "This complex provides an immense amount of point defense, helping shield its base from those who would wish to fire upon it." #Through a unique combination of Psykotech and kinetics, these batteries are capable of slowing missiles down to speeds which make them far easier to intercept before rendering them inoperable via railguns.
- sm_orbital_ring_giga_novian_aegis_shield: "Aegisphere Projector"
- sm_orbital_ring_giga_novian_aegis_shield_desc: "This facility of Novian design provides the planet below a nigh-impenetrable planetary shield, protecting it from any invaders." #This massive shield is capable of protecting the world it encompasses using a half psionic half energy based barrier which protects not only from third dimensional bombings but also ones of the fourth dimensional and quite possibly even higher, if the final tier of it not appearing activated is to be believed...
- sm_ring_giga_novian_garrison: "System Garrison"
- sm_ring_giga_novian_garrison_desc: "This base provides the Arikhanate a massive army presence, showing their dedication to keeping what they believe to be theirs." #It is from this colossal complex from which the warriors of the Arikhanate are able to project power across the system, enabling troop movements across the system at esoterically quick speeds.
- sm_ring_giga_novian_logistics: "Armadal Anchorage" #Arikian Anchorage
- sm_ring_giga_novian_logistics_desc: "This facility of the Arikhanate provides immense ship dockyards and crew provisions, extending their already long arm to dish out punishment to those who oppose it." #It is from this variety of dry docks that the Arikian state is capable of sustaining its fleets. Massive PsykoConveyors pump the much needed supplies and personnel into the organs of vessels, enabling a single Arikian module to sustain a great deal more vessels than conventional technology would.
+ sm_orbital_ring_novian_listening_post: "Galactic Eye" #The Arikhan's Eye
+ sm_orbital_ring_novian_listening_post_desc: "A massive surveillance platfrom, providing the Arikhanate with near-total intelligence on the state of the galaxy." #This titanic listening post enables Arikhanate intelligence agencies to gather extremely reliable intel on events in this galaxy. All communications to the Arikhanate are also routed through this station.
+ sm_orbital_ring_novian_shipyard: "Armadal Shipyard" #Arikian Shipforge
+ sm_orbital_ring_novian_shipyard_desc: "This facility provides essential shipbuilding facilities for the Arikhan's fleet." #What appear to be barbs on this equatorial ring reveal themselves to actually be highly advanced shipyards, enabling one of these rings to make a fleet of considerable size in a remarkably short period.
+ sm_orbital_ring_novian_pd_array: "Bulwark Array"
+ sm_orbital_ring_novian_pd_array_desc: "This complex provides an immense amount of point defense, helping shield its base from those who would wish to fire upon it." #Through a unique combination of Psykotech and kinetics, these batteries are capable of slowing missiles down to speeds which make them far easier to intercept before rendering them inoperable via railguns.
+ sm_orbital_ring_novian_aegis_shield: "Aegisphere Projector"
+ sm_orbital_ring_novian_aegis_shield_desc: "This facility of Novian design provides the planet below a nigh-impenetrable planetary shield, protecting it from any invaders." #This massive shield is capable of protecting the world it encompasses using a half psionic half energy based barrier which protects not only from third dimensional bombings but also ones of the fourth dimensional and quite possibly even higher, if the final tier of it not appearing activated is to be believed...
+ sm_ring_novian_garrison: "System Garrison"
+ sm_ring_novian_garrison_desc: "This base provides the Arikhanate a massive army presence, showing their dedication to keeping what they believe to be theirs." #It is from this colossal complex from which the warriors of the Arikhanate are able to project power across the system, enabling troop movements across the system at esoterically quick speeds.
+ sm_ring_novian_logistics: "Armadal Anchorage" #Arikian Anchorage
+ sm_ring_novian_logistics_desc: "This facility of the Arikhanate provides immense ship dockyards and crew provisions, extending their already long arm to dish out punishment to those who oppose it." #It is from this variety of dry docks that the Arikian state is capable of sustaining its fleets. Massive PsykoConveyors pump the much needed supplies and personnel into the organs of vessels, enabling a single Arikian module to sustain a great deal more vessels than conventional technology would.
+
 
  #####################
  ##### BUILDINGS #####
  #####################
- building_giga_novian_capital:0 "Novian Capital Complex"
- building_giga_novian_capital_desc:0 "The seat of power of local Novian rulers. Uses highly advanced technology to greatly increase the government's control over the planet, increasing stability planetwide."
- mod_building_giga_novian_capital_max:0 "Max $building_giga_novian_capital$"
+ building_novian_capital:0 "Novian Capital Complex"
+ building_novian_capital_desc:0 "The seat of power of local Novian rulers. Uses highly advanced technology to greatly increase the government's control over the planet, increasing stability planetwide."
+ mod_building_novian_capital_max:0 "Max $building_novian_capital$"
 
- building_giga_novian_capital_throne:0 "Palace of the Arikhan"
- building_giga_novian_capital_throne_desc:0 "The formidable architecture of this palatial complex sends a clear message that the Arikhan themself looms in these halls."
- mod_building_giga_novian_capital_throne_max:0 "Max $building_giga_novian_capital_throne$"
+ building_novian_capital_throne:0 "Palace of the Arikhan"
+ building_novian_capital_throne_desc:0 "The formidable architecture of this palatial complex sends a clear message that the Arikhan themself looms in these halls."
+ mod_building_novian_capital_throne_max:0 "Max $building_novian_capital_throne$"
 
- building_giga_novian_city:0 "Novopolis"
- building_giga_novian_city_desc:0 "A highly advanced city that uses Novian technology."
- mod_building_giga_novian_city_max:0 "Max $building_giga_novian_city$"
+ building_novian_city:0 "Novopolis"
+ building_novian_city_desc:0 "A highly advanced city that uses Novian technology."
+ mod_building_novian_city_max:0 "Max $building_novian_city$"
 
- building_giga_novian_civilian_forge:0 "Novian Civilian Manufactory"
- building_giga_novian_civilian_forge_desc:0 "Civilian industries that function efficiently due to being enhanced with Novian technology."
- mod_building_giga_novian_civilian_forge_max:0 "Max $building_giga_novian_civilian_forge$"
+ building_novian_civilian_forge:0 "Novian Civilian Manufactory"
+ building_novian_civilian_forge_desc:0 "Civilian industries that function efficiently due to being enhanced with Novian technology."
+ mod_building_novian_civilian_forge_max:0 "Max $building_novian_civilian_forge$"
 
- building_giga_novian_encampment:0 "Novian Encampment"
- building_giga_novian_encampment_desc:0 "A large military base, prepared to withstand hostile invasion."
- mod_building_giga_novian_encampment_max:0 "Max $building_giga_novian_encampment$"
+ building_novian_encampment:0 "Novian Encampment"
+ building_novian_encampment_desc:0 "A large military base, prepared to withstand hostile invasion."
+ mod_building_novian_encampment_max:0 "Max $building_novian_encampment$"
 
- building_giga_novian_fort:0 "Novian Planetary Bunker"
- building_giga_novian_fort_desc:0 "A planetary bunker system built by the Novians that protects the planet from most orbital bombardment."
- mod_building_giga_novian_fort_max:0 "Max $building_giga_novian_fort$"
+ building_novian_fort:0 "Novian Planetary Bunker"
+ building_novian_fort_desc:0 "A planetary bunker system built by the Novians that protects the planet from most orbital bombardment."
+ mod_building_novian_fort_max:0 "Max $building_novian_fort$"
 
- building_giga_novian_autofab:0 "Novian Automous Fabricator" #Automous?
- building_giga_novian_autofab_desc:0 "Using the energy from the quasar at the heart of Novian civilization, this building uses energy to mass converters to power the industry on this planet."
- mod_building_giga_novian_autofab_max:0 "Max $building_giga_novian_autofab$"
+ building_novian_autofab:0 "Quasigenic Fabricator"
+ building_novian_autofab_desc:0 "Using the energy from the quasar at the heart of Novian civilization, this building uses energy-to-mass converters to power the industry on this planet."
+ mod_building_novian_autofab_max:0 "Max $building_novian_autofab$"
 
- building_giga_novian_temple:0 "Novitic Sanctuary"
- building_giga_novian_temple_desc:0 "A place where local Novians can come together in worship of their gods. Although different from other galactic religions, the Novians still have a unifying faith." #Change this loc.
- mod_building_giga_novian_temple_max:0 "Max $building_giga_novian_temple$"
+ building_novian_temple:0 "Novitic Sanctuary"
+ building_novian_temple_desc:0 "A place where local Novians can come together in worship of their gods. Although different from other galactic religions, the Novians still have a unifying faith." #Change this loc.
+ mod_building_novian_temple_max:0 "Max $building_novian_temple$"
 
- building_giga_novian_grand_temple:0 "Nova's Roost"
- building_giga_novian_grand_temple_desc:0 "The Arikhan himself will bend a knee in this place only, swearing a higher fealty to the deity of the Arikian people: Nova."
- mod_building_giga_novian_grand_temple_max:0 "Max $building_giga_novian_grand_temple$"
+ building_novian_temple_grand:0 "Nova's Roost"
+ building_novian_temple_grand_desc:0 "The Arikhan himself will bend a knee in this place only, swearing a higher fealty to the deity of the Arikian people: Nova."
+ mod_building_novian_grand_temple_max:0 "Max $building_novian_temple_grand$"
 
- building_giga_novian_overseers:0 "Novian Slave Administration"
- building_giga_novian_overseers_desc:0 "This facility arranges for employment of xeno slaves planetwide."
- mod_building_giga_novian_overseers_max:0 "Max $building_giga_novian_overseers$"
+ building_novian_overseers:0 "Agarthine Slave Administration"
+ building_novian_overseers_desc:0 "This facility arranges for employment of xeno slaves planetwide."
+ mod_building_novian_overseers_max:0 "Max $building_novian_overseers$"
 
- building_giga_novian_iodizium_imports:0 "Novian Iodizium Imports Depot"
- building_giga_novian_iodizium_imports_desc:0 "Specialised equipment in these plants extract useable iodizium from the crude conglomerates sourced by distant mining rigs."
- mod_building_giga_novian_iodizium_imports_max:0 "Max $building_giga_novian_iodizium_imports$"
+ building_novian_iodizium_imports:0 "Iodizium Imports Depot"
+ building_novian_iodizium_imports_desc:0 "Specialised equipment in these plants extract useable iodizium from the crude conglomerates sourced by distant mining rigs."
+ mod_building_novian_iodizium_imports_max:0 "Max $building_novian_iodizium_imports$"
 
- building_giga_novian_ripperdoc:0 "Novian Biotech Clinic"
- building_giga_novian_ripperdoc_desc:0 "Patients go into these blackbox facilities flesh and walk out steel. For psychological safety, memories of the procedure are removed."
- mod_building_giga_novian_ripperdoc_max:0 "Max $building_giga_novian_ripperdoc$"
+ building_novian_ripperdoc:0 "Meatcarver Clinic"
+ building_novian_ripperdoc_desc:0 "Patients go into these blackbox facilities flesh and walk out steel. For psychological safety, memories of the procedure are removed."
+ mod_building_novian_ripperdoc_max:0 "Max $building_novian_ripperdoc$"
 
- building_giga_novian_orbital_uplink:0 "Orbital Assembly Complex"
- building_giga_novian_orbital_uplink_desc:0 "A soaring tower linking planetside industry and defenses with orbital infrastructure."
- mod_building_giga_novian_orbital_uplink_max:0 "Max $building_giga_novian_orbital_uplink$"
+ building_novian_orbital_uplink:0 "Orbital Assembly Complex"
+ building_novian_orbital_uplink_desc:0 "A soaring tower linking planetside industry and defenses with orbital infrastructure."
+ mod_building_novian_orbital_uplink_max:0 "Max $building_novian_orbital_uplink$"
 
- building_giga_novian_hangars:0 "Landship Hangars"
- building_giga_novian_hangars_desc:0 "Behind these vast doors lie the Arikarophrakts, pride and joy of Novian ground warfare."
- mod_building_giga_novian_hangars_max:0 "Max $building_giga_novian_hangars$"
+ building_novian_hangars:0 "Landship Hangars"
+ building_novian_hangars_desc:0 "Behind these vast doors lie the Arikarophrakts, pride and joy of Novian ground warfare."
+ mod_building_novian_hangars_max:0 "Max $building_novian_hangars$"
 
- building_giga_novian_colosseum:0 "Arikolosseum"
- building_giga_novian_colosseum_desc:0 "Citizens around the Arikhanate tune in to the savage sports held here, where cybergladiators spill blood and oil below the cheering crowd."
- mod_building_giga_novian_colosseum_max:0 "Max $building_giga_novian_colosseum$"
+ building_novian_colosseum:0 "Arikolosseum"
+ building_novian_colosseum_desc:0 "Citizens around the Arikhanate tune in to the savage sports held here, where cybergladiators spill blood and oil below the cheering crowd."
+ mod_building_novian_colosseum_max:0 "Max $building_novian_colosseum$"
 
- building_giga_novian_strange_matter_plant:0 "Hyperogenesis Plant"
- building_giga_novian_strange_matter_plant_desc:0 "Suspended within a layered matrix of confinement fields, this strangelet undergoes controlled reproduction on a diet of strictly-quantified quantum phenomena."
- mod_building_giga_novian_strange_matter_plant_max:0 "Max $building_giga_novian_strange_matter_plant$"
+ building_novian_strange_matter_plant:0 "Hyperogenesis Plant"
+ building_novian_strange_matter_plant_desc:0 "Suspended within a layered matrix of confinement fields, this strangelet undergoes controlled reproduction on a diet of strictly-quantified quantum phenomena."
+ mod_building_novian_strange_matter_plant_max:0 "Max $building_novian_strange_matter_plant$"
+
 
  ################
  ##### JOBS #####
  ################
- job_giga_novian_toiler: "Agarthine Toiler"
- job_giga_novian_toiler_plural: "Agarthine Toilers"
- job_giga_novian_toiler_desc: "These unfortunate captives are forced to work till death by the Novian authorities." #Not exactly the case under current lore - rework.
- job_giga_novian_toiler_effect_desc: "£job_giga_novian_toiler£ $job_giga_novian_toiler_plural$ produce £energy£ §Y$energy$§!, £minerals£ §Y$minerals$§! and £food£ §Y$food$§!"
- mod_job_giga_novian_toiler_add: "$job_giga_novian_toiler$ Jobs"
+ job_novian_toiler: "Agarthine Toiler"
+ job_novian_toiler_plural: "Agarthine Toilers"
+ job_novian_toiler_desc: "These unfortunate captives are forced to work till death by the Novian authorities." #Not exactly the case under current lore - rework.
+ job_novian_toiler_effect_desc: "£job_novian_toiler£ $job_novian_toiler_plural$ produce £energy£ §Y$energy$§!, £minerals£ §Y$minerals$§! and £food£ §Y$food$§!"
+ mod_job_novian_toiler_add: "$job_novian_toiler$ Jobs"
 
- job_giga_novian_scavenger: "Agarthine Scavenger"
- job_giga_novian_scavenger_plural: "Agarthine Scavengers"
- job_giga_novian_scavenger_desc: "Smelting scrap metal and cataloguing the Agartha's deteriorating resource caches could employ a medium-sized civilisation for centuries." #Alternative desc idea focuses on how it's still a dangerous job, even when not working under the Novians.
- job_giga_novian_scavenger_effect_desc: "£job_giga_novian_scavenger£ $job_giga_novian_scavenger_plural$ produce £energy£ §Y$energy$§!, £minerals£ §Y$minerals$§! and £food£ §Y$food$§!"
- mod_job_giga_novian_scavenger_add: "$job_giga_novian_scavenger$ Jobs"
+ job_novian_scavenger: "Agarthine Scavenger"
+ job_novian_scavenger_plural: "Agarthine Scavengers"
+ job_novian_scavenger_desc: "Smelting scrap metal and cataloguing the Agartha's deteriorating resource caches could employ a medium-sized civilisation for centuries." #Alternative desc idea focuses on how it's still a dangerous job, even when not working under the Novians.
+ job_novian_scavenger_effect_desc: "£job_novian_scavenger£ $job_novian_scavenger_plural$ produce £energy£ §Y$energy$§!, £minerals£ §Y$minerals$§! and £food£ §Y$food$§!"
+ mod_job_novian_scavenger_add: "$job_novian_scavenger$ Jobs"
 
- job_giga_novian_scavenger_gestalt: "Agarthine Scavenger Drone"
- job_giga_novian_scavenger_gestalt_plural: "Agarthine Scavenger Drones"
- job_giga_novian_scavenger_gestalt_desc: "Smelting scrap metal and cataloguing the Agartha's deteriorating resource caches could employ a medium-sized civilisation for centuries." #Alternative desc idea focuses on how it's still a dangerous job, even when not working under the Novians.
- job_giga_novian_scavenger_gestalt_effect_desc: "£job_giga_novian_scavenger_gestalt£ $job_giga_novian_scavenger_gestalt_plural$ produce £energy£ §Y$energy$§!, £minerals£ §Y$minerals$§! and £food£ §Y$food$§!"
- mod_job_giga_novian_scavenger_gestalt_add: "$job_giga_novian_scavenger_gestalt$ Jobs"
+ job_novian_scavenger_gestalt: "Agarthine Scavenger Drone"
+ job_novian_scavenger_gestalt_plural: "Agarthine Scavenger Drones"
+ job_novian_scavenger_gestalt_desc: "Smelting scrap metal and cataloguing the Agartha's deteriorating resource caches could employ a medium-sized civilisation for centuries." #Alternative desc idea focuses on how it's still a dangerous job, even when not working under the Novians.
+ job_novian_scavenger_gestalt_effect_desc: "£job_novian_scavenger_gestalt£ $job_novian_scavenger_gestalt_plural$ produce £energy£ §Y$energy$§!, £minerals£ §Y$minerals$§! and £food£ §Y$food$§!"
+ mod_job_novian_scavenger_gestalt_add: "$job_novian_scavenger_gestalt$ Jobs"
 
- job_giga_novian_technician: "Novian Machinist" #Mekhanist?
- job_giga_novian_technician_plural: "Novian Machinists"
- job_giga_novian_technician_desc: "A mind for sustainability is rare in Arikian society, making the work of these resourceful individuals even more critical in preventing infrastructural collapse."
- job_giga_novian_technician_effect_desc: "£job_giga_novian_technician£ $job_giga_novian_technician_plural$ produce £energy£ §Y$energy$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
- mod_job_giga_novian_technician_add: "$job_giga_novian_technician$ Jobs"
+ job_novian_technician: "Novian Machinist"
+ job_novian_technician_plural: "Novian Machinists"
+ job_novian_technician_desc: "A mind for sustainability is rare in Arikian society, making the work of these resourceful individuals even more critical in preventing infrastructural collapse."
+ job_novian_technician_effect_desc: "£job_novian_technician£ $job_novian_technician_plural$ produce £energy£ §Y$energy$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
+ mod_job_novian_technician_add: "$job_novian_technician$ Jobs"
 
- job_giga_novian_miner: "Novian Miner"
- job_giga_novian_miner_plural: "Novian Miners"
- job_giga_novian_miner_desc: "Rugged miners work doggedly at the rock faces that mark the leading edges of Novian urban sprawl." #Comment now refers to obsolete desc and lore: Stony is a dual-use wordplay referring to them beings lithoids and stern. #Even previouser desc: Few of the Novians' subterranean cities are carved by their own hand nowadays.
- job_giga_novian_miner_effect_desc: "£job_giga_novian_miner£ $job_giga_novian_miner_plural$ produce £minerals£ §Y$minerals$§!, £rare_crystals£ §Y$rare_crystals$§! and £volatile_motes£ §Y$volatile_motes$§!"
- mod_job_giga_novian_miner_add: "$job_giga_novian_miner$ Jobs"
+ job_novian_miner: "Novian Miner"
+ job_novian_miner_plural: "Novian Miners"
+ job_novian_miner_desc: "Rugged miners who work doggedly at the rock faces marking the leading edges of Novian urban sprawl."
+ job_novian_miner_effect_desc: "£job_novian_miner£ $job_novian_miner_plural$ produce £minerals£ §Y$minerals$§!, £rare_crystals£ §Y$rare_crystals$§! and £volatile_motes£ §Y$volatile_motes$§!"
+ mod_job_novian_miner_add: "$job_novian_miner$ Jobs"
 
- job_giga_novian_farmer: "Planktoculturalist" #https://discord.com/channels/739835273969664050/997970920234823812/1289841192590118912
- job_giga_novian_farmer_plural: "Planktoculturalists"
- job_giga_novian_farmer_desc: "These trained biotechnicians cultivate vats of organic sludge, producing vast quantities of technically-edible gruel." #Versed in biotech and agronomy, these individuals operate the baleens that reap useful biomass from vast tracts of unspeakable sludge.
- job_giga_novian_farmer_effect_desc: "£job_giga_novian_farmer£ $job_giga_novian_farmer_plural$ produce £food£ §Y$food$§! and £exotic_gases£ §Y$exotic_gases$§!"
- mod_job_giga_novian_farmer_add: "$job_giga_novian_farmer$ Jobs"
+ job_novian_farmer: "Planktoculturalist"
+ job_novian_farmer_plural: "Planktoculturalists"
+ job_novian_farmer_desc: "These trained biotechnicians cultivate vats of organic sludge, producing vast quantities of technically-edible gruel." #Versed in biotech and agronomy, these individuals operate the baleens that reap useful biomass from vast tracts of unspeakable sludge.
+ job_novian_farmer_effect_desc: "£job_novian_farmer£ $job_novian_farmer_plural$ produce £food£ §Y$food$§! and £exotic_gases£ §Y$exotic_gases$§!"
+ mod_job_novian_farmer_add: "$job_novian_farmer$ Jobs"
 
- job_giga_novian_ripperdoc: "Meatcarver"
- job_giga_novian_ripperdoc_plural: "Meatcarver"
- job_giga_novian_ripperdoc_desc: "No matter how terrifying their style may be - hence the colloquialism "meatcarver" - there is no refuting the Novians' claims that these cyber- and bio- technicians are the most skilled in the galaxy."
- job_giga_novian_ripperdoc_effect_desc: "£job_giga_novian_ripperdoc£ $job_giga_novian_ripperdoc_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £engineering£ §Y$engineering_research$§!, £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, £mod_pop_growth_speed£§Y$MOD_POP_GROWTH_SPEED$§!, and £mod_trade_value_add£ §Y$TRADE_VALUE$§!"
- mod_job_giga_novian_ripperdoc_add: "$job_giga_novian_ripperdoc$ Jobs"
+ job_novian_ripperdoc: "Meatcarver"
+ job_novian_ripperdoc_plural: "Meatcarvers"
+ job_novian_ripperdoc_desc: "No matter how terrifying their style may be - hence the colloquialism "meatcarver" - there is no refuting the Novians' claims that these cyber- and bio- technicians are the most skilled in the galaxy."
+ job_novian_ripperdoc_effect_desc: "£job_novian_ripperdoc£ $job_novian_ripperdoc_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £engineering£ §Y$engineering_research$§!, £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, £mod_pop_growth_speed£§Y$MOD_POP_GROWTH_SPEED$§!, and £mod_trade_value_add£ §Y$TRADE_VALUE$§!"
+ mod_job_novian_ripperdoc_add: "$job_novian_ripperdoc$ Jobs"
 
- job_giga_novian_oppressor: "Oppressor"
- job_giga_novian_oppressor_plural: "Oppressors"
- job_giga_novian_oppressor_desc: "The feared civil enforcement of the Arikhanate, oppressing the citizens beneath them in the name of order."
- job_giga_novian_oppressor_effect_desc: "£job_giga_novian_oppressor£ $job_giga_novian_oppressor_plural$ turn £energy£ §Y$energy$§! into £unity£ §Y$unity$§!, decrease £crime£ §Y$PLANET_CRIME_TITLE$§! and spawn £defense_army£ §YDefense Armies§!"
- mod_job_giga_novian_oppressor_add: "$job_giga_novian_oppressor$ Jobs"
+ job_novian_oppressor: "Commissar"
+ job_novian_oppressor_plural: "Commissars"
+ job_novian_oppressor_desc: "Any Novian that lives to adulthood knows to turn deviants over to the $job_novian_oppressor_plural$, for those who show mercy are no less guilty of treason."
+ job_novian_oppressor_effect_desc: "£job_novian_oppressor£ $job_novian_oppressor_plural$ turn £energy£ §Y$energy$§! into £unity£ §Y$unity$§!, decrease £crime£ §Y$PLANET_CRIME_TITLE$§! and spawn £defense_army£ §YDefense Armies§!"
+ mod_job_novian_oppressor_add: "$job_novian_oppressor$ Jobs"
 
- job_giga_novian_manufacturer: "Manufacturer" #Machinist?
- job_giga_novian_manufacturer_plural: "Manufacturers"
- job_giga_novian_manufacturer_desc: "The backbone of the Arikhanate's economy, producing the alloys necessary to feed the ever-hungry war machine. They are also responsible for the rarer luxury goods found scattered throughout the Arikhanate."
- job_giga_novian_manufacturer_effect_desc: "£job_giga_novian_manufacturer£ $job_giga_novian_manufacturer_plural$ turn £minerals£ §Y$minerals$§! into £alloys£ §Y$alloys$§! and £consumer_goods£ §Y$consumer_goods$§!"
- mod_job_giga_novian_manufacturer_add: "$job_giga_novian_manufacturer$ Jobs"
+ job_novian_manufacturer: "Manufacturer" #Machinist?
+ job_novian_manufacturer_plural: "Manufacturers"
+ job_novian_manufacturer_desc: "The backbone of the Arikhanate's economy, producing the alloys necessary to feed the ever-hungry war machine. They are also responsible for the rarer luxury goods found scattered throughout the Arikhanate."
+ job_novian_manufacturer_effect_desc: "£job_novian_manufacturer£ $job_novian_manufacturer_plural$ turn £minerals£ §Y$minerals$§! into £alloys£ §Y$alloys$§! and £consumer_goods£ §Y$consumer_goods$§!"
+ mod_job_novian_manufacturer_add: "$job_novian_manufacturer$ Jobs"
 
- job_giga_novian_priest: "Novitic Bishop"
- job_giga_novian_priest_plural: "Novitic Bishops"
- job_giga_novian_priest_desc:  "A major leader of the Arikian religion, guiding the souls following it through their true path, even if it does not lead to salvation."
- job_giga_novian_priest_effect_desc: "£job_giga_novian_priest£ $job_giga_novian_priest_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
- mod_job_giga_novian_priest_add: "$job_giga_novian_priest$ Jobs"
+ job_novian_priest: "Novitic Bishop"
+ job_novian_priest_plural: "Novitic Bishops"
+ job_novian_priest_desc: "A major leader of the Arikian religion, guiding the souls following it through their true path, even if it does not lead to salvation."
+ job_novian_priest_effect_desc: "£job_novian_priest£ $job_novian_priest_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
+ mod_job_novian_priest_add: "$job_novian_priest$ Jobs"
 
- job_giga_novian_acolyte: "Novitic Cleric"
- job_giga_novian_acolyte_plural: "Novitic Clerics"
- job_giga_novian_acolyte_desc: "A local leader of the Arikian religion, charged with maintaining religious fervor within their communities."
- job_giga_novian_acolyte_effect_desc: "£job_giga_novian_acolyte£ $job_giga_novian_acolyte_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
- mod_job_giga_novian_acolyte_add: "$job_giga_novian_acolyte$ Jobs"
+ job_novian_acolyte: "Novitic Cleric"
+ job_novian_acolyte_plural: "Novitic Clerics"
+ job_novian_acolyte_desc: "A local leader of the Arikian religion, charged with maintaining religious fervor within their communities."
+ job_novian_acolyte_effect_desc: "£job_novian_acolyte£ $job_novian_acolyte_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
+ mod_job_novian_acolyte_add: "$job_novian_acolyte$ Jobs"
 
- job_giga_novian_commandant: "Arikommandant" #Commissar is a good word for somewhere. Oppressors? Occupation priests? #Just Commandant?
- job_giga_novian_commandant_plural: "Arikommandants"
- job_giga_novian_commandant_desc: "A ruthless leader of the Novian war machine, commanding massive swaths of the Arikian army." #Make it clear they're politicians as well as generals.
- job_giga_novian_commandant_effect_desc: "£job_giga_novian_commandant£ $job_giga_novian_commandant_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§!, increase £stability£ §Y$MOD_PLANET_STABILITY_ADD$§!, and spawn £defense_army£ §YDefense Armies§!"
- mod_job_giga_novian_commandant_add: "$job_giga_novian_commandant$ Jobs"
+ job_novian_commandant: "Arikommandant"
+ job_novian_commandant_plural: "Arikommandants"
+ job_novian_commandant_desc: "A ruthless leader of the Novian war machine, commanding massive swaths of the Arikian army." #Make it clear they're politicians as well as generals.
+ job_novian_commandant_effect_desc: "£job_novian_commandant£ $job_novian_commandant_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§!, increase £stability£ §Y$MOD_PLANET_STABILITY_ADD$§!, and spawn £defense_army£ §YDefense Armies§!"
+ mod_job_novian_commandant_add: "$job_novian_commandant$ Jobs"
 
- job_giga_novian_soldier: "Novian Soldier"
- job_giga_novian_soldier_plural: "Novian Soldiers"
- job_giga_novian_soldier_desc: "The default career for a Novian citizen, these zealous warriors both protect the Arikhanate from foreign threats and drum up jingoism among the locals."
- job_giga_novian_soldier_effect_desc: "£job_giga_novian_soldier£ $job_giga_novian_soldier_plural$ increase £stability£ §Y$MOD_PLANET_STABILITY_ADD$§! and produce £unity£ §Y$unity$§!." #£job_giga_novian_soldier£ $job_giga_novian_soldier_plural$ increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!, £stability£ §Y$MOD_PLANET_STABILITY_ADD$§!, and spawn £defense_army£ §YDefense Armies§!
- mod_job_giga_novian_soldier_add: "$job_giga_novian_soldier$ Jobs"
+ job_novian_soldier: "Novian Soldier"
+ job_novian_soldier_plural: "Novian Soldiers"
+ job_novian_soldier_desc: "The default career for a Novian citizen, these zealous warriors both protect the Arikhanate from foreign threats and drum up jingoism among the locals."
+ job_novian_soldier_effect_desc: "£job_novian_soldier£ $job_novian_soldier_plural$ increase £stability£ §Y$MOD_PLANET_STABILITY_ADD$§! and produce £unity£ §Y$unity$§!." #£job_novian_soldier£ $job_novian_soldier_plural$ increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!, £stability£ §Y$MOD_PLANET_STABILITY_ADD$§!, and spawn £defense_army£ §YDefense Armies§!
+ mod_job_novian_soldier_add: "$job_novian_soldier$ Jobs"
 
- job_giga_novian_shipwright_novian: "Shipwright"
- job_giga_novian_shipwright_novian_plural: "Shipwrights"
- job_giga_novian_shipwright_novian_desc: "It takes an army to build a navy." #Those who build up and maintain the Arikian armada, playing a crucial war in the Novian war machine and system of oppression.
- job_giga_novian_shipwright_novian_effect_desc: "£job_giga_novian_shipwright_novian£ $job_giga_novian_shipwright_novian_plural$ turn £alloys£ §Y$alloys$§! into £engineering£ §Y$engineering_research$§! and increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!"
- mod_job_giga_novian_shipwright_novian_add: "$job_giga_novian_shipwright_novian$ Jobs"
+ job_novian_shipwright_novian: "Shipwright"
+ job_novian_shipwright_novian_plural: "Shipwrights"
+ job_novian_shipwright_novian_desc: "It takes an army to build a navy." #Those who build up and maintain the Arikian armada, playing a crucial war in the Novian war machine and system of oppression.
+ job_novian_shipwright_novian_effect_desc: "£job_novian_shipwright_novian£ $job_novian_shipwright_novian_plural$ turn £alloys£ §Y$alloys$§! into £engineering£ §Y$engineering_research$§! and increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!"
+ mod_job_novian_shipwright_novian_add: "$job_novian_shipwright_novian$ Jobs"
 
- job_giga_novian_shipwright_individualist: "Shipwright"
- job_giga_novian_shipwright_individualist_plural: "Shipwrights"
- job_giga_novian_shipwright_individualist_desc: "It takes an army to build a navy." #Those who build up and maintain the Arikian armada, playing a crucial war in the Novian war machine and system of oppression.
- job_giga_novian_shipwright_individualist_effect_desc: "£job_giga_novian_shipwright_individualist£ $job_giga_novian_shipwright_individualist_plural$ turn £alloys£ §Y$alloys$§! into £engineering£ §Y$engineering_research$§! and increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!"
- mod_job_giga_novian_shipwright_individualist_add: "$job_giga_novian_shipwright_individualist$ Jobs"
+ job_novian_shipwright_individualist: "Shipwright"
+ job_novian_shipwright_individualist_plural: "Shipwrights"
+ job_novian_shipwright_individualist_desc: "It takes an army to build a navy." #Those who build up and maintain the Arikian armada, playing a crucial war in the Novian war machine and system of oppression.
+ job_novian_shipwright_individualist_effect_desc: "£job_novian_shipwright_individualist£ $job_novian_shipwright_individualist_plural$ turn £alloys£ §Y$alloys$§! into £engineering£ §Y$engineering_research$§! and increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!"
+ mod_job_novian_shipwright_individualist_add: "$job_novian_shipwright_individualist$ Jobs"
 
- job_giga_novian_shipwright_gestalt: "Shipwright"
- job_giga_novian_shipwright_gestalt_plural: "Shipwrights"
- job_giga_novian_shipwright_gestalt_desc: "It takes an army to build a navy." #Those who build up and maintain the Arikian armada, playing a crucial war in the Novian war machine and system of oppression.
- job_giga_novian_shipwright_gestalt_effect_desc: "£job_giga_novian_shipwright_gestalt£ $job_giga_novian_shipwright_gestalt_plural$ turn £alloys£ §Y$alloys$§! into £engineering£ §Y$engineering_research$§! and increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!"
- mod_job_giga_novian_shipwright_gestalt_add: "$job_giga_novian_shipwright_gestalt$ Jobs"
+ job_novian_shipwright_gestalt: "Shipwright"
+ job_novian_shipwright_gestalt_plural: "Shipwrights"
+ job_novian_shipwright_gestalt_desc: "It takes an army to build a navy." #Those who build up and maintain the Arikian armada, playing a crucial war in the Novian war machine and system of oppression.
+ job_novian_shipwright_gestalt_effect_desc: "£job_novian_shipwright_gestalt£ $job_novian_shipwright_gestalt_plural$ turn £alloys£ §Y$alloys$§! into £engineering£ §Y$engineering_research$§! and increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!"
+ mod_job_novian_shipwright_gestalt_add: "$job_novian_shipwright_gestalt$ Jobs"
 
- job_giga_novian_archivist: "Novitic Scholar"
- job_giga_novian_archivist_plural: "Novitic Scholars"
- job_giga_novian_archivist_desc: "These intellectuals are devoted to understanding their people's rich history - and more importantly, curating it to support proper and relevant lessons for modernity."
- job_giga_novian_archivist_effect_desc: "£job_giga_novian_archivist£ $job_giga_novian_archivist_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into $r_research$"
- mod_job_giga_novian_archivist_add: "$job_giga_novian_archivist$ Jobs"
+ job_novian_archivist: "Novitic Scholar"
+ job_novian_archivist_plural: "Novitic Scholars"
+ job_novian_archivist_desc: "These intellectuals are devoted to understanding their people's rich history - and more importantly, curating it to support proper and relevant lessons for modernity."
+ job_novian_archivist_effect_desc: "£job_novian_archivist£ $job_novian_archivist_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into $r_research$"
+ mod_job_novian_archivist_add: "$job_novian_archivist$ Jobs"
 
- job_giga_novian_gladiator: "Kren Gladiator" #Kran?
- job_giga_novian_gladiator_plural: "Kren Gladiators"
- job_giga_novian_gladiator_desc: "The Kren were unfortunate enough to earn the respect of the Novians with their martial prowess, disallowing themselves a swift and honourable end."
- job_giga_novian_gladiator_effect_desc: "£job_giga_novian_gladiator£ $job_giga_novian_gladiator_plural$ turn £alloys£ §Y$alloys$§! into £unity£ §Y$unity$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
- mod_job_giga_novian_gladiator_add: "$job_giga_novian_gladiator$ Jobs"
+ job_novian_gladiator: "Kren Gladiator" #Kran?
+ job_novian_gladiator_plural: "Kren Gladiators"
+ job_novian_gladiator_desc: "The Kren were unfortunate enough to earn the respect of the Novians with their martial prowess, disallowing themselves a swift and honourable end."
+ job_novian_gladiator_effect_desc: "£job_novian_gladiator£ $job_novian_gladiator_plural$ turn £alloys£ §Y$alloys$§! into £unity£ §Y$unity$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
+ mod_job_novian_gladiator_add: "$job_novian_gladiator$ Jobs"
 
- job_giga_novian_overseer: "Agarthine Overseer"
- job_giga_novian_overseer_plural: "Agarthine Overseers"
- job_giga_novian_overseer_desc: "These ruthless superintendants drive competition between slaves to increase productivity - and undermine any troublesome solidarity - for as long as an ample surplus of bodies is available."
- job_giga_novian_overseer_effect_desc: "£job_giga_novian_overseer£ $job_giga_novian_overseer_plural$ produce £unity£ §Y$unity$§! and improve the $giga_r_energy$$giga_r_minerals$$giga_r_food$ §YProductivity§! of £job_giga_novian_toiler£ $job_giga_novian_toiler_plural$ for each £job_giga_novian_toiler£ $job_giga_novian_toiler$ on the planet."
- mod_job_giga_novian_overseer_add: "$job_giga_novian_overseer$ Jobs"
+ job_novian_overseer: "Agarthine Overseer"
+ job_novian_overseer_plural: "Agarthine Overseers"
+ job_novian_overseer_desc: "These ruthless superintendants drive competition between slaves to increase productivity - and undermine any troublesome solidarity - for as long as an ample surplus of bodies is available."
+ job_novian_overseer_effect_desc: "£job_novian_overseer£ $job_novian_overseer_plural$ produce £unity£ §Y$unity$§! and improve the $giga_r_energy$$giga_r_minerals$$giga_r_food$ §YProductivity§! of £job_novian_toiler£ $job_novian_toiler_plural$ for each £job_novian_toiler£ $job_novian_toiler$ on the planet."
+ mod_job_novian_overseer_add: "$job_novian_overseer$ Jobs"
 
- job_giga_novian_scavenger_leader: "Scavenger Foreman"
- job_giga_novian_scavenger_leader_plural: "Scavenger Foremen"
- job_giga_novian_scavenger_leader_desc: "As the workforce grows, labour strategists become increasingly important to ensure our efforts are efficiently targeted."
- job_giga_novian_scavenger_leader_effect_desc: "£job_giga_novian_scavenger_leader£ $job_giga_novian_scavenger_leader_plural$ produce £unity£ §Y$unity$§! and improve the $giga_r_energy$$giga_r_minerals$$giga_r_food$ §YProductivity§! of £job_giga_novian_scavenger£ $job_giga_novian_scavenger_plural$."
- mod_job_giga_novian_scavenger_leader_add: "$job_giga_novian_scavenger_leader$ Jobs"
- mod_job_giga_novian_scavenger_leader_per_pop:0 "§G+1§! $job_giga_novian_scavenger_leader$ Job per $VALUE$ Pops"
- mod_job_giga_novian_scavenger_leader_per_pop_short:0 "\n§G+1§! £mod_job_manager_add£ per $VALUE$ £pop£"
+ job_novian_scavenger_leader: "Scavenger Foreman"
+ job_novian_scavenger_leader_plural: "Scavenger Foremen"
+ job_novian_scavenger_leader_desc: "As the workforce grows, labour strategists become increasingly important to ensure our efforts are efficiently targeted."
+ job_novian_scavenger_leader_effect_desc: "£job_novian_scavenger_leader£ $job_novian_scavenger_leader_plural$ produce £unity£ §Y$unity$§! and improve the $giga_r_energy$$giga_r_minerals$$giga_r_food$ §YProductivity§! of £job_novian_scavenger£ $job_novian_scavenger_plural$."
+ mod_job_novian_scavenger_leader_add: "$job_novian_scavenger_leader$ Jobs"
+ mod_job_novian_scavenger_leader_per_pop:0 "§G+1§! $job_novian_scavenger_leader$ Job per $VALUE$ Pops"
+ mod_job_novian_scavenger_leader_per_pop_short:0 "\n§G+1§! £mod_job_manager_add£ per $VALUE$ £pop£"
 
- job_giga_novian_scavenger_leader_gestalt: "Scavenger Controller"
- job_giga_novian_scavenger_leader_gestalt_plural: "Scavenger Controllers"
- job_giga_novian_scavenger_leader_gestalt_desc: "As the workforce grows, administrative drones on the ground become increasingly important to ensure our efforts are efficiently targeted."
- job_giga_novian_scavenger_leader_gestalt_effect_desc: "£job_giga_novian_scavenger_leader_gestalt£ $job_giga_novian_scavenger_leader_gestalt_plural$ produce £unity£ §Y$unity$§! and improve the $giga_r_energy$$giga_r_minerals$$giga_r_food$ §YProductivity§! of £job_giga_novian_scavenger_gestalt£ $job_giga_novian_scavenger_gestalt_plural$."
- mod_job_giga_novian_scavenger_leader_gestalt_add: "$job_giga_novian_scavenger_leader_gestalt$ Jobs"
- mod_job_giga_novian_scavenger_leader_gestalt_per_pop:0 "§G+1§! $job_giga_novian_scavenger_leader_gestalt$ Job per $VALUE$ Pops"
- mod_job_giga_novian_scavenger_leader_gestalt_per_pop_short:0 "\n§G+1§! £mod_job_evaluator_add£ per $VALUE$ £pop£"
+ job_novian_scavenger_leader_gestalt: "Scavenger Controller"
+ job_novian_scavenger_leader_gestalt_plural: "Scavenger Controllers"
+ job_novian_scavenger_leader_gestalt_desc: "As the workforce grows, administrative drones on the ground become increasingly important to ensure our efforts are efficiently targeted."
+ job_novian_scavenger_leader_gestalt_effect_desc: "£job_novian_scavenger_leader_gestalt£ $job_novian_scavenger_leader_gestalt_plural$ produce £unity£ §Y$unity$§! and improve the $giga_r_energy$$giga_r_minerals$$giga_r_food$ §YProductivity§! of £job_novian_scavenger_gestalt£ $job_novian_scavenger_gestalt_plural$."
+ mod_job_novian_scavenger_leader_gestalt_add: "$job_novian_scavenger_leader_gestalt$ Jobs"
+ mod_job_novian_scavenger_leader_gestalt_per_pop:0 "§G+1§! $job_novian_scavenger_leader_gestalt$ Job per $VALUE$ Pops"
+ mod_job_novian_scavenger_leader_gestalt_per_pop_short:0 "\n§G+1§! £mod_job_evaluator_add£ per $VALUE$ £pop£"
 
- # job_giga_novian_: ""
- # job_giga_novian__plural: ""
- # job_giga_novian__desc: "desc"
- # job_giga_novian__effect_desc: "effect desc"
- # mod_job_giga_novian__add: "$job_giga_novian_$ Jobs"
+ # job_novian_: ""
+ # job_novian__plural: ""
+ # job_novian__desc: "desc"
+ # job_novian__effect_desc: "effect desc"
+ # mod_job_novian__add: "$job_novian_$ Jobs"
+
 
  #####################
  ##### DISTRICTS #####
  #####################
- district_giga_novian_city:0 "Novian Arcology District"
- district_giga_novian_city_plural:0 "Novian Arcology Districts"
- district_giga_novian_city_desc:0 "Subterranean housing that allows inhabitants to live underground, allowing for large, sprawling cities due to space no longer being a concern."
+ district_novian_city:0 "Novian Arcology District"
+ district_novian_city_plural:0 "Novian Arcology Districts"
+ district_novian_city_desc:0 "Subterranean housing that allows inhabitants to live underground, allowing for large, sprawling cities due to space no longer being a concern."
 
- district_giga_novian_industrial:0 "Novian Manufactory District"
- district_giga_novian_industrial_plural:0 "Novian Manufactory Districts"
- district_giga_novian_industrial_desc:0 "Forges powered by Novian technology that are able to function highly efficiently due to the environment no longer being a concern."
+ district_novian_industrial:0 "Novian Manufactory District"
+ district_novian_industrial_plural:0 "Novian Manufactory Districts"
+ district_novian_industrial_desc:0 "Forges powered by Novian technology that are able to function highly efficiently due to the environment no longer being a concern."
 
- district_giga_novian_mining:0 "Novian Stripmining District"
- district_giga_novian_mining_plural:0 "Novian Stripmining Districts"
- district_giga_novian_mining_desc:0 "Using Sektian mining technology enables miners to function at previously impossible production levels. Stripmining parts of the planet is necessary to build infrastructure than enables habitation of the planet."
+ district_novian_mining:0 "Novian Excavation District"
+ district_novian_mining_plural:0 "Novian Excavation Districts"
+ district_novian_mining_desc:0 "Using Sektian mining technology enables miners to function at previously impossible production levels. Stripmining parts of the planet is necessary to build infrastructure than enables habitation of the planet."
 
- district_giga_novian_energy:0 "Novian Geothermal District"
- district_giga_novian_energy_plural:0 "Novian Geothermal Districts"
- district_giga_novian_energy_desc:0 "Produces energy using heat from the planet's mantle. Advanced Novian technology allows highly productive energy extraction."
+ district_novian_energy:0 "Novian Geothermal District"
+ district_novian_energy_plural:0 "Novian Geothermal Districts"
+ district_novian_energy_desc:0 "Advanced Novian Produces energy using heat from the planet's mantle. Advanced Novian technology allows highly productive energy extraction."
 
- district_giga_novian_farming:0 "Novian Subterranean Farming District"
- district_giga_novian_farming_plural:0 "Novian Subterranean Farming Districts"
- district_giga_novian_farming_desc:0 "Hydroponics and genetically modified fungi allow for effective farming on worlds that normally would be unable to feed themselves. Uses the heat of the mantle and minerals in the soil to function."
+ district_novian_farming:0 "Novian Subterranean Farming District"
+ district_novian_farming_plural:0 "Novian Subterranean Farming Districts"
+ district_novian_farming_desc:0 "Hydroponics and genetically modified microbes allow for effective farming on worlds that normally would be unable to feed themselves. Uses the heat of the mantle and minerals in the soil to function."
 
- district_giga_novian_agartha:0 "Agarthine Infrastructure District"
- district_giga_novian_agartha_plural:0 "Agarthine Infrastructure Districts"
- district_giga_novian_agartha_desc:0 "This section of the Agartha houses the basic infrastructure required to keep the structure operational."
- mod_district_giga_novian_agartha_max: "Max Agarthine Infrastructure Districts"
- mod_district_giga_novian_agartha_max_desc: "Is this ever seen?"
+ district_novian_agartha:0 "Agarthine Infrastructure District"
+ district_novian_agartha_plural:0 "Agarthine Infrastructure Districts"
+ district_novian_agartha_desc:0 "This section of the Agartha houses the basic infrastructure required to keep the structure and its industry operational."
+ mod_district_novian_agartha_max: "Max Agarthine Infrastructure Districts"
+ mod_district_novian_agartha_max_desc: "Is this ever seen?"
 
- district_giga_novian_spacehab:0 "Novian Habitation Module"
- district_giga_novian_spacehab_plural:0 "Novian Habitation Modules"
- district_giga_novian_spacehab_desc:0 "This utilitarian module provides uncomfortable and compact residences for its population."
+ district_novian_spacehab:0 "Novian Habitation Module"
+ district_novian_spacehab_plural:0 "Novian Habitation Modules"
+ district_novian_spacehab_desc:0 "This utilitarian module provides uncomfortable and compact residences for its population." #Joke comparison to normal habitat housing districts, which provide 'comfortable, if compact' residences.
 
- district_giga_novian_quastech:0 "Quasaric Processing Module"
- district_giga_novian_quastech_plural:0 "Quasaric Processing Modules"
- district_giga_novian_quastech_desc:0 "Specialised infrastructure is necessary to not only survive but harvest the energic tempest of a quasar's accretion disk."
+ district_novian_quastech:0 "Quasaric Processing Module"
+ district_novian_quastech_plural:0 "Quasaric Processing Modules"
+ district_novian_quastech_desc:0 "Specialised infrastructure is necessary to not only survive but harvest the energistic tempest of a quasar's accretion disk."
 
- district_giga_novian_shipwright:0 "Armadal Shipyard Module"
- district_giga_novian_shipwright_plural:0 "Armadal Shipyard Modules"
- district_giga_novian_shipwright_desc:0 "Despite its disorderly appearance, this labyrinth of drydocks and construction platforms can turn advanced materials into a spaceborne armada at terrific speeds."
+ district_novian_shipwright:0 "Armadal Shipyard Module"
+ district_novian_shipwright_plural:0 "Armadal Shipyard Modules"
+ district_novian_shipwright_desc:0 "Despite its disorderly appearance, this labyrinth of drydocks and construction platforms can turn advanced materials into a spaceborne armada at terrific speeds."
+
 
  ####################
  ##### DEPOSITS #####
  ####################
- d_giga_novian_quastech_uplink:0 "Accretion Ring Outstations"
- d_giga_novian_quastech_uplink_desc:0 "Access to extensive orbital infrastructure around the Galactic Nucleus greatly enhances energy collection capabilities on this habitat."
- d_giga_novian_capital_energy:0 "Hypertidal Generators"
- d_giga_novian_capital_energy_desc:0 "Nodes of machinery strategically dispersed across this tide-torn world can yield immense quantities of useable energy."
- d_giga_novian_capital_minerals:0 "Sprawlfront Rock Faces"
- d_giga_novian_capital_minerals_desc:0 "The advantage of subterranean urban expansion is that finding mineral veins is unavoidable."
- d_giga_novian_capital_food:0 "Noxious Mire"
- d_giga_novian_capital_food_desc:0 "Most societies would refuse to eat from this sea of coagulated organic slurry. The Novians are not most societies."
- d_giga_novian_temple_energy:0 "Geothermal Fields"
- d_giga_novian_temple_energy_desc:0 "Thunderous geysers hint at the barely-contained energy churning underneath this planet's crust."
- d_giga_novian_temple_minerals:0 "Fluviovolcanic Landforms"
- d_giga_novian_temple_minerals_desc:0 "High geological activity and the movement of liquid water together expose this planet's subsurface mineral wealth."
- d_giga_novian_temple_food:0 "Algal Hot Springs"
- d_giga_novian_temple_food_desc:0 "Microscopic algae thrives in the warm, mineral-rich water."
- d_giga_novian_iodizium_slag:0 "Iodized Slag"
- d_giga_novian_iodizium_slag_desc:0 "Cataclysmic orbital bombardment has wrecked the region, but in the process metamorphosed samples of rare £sr_iodizium£ §Y$sr_iodizium$§!."
+ d_novian_quastech_uplink:0 "Accretion Ring Outstations"
+ d_novian_quastech_uplink_desc:0 "Access to extensive orbital infrastructure around the Galactic Nucleus greatly enhances energy collection capabilities on this habitat."
+ d_novian_capital_energy:0 "Hypertidal Generators"
+ d_novian_capital_energy_desc:0 "Nodes of machinery strategically dispersed across this tide-torn world can yield immense quantities of useable energy."
+ d_novian_capital_minerals:0 "Sprawlfront Rock Faces"
+ d_novian_capital_minerals_desc:0 "The advantage of subterranean urban expansion is that finding mineral veins is unavoidable."
+ d_novian_capital_food:0 "Noxious Mire"
+ d_novian_capital_food_desc:0 "Most societies would refuse to eat from this sea of coagulated organic slurry. The Novians are not most societies."
+ d_novian_temple_energy:0 "Geothermal Fields"
+ d_novian_temple_energy_desc:0 "Thunderous geysers hint at the barely-contained energy churning underneath this planet's crust."
+ d_novian_temple_minerals:0 "Fluviovolcanic Landforms"
+ d_novian_temple_minerals_desc:0 "High geological activity and the movement of liquid water together expose this planet's subsurface mineral wealth."
+ d_novian_temple_food:0 "Algal Hot Springs"
+ d_novian_temple_food_desc:0 "Microscopic algae thrives in the warm, mineral-rich water."
+ d_novian_iodizium_slag:0 "Iodized Slag"
+ d_novian_iodizium_slag_desc:0 "Cataclysmic orbital bombardment has wrecked the region, but in the process metamorphosed samples of rare £sr_iodizium£ §Y$sr_iodizium$§!."
+
 
  ############################
  ##### PLANET MODIFIERS #####
@@ -356,6 +363,7 @@
  col_novian_occupied: "Novian Occupied"
  col_novian_occupied_desc: "This world is currently under Novian oppression, bringing great grief to the local residents whose lives are in constant danger."
 
+
  ##############################
  ##### SYSTEMS AND BODIES #####
  ##############################
@@ -372,11 +380,11 @@
  iriti'ata: "Iriti'Ata"
  arikia_etollia: "Arikia Etollia"
  huakanov: "Huakanov"
- novwaka: "Novwaka"
+ whetuna: "Whetuna"
  tali_uakt: "Tali Uakt"
  uytie_girk: "Uytie Girk"
  tem_huakit: "Tem Huakit"
- nov_motu: "Nov Motu"
+ ghulkata: "Ghulkata"
  enganui: "Enganui"
  koh_itin: "Koh Itin"
  shiv_aratk: "Shiv Aratk"
@@ -402,6 +410,7 @@
 
  kastra: "Kastra" #this is in vanilla already, with a slightly different loc key
 
+
  ############################
  ##### SPECIAL PROJECTS #####
  ############################
@@ -411,23 +420,30 @@
  STUDY_NOVIAN_SOCIETY_DESC:0 "The scale of the Novian threat demands analysis of their societal design."
  STUDY_NOVIAN_DESIGNS:0 "Investigate Novian Engineering"
  STUDY_NOVIAN_DESIGNS_DESC:0 "The scale of the Novian threat demands analysis of their naval capabilities."
- #events triggered by completing special projects
- giga_novian.3001.name:0 "Novian Intelligence Agency"
- giga_novian.3001.desc:0 "The discovery of the Novian Arikhanate will certainly pose a threat to our nation. It will be necessary to form an agency dedicated to the study and collection of information related to the Novians. Every move they make that we know of will be catalogued and studied. There is great opportunity for scientific, cultural, and military gain by studying them considering how old their civilization is, a very rare and unique opportunity in this galaxy. Studying the Novians will be very beneficial in the long run, especially if they were to §Pattack§! us in the future, which is highly likely considering the data we have gathered from the limited communications we've had with them and their xenophobic nature."
- giga_novian.3001.a:0 "Lets get to work then."
- giga_novian.10001.name:0 "Novian Technology Study Complete"
- giga_novian.10001.desc:0 "From what our scientists and the limited data our probes have been able to gather Novian technology is highly advanced. However, similar to most precursor civilizations, it is not without its flaws. Most of their technology seems to be made for war as well as lasting for centuries with little maintenance, likely due to their civilization going into stasis for long periods for a currently unknown reason. Despite going to such lengths, it is showing the consequences of such little maintenance."
- giga_novian.10001.a:0 "Interesting."
- giga_novian.10002.name:0 "Novian Culture Investigation Complete"
- giga_novian.10002.desc:0 "The Novian race differs greatly from the convergent evolutionary models that define most other galactic species, relying on unconventional biomolecules and chemistries not usually seen in all but the most exotic extremophilic lifeforms.  This makes them very rugged, surviving on worlds most other species would never consider, usually living in subterranean colonies, and posses almost complete control over the local biospheres of their own worlds.  However, they are unable to survive on most other worlds without substantial life support equipment. \n\nTheir culture has been shaped significantly by this, with great emphasis on preventing themselves from 'going soft,' and a large reliance on slaves from 'primitive races.'  Each of these races appears to have been put towards specific tasks within the Novian Arikhanate, such as their largest slave population of Sektians being focused towards farming and mining.  They are extremely xenophobic and distrusting of outsiders, and often overlook their slaves as anything more than a tool."
- giga_novian.10002.a:0 "Worrying."
- giga_novian.10003.name:0 "Novian Engineering Analysis Complete"
- giga_novian.10003.desc:0 "After the conclusion of our study of Novian engineering it has been concluded that some Novian ships make very limited use of higher dimensional engineering due to the sheer stress put on their constructs from their size. According to a few of our engineers their structures are figuratively 'held together by gigastructural duct tape, xeno based glue, and some hope and zealotry.' They appear to be meeting the energy demands of such advanced technology by §Sextracting energy from the hyperquasar at the center of the galaxy§!. If we were somehow able to get access to this, we would undoubtedly be able to throw much of their civilization into disarray, however such an attack would be very costly."
- giga_novian.10003.a:0 "Intriguing."
+
+ #Initial Investigations event locs
+ novian.3001.name:0 "Novian Investigations"
+ novian.3001.desc:0 "The advanced and aggressive Novian Arikhanate presents a potential grave threat to our nation, demanding high-priority intelligence analysis. Every move they make that we know of will be documented. This information will be critical if they are to §Pattack§! us in the future, which is highly likely given the xenophobic militarism evident in our limited communications with them.\n\nThere is also great opportunity for scientific, historical and technological insight in studying them: their civilisation is a living fossil given their age and apparent stagnation, presenting a rare opportunity to see the past in detail."
+ novian.3001.a:0 "Lets get to work then."
+
+ novian.10001.name:0 "Novian Technology Study Complete"
+ novian.10001.desc:0 "From the data our scientists and probes have been able to gather, Novian technology is highly advanced. However, similar to most precursor civilizations, it is not without its flaws. Most of their technology seems to be made for centuries with little maintenance - likely due to their civilization going into stasis for long periods for a currently unknown reason - but despite going to such lengths, it is showing the consequences of decay."
+ novian.10001.a:0 "Interesting."
+
+ novian.10002.name:0 "Novian Culture Investigation Complete"
+ novian.10002.desc:0 "The Novian race differs greatly from the convergent evolutionary models that define most other galactic species, relying on unconventional biochemistries not usually seen in all but the most exotic extremophilic lifeforms. This allows them to live on worlds considered toxic by others, where they live in subterranean colonies and possess almost complete control over the biospheres. However, they struggle to survive on most other worlds without substantial life support equipment. \n\nThey are extremely distrusting of each other but even more so aliens, and their culture places a great emphasis on preventing themselves from 'going soft,' despite a clear economic reliance on xeno slaves. Each slave race appears to have been put towards specific tasks, such as the pre-eminent race of Sektians being focused towards farming and mining."
+ novian.10002.a:0 "Worrying."
+
+ novian.10003.name:0 "Novian Engineering Analysis Complete"
+ novian.10003.desc:0 "Our study of Novian engineering has concluded that they make use of higher dimensional engineering due to the sheer stress put on their constructs from the sizes and energies involved. According to a team of our engineers, their structures are figuratively 'held together by gigastructural duct tape, xeno-based glue, and some hope and zealotry.' \n\n They appear to be meeting the energy demands of such inefficient technology by extracting energy from the hyperquasar at the center of the galaxy. If we were somehow able to cut off this source, we would undoubtedly throw much of their civilization into disarray."
+ novian.10003.a:0 "Intriguing."
+
  #event for finishing all special projects
- giga_novian.10004.name:0 "The Bigger Fish"
- giga_novian.10004.desc:0 "The Arikhate appears to place extreme emphasis on a singular ship - and for good reason.  The Hypership is the largest and most dangerous threat, let alone singular asset, that we are aware of in galactic history.  Being built in part around a star, it eclipses some entire systems.  It seems to act as the flagship of the Arikhanate, being its prized possession and the tool sent against only the Arikhan's greatest perceived threats.  Such a fight would be a daunting task for even some of the most powerful galactic forces, and its sheer scale strikes fear into the hearts and minds of our officers."
- giga_novian.10004.a:0 "Alarming."
+ novian.10004.name:0 "The Bigger Fish"
+ novian.10004.desc:0 "The Arikhanate appears to place extreme emphasis on a singular ship - and for good reason. The Hypership is among the largest warships, let alone singular assets, that we are aware of in galactic history. Being built in part around a star, it eclipses some entire systems.\n\n It seems to act as the flagship of the Arikhanate, being its prized possession and the tool sent against only the Arikhan's greatest perceived threats. Such a fight would be a daunting task for even some of the most powerful galactic forces, and its sheer scale strikes dread into the hearts and minds of our officers."
+ novian.10004.a:0 "Alarming."
+ novian.10004.a.tooltip:0 "Our intelligence agencies have been given 2 years to develop a full threat analysis."
+
  #Modifiers for completing analyses
  novian_analysis_physics: "Novian Technology Insights"
  novian_analysis_physics_desc: "We have grasped the state of Novian technological capabilities."
@@ -436,33 +452,6 @@
  novian_analysis_engineering: "Novian Engineering Insights"
  novian_analysis_engineering_desc: "We have made a significant breakthrough in understanding Novian engineering."
 
- ############################
- ##### SHIPS AND FLEETS #####
- ############################
- giga_novian_corvette:0 "Novian Corvette"
- giga_novian_corvette_plural:0 "Novian Corvettes"
- NOVIAN_CORVETTE: "Novian Corvette"
- giga_novian_escort:0 "Novian Escort"
- giga_novian_escort_plural:0 "Novian Escorts"
- NOVIAN_ESCORT: "Novian Escort"
- giga_novian_asteroidcraft:0 "Novian Asteroidcraft"
- giga_novian_asteroidcraft_plural:0 "Novian Asteroidcrafts"
- NOVIAN_ASTEROID: "Novian Asteroidcraft"
- giga_novian_juggernaut:0 "Novian Herald"
- giga_novian_juggernaut_plural:0 "Novian Herald"
- giga_novian_moon:0 "Sleepless Moon"
- giga_novian_moon_plural:0 "Sleepless Moons"
- NOVIAN_MOON: "Sleepless Moon"
- giga_novian_hypership:0 "Novian Hypership"
- giga_novian_hypership_plural:0 "Novian Hyperships"
- #Do I need a NOVIAN_HYPERSHIP here? I need to check what they do.
-
- novian_fleet_raider: "Novian Raiding Fleet"
- #novian_fleet_defence: "Novian Defense Fleet"
- novian_fleet_defence: "Novian War Fleet"
- novian_fleet_assault: "Novian Assault Fleet"
- novian_fleet_capital: "Nov Irki"
-
 
  ##########################
  ##### MEGASTRUCTURES #####
@@ -470,20 +459,21 @@
  #Maybe redo all involved locs, and the key "giga_fe_shield".
  #giga_fe_shield:0 "Archaic Shield Projector"
  #giga_fe_shield_tooltip:0 "This ancient station is projecting a system wide shield that is able to halt the immense destructive power of super-weapons"
- tech_ndb_shield:0 "Stellar Shield Projector" #make the name a technology description rather than the mega name?
- tech_ndb_shield_desc:0 "This advanced station can project a system wide shield that is able to halt the immense destructive power of super-weapons."
+ tech_novian_ndb_shield:0 "Stellar Shield Projector" #make the name a technology description rather than the mega name?
+ tech_novian_ndb_shield_desc:0 "This advanced station can project a system wide shield that is able to halt the immense destructive power of super-weapons."
  ndb_shield_0: "Stellar Shield Projector Construction Site" #Check this is how other megas name it
  ndb_shield_0_DESC: "REPLACE_ME"
  ndb_shield_0_MEGASTRUCTURE_DETAILS: "REPLACE_ME"
  ndb_shield_0_CONSTRUCTION_INFO_DELAYED: "REPLACE_ME"
  ndb_shield_1: "Stellar Shield Projector Energy Siphons"
- ndb_shield_1_DESC: "This construct is the first stage of a much larger structure, designed to protect its system from galactic weapons of mass destruction.  It taps into the energy of the celestial body below in order to provide the energy necessary for such a feat."
+ ndb_shield_1_DESC: "This construct is the first stage of a much larger structure, designed to protect its system from galactic weapons of mass destruction. It taps into the energy of the celestial body below in order to provide the energy necessary for such a feat."
  ndb_shield_2: "Stellar Shield Projector Field Conciliators"
- ndb_shield_2_DESC: "This construct is the second stage of a much larger structure, designed to protect its system from galactic weapons of mass destruction.  This stage lays the groundwork for us to interact with and manipulate the system's natural energistic fields."
+ ndb_shield_2_DESC: "This construct is the second stage of a much larger structure, designed to protect its system from galactic weapons of mass destruction. This stage lays the groundwork for us to interact with and manipulate the system's natural energistic fields."
  ndb_shield_3: "Stellar Shield Projector Systemic Realigners"
- ndb_shield_3_DESC: "This construct is the third stage of a much larger structure, designed to protect its system from galactic weapons of mass destruction.  The megastructure is forcefully twisting the natural energy patterns of the system to its own desires, and now we must shape these flows to finalise our design."
+ ndb_shield_3_DESC: "This construct is the third stage of a much larger structure, designed to protect its system from galactic weapons of mass destruction. The megastructure is forcefully twisting the natural energy patterns of the system to its own desires, and now we must shape these flows to finalise our design."
  ndb_shield_4: "Stellar Shield Projector"
  ndb_shield_4_DESC: "This megastructure manipulates the system's star to reshape the natural energy flows of the system into a formidable broad-area shield, prevent galactic weapons of mass destruction from destroying anything within this system."
+
 
  ###############
  ##### WAR #####
@@ -492,10 +482,11 @@
  casus_belli_cb_novian_attacker_acquire_hint: "REPLACE_ME 2" #visible in-game?
  casus_belli_cb_novian_defender: "Galactic War"
  casus_belli_cb_novian_defender_acquire_hint: "REPLACE_ME 4" #visible in-game?
- war_goal_wg_novian_conquest: "Defeat Novian Arikhanate"
- war_goal_wg_novian_conquest_desc: "War is waged to end the Novian threat. \n\n§RThe Novians will never accept peace; we must kill or be killed.§!"
- war_goal_wg_novian_defence: "Dominate Galaxy"
- war_goal_wg_novian_defence_desc: "War is waged to crush any and all resistance to Novian supremacy."
+ war_goal_wg_novian_conquest: "Dominate Galaxy"
+ war_goal_wg_novian_conquest_desc: "War is waged to crush any and all resistance to Novian supremacy."
+ war_goal_wg_novian_defence: "Defeat Novian Arikhanate"
+ war_goal_wg_novian_defence_desc: "War is waged to end the Novian threat. \n\n§RThe Novians will never accept peace; we must kill or be killed.§!"
+
 
  ##################
  ##### GALCOM #####
@@ -505,26 +496,23 @@
  galcom_gigas_threatened_novian:0 "Threatened by Novians"
  galcom_gigas_not_threatened_novian:0 "Not threatened by Novians"
 
- resolution_nov1: "Nov res 1"
- resolution_nov1_desc: "Nov res 1 desc"
- resolution_nov1_success: "Nov res 1 success"
- nov1: "Nov1 passed"
- nov1_desc: "Nov1 passed desc"
+ resolution_nov_anti_raider: "Galactic Bulwark"
+ resolution_nov_anti_raider_desc: "Every world pillaged by the Novian menace deepens the threat they pose to the entire galaxy. We must stand together against their incursions."
+ resolution_nov_anti_raider_success: "GalCom members will be at war with every Novian raiding fleet, §Rregardless of which empire is targeted§!."
+ #galcom_nov_anti_raider: "Galactic Bulwark Treaty"
+ #galcom_nov_anti_raider_desc: "Members of the Galactic Community are pooling resources and knowledge to counter the Novian raiding fleets."
 
- resolution_nov2: "Nov res 2"
- resolution_nov2_desc: "Nov res 2 desc"
- resolution_nov2_success: "Nov res 2 success"
- nov2: "Nov2 passed"
- nov2_desc: "Nov2 passed desc"
+ resolution_nov_pooled_espionage: "The Abyss Stares Back"
+ resolution_nov_pooled_espionage_desc: "The Arikhanate may occupy the heart of our galaxy, but that only means it has enemies all around. With a united intelligence effort, we can observe them from every conceivable astrospatial and sociological perspective."
+ resolution_nov_pooled_espionage_success: "All nations will gain §Y+2§! §PNOS§! Infiltration, but more widely shared intelligence §Rmay present vulnerabilities§! in our defences to other nations and the Arikhanate."
 
  resolution_nov3: "Nov res 3"
  resolution_nov3_desc: "Nov res 3 desc"
  resolution_nov3_success: "Nov res 3 success"
- nov3: "Nov3 passed"
- nov3_desc: "Nov3 passed desc"
 
- galactic_focus_crisis_novian: "novian galactic crisis"
- galactic_focus_crisis_novian_desc: "novian galactic crisis desc"
+ galactic_focus_crisis_novian: "Focus: The Novian Arikhanate"
+ galactic_focus_crisis_novian_desc: "The Novian state is a threat to all nations and entities in the galaxy. If we do not unite to stop their tyranny, they will enslave us all. We should make dealing with this crisis the Galactic Focus."
+
 
  ##################################
  ##### ARMIES AND BOMBARDMENT #####
@@ -621,15 +609,98 @@
  agartha_toy_desc_details: "A handcrafted toy given from adult to orphan child in the most challenging of situations, the spirit of this simple doll brings our communities closer together than ever."
 
 
+ ######################
+ ##### ESPIONAGE #####
+ ######################
+ novian_situation_dissidence_general: "Destabilising the Arikhanate"
+ novian_situation_dissidence_general_type: "Destabilising the Arikhanate"
+
+ novian_situation_dissidence_general_approach_low: "Passive Espionage"
+ novian_situation_dissidence_general_approach_medium: "Moderate Subversive Efforts"
+ novian_situation_dissidence_general_approach_high: "Intense Subversive Efforts"
+
+ novian_situation_dissidence_general_self_sustaining_low: "Minor Self-sustaining Dissent"
+ novian_situation_dissidence_general_self_sustaining_medium: "Moderate Self-sustaining Dissent"
+ novian_situation_dissidence_general_self_sustaining_high: "Major Self-sustaining Dissent"
+
+ novian_situation_dissidence_general_counterintel: "Arikhanate Internal Security Efforts"
+
+ novian_situation_dissidence_general_approach_low_effect: "Any unrest in the Arikhanate will be of internal origin." #We will not actively fuel dissidence in the Arikhanate.
+ novian_situation_dissidence_general_approach_medium_effect: "We will support disruptive elements within the Arikhanate.\n\nThe situation will progress according to our §PNOS Infiltration§! value."
+ novian_situation_dissidence_general_approach_high_effect: "We will engage in massive efforts to undermine the stability of the Arikhanate.\n\nThe situation will progress according to double our §PNOS Infiltration§! value."
+
+ novian_situation_dissidence_general_stage_1_tooltip: "Negligible Dissidence"
+ novian_situation_dissidence_general_stage_2_tooltip: "Trivial Dissidence"
+ novian_situation_dissidence_general_stage_3_tooltip: "Problematic Dissidence"
+ novian_situation_dissidence_general_stage_4_tooltip: "Crippling Dissidence"
+
+ novian_situation_dissidence_general_desc_1: "The social engineering of Arikian tradition can easily diffuse and pacify any disgruntlement at this stage.\n\nNo penalties at this stage."
+ novian_situation_dissidence_general_desc_2: "Despite a rise in defiant behaviour, local authorities have a tight grip on the situation and troublemakers are easily replaced.\n\nThe Arikhanate will suffer from -5% fire rate and -5 stability."
+ novian_situation_dissidence_general_desc_3: "Increasingly organised non-conformist elements are resisting eradication by state forces, while breaching the public consciousness.\n\nThe Arikhanate will suffer from -15% fire rate and -15 stability."
+ novian_situation_dissidence_general_desc_4: "The Arikhanate is losing its grip on the flow of ideas, and ideological infighting has begun in the upper ranks.\n\nThe Arikhanate will suffer from -30% fire rate and -30 stability."
+
+ novian_situation_dissidence_general_monthly_change_tooltip: "This §YSituation§! will progress based primarily on our selected §YApproach§!." #$situation_monthly_change_tooltip_approaches_dependent$
+
+ novian_dissidence_stage_2: "Trivial Dissidence"
+ novian_dissidence_stage_3: "Problematic Dissidence"
+ novian_dissidence_stage_4: "Crippling"
+ novian_dissidence_stage_post: "Political Instability"
+
+ novian_situation_dissidence_general_failure_tooltip: "The operation will collapse and we will be forced to withdraw our efforts for the time being. We may try again in the future."
+ novian_situation_dissidence_general_success_tooltip: "Infighting will become self-sustaining, crippling the Arikhanate. They will suffer from -40% fire rate and -40 stability indefinitely."
+
+ novian.20014.name: "Long-forgotten Turmoil"
+ novian.20014.desc: "A culture of rebelliousness has gripped the Arikian masses on a scale likely unseen by their society in millenia. Meanwhile, factions within the political class are at each other's throats over who to blame and how to restore stability: technocrats, officers and religious leaders are cutting each other down as they vie for power in a proposed reformed state.\n\nThere is no doubt that our recent destabilisation operation has been a §Gsuccess§!. While the old status quo is projected to resurface eventually - whether under the current Arikhan's manoeuvring or perhaps by that of an opportunistic general -, this would likely be after the impending galactic war is over §Rone way or another§!. Regardless, today we celebrate a victory that turns the tides in our favour."
+ novian.20014.a: "Proof that even their "total" control can be broken."
+ novian.20014.tooltip: "The Novians will suffer from -40% fire rate and -40 stability indefinitely."
+
+ ########################
+ ### EMPIRE MODIFIERS ###
+ ########################
+ novian_colony_capital_lost: "Capital lost (strategic control loss)"
+ novian_colony_capital_lost_tooltip: "The Novians will suffer from §Yreduced sublight speed§!."
+ novian_colony_temple_lost: "Temple lost (Pilemind combat computer shortage)"
+ novian_colony_temple_lost_tooltip: "The Novians will suffer from §Yreduced tracking and chance to hit§!."
+ novian_colony_shipyard_lost: "Shipyard lost (repair infrastructure shortage)"
+ novian_colony_shipyard_lost_hypership_counter: "To make Hypership penalty same proportionally as penalty for other ships"
+ novian_colony_shipyard_lost_tooltip: "The Novians will suffer from §Yreduced armour and hull repair rate§!."
+ novian_colony_quashab_lost: "Quashab lost (energy shortage)"
+ novian_colony_quashab_lost_tooltip: "The Novians will suffer from §Yreduced bombardment damage§!."
+ novian_colony_agartha_lost: "Agartha lost (materials shortage)"
+ novian_colony_agartha_lost_tooltip: "The Novians will suffer from §Yweakened armour and shields§!."
+
+ novian_hypership_lost:0 "Hypership lost (morale collapse)"
+ novian_hypership_lost_desc:0 "The Hypership's defeat has brought the Novians' indomitable spirit to its knees."
+
+ novian_mechanics:0 "Novian Mechanics"
+ novian_mechanics_desc:0 "Saving the Arikhanate's economy since 2300!"
+
+ novian_difficulty_1:0 "Micronova (Easy Difficulty)"
+ novian_difficulty_1_desc:0 "Little chicks"
+ novian_difficulty_2:0 "Nova (Normal Difficulty)"
+ novian_difficulty_2_desc:0 "Ordinary ducks"
+ novian_difficulty_3:0 "Supernova (Hard Difficulty)"
+ novian_difficulty_3_desc:0 "Very big angry duck"
+ novian_difficulty_4:0 "Hypernova (Very Hard Difficulty)"
+ novian_difficulty_4_desc:0 "A goose, even"
+ novian_difficulty_5:0 "Aetheronova (Crazy Difficulty)"
+ novian_difficulty_5_desc:0 "A flock of geese with the meth relic"
+
+ novian_colony_system_starbase: "Colonised System Static Defence Buff"
+ novian_raider_swiftness: "Designed for swift strikes"
+
+ magical_neutronium_deficit: "Quasaric Energy Deficit"
+ magical_neutronium_deficit_desc: "Our strongest weapons cannot realistically be powered without the energetic wealth of the Hyperquasar."
+
 
 
  #########################
  ##### MISCELLANEOUS #####
  #########################
  mod_damage_vs_country_type_novian_arikhanate_mult: "Damage to the Novian Arikhanate"
- mod_damage_vs_country_type_novian_arikhanate_mult_desc: "Damage to the Novian Arikhanate desc"
+ #mod_damage_vs_country_type_novian_arikhanate_mult_desc: "Damage to the Novian Arikhanate desc"
  mod_damage_vs_country_type_novian_raiders_mult: "Damage to Novian raiders"
- mod_damage_vs_country_type_novian_raiders_mult_desc: "Damage to Novian raiders desc"
+ #mod_damage_vs_country_type_novian_raiders_mult_desc: "Damage to Novian raiders desc"
 
  FLAG_CATEGORY_giganovian:0 "Novian"
  Novian:0 "Novian"
@@ -642,37 +713,13 @@
  auth_novian_desc: "This society has powerful Arikouncillors swear fealty to the Arikhan, whose reign aligns with the will of the Novitic Priesthood."
  arikhan: "Arikhan"
 
- novian_disarray:0 "Arikhanate in Disarray"
- novian_disarray_desc:0 "The destruction of the Hypership has thrown the nation into disarray."
-
- novian_mechanics:0 "Novian Mechanics"
- novian_mechanics_desc:0 "Saving the Arikhanate's economy since 2300!"
-
- novian_difficulty_1:0 "Micronova (Easy)"
- novian_difficulty_1_desc:0 "Little chicks"
- novian_difficulty_2:0 "Nova (Normal)"
- novian_difficulty_2_desc:0 "Ordinary ducks"
- novian_difficulty_3:0 "Supernova (Hard)"
- novian_difficulty_3_desc:0 "Very big angry duck"
- novian_difficulty_4:0 "Hypernova (Very Hard)"
- novian_difficulty_4_desc:0 "A goose, even"
- novian_difficulty_5:0 "Aetheronova (Crazy)"
- novian_difficulty_5_desc:0 "A flock of geese with the meth relic"
-
- arm_of_intent: "Arm of Intent" #name it after the Arikhan or Engineer of the time? #Redo the key
-
  nov_terra_incognita: "Terra Incognita"
 
- giga_novian.11.name: "Novian Crisis Settings"
- giga_novian.11.desc: "Choose whether to play with the Novians, an endgame crisis with content beginning with the opening of the galactic core in midgame. Make sure to finalise the Gigastructures game start menu first, as this event needs to override it if you choose to enable the Novians. The stats for each difficulty boost are simplified and not all stats vary by the same amount."
- giga_novian.12.a: "Enable Novians (Micronova). -33% to all combat and economic stats."
- giga_novian.13.a: "Enable Novians (Nova)."
- giga_novian.14.a: "Enable Novians (Supernova). +75% to all combat and economic stats."
- giga_novian.15.a: "Enable Novians (Hypernova). +300% to all combat and economic stats."
- giga_novian.16.a: "Enable Novians (Aetheronova). +800% to all combat and economic stats."
- giga_novian.17.a: "Do not enable Novians (sad)."
-
- starbase_nov:0 "$starbase_citadel$"
- starbase_nov_plural:0 "$starbase_citadel_plural$"
- novian_starbase: "His Ambit"
- novian_orbital: "His People"
+ novian.11.name: "Novian Crisis Settings"
+ novian.11.desc: "Choose whether to play with the Novians, an endgame crisis with content beginning with the opening of the galactic core in midgame.\n\nMake sure to finalise the Gigastructures game start menu first, as this event needs to override it if you choose to enable the Novians.\n\nThe stats for each difficulty boost are simplified and not all stats vary by the same amount."
+ novian.12.a: "Enable Novians (Micronova). -33% to army and ship stats."
+ novian.13.a: "Enable Novians (Nova)."
+ novian.14.a: "Enable Novians (Supernova). +75% to army and ship stats."
+ novian.15.a: "Enable Novians (Hypernova). +300% to army and ship stats."
+ novian.16.a: "Enable Novians (Aetheronova). +800% to army and ship stats."
+ novian.17.a: "Do not enable Novians (sad)."

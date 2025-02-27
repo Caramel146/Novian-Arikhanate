@@ -4,11 +4,24 @@ col_novian_capital = {
 	potential = {
 		exists = owner
 		owner = {
-			is_country_type = novian_arikhanate #check country code
+			is_country_type = novian_arikhanate
 		}
 	}
 
 	planet_modifier = {
+		planet_stability_mult = 0.1
+		planet_amenities_mult = -0.1
+		#planet_crime_add = 1
+		#planet_crime_floor_add = 0.1
+		#planet_crime_mult = 0.1
+		planet_orbital_bombardment_damage = -0.1
+		planet_jobs_produces_mult = 0.1
+		army_morale = 0.1
+		#defense_armies_add = 1
+		#pop_purge_mult = 1
+		#habitability_ceil_add = -0.1
+		#planet_jobs_slave_produces_mult = 1
+		#pop_factions_energy_produces_mult = 1
 	}
 
 	weight_modifier = {
@@ -27,6 +40,19 @@ col_novian_temple = {
 	}
 
 	planet_modifier = {
+		planet_stability_mult = 0.1
+		planet_amenities_mult = -0.1
+		#planet_crime_add = 10
+		#planet_crime_floor_add = 0.1
+		#planet_crime_mult = 0.1
+		planet_orbital_bombardment_damage = -0.1
+		planet_jobs_produces_mult = 0.1
+		army_morale = 0.1
+		#defense_armies_add = 1
+		#pop_purge_mult = 1
+		#habitability_ceil_add = -0.1
+		#planet_jobs_slave_produces_mult = 1
+		#pop_factions_energy_produces_mult = 1
 	}
 
 	weight_modifier = {
@@ -45,6 +71,19 @@ col_novian_shipyard = {
 	}
 
 	planet_modifier = {
+		planet_stability_mult = 0.1
+		planet_amenities_mult = -0.1
+		#planet_crime_add = 10
+		#planet_crime_floor_add = 0.1
+		#planet_crime_mult = 0.1
+		planet_orbital_bombardment_damage = -0.1
+		planet_jobs_produces_mult = 0.1
+		army_morale = 0.1
+		#defense_armies_add = 1
+		#pop_purge_mult = 1
+		#habitability_ceil_add = -0.1
+		#planet_jobs_slave_produces_mult = 1
+		#pop_factions_energy_produces_mult = 1
 	}
 
 	weight_modifier = {
@@ -63,6 +102,19 @@ col_novian_quashab = {
 	}
 
 	planet_modifier = {
+		planet_stability_mult = 0.1
+		planet_amenities_mult = -0.1
+		#planet_crime_add = 10
+		#planet_crime_floor_add = 0.1
+		#planet_crime_mult = 0.1
+		planet_orbital_bombardment_damage = -0.1
+		planet_jobs_produces_mult = 0.1
+		army_morale = 0.1
+		#defense_armies_add = 1
+		#pop_purge_mult = 1
+		#habitability_ceil_add = -0.1
+		#planet_jobs_slave_produces_mult = 1
+		#pop_factions_energy_produces_mult = 1
 	}
 
 	weight_modifier = {
@@ -81,6 +133,19 @@ col_novian_agartha = {
 	}
 
 	planet_modifier = {
+		planet_stability_mult = 0.1
+		planet_amenities_mult = -0.1
+		#planet_crime_add = 10
+		#planet_crime_floor_add = 0.1
+		#planet_crime_mult = 0.1
+		planet_orbital_bombardment_damage = -0.1
+		planet_jobs_produces_mult = 0.1
+		army_morale = 0.1
+		#defense_armies_add = 1
+		#pop_purge_mult = 1
+		#habitability_ceil_add = -0.1
+		#planet_jobs_slave_produces_mult = 1
+		#pop_factions_energy_produces_mult = 1
 	}
 
 	weight_modifier = {

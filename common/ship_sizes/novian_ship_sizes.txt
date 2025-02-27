@@ -1,0 +1,345 @@
+novian_corvette = {
+	#entity = novian_corvette_entity
+	entity = fallen_empire_04_warship_small_entity
+	graphical_culture = no
+	formation_priority = @frigate_formation_priority
+	max_speed = 200
+	acceleration = 0.5
+	rotation_speed = 0.2
+	collision_radius = @frigate_collision_radius
+	max_hitpoints = 1000
+	modifier = {
+		ship_shield_add = 1500
+		ship_armor_add = 1500
+		ship_evasion_add = 70
+	}
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_1_torpedo
+
+	combat_disengage_chance = 0.00
+
+	possible_construction = { always = no }
+	is_designable = no
+	class = shipclass_military
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}
+
+novian_escort = {
+	#entity = novian_escort_entity
+	entity = fallen_empire_04_warship_large_entity
+	graphical_culture = no
+	formation_priority = @cruiser_formation_priority
+	max_speed = 150
+	acceleration = 0.4
+	rotation_speed = 0.15
+	collision_radius = @cruiser_collision_radius
+	max_hitpoints = 6000
+	modifier = {
+		ship_shield_add = 4500
+		ship_armor_add = 4500
+		ship_evasion_add = 30
+	}
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_4
+
+	combat_disengage_chance = 0.00
+
+	possible_construction = { always = no }
+	is_designable = no
+	class = shipclass_military
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}
+
+novian_asteroidcraft = {
+	entity = giga_asteroid_artillery_core_entity
+	graphical_culture = no
+	formation_priority = 31
+	max_speed = 110
+	acceleration = 0.2
+	rotation_speed = 0.1
+	collision_radius = 32
+	max_hitpoints = 64000
+	modifier = {
+		ship_shield_add = 40500
+		ship_armor_add = 40500
+		ship_evasion_mult = -0.5
+		ship_cloaking_strength_add = -5
+	}
+	size_multiplier = 16
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_military_16 #gonna need to make another icon but meh
+
+	combat_disengage_chance = 0.00
+
+	possible_construction = { always = no }
+	is_designable = no
+	class = shipclass_military
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}
+
+novian_juggernaut = {
+	entity = novian_juggernaut_entity
+	graphical_culture = no
+	formation_priority = 64
+	max_speed = 80
+	acceleration = 0.1
+	rotation_speed = 0.2
+	collision_radius = 3.0
+	max_hitpoints = 64000
+	modifier = {
+		ship_shield_add = 20500
+		ship_armor_add = 20500
+		ship_evasion_mult = -1
+	}
+	size_multiplier = 32
+	fleet_slot_size = 32
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = yes
+	icon = ship_size_military_64
+
+	combat_disengage_chance = 0.00
+
+	possible_construction = { always = no }
+	is_designable = no
+	class = shipclass_military
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}
+
+novian_moon = {
+	#entity = novian_moon_entity
+	entity = giga_moon_thrusters_ai_fe
+	#entity = novian_moon_entity
+	graphical_culture = no
+	formation_priority = 32
+	max_speed = 90
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 32
+	max_hitpoints = 350000
+	modifier = {
+		ship_shield_add = 200000
+		ship_armor_add = 250000
+		ship_evasion_mult = -1
+		ship_cloaking_strength_add = -10
+	}
+	size_multiplier = 50
+	fleet_slot_size = 50
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_atk_moon
+
+	combat_disengage_chance = 0.00
+
+	possible_construction = { always = no }
+	is_designable = no
+	class = shipclass_military
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components" #absent on moons otherwise.?
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}
+
+novian_hypership = {
+	graphical_culture = no
+	entity = novian_hypership_entity
+	formation_priority = 512
+	max_speed = 80
+	acceleration = 0.1
+	rotation_speed = 0.05
+	collision_radius = 512
+	max_hitpoints = 20000000
+	modifier = {
+		ship_shield_add = 20000000
+		ship_armor_add = 20000000
+		ship_evasion_mult = -1
+		ship_cloaking_strength_add = -30
+
+		ship_hull_regen_add_perc = -0.005 #inherent regen halving to allow recovery and re-attack after a loss
+		ship_armor_regen_add_perc = -0.005
+		ship_shield_regen_add_perc = -0.005
+	}
+	size_multiplier = 500
+	fleet_slot_size = 512
+	section_slots = {
+		"bowgun" = { locator = "part1" }
+		"bow" = { locator = "part2" }
+		"mid" = { locator = "part3" }
+		"stern" = { locator = "part4" }
+		"sternthrusters" = { locator = "part5" }
+		"kugel" = { locator = "part6" }
+	}
+	num_target_locators = 4
+	is_space_station = no
+	icon = ship_size_atk_system #gonna need to make another icon but meh
+
+	combat_disengage_chance = 0.00
+	can_disable = yes
+	#flip_control_on_disable = yes
+
+	possible_construction = { always = no }
+	is_designable = no
+	class = shipclass_military
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}
+
+@build_block_radius_starbase = 20
+@starbase_formation_priority = 1
+@build_block_orbital_ring = 20
+@orbital_ring_formation_priority = 1
+
+novian_starbase = {
+	entity = starbase_citadel_entity
+	#graphical_culture = yes
+	formation_priority = @starbase_formation_priority
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+
+	max_hitpoints = 100000
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 70000
+		ship_shield_add = 70000
+		#ship_cloaking_detection_add = 5 #They have a stupid high base sensor range, because of the hyper siphons, lowers to 2 when you blind them
+	}
+	# ship_modifier = {
+	# 	ship_fire_rate_mult = 1
+	# 	ship_weapon_range_mult = 1
+	# }
+
+	combat_size_multiplier = 50
+	size_multiplier = 16
+	fleet_slot_size = 2
+	section_slots = {
+		"core" = { locator = "part1" }
+		"1" = { locator = "part2" }
+		"2" = { locator = "part3" }
+		"3" = { locator = "part4" }
+		"4" = { locator = "part5" }
+		"5" = { locator = "part6" }
+		"6" = { locator = "part7" }
+	}
+	is_designable = no
+	num_target_locators = 0
+	is_space_station = no
+	can_have_federation_design = no
+	is_civilian = no
+	components_add_to_cost = no
+	can_disable = no
+	flip_control_on_disable = no
+
+	base_buildtime = 1440
+	resources = {
+		category = starbase_stations
+		cost = { alloys = 3500 }
+		upkeep = { energy = 5 }
+	}
+	potential_construction = { always = no }
+	possible_construction = { always = no }
+
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+	class = shipclass_starbase
+
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ftl_inhibitor"
+
+	build_block_radius = @build_block_radius_starbase
+	icon_frame = 5
+	icon = ship_size_military_station
+}
+
+novian_maginot = { #based on strategic_defence_command_platform and orbital_ring_tier_3
+	entity = planetary_drive_yard_full_shipyard_entity #planetary_drive_yard_full_fortress_entity #orbital_ring_tier_3_section_entity
+	scales_with_planet = yes
+	graphical_culture = no
+	icon_frame = 9 #7 for maginot, 9 for T3 ring
+	icon = ship_size_military_64
+	ship_class_icon_frame = 35
+
+	max_speed = 0
+	acceleration = 0
+	rotation_speed = 0 #0.025
+	collision_radius = 32
+	formation_priority = 32
+
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 300000 #maginot has 150k
+		ship_shield_add = 300000 #maginot has 150k
+
+		ship_hull_regen_add_perc = -0.005 #inherent regen halving to allow recovery and re-attack after a loss
+		ship_armor_regen_add_perc = -0.005
+		ship_shield_regen_add_perc = -0.005
+	}
+	max_hitpoints = 400000 #maginot has 275k
+	combat_disengage_chance = 0.0
+	size_multiplier = 50
+	fleet_slot_size = 50
+	is_space_station = no
+	section_slots = {
+		"core" =	{ locator = "part1" }
+	}
+	num_target_locators = 0
+
+	possible_construction = { always = no }
+	class = shipclass_starbase
+	is_designable = no
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = no
+	can_disable = no
+
+	ship_roles = { artillery }
+
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+	#required_component_set = "combat_computers"
+	#required_component_set = "ftl_inhibitor"
+
+	#prerequisites = { "giga_tech_maginot_world" }
+
+	resources = {
+		category = ships
+		upkeep = {
+			energy = 250
+			alloys = 50
+		}
+	}
+}

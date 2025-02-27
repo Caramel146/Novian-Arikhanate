@@ -49,8 +49,8 @@ objectTypes = {
 	}
 
 	pdxparticle = {
-		name = "giga_novian_small2_particle"
-		type = "giga_novian_small2_particle"
+		name = "novian_small2_particle"
+		type = "novian_small2_particle"
 		scale = 10.0
 	}
 }

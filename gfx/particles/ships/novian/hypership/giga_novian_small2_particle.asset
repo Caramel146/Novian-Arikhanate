@@ -1,5 +1,5 @@
 particle={
-	name="giga_novian_small2_particle"
+	name="novian_small2_particle"
 	subsystem={
 		name="blue_smoke"
 		max_amount=1000

@@ -1,12 +1,24 @@
 #Ship Components
 spriteTypes = {
 	spriteType = {
-		name = "GFX_ship_part_reactor_hypership"
-		texturefile = "gfx/interface/icons/ship_parts/novian_reactor_hypership.dds"
+		name = "GFX_ship_part_shield_novian"
+		texturefile = "gfx/interface/icons/ship_parts/shield_novian.dds"
 	}
 	spriteType = {
-		name = "GFX_ship_part_novian_autocannon"
-		texturefile = "gfx/interface/icons/ship_parts/novian_autocannon.dds"
+		name = "GFX_ship_part_armor_novian"
+		texturefile = "gfx/interface/icons/ship_parts/armor_novian.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_energy_lance_novian"
+		texturefile = "gfx/interface/icons/ship_parts/energy_lance_novian.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_planet_lance_novian"
+		texturefile = "gfx/interface/icons/ship_parts/planet_lance_novian.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mass_accelerator_novian"
+		texturefile = "gfx/interface/icons/ship_parts/mass_accelerator_novian.dds"
 	}
 }
 
@@ -38,27 +50,27 @@ spriteTypes = {
 spriteTypes = {
 	spriteType = {
 		name = "GFX_orbitalring_module_novian_listening_post"
-		texturefile = "gfx/interface/icons/modules/orbitalring_module_giga_novian_listening_post.dds"
+		texturefile = "gfx/interface/icons/modules/orbitalring_module_novian_listening_post.dds"
 	}
 	spriteType = {
 		name = "GFX_orbitalring_module_novian_shipyard"
-		texturefile = "gfx/interface/icons/modules/orbitalring_module_giga_novian_shipyard.dds"
+		texturefile = "gfx/interface/icons/modules/orbitalring_module_novian_shipyard.dds"
 	}
 	spriteType = {
 		name = "GFX_orbitalring_module_novian_pd_array"
-		texturefile = "gfx/interface/icons/modules/orbitalring_module_giga_novian_pd_array.dds"
+		texturefile = "gfx/interface/icons/modules/orbitalring_module_novian_pd_array.dds"
 	}
 	spriteType = {
 		name = "GFX_orbitalring_module_novian_aegis_shield"
-		texturefile = "gfx/interface/icons/modules/orbitalring_module_giga_novian_aegis_shield.dds"
+		texturefile = "gfx/interface/icons/modules/orbitalring_module_novian_aegis_shield.dds"
 	}
 	spriteType = {
 		name = "GFX_orbitalring_novian_garrison"
-		texturefile = "gfx/interface/icons/modules/orbitalring_giga_novian_garrison.dds"
+		texturefile = "gfx/interface/icons/modules/orbitalring_novian_garrison.dds"
 	}
 	spriteType = {
 		name = "GFX_orbitalring_novian_logistics"
-		texturefile = "gfx/interface/icons/modules/orbitalring_giga_novian_logistics.dds"
+		texturefile = "gfx/interface/icons/modules/orbitalring_novian_logistics.dds"
 	}
 }
 

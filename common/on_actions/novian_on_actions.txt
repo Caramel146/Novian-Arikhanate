@@ -1,25 +1,26 @@
 on_custom_diplomacy = {
     events = {
-		giga_novian.1001
+		novian.1001 #Arikhanate diplo trigger
 	}
 }
 
 on_planet_bombarded = {
 	events = {
-		giga_novian.150
+		novian.150 #raiding success point check
+		novian.300	#slag/melt check
 	}
 }
 
 on_fleet_auto_move_arrival = {
 	events = {
-		giga_novian.200
+		novian.200 #Raiders successfully return to Agartha
 	}
 }
 
 # on_ship_destroyed_perp = {
 on_ship_disabled = {
 	events = {
-		giga_novian.60010
+		novian.60010 #Hypership destruction recognition
 	}
 }
 
@@ -28,41 +29,53 @@ on_planet_conquer = {
 #on_planet_occupied = {
 #on_planet_transfer = {
 	events = {
-		giga_novian.60100
-		giga_novian.60110
-		giga_novian.60120
-		giga_novian.60130
-		giga_novian.60140
+		novian.60100 #Throneworld conquered
+		novian.60110 #Temple conquered
+		novian.60120 #Shipyard conquered
+		novian.60130 #Quashab conquered
+		novian.60140 #Agartha conquered
+	}
+}
+
+on_planet_transfer = {
+	events = {
+		novian.60141 #swaps Agartha program modifier from gestalt to non-gestalt version
 	}
 }
 
 on_game_start_country = {
 	events = {
-		giga_novian.10
+		novian.10 #gives host Novian settings options
 	}
 }
 
 on_monthly_pulse = {
 	events = {
-		giga_novian.130 #raid chance roll
-		giga_novian.131 #delete raiders after 5 years on deployment to prevent getting stuck
+		novian.130 #raid chance roll
+		novian.131 #delete raiders after 5 years on deployment to prevent getting stuck
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		novian.20008 # #check nos_infil
 	}
 }
 
 # on_mid_game_pulse = {
 # 	events = {
-# 		giga_novian.12
+# 		novian.12
 # 	}
 # }
 
 on_fleet_destroyed_victim = {
 	events = {
-		giga_novian.136
+		novian.136 #Raid fleet destruction recognition
 	}
 }
 
-on_planet_bombarded = {
+on_entering_system_first_time = {
 	events = {
-		origin.7200		# Fruitful Origin: Seed Bombing stance creates blockers
+		novian.4000 #QSO candidacy upon entering quasar system
 	}
 }

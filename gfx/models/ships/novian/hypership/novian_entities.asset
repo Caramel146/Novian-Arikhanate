@@ -231,9 +231,9 @@ entity = {
 		start_event = { node = "core_link_1" particle = "novian_small_thrust_effect" keep_particle = yes trigger_once = yes }
 		start_event = { node = "core_link_2" particle = "novian_small_thrust_effect" keep_particle = yes trigger_once = yes }
 		start_event = { node = "core_link_3" particle = "novian_small_thrust_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 0	node = "platform_thrust_1"		particle = "giga_novian_small2_particle"			keep_particle = yes trigger_once = yes }
-		event = { time = 0	node = "platform_thrust_2"		particle = "giga_novian_small2_particle"			keep_particle = yes trigger_once = yes }
-		event = { time = 0	node = "platform_thrust_3"		particle = "giga_novian_small2_particle"			keep_particle = yes trigger_once = yes }
+		event = { time = 0	node = "platform_thrust_1"		particle = "novian_small2_particle"			keep_particle = yes trigger_once = yes }
+		event = { time = 0	node = "platform_thrust_2"		particle = "novian_small2_particle"			keep_particle = yes trigger_once = yes }
+		event = { time = 0	node = "platform_thrust_3"		particle = "novian_small2_particle"			keep_particle = yes trigger_once = yes }
 
 	}
 	#Explosions non final

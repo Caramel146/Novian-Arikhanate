@@ -1,0 +1,245 @@
+d_novian_quastech_uplink = {
+    icon = d_station_reactor
+    is_for_colonizable = yes
+
+    category = deposit_cat_energy
+
+    planet_modifier = {
+        planet_technician_energy_produces_add = 3
+    }
+
+    resources = {
+        category = deposit_blockers
+        produces = {
+            sr_magical_neutronium = 5
+        }
+    }
+
+    potential = { always = no }
+
+    drop_weight = { weight = 0 }
+}
+
+d_novian_capital_energy = {
+    icon = d_drilling_for_gas
+    is_for_colonizable = yes
+    use_for_min_max_adjustments = yes
+
+    should_swap_deposit_on_terraforming = no
+
+    category = deposit_cat_energy
+    #category = deposit_cat_rare
+
+    planet_modifier = {
+        district_generator_max = 10
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        district_generator_max = 10
+        mult = value:natural_desposit_district_amount_multiplier
+    }
+
+    potential = { always = no }
+
+    drop_weight = { weight = 0 }
+}
+
+d_novian_capital_minerals = {
+    #icon = d_mining_tunnels
+    icon = d_progenitor_empty
+    is_for_colonizable = yes
+    use_for_min_max_adjustments = yes
+
+    should_swap_deposit_on_terraforming = no
+
+    category = deposit_cat_minerals
+    #category = deposit_cat_rare
+
+    planet_modifier = {
+        district_mining_max = 12
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        district_mining_max = 12
+        mult = value:natural_desposit_district_amount_multiplier
+    }
+
+    potential = { always = no }
+
+    drop_weight = { weight = 0 }
+}
+
+d_novian_capital_food = {
+    #icon = d_fuming_bog
+    #icon = d_unpleasant_atmosphere_blocker
+    icon = d_rotten_soil_blocker
+    is_for_colonizable = yes
+    use_for_min_max_adjustments = yes
+
+    should_swap_deposit_on_terraforming = no
+
+    category = deposit_cat_food
+    #category = deposit_cat_rare
+
+    planet_modifier = {
+        district_farming_max = 9
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        district_farming_max = 9
+        mult = value:natural_desposit_district_amount_multiplier
+    }
+
+    potential = { always = no }
+
+    drop_weight = { weight = 0 }
+}
+
+d_novian_temple_energy = {
+    icon = d_geothermal_vent
+    is_for_colonizable = yes
+    use_for_min_max_adjustments = yes
+
+    should_swap_deposit_on_terraforming = no
+
+    category = deposit_cat_energy
+    #category = deposit_cat_rare
+
+    planet_modifier = {
+        district_generator_max = 11
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        district_generator_max = 11
+        mult = value:natural_desposit_district_amount_multiplier
+    }
+
+    potential = { always = no }
+
+    drop_weight = { weight = 0 }
+}
+
+d_novian_temple_minerals = {
+    icon = d_grand_canyon
+    is_for_colonizable = yes
+    use_for_min_max_adjustments = yes
+
+    should_swap_deposit_on_terraforming = no
+
+    category = deposit_cat_minerals
+    #category = deposit_cat_rare
+
+    planet_modifier = {
+        district_mining_max = 8
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        district_mining_max = 8
+        mult = value:natural_desposit_district_amount_multiplier
+    }
+
+    potential = { always = no }
+
+    drop_weight = { weight = 0 }
+}
+
+d_novian_temple_food = {
+    icon = d_bubbling_swamp
+    is_for_colonizable = yes
+    use_for_min_max_adjustments = yes
+
+    should_swap_deposit_on_terraforming = no
+
+    category = deposit_cat_food
+    #category = deposit_cat_rare
+
+    planet_modifier = {
+        district_farming_max = 8
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            always = yes
+        }
+        district_farming_max = 8
+        mult = value:natural_desposit_district_amount_multiplier
+    }
+
+    potential = { always = no }
+
+    drop_weight = { weight = 0 }
+}
+
+d_novian_iodizium_slag = {
+    icon = d_buried_lithoids
+
+    time = 1080
+
+    is_for_colonizable = yes
+    category = deposit_cat_blockers
+
+    potential = { always = no }
+
+    can_be_cleared = {
+        always = yes
+    }
+
+    planet_modifier = {
+        planet_max_districts_add = -1
+        habitability_ceil_add = -0.05
+        #habitability_floor_add = -0.05
+        pop_environment_tolerance = -0.05
+    }
+
+    drop_weight = { weight = 0 }
+
+    resources = {
+        category = deposit_blockers
+        produces = {
+            sr_iodizium = 0.1
+        }
+        cost = {
+            energy = 5000
+            alloys = 1000
+        }
+    }
+
+    on_cleared = {
+        owner = { add_resource = { sr_iodizium = 50 } }#500 months worth of the blocker's deposit seems a lot, but below 50 seems too low
+        hidden_effect = {
+            # clear the variable that handled the bombardment event
+            change_variable = {
+                which = novian_bombardment_blockers
+                value = -1
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = novian_bombardment_blockers
+                        value = 0
+                    }
+                }
+                clear_variable = novian_bombardment_blockers
+            }
+        }
+    }
+
+    # ai_weight = {
+    #     weight = 2
+    # }
+}

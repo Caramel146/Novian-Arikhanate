@@ -1,0 +1,19 @@
+### Edicts regarding the Novian Operations Section
+
+novian_bureau_edict = {
+    icon = "GFX_edict_type_policy"
+    length = 1
+    resources = { category = edicts }
+    potential = {
+        NOT = { has_global_flag = novian_arikhanate_defeated }
+        has_country_flag = novian_espionage_unlocked
+    }
+    effect = { country_event = { id = novian.20001 } }
+    allow = {
+        hidden_trigger = {
+            custom_tooltip = "already_monitoring_novians"
+            NOT = { has_country_flag = monitoring_novians }
+        }
+    }
+    ai_weight = { weight = 0 }
+}

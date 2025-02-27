@@ -207,9 +207,10 @@ special_project = {
 	location = no
 	timelimit = -1
 	event_scope = country_event
+	event_chain = novian_chain
 	on_success = {
 		country_event = {
-			id = giga_novian.10001
+			id = novian.10001
 		}
 	}
 }
@@ -222,9 +223,10 @@ special_project = {
 	location = no
 	timelimit = -1
 	event_scope = country_event
+	event_chain = novian_chain
 	on_success = {
 		country_event = {
-			id = giga_novian.10002
+			id = novian.10002
 		}
 	}
 }
@@ -237,9 +239,10 @@ special_project = {
 	location = no
 	timelimit = -1
 	event_scope = country_event
+	event_chain = novian_chain
 	on_success = {
 		country_event = {
-			id = giga_novian.10003
+			id = novian.10003
 		}
 	}
 }

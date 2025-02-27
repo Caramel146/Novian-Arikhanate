@@ -4,8 +4,8 @@ namespace = novian_arc
 ### NovAet War ###
 fleet_event = {
     id = novian_arc.011
-    title = giga_novian.011.name
-    desc = giga_novian.011.desc
+    title = novian.011.name
+    desc = novian.011.desc
 
     picture = GFX_evt_physics_research
     archaeology = yes
@@ -17,15 +17,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.011.a
+        name = novian.011.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.012
-    title = giga_novian.012.name
-    desc = giga_novian.012.desc
+    title = novian.012.name
+    desc = novian.012.desc
 
     picture = GFX_evt_physics_research
     archaeology = yes
@@ -37,15 +37,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.012.a
+        name = novian.012.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.013
-    title = giga_novian.013.name
-    desc = giga_novian.013.desc
+    title = novian.013.name
+    desc = novian.013.desc
 
     picture = GFX_evt_physics_research
     archaeology = yes
@@ -57,15 +57,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.013.a
+        name = novian.013.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.014
-    title = giga_novian.014.name
-    desc = giga_novian.014.desc
+    title = novian.014.name
+    desc = novian.014.desc
 
     picture = GFX_evt_physics_research
     archaeology = yes
@@ -77,15 +77,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.014.a
+        name = novian.014.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.015
-    title = giga_novian.015.name
-    desc = giga_novian.015.desc
+    title = novian.015.name
+    desc = novian.015.desc
 
     picture = GFX_evt_physics_research
     archaeology = yes
@@ -97,7 +97,7 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.015.a
+        name = novian.015.a
         small_artifact_reward = yes
     }
 }
@@ -107,8 +107,8 @@ fleet_event = {
 ### Kren Fleets Discovered ###
 fleet_event = {
     id = novian_arc.021
-    title = giga_novian.021.name
-    desc = giga_novian.021.desc
+    title = novian.021.name
+    desc = novian.021.desc
 
     picture = GFX_evt_physics_research
     archaeology = yes
@@ -120,15 +120,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.021.a
+        name = novian.021.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.022
-    title = giga_novian.022.name
-    desc = giga_novian.022.desc
+    title = novian.022.name
+    desc = novian.022.desc
 
     picture = GFX_evt_physics_research
     archaeology = yes
@@ -140,7 +140,7 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.022.a
+        name = novian.022.a
         small_artifact_reward = yes
     }
 }
@@ -154,8 +154,8 @@ fleet_event = {
 ### Shrouded Moon ###
 fleet_event = {
     id = novian_arc.041
-    title = giga_novian.041.name
-    desc = giga_novian.041.desc
+    title = novian.041.name
+    desc = novian.041.desc
 
     picture = GFX_evt_astral_rift_research_lab #stage 1: immediately obvious that it's a morbid biotech lab - but why so secret?
     archaeology = yes
@@ -167,15 +167,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.041.a
+        name = novian.041.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.042
-    title = giga_novian.042.name
-    desc = giga_novian.042.desc
+    title = novian.042.name
+    desc = novian.042.desc
 
     picture = GFX_evt_synaptic_lathe
     archaeology = yes
@@ -187,15 +187,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.042.a
+        name = novian.042.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.043
-    title = giga_novian.043.name
-    desc = giga_novian.043.desc
+    title = novian.043.name
+    desc = novian.043.desc
 
     picture = GFX_evt_rift_sphere
     archaeology = yes
@@ -207,15 +207,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.043.a
+        name = novian.043.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.044
-    title = giga_novian.044.name
-    desc = giga_novian.044.desc
+    title = novian.044.name
+    desc = novian.044.desc
 
     picture = GFX_evt_shrouded_planet
     archaeology = yes
@@ -227,15 +227,15 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.044.a
+        name = novian.044.a
         small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = novian_arc.045
-    title = giga_novian.045.name
-    desc = giga_novian.045.desc
+    title = novian.045.name
+    desc = novian.045.desc
 
     picture = GFX_evt_cosmic_storms_fleets_of_the_thrice_damned
     archaeology = yes
@@ -247,7 +247,7 @@ fleet_event = {
     after = {		fromfrom = { set_site_progress_locked = no } }
 
     option = {
-        name = giga_novian.045.a
+        name = novian.045.a
         small_artifact_reward = yes
         hidden_effect = {
             fleet_event = { id = novian_arc.046 days = 15 }
@@ -257,9 +257,9 @@ fleet_event = {
 
 fleet_event = {
     id = novian_arc.046
-    title = giga_novian.046.name
-    desc = giga_novian.046.desc
-    location = event_target:novian_shielded_moon
+    title = novian.046.name
+    desc = novian.046.desc
+    location = event_target:SHIELD_NOVIANed_moon
 
     picture = GFX_evt_situation_the_seal
     show_sound = event_psionic
@@ -267,10 +267,10 @@ fleet_event = {
     is_triggered_only = yes
 
     option = {
-        name = giga_novian.046.a
+        name = novian.046.a
     }
 
     option = {
-        name = giga_novian.046.b
+        name = novian.046.b
     }
 }

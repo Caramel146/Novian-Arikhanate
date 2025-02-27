@@ -1,4 +1,5 @@
 spawn_core_smbh_aeternum = {
+    optimize_memory
     no_scope = {
         spawn_system = {
             min_distance >= 0
@@ -178,6 +179,7 @@ spawn_core_smbh_aeternum = {
 }
 
 spawn_core_smbh = {
+    optimize_memory
     no_scope = {
         spawn_system = {
             min_distance >= 0
@@ -193,6 +195,7 @@ spawn_core_smbh = {
 }
 
 spawn_core_quasar_novian = {
+    optimize_memory
     create_novians = yes
     create_novian_raid_country = yes
 
@@ -213,7 +216,7 @@ spawn_core_quasar_novian = {
             max_distance <= 15
             min_orientation_angle = 47
             max_orientation_angle = 47
-            initializer = "giga_novian_inner_1_initializer"
+            initializer = "novian_inner_1_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -221,7 +224,7 @@ spawn_core_quasar_novian = {
             max_distance <= 15
             min_orientation_angle = 89
             max_orientation_angle = 89
-            initializer = "giga_novian_inner_2_initializer"
+            initializer = "novian_inner_2_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -229,7 +232,7 @@ spawn_core_quasar_novian = {
             max_distance <= 15
             min_orientation_angle = 138
             max_orientation_angle = 138
-            initializer = "giga_novian_inner_3_initializer"
+            initializer = "novian_inner_3_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -237,7 +240,7 @@ spawn_core_quasar_novian = {
             max_distance <= 15
             min_orientation_angle = 194
             max_orientation_angle = 194
-            initializer = "giga_novian_inner_4_initializer"
+            initializer = "novian_inner_4_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -245,7 +248,7 @@ spawn_core_quasar_novian = {
             max_distance <= 15
             min_orientation_angle = 241
             max_orientation_angle = 241
-            initializer = "giga_novian_inner_5_initializer"
+            initializer = "novian_inner_5_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -253,7 +256,7 @@ spawn_core_quasar_novian = {
             max_distance <= 15
             min_orientation_angle = 297
             max_orientation_angle = 297
-            initializer = "giga_novian_inner_6_initializer"
+            initializer = "novian_inner_6_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -261,48 +264,48 @@ spawn_core_quasar_novian = {
             max_distance <= 15
             min_orientation_angle = 356
             max_orientation_angle = 356
-            initializer = "giga_novian_inner_7_initializer"
+            initializer = "novian_inner_7_initializer"
             hyperlane = no
         }
         add_hyperlane = {
             from = event_target:giga_core_system
-            to = event_target:giga_novian_inner_1
+            to = event_target:novian_inner_1
         }
         add_hyperlane = {
             from = event_target:giga_core_system
-            to = event_target:giga_novian_inner_3
+            to = event_target:novian_inner_3
         }
         add_hyperlane = {
             from = event_target:giga_core_system
-            to = event_target:giga_novian_inner_6
+            to = event_target:novian_inner_6
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_1
-            to = event_target:giga_novian_inner_2
+            from = event_target:novian_inner_1
+            to = event_target:novian_inner_2
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_2
-            to = event_target:giga_novian_inner_3
+            from = event_target:novian_inner_2
+            to = event_target:novian_inner_3
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_3
-            to = event_target:giga_novian_inner_4
+            from = event_target:novian_inner_3
+            to = event_target:novian_inner_4
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_4
-            to = event_target:giga_novian_inner_5
+            from = event_target:novian_inner_4
+            to = event_target:novian_inner_5
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_5
-            to = event_target:giga_novian_inner_6
+            from = event_target:novian_inner_5
+            to = event_target:novian_inner_6
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_6
-            to = event_target:giga_novian_inner_7
+            from = event_target:novian_inner_6
+            to = event_target:novian_inner_7
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_7
-            to = event_target:giga_novian_inner_1
+            from = event_target:novian_inner_7
+            to = event_target:novian_inner_1
         }
         #The Middle Ring (9 systems)
         spawn_system = {
@@ -310,7 +313,7 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 42
             max_orientation_angle = 42
-            initializer = "giga_novian_middle_1_initializer"
+            initializer = "novian_middle_1_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -318,7 +321,7 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 83
             max_orientation_angle = 83
-            initializer = "giga_novian_middle_2_initializer"
+            initializer = "novian_middle_2_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -326,7 +329,7 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 117
             max_orientation_angle = 117
-            initializer = "giga_novian_middle_3_initializer"
+            initializer = "novian_middle_3_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -334,7 +337,7 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 161
             max_orientation_angle = 161
-            initializer = "giga_novian_middle_4_initializer"
+            initializer = "novian_middle_4_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -342,7 +345,7 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 197
             max_orientation_angle = 197
-            initializer = "giga_novian_middle_5_initializer"
+            initializer = "novian_middle_5_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -350,7 +353,7 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 239
             max_orientation_angle = 239
-            initializer = "giga_novian_middle_6_initializer"
+            initializer = "novian_middle_6_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -358,7 +361,7 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 283
             max_orientation_angle = 283
-            initializer = "giga_novian_middle_7_initializer"
+            initializer = "novian_middle_7_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -366,7 +369,7 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 317
             max_orientation_angle = 317
-            initializer = "giga_novian_middle_8_initializer"
+            initializer = "novian_middle_8_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -374,60 +377,56 @@ spawn_core_quasar_novian = {
             max_distance <= 30
             min_orientation_angle = 6
             max_orientation_angle = 6
-            initializer = "giga_novian_middle_9_initializer"
+            initializer = "novian_middle_9_initializer"
             hyperlane = no
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_1
-            to = event_target:giga_novian_middle_1
+            from = event_target:novian_inner_3
+            to = event_target:novian_middle_4
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_3
-            to = event_target:giga_novian_middle_4
+            from = event_target:novian_inner_5
+            to = event_target:novian_middle_6
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_5
-            to = event_target:giga_novian_middle_6
+            from = event_target:novian_inner_7
+            to = event_target:novian_middle_8
         }
         add_hyperlane = {
-            from = event_target:giga_novian_inner_7
-            to = event_target:giga_novian_middle_8
+            from = event_target:novian_middle_1
+            to = event_target:novian_middle_2
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_1
-            to = event_target:giga_novian_middle_2
+            from = event_target:novian_middle_2
+            to = event_target:novian_middle_3
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_2
-            to = event_target:giga_novian_middle_3
+            from = event_target:novian_middle_3
+            to = event_target:novian_middle_4
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_3
-            to = event_target:giga_novian_middle_4
+            from = event_target:novian_middle_4
+            to = event_target:novian_middle_5
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_4
-            to = event_target:giga_novian_middle_5
+            from = event_target:novian_middle_5
+            to = event_target:novian_middle_6
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_5
-            to = event_target:giga_novian_middle_6
+            from = event_target:novian_middle_6
+            to = event_target:novian_middle_7
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_6
-            to = event_target:giga_novian_middle_7
+            from = event_target:novian_middle_7
+            to = event_target:novian_middle_8
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_7
-            to = event_target:giga_novian_middle_8
+            from = event_target:novian_middle_8
+            to = event_target:novian_middle_9
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_8
-            to = event_target:giga_novian_middle_9
-        }
-        add_hyperlane = {
-            from = event_target:giga_novian_middle_9
-            to = event_target:giga_novian_middle_1
+            from = event_target:novian_middle_9
+            to = event_target:novian_middle_1
         }
         #The Outer Ring (12 systems)
         spawn_system = {
@@ -435,7 +434,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 30
             max_orientation_angle = 30
-            initializer = "giga_novian_outer_1_initializer"
+            initializer = "novian_outer_1_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -443,7 +442,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 60
             max_orientation_angle = 60
-            initializer = "giga_novian_outer_2_initializer"
+            initializer = "novian_outer_2_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -451,7 +450,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 90
             max_orientation_angle = 90
-            initializer = "giga_novian_outer_3_initializer"
+            initializer = "novian_outer_3_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -459,7 +458,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 120
             max_orientation_angle = 120
-            initializer = "giga_novian_outer_4_initializer"
+            initializer = "novian_outer_4_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -467,7 +466,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 150
             max_orientation_angle = 150
-            initializer = "giga_novian_outer_5_initializer"
+            initializer = "novian_outer_5_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -475,7 +474,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 180
             max_orientation_angle = 180
-            initializer = "giga_novian_outer_6_initializer"
+            initializer = "novian_outer_6_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -483,7 +482,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 210
             max_orientation_angle = 210
-            initializer = "giga_novian_outer_7_initializer"
+            initializer = "novian_outer_7_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -491,7 +490,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 240
             max_orientation_angle = 240
-            initializer = "giga_novian_outer_8_initializer"
+            initializer = "novian_outer_8_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -499,7 +498,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 270
             max_orientation_angle = 270
-            initializer = "giga_novian_outer_9_initializer"
+            initializer = "novian_outer_9_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -507,7 +506,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 300
             max_orientation_angle = 300
-            initializer = "giga_novian_outer_10_initializer"
+            initializer = "novian_outer_10_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -515,7 +514,7 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 330
             max_orientation_angle = 330
-            initializer = "giga_novian_outer_11_initializer"
+            initializer = "novian_outer_11_initializer"
             hyperlane = no
         }
         spawn_system = {
@@ -523,102 +522,97 @@ spawn_core_quasar_novian = {
             max_distance <= 45
             min_orientation_angle = 360
             max_orientation_angle = 360
-            initializer = "giga_novian_outer_12_initializer"
+            initializer = "novian_outer_12_initializer"
             hyperlane = no
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_2
-            to = event_target:giga_novian_outer_3
+            from = event_target:novian_middle_2
+            to = event_target:novian_outer_3
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_3
-            to = event_target:giga_novian_outer_4
+            from = event_target:novian_middle_5
+            to = event_target:novian_outer_7
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_5
-            to = event_target:giga_novian_outer_7
+            from = event_target:novian_middle_8
+            to = event_target:novian_outer_10
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_8
-            to = event_target:giga_novian_outer_10
+            from = event_target:novian_middle_9
+            to = event_target:novian_outer_12
         }
         add_hyperlane = {
-            from = event_target:giga_novian_middle_9
-            to = event_target:giga_novian_outer_12
+            from = event_target:novian_outer_1
+            to = event_target:novian_outer_2
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_1
-            to = event_target:giga_novian_outer_2
+            from = event_target:novian_outer_2
+            to = event_target:novian_outer_3
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_2
-            to = event_target:giga_novian_outer_3
+            from = event_target:novian_outer_3
+            to = event_target:novian_outer_4
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_3
-            to = event_target:giga_novian_outer_4
+            from = event_target:novian_outer_4
+            to = event_target:novian_outer_5
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_4
-            to = event_target:giga_novian_outer_5
+            from = event_target:novian_outer_5
+            to = event_target:novian_outer_6
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_5
-            to = event_target:giga_novian_outer_6
+            from = event_target:novian_outer_6
+            to = event_target:novian_outer_7
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_6
-            to = event_target:giga_novian_outer_7
+            from = event_target:novian_outer_7
+            to = event_target:novian_outer_8
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_7
-            to = event_target:giga_novian_outer_8
+            from = event_target:novian_outer_8
+            to = event_target:novian_outer_9
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_8
-            to = event_target:giga_novian_outer_9
+            from = event_target:novian_outer_9
+            to = event_target:novian_outer_10
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_9
-            to = event_target:giga_novian_outer_10
+            from = event_target:novian_outer_10
+            to = event_target:novian_outer_11
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_10
-            to = event_target:giga_novian_outer_11
+            from = event_target:novian_outer_11
+            to = event_target:novian_outer_12
         }
         add_hyperlane = {
-            from = event_target:giga_novian_outer_11
-            to = event_target:giga_novian_outer_12
-        }
-        add_hyperlane = {
-            from = event_target:giga_novian_outer_12
-            to = event_target:giga_novian_outer_1
+            from = event_target:novian_outer_12
+            to = event_target:novian_outer_1
         }
         #Ownership
         every_system = {
             limit = {
-                has_star_flag = giga_novian_system
+                has_star_flag = novian_system
             }
             create_novian_citadel = yes
-            every_system_planet = {
-                set_planet_flag = cant_build_here
-                set_planet_flag = cant_target_this_planet
-            }
         }
     }
     spawn_core_connectors_novian = yes
-    event_target:novian_arikhanate = { #Needs to be here instead of in create_novians because the planets must spawn before the economy calculates.
-        country_event = { id = giga_novian.60000 }
-    }
     every_playable_country = {
+        set_country_flag = novian_contact_ongoing #used to prevent the monthly check event "fixing" lack of contact prior to the initial contact.
         country_event = {
-            id = giga_novian.2000
+            id = novian.2000
             days = 30
         }
+    }
+    event_target:novian_arikhanate = { #Needs to be here instead of in create_novians because the planets must spawn before the economy calculates.
+        country_event = { id = novian.60000 } #monthly mechanics event
+        country_event = { id = novian.20002 } #initial faction membership evaluation
     }
 }
 
 spawn_core_quasar = {
+    optimize_memory
     no_scope = {
         spawn_system = {
             min_distance >= 0
@@ -636,6 +630,7 @@ spawn_core_quasar = {
 
 ###########################
 spawn_core_empty_generic = {
+    optimize_memory
     spawn_system = {
         min_distance >= 30
         max_distance <= 30
@@ -881,6 +876,7 @@ spawn_core_empty_generic = {
 }
 
 spawn_core_connectors_generic = {
+    optimize_memory
     event_target:giga_outer_1 = {
         random_list = {
             1 = {
@@ -897,6 +893,7 @@ spawn_core_connectors_generic = {
             }
         }
     }
+    reroll_random = yes
     event_target:giga_outer_2 = {
         random_list = {
             1 = {
@@ -913,6 +910,7 @@ spawn_core_connectors_generic = {
             }
         }
     }
+    reroll_random = yes
     event_target:giga_outer_3 = {
         random_list = {
             1 = {
@@ -931,8 +929,9 @@ spawn_core_connectors_generic = {
     }
 }
 
-spawn_core_connectors_novian = { #I think that's what these do. Check.
-    event_target:giga_novian_outer_1 = {
+spawn_core_connectors_novian = {
+    optimize_memory
+    event_target:novian_outer_2 = { #Shiv Aratk - nor-nor-west
         random_list = {
             1 = {
                 while = {
@@ -948,7 +947,8 @@ spawn_core_connectors_novian = { #I think that's what these do. Check.
             }
         }
     }
-    event_target:giga_novian_outer_3 = {
+    reroll_random = yes
+    event_target:novian_outer_11 = { #Okuit - sou-east-east
         random_list = {
             1 = {
                 while = {
@@ -964,7 +964,8 @@ spawn_core_connectors_novian = { #I think that's what these do. Check.
             }
         }
     }
-    event_target:giga_novian_outer_5 = {
+    reroll_random = yes
+    event_target:novian_outer_8 = { #Gacarat - sou-sou-west
         random_list = {
             1 = {
                 while = {
@@ -980,55 +981,8 @@ spawn_core_connectors_novian = { #I think that's what these do. Check.
             }
         }
     }
-    event_target:giga_novian_outer_6 = {
-        random_list = {
-            1 = {
-                while = {
-                    count = 1
-                    giga_generate_hyperlane = yes
-                }
-            }
-            1 = {
-                while = {
-                    count = 2
-                    giga_generate_hyperlane = yes
-                }
-            }
-        }
-    }
-    event_target:giga_novian_outer_8 = {
-        random_list = {
-            1 = {
-                while = {
-                    count = 1
-                    giga_generate_hyperlane = yes
-                }
-            }
-            1 = {
-                while = {
-                    count = 2
-                    giga_generate_hyperlane = yes
-                }
-            }
-        }
-    }
-    event_target:giga_novian_outer_11 = {
-        random_list = {
-            1 = {
-                while = {
-                    count = 1
-                    giga_generate_hyperlane = yes
-                }
-            }
-            1 = {
-                while = {
-                    count = 2
-                    giga_generate_hyperlane = yes
-                }
-            }
-        }
-    }
-    event_target:giga_novian_outer_12 = {
+    reroll_random = yes
+    event_target:novian_outer_5 = { #Castakum - nor-west-west
         random_list = {
             1 = {
                 while = {

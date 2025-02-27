@@ -3,6 +3,7 @@ auth_novian = {
     election_type = none
     can_reform = no
     has_agendas = no
+    #has_factions = yes
     valid_for_released_vassal = no
 
     ruler_council_position = councilor_ruler_imperial

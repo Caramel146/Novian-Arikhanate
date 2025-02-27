@@ -97,6 +97,6 @@ giga_is_core_system = {
         has_star_flag = giga_outer_02
         has_star_flag = giga_outer_03
         has_star_flag = giga_galactic_center
-        has_star_flag = giga_novian_system
+        has_star_flag = novian_system
     }
 }

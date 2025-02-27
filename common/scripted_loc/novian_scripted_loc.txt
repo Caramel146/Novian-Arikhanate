@@ -1,0 +1,4 @@
+defined_text = {
+    name = nos_counter
+    value = value:nos_counter
+}
