@@ -1,4 +1,4 @@
-#NovAet battle and Shroudbreakers
+#NovAet battle and Shroudbreakers #
 site_novian_010 = {
     desc = site_novian_010_intro
     picture = GFX_evt_generator_powerup
